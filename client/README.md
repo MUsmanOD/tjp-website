@@ -1,8 +1,8 @@
 # TJP client
 
 Next.js App Router, React, Tailwind CSS v4, shadcn/ui (Radix), Motion, and
-TanStack Query. The existing starter page, content, and destinations remain in
-place; the root layout now supplies shared site navigation and a footer.
+TanStack Query. The homepage displays only "Coming soon" in a centered 100vh
+hero; the root layout supplies shared site navigation and a footer.
 
 ## Run and validate
 
@@ -53,16 +53,15 @@ npx shadcn@latest add input
 `src/app/globals.css` is the single source of design tokens and reusable styles.
 Semantic Tailwind colors such as `text-foreground`, `text-muted-foreground`,
 `bg-background`, `bg-surface`, and `border-border` derive from CSS variables.
-Light/dark appearance continues to follow the operating system preference.
+The site uses light mode regardless of the operating system preference.
 
-| Primitive                                            | Purpose                                 |
-| ---------------------------------------------------- | --------------------------------------- |
-| `heading-page` / `heading-section`                   | Page titles and subheadings             |
-| `text-lead` / `text-body` / `text-small`             | Introductory, body, and supporting text |
-| `text-link` / `nav-link` / `brand-link`              | Inline links, navigation, and branding  |
-| `container-page` / `container-content`               | Shared wide and narrow content widths   |
-| `section-space` / `stack-content`                    | Consistent vertical spacing             |
-| `action-link` with primary or outline `data-variant` | Existing page CTA styles                |
+| Primitive                                | Purpose                                 |
+| ---------------------------------------- | --------------------------------------- |
+| `heading-page` / `heading-section`       | Page titles and subheadings             |
+| `text-lead` / `text-body` / `text-small` | Introductory, body, and supporting text |
+| `text-link` / `nav-link` / `brand-link`  | Inline links, navigation, and branding  |
+| `container-page` / `container-content`   | Shared wide and narrow content widths   |
+| `section-space` / `stack-content`        | Consistent vertical spacing             |
 
 Use shared primitives for recurring styling and Tailwind utilities for local
 layout differences. Do not copy full typography or container class lists between
