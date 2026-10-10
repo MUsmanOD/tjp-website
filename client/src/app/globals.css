@@ -1,0 +1,171 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --heading: #000000;
+  --surface: #fafafa;
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --primary: var(--foreground);
+  --primary-foreground: var(--background);
+  --secondary: #f4f4f5;
+  --secondary-foreground: var(--foreground);
+  --muted: #f4f4f5;
+  --muted-foreground: #52525b;
+  --accent: #f4f4f5;
+  --accent-foreground: var(--foreground);
+  --destructive: #dc2626;
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #71717a;
+  --radius: 0.625rem;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-heading: var(--heading);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --heading: #fafafa;
+    --surface: #000000;
+    --secondary: #18181b;
+    --muted: #18181b;
+    --muted-foreground: #a1a1aa;
+    --accent: #18181b;
+    --destructive: #f87171;
+    --border: #27272a;
+    --input: #3f3f46;
+    --ring: #a1a1aa;
+    color-scheme: dark;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-ring;
+  }
+}
+
+/* Shared primitives: combine these with Tailwind utilities for local layout needs. */
+@utility container-page {
+  @apply mx-auto w-full max-w-7xl px-6 sm:px-8;
+}
+
+@utility container-content {
+  @apply mx-auto w-full max-w-3xl px-6 sm:px-16;
+}
+
+@utility section-space {
+  @apply py-12 sm:py-16;
+}
+
+@utility stack-content {
+  @apply flex flex-col gap-6;
+}
+
+@utility heading-page {
+  @apply text-3xl leading-10 font-semibold tracking-tight text-heading;
+}
+
+@utility heading-section {
+  @apply text-xl leading-7 font-semibold tracking-tight text-heading;
+}
+
+@utility text-lead {
+  @apply text-lg leading-8 text-muted-foreground;
+}
+
+@utility text-body {
+  @apply text-base leading-7;
+}
+
+@utility text-small {
+  @apply text-sm leading-6;
+}
+
+@utility text-link {
+  @apply font-medium text-heading;
+}
+
+@utility nav-link {
+  @apply text-sm leading-6 font-medium text-muted-foreground transition-colors hover:text-foreground;
+}
+
+@utility brand-link {
+  @apply text-xl leading-7 font-semibold tracking-tight text-foreground;
+}
+
+@layer components {
+  .skip-link {
+    @apply sr-only fixed top-3 left-3 z-[100] rounded-md bg-background text-foreground shadow-md;
+  }
+
+  .skip-link:focus {
+    @apply not-sr-only fixed top-3 left-3 px-4 py-3;
+  }
+
+  /* Preserve the starter page's two existing CTA designs in one reusable variant system. */
+  .action-link {
+    @apply flex h-12 w-full items-center justify-center gap-2 rounded-full px-5 text-base font-medium transition-colors md:w-[158px];
+  }
+
+  .action-link[data-variant="primary"] {
+    @apply bg-foreground text-background hover:bg-[#383838] dark:hover:bg-[#ccc];
+  }
+
+  .action-link[data-variant="outline"] {
+    @apply border border-solid border-black/[.08] hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a];
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
