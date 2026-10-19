@@ -1,9 +1,9 @@
-// Keep shared branding and navigation in one place. Only link to existing destinations.
+// Labels are translation keys. All destinations exist on the homepage.
 export const siteConfig = {
   name: "TJP",
   navigation: [
-    { label: "Home", href: "/" },
-    { label: "Documentation", href: "https://nextjs.org/docs" },
-    { label: "Learning Center", href: "https://nextjs.org/learn" },
+    { key: "home", href: "/#home" },
+    { key: "about", href: "/#about" },
+    { key: "focus", href: "/#focus" },
   ],
 };

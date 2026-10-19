@@ -1,8 +1,9 @@
 # TJP client
 
 Next.js App Router, React, Tailwind CSS v4, shadcn/ui (Radix), Motion, and
-TanStack Query. The homepage displays only "Coming soon" in a centered 100vh
-hero; the root layout supplies shared site navigation and a footer.
+TanStack Query. A responsive English/Urdu homepage uses the shared Header,
+Footer, and brand design system. Read the root [AI_INSTRUCTIONS.md](../AI_INSTRUCTIONS.md)
+before making changes. Frontend development does not require the API to run.
 
 ## Run and validate
 
@@ -23,12 +24,23 @@ the Express server's `CLIENT_ORIGIN` to allow the client origin.
 
 ## Component architecture
 
-- `src/config/site.js`: shared branding and navigation. Only existing routes and
-  resources are linked; replace these items as real pages are added.
-- `src/components/layout/`: `Header`, `Footer`, shared links, and mobile navigation.
-  `Header` and `Footer` accept `name`, `navigation`, and `className` overrides.
-- `src/components/ui/`: shadcn Button, Sheet, and Separator source files.
-- `src/components/providers/app-providers.jsx`: query cache and animation providers.
+- `src/config/site.js`: shared navigation with translation keys and implemented
+  homepage anchors. New items need a `key` translated under `navigation` in both dictionaries.
+- `src/components/layout/`: reusable `Header`, `Footer`, `Brand`, `Container`,
+  `LanguageSwitcher`, `SkipLink`, shared links, and mobile navigation.
+  `Header` and `Footer` accept `name`, `navigation`, and `className` overrides;
+  omit `name` for translated branding. `Container` accepts `as`, `narrow`, and `className`.
+- `src/components/home/`: `HeroSlider`, `AboutSection` with the supplied Abdullah
+  Gul portrait, and translated homepage composition.
+- `src/config/hero-slides.js`: four local hero photographs and attribution metadata.
+- `src/lib/slider.js`: shared slide wrapping and horizontal wheel normalization.
+- `src/components/auth/`: translated Login unavailable state at `/login`. No
+  credentials are collected and no authentication integration is implemented.
+- `src/components/ui/`: shadcn Button, Sheet, Separator, and Card source files.
+  Pass a translated `closeLabel` to `SheetContent`.
+- `src/components/providers/app-providers.jsx`: existing query cache and animation
+  providers plus the shared `LanguageProvider`.
+- `src/i18n/messages.js`: centralized English/Urdu copy, supported locales, and fallback policy.
 - `src/components/motion/interactive-text.jsx`: reusable, subtle brand interactions.
 - `src/lib/`: the shared `cn` helper, query policy, API query factory, and deferred
   Motion features.
@@ -39,7 +51,52 @@ tabIndex={-1}>` landmark so the shared keyboard skip link keeps working.
 
 The mobile Sheet includes a title, description, focus trapping, Escape dismissal,
 focus restoration, and 44px open/close controls. It closes after choosing a link
-or crossing the desktop breakpoint. Header and footer links share one renderer.
+or crossing the desktop breakpoint (1024px). The drawer opens on the left for
+Urdu and the right for English. Header and footer links share one renderer.
+
+## Languages
+
+Call `useLanguage()` in client components to access `{ messages, locale, direction,
+setLocale }`. Add every visitor-facing string, including accessibility labels,
+to both dictionaries in `src/i18n/messages.js`. Keep their key shapes identical.
+Do not create an additional language store or hardcode text in JSX.
+
+The provider updates HTML `lang` and `dir`, configures Radix direction, and saves
+the language under `tjp-language` in localStorage. Browser storage events synchronize
+open tabs. If storage is unavailable, switching still works in memory. Static HTML
+renders English; a saved Urdu preference applies after hydration. This foundation
+does not provide separate locale URLs or locale-specific SEO metadata.
+
+Urdu uses bundled-at-build `next/font` Noto Nastaliq Urdu with script-specific
+line heights. Use logical spacing and positioning, and mirror directional arrows.
+`LanguageSwitcher` works in the header, mobile drawer, and footer from one source.
+It displays Urdu when English is selected and English when Urdu is selected.
+
+## Homepage interactions
+
+The compact header is 72px on desktop and 64px on phones. It displays only the
+brand monogram, navigation, the alternate language, and Login. The hero fills
+`calc(100svh - var(--header-height))`, so header and hero occupy one viewport.
+`Brand compact` hides adjacent brand text without removing its accessible label.
+
+The four slides crossfade and gently zoom, with autoplay every 3 seconds.
+Hero text and buttons are centered, with no visible section/location labels or
+bottom controls. Horizontal trackpad gestures, touch swipes, and keyboard
+Left/Right/Home/End navigate slides. Vertical scrolling and pinch-to-zoom stay
+available. Manual navigation restarts the three-second interval; pointer hover
+does not stop it. Keyboard focus pauses autoplay, and a keyboard-accessible
+pause/resume control is visually hidden until focused. Reduced motion disables
+autoplay and minimizes animation. The shared Button's primary
+variant implements the requested shine and four animated corner borders; reuse
+its `inverse` / `inverse-ghost` variants for controls on dark backgrounds.
+
+Body copy is concise and uses 1.5 line-height in English, with Urdu-specific
+spacing for readability. Local hero WebP assets and their licenses are listed in
+`public/images/home/CREDITS.md`; the footer includes expandable photo credits.
+
+The homepage copy and TJP monogram are presentation placeholders. Replace them
+with approved party copy and assets before public launch; no official platform,
+membership flow, contact details, or backend integration is asserted.
 
 ## UI and styles
 
@@ -53,15 +110,19 @@ npx shadcn@latest add input
 `src/app/globals.css` is the single source of design tokens and reusable styles.
 Semantic Tailwind colors such as `text-foreground`, `text-muted-foreground`,
 `bg-background`, `bg-surface`, and `border-border` derive from CSS variables.
-The site uses light mode regardless of the operating system preference.
+The site uses light mode regardless of the operating system preference. Primary
+green is `#0C6D3A`, with white and black; secondary surfaces and neutrals derive
+from these tokens with `color-mix`. Do not add unrelated colors or local type scales.
 
 | Primitive                                | Purpose                                 |
 | ---------------------------------------- | --------------------------------------- |
-| `heading-page` / `heading-section`       | Page titles and subheadings             |
+| `heading-page` / `heading-hero` / `heading-section` / `heading-card` | Page titles, hero, sections, and cards |
+| `text-eyebrow`                          | Small section labels                    |
 | `text-lead` / `text-body` / `text-small` | Introductory, body, and supporting text |
 | `text-link` / `nav-link` / `brand-link`  | Inline links, navigation, and branding  |
 | `container-page` / `container-content`   | Shared wide and narrow content widths   |
 | `section-space` / `stack-content`        | Consistent vertical spacing             |
+| `button-base` / `card-panel`             | Shared shadcn Button and Card treatments |
 
 Use shared primitives for recurring styling and Tailwind utilities for local
 layout differences. Do not copy full typography or container class lists between
@@ -140,8 +201,11 @@ The cache is intentionally in memory; it is cleared on reload and does not store
 private API data in localStorage. Use ordinary `useQuery` for this provider; a
 future Suspense-based data flow needs an appropriate hydration/Suspense boundary.
 
-`npm test` verifies freshness, deduplication, invalidation, isolation, cancellation,
-retry limits, error recovery, and request encoding using mocked transport.
+`npm test` verifies translation completeness, matching dictionary keys, locale
+fallbacks, translated navigation, slide wrapping, horizontal gesture handling,
+and all four local slide assets, alongside freshness, deduplication,
+invalidation, isolation, cancellation, retry limits, error recovery, and request
+encoding using mocked transport. `npm run build` validates the production bundle.
 
 ## Dependency audit
 

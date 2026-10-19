@@ -1,27 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu } from "lucide-react";
-import * as m from "motion/react-m";
+import { Brand } from "@/components/layout/brand";
+import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { NavigationLinks } from "@/components/layout/navigation-links";
+import { useLanguage } from "@/components/providers/language-provider";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
 export function MobileNavigation({ name, items }) {
   const [open, setOpen] = useState(false);
+  const navigationTarget = useRef(null);
+  const { locale, direction, messages } = useLanguage();
 
   useEffect(() => {
     if (!open) return;
-
-    // Match Tailwind's md breakpoint and release the modal when switching to desktop.
-    const desktop = window.matchMedia("(min-width: 768px)");
+    const desktop = window.matchMedia("(min-width: 1024px)");
     const closeOnDesktop = (event) => {
       if (event.matches) setOpen(false);
     };
@@ -32,38 +27,37 @@ export function MobileNavigation({ name, items }) {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="size-11 md:hidden"
-          aria-label="Open navigation"
-        >
-          <m.span
-            initial={false}
-            animate={{ rotate: open ? 90 : 0 }}
-            className="inline-flex"
-          >
-            <Menu aria-hidden="true" className="size-5" />
-          </m.span>
+        <Button variant="ghost" size="icon" className="size-11 lg:hidden" aria-label={messages.common.openMenu}>
+          <Menu aria-hidden="true" className="size-5" />
         </Button>
       </SheetTrigger>
-      <SheetContent className="w-[min(22rem,90vw)] overflow-y-auto">
-        <SheetHeader className="p-6">
-          <SheetTitle className="heading-section">{name}</SheetTitle>
-          <SheetDescription>
-            Explore the website and its resources.
-          </SheetDescription>
+      <SheetContent side={direction === "rtl" ? "left" : "right"} dir={direction} lang={locale}
+        closeLabel={messages.common.closeMenu} className="w-[min(22rem,90vw)] overflow-y-auto"
+        onCloseAutoFocus={(event) => {
+          const target = navigationTarget.current;
+          navigationTarget.current = null;
+          if (!target) return;
+          // Move focus to the chosen section after the modal releases focus.
+          // Otherwise restoring trigger focus can interrupt Next's anchor scroll.
+          event.preventDefault();
+          target.focus({ preventScroll: true });
+          target.scrollIntoView({ block: "start" });
+        }}>
+        <SheetHeader className="p-6 pt-16 text-start">
+          <SheetTitle className="heading-section">{name || messages.brand.name}</SheetTitle>
+          <SheetDescription className="text-body">{messages.common.menuDescription}</SheetDescription>
         </SheetHeader>
-        <nav
-          aria-label="Mobile navigation"
-          className="flex flex-col gap-2 px-6 pb-6"
-        >
-          <NavigationLinks
-            items={items}
-            className="rounded-md px-3 py-3 hover:bg-accent"
-            onNavigate={() => setOpen(false)}
-          />
+        <nav aria-label={messages.common.mobileNavigation} className="flex flex-col gap-2 px-6">
+          <NavigationLinks items={items} className="rounded-md px-3 py-3 hover:bg-accent"
+            onNavigate={(event) => {
+              navigationTarget.current = document.getElementById(event.currentTarget.hash.slice(1));
+              setOpen(false);
+            }} />
         </nav>
+        <div className="mt-auto space-y-6 border-t p-6">
+          <LanguageSwitcher />
+          <Brand name={name} />
+        </div>
       </SheetContent>
     </Sheet>
   );
