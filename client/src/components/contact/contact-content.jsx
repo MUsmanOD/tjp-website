@@ -61,7 +61,6 @@ export function ContactContent() {
         <Card className="contact-form-card" data-scroll-reveal data-scroll-delay="80">
           <h2 className="heading-section">{copy.heading}</h2>
           <form ref={formRef} className="contact-form" onSubmit={downloadMessage} onChange={() => setSaved(false)} onReset={() => setSaved(false)} aria-describedby="contact-hint">
-            <p className="sr-only">{messages.form.required}</p>
             <div className="grid gap-5 sm:grid-cols-2">
               <FormField name="name" required autoComplete="name" maxLength={100} />
               <FormField name="email" type="email" required autoComplete="email" maxLength={254} />

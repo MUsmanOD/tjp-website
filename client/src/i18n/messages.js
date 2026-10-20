@@ -238,7 +238,7 @@ const pageCopy = {
       all: "تمام تصاویر", heritage: "تاریخی ورثہ", landscapes: "قدرتی مناظر", filter: "تصاویر چھانٹیں", open: "تصویر کھولیں", close: "تصویر بند کریں", previous: "پچھلی تصویر", next: "اگلی تصویر", count: "از", credit: "تصویر", source: "اصل تصویر اور حوالہ", note: "سیاق اور ماخذ دیکھنے کے لیے تصویر کھولیں۔ محفوظ تاریخیں اشاعت کی ہیں؛ بغیر تاریخ کی تصاویر کی نشاندہی کی گئی ہے۔",
     },
     form: {
-      name: "پورا نام", email: "ای میل ایڈریس", phone: "فون نمبر", city: "شہر / ضلع", province: "صوبہ / علاقہ", choose: "علاقہ منتخب کریں", topic: "موضوع", message: "آپ کا پیغام", interest: "دلچسپی کا شعبہ", password: "پاس ورڈ", confirmPassword: "پاس ورڈ دوبارہ لکھیں", optional: "اختیاری", required: "ستارے * والے خانے لازمی ہیں۔",
+      name: "پورا نام", email: "ای میل ایڈریس", phone: "فون نمبر", city: "شہر / ضلع", province: "صوبہ / علاقہ", choose: "علاقہ منتخب کریں", topic: "موضوع", message: "آپ کا پیغام", interest: "دلچسپی کا شعبہ", password: "پاس ورڈ", confirmPassword: "پاس ورڈ دوبارہ لکھیں", optional: "اختیاری",
       namePlaceholder: "آپ کا پورا نام", emailPlaceholder: "you@example.com", phonePlaceholder: "+92 300 1234567", cityPlaceholder: "آپ کا شہر یا ضلع", messagePlaceholder: "اپنی بات یہاں لکھیں…", passwordPlaceholder: "آن لائن رسائی جلد دستیاب ہوگی", selectInterest: "دلچسپی منتخب کریں",
       regions: ["پنجاب", "سندھ", "خیبر پختونخوا", "بلوچستان", "اسلام آباد", "گلگت بلتستان", "آزاد جموں و کشمیر", "بیرونِ ملک"],
       interests: ["سماجی شرکت", "نوجوان اور تعلیم", "ابلاغ اور میڈیا", "عام رکنیت"],

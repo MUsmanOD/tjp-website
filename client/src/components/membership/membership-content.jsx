@@ -25,7 +25,6 @@ export function MembershipContent() {
         <p className="print-only heading-card mb-6">{copy.printTitle}</p>
         <h2 className="heading-section text-2xl sm:text-3xl">{copy.heading}</h2><p className="text-body mt-3 text-muted-foreground">{copy.descriptionForm}</p>
         <form ref={formRef} className="mt-7 space-y-5" onChange={() => setPrinted(false)} onReset={() => setPrinted(false)} onSubmit={(event) => { event.preventDefault(); setPrinted(true); window.print(); }}>
-          <p className="text-small text-muted-foreground">{messages.form.required}</p>
           <FormField name="name" required autoComplete="name" maxLength={100} />
           <div className="grid gap-5 sm:grid-cols-2"><FormField name="email" type="email" required autoComplete="email" maxLength={254} /><FormField name="phone" type="tel" required autoComplete="tel" pattern={"[+0-9 .\\(\\)\\-]{7,25}"} /></div>
           <div className="grid gap-5 sm:grid-cols-2"><FormField name="city" required autoComplete="address-level2" maxLength={100} /><FormField name="province" options={messages.form.regions} optionValues={translations.en.form.regions} selectVariant="custom" required autoComplete="address-level1" /></div>
