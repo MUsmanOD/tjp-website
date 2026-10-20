@@ -13,7 +13,7 @@ export function ArticleCard({ article, index, headingAs: Heading = "h3" }) {
   const copy = messages.journal.articles[index];
   const photo = media[article.media];
   return (
-    <Card className="editorial-card group">
+    <Card className="editorial-card group" data-scroll-reveal data-scroll-delay={(index % 3) * 80}>
       <SiteLink href={`/blogs/${article.slug}`} className="article-image" tabIndex={-1} aria-hidden="true">
         <Image src={photo.src} alt="" fill sizes="(max-width: 767px) 90vw, 30vw" className="object-cover transition-transform duration-700 group-hover:scale-105" style={{ objectPosition: photo.position }} />
         <span className="image-category">{messages.journal.categories[article.category]}</span>

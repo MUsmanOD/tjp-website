@@ -19,7 +19,7 @@ export function HomeContent() {
       <AboutSection />
       <section id="focus" tabIndex={-1} aria-labelledby="focus-title" className="section-space border-t bg-surface">
         <Container>
-          <div className="mb-10 flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
+          <div className="mb-10 flex flex-col justify-between gap-5 lg:flex-row lg:items-end" data-scroll-reveal>
             <div>
               <p className="text-eyebrow mb-4">{content.eyebrow}</p>
               <h2 id="focus-title" className="heading-section max-w-xl">{content.title}</h2>
@@ -30,7 +30,7 @@ export function HomeContent() {
             {content.items.map((item, index) => {
               const Icon = focusIcons[index];
               return (
-                <Card key={index}>
+                <Card key={index} data-scroll-reveal data-scroll-delay={index * 80}>
                   <CardHeader>
                     <div className="mb-5 flex items-center justify-between">
                       <span className="flex size-11 items-center justify-center rounded-lg border bg-surface text-primary"><Icon className="size-5" aria-hidden="true" /></span>

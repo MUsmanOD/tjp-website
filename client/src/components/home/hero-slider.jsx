@@ -102,9 +102,9 @@ export function HeroSlider() {
         <div className="hero-copy" key={`${locale}-${active}`}>
           <h1 id="home-title" className="heading-hero">{slide.title}<span className="block">{slide.accent}</span></h1>
           <p className="text-lead hero-description text-white/90">{slide.description}</p>
-          <div className="hero-actions mt-7 flex flex-wrap items-center justify-center gap-2">
-            <Button asChild size="lg"><SiteLink href="/#about">{messages.common.explore}<ArrowRight aria-hidden="true" className="rtl:rotate-180" /></SiteLink></Button>
-            <Button asChild variant="inverse"><SiteLink href="/#focus">{content.secondaryAction}</SiteLink></Button>
+          <div className="hero-actions mt-7 flex w-full items-center justify-center gap-3">
+            <Button asChild size="lg"><SiteLink href="/membership">{messages.common.join}<ArrowRight aria-hidden="true" className="rtl:rotate-180" /></SiteLink></Button>
+            <Button asChild size="lg" variant="inverse"><SiteLink href="/#about">{messages.common.explore}</SiteLink></Button>
           </div>
         </div>
         <Button variant="inverse" className="hero-pause" disabled={Boolean(reducedMotion)}

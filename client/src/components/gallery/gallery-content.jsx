@@ -30,7 +30,7 @@ export function GalleryContent() {
         <Container>
           <div className="filter-row" role="group" aria-label={messages.gallery.filter}>{["all", ...new Set(galleryItems.map((item) => item.category))].map((key) => <button key={key} type="button" className="filter-chip" aria-pressed={filter === key} onClick={() => { setActive(null); setFilter(key); }}>{messages.gallery[key]}</button>)}</div>
           <div className="gallery-grid">
-            {items.map((item, index) => <button key={item.media} className="gallery-tile group" type="button" aria-label={`${messages.gallery.open}: ${messages.media[item.media].title}`} onClick={(event) => { opener.current = event.currentTarget; setActive(index); }}>
+            {items.map((item, index) => <button key={item.media} className="gallery-tile group" data-scroll-reveal data-scroll-delay={(index % 3) * 80} type="button" aria-label={`${messages.gallery.open}: ${messages.media[item.media].title}`} onClick={(event) => { opener.current = event.currentTarget; setActive(index); }}>
               <Image src={media[item.media].src} alt={messages.media[item.media].alt} fill sizes="(max-width: 639px) 90vw, 45vw" className="object-cover transition-transform duration-700 group-hover:scale-105" style={{ objectPosition: media[item.media].position }} />
               <span className="gallery-tile-shade" aria-hidden="true" />
               <span className="gallery-expand" aria-hidden="true"><Expand className="size-5" /></span>

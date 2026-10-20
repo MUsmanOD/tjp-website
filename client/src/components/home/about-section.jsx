@@ -14,7 +14,7 @@ export function AboutSection() {
   return (
     <section id="about" tabIndex={-1} aria-labelledby="about-title" className="section-space bg-background">
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
-        <figure className="about-portrait">
+        <figure className="about-portrait" data-scroll-reveal>
           <span className="about-portrait-line" aria-hidden="true" />
           <Image src={media.founder.src} alt={messages.media.founder.alt} fill
             sizes="(max-width: 1023px) 90vw, 42vw" className="object-cover" style={{ objectPosition: media.founder.position }} />
@@ -23,7 +23,7 @@ export function AboutSection() {
             <span className="text-small text-white/85">{content.role}</span>
           </figcaption>
         </figure>
-        <div className="stack-content items-start">
+        <div className="stack-content items-start" data-scroll-reveal data-scroll-delay="80">
           <p className="text-eyebrow flex items-center gap-3"><span className="h-px w-9 bg-primary" aria-hidden="true" />{content.eyebrow}</p>
           <h2 id="about-title" className="heading-section whitespace-pre-line">{content.title}</h2>
           <p className="text-body max-w-lg text-muted-foreground">{content.description}</p>

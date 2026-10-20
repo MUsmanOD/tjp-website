@@ -14,7 +14,7 @@ export function PageIntro({ content, breadcrumb, showMark = true }) {
           <SiteLink href="/" className="text-link">{messages.navigation.home}</SiteLink>
           <span aria-hidden="true">/</span><span>{breadcrumb || content.eyebrow}</span>
         </div>
-        <div className="flex items-end justify-between gap-8">
+        <div className="flex items-end justify-between gap-8" data-scroll-reveal>
           <div className="max-w-3xl">
             <p className="text-eyebrow mb-4">{content.eyebrow}</p>
             <h1 className="heading-page whitespace-pre-line">{content.title}</h1>

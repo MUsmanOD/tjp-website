@@ -35,7 +35,7 @@ export function ContactContent() {
     <PageIntro content={copy} breadcrumb={messages.navigation.contact} showMark={false} />
     <section className="contact-section">
       <Container className="contact-layout">
-        <aside className="contact-info">
+        <aside className="contact-info" data-scroll-reveal>
           <div className="contact-detail">
             <MapPin aria-hidden="true" className="contact-icon" />
             <div>
@@ -58,7 +58,7 @@ export function ContactContent() {
             {copy.source}<ArrowUpRight className="size-4 shrink-0 rtl:-scale-x-100" aria-hidden="true" />
           </a>
         </aside>
-        <Card className="contact-form-card">
+        <Card className="contact-form-card" data-scroll-reveal data-scroll-delay="80">
           <h2 className="heading-section">{copy.heading}</h2>
           <form ref={formRef} className="contact-form" onSubmit={downloadMessage} onChange={() => setSaved(false)} onReset={() => setSaved(false)} aria-describedby="contact-hint">
             <p className="sr-only">{messages.form.required}</p>
@@ -79,8 +79,8 @@ export function ContactContent() {
     </section>
     <section className="contact-faq">
       <Container narrow>
-        <h2 className="heading-section mb-6">{copy.faqTitle}</h2>
-        <div className="divide-y border-y">
+        <h2 className="heading-section mb-6" data-scroll-reveal>{copy.faqTitle}</h2>
+        <div className="divide-y border-y" data-scroll-reveal>
           {copy.faqs.map((faq, index) => <details key={index} className="faq-item">
             <summary>{faq.question}<span aria-hidden="true" className="faq-plus">+</span></summary>
             <p className="text-body pb-6 pe-6 text-muted-foreground">{faq.answer}</p>

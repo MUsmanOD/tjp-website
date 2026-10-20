@@ -5,7 +5,7 @@ import { SiteLink } from "@/components/layout/site-link";
 
 export function SectionHeading({ content, id, href }) {
   return (
-    <div className="section-heading">
+    <div className="section-heading" data-scroll-reveal>
       <div className="max-w-2xl">
         <p className="text-eyebrow mb-3">{content.eyebrow}</p>
         <h2 id={id} className="heading-section">{content.title}</h2>

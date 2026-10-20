@@ -33,7 +33,7 @@ export function MobileNavigation({ name, items }) {
         </Button>
       </SheetTrigger>
       <SheetContent side={direction === "rtl" ? "left" : "right"} dir={direction} lang={locale}
-        closeLabel={messages.common.closeMenu} data-lenis-prevent className="w-[min(22rem,90vw)] overflow-y-auto"
+        closeLabel={messages.common.closeMenu} data-lenis-prevent className="mobile-menu"
         onCloseAutoFocus={(event) => {
           const target = navigationTarget.current;
           navigationTarget.current = null;
@@ -44,12 +44,13 @@ export function MobileNavigation({ name, items }) {
           target.focus({ preventScroll: true });
           target.scrollIntoView({ block: "start" });
         }}>
-        <SheetHeader className="p-6 pt-16 text-start">
-          <SheetTitle className="heading-section">{name || messages.brand.name}</SheetTitle>
-          <SheetDescription className="text-body">{messages.common.menuDescription}</SheetDescription>
+        <SheetHeader className="mobile-menu-header text-start">
+          <SheetTitle className="sr-only">{name || messages.brand.name}</SheetTitle>
+          <SheetDescription className="sr-only">{messages.common.menuDescription}</SheetDescription>
+          <Brand name={name} onClick={() => setOpen(false)} />
         </SheetHeader>
-        <nav aria-label={messages.common.mobileNavigation} className="flex flex-col gap-2 px-6">
-          <NavigationLinks items={items} className="rounded-md px-3 py-3 hover:bg-accent"
+        <nav aria-label={messages.common.mobileNavigation} className="mobile-menu-links">
+          <NavigationLinks items={items} className="rounded-md px-3 py-2 hover:bg-accent"
             onNavigate={(event) => {
               const link = event.currentTarget;
               navigationTarget.current = link.pathname === window.location.pathname && link.hash
@@ -57,12 +58,11 @@ export function MobileNavigation({ name, items }) {
               setOpen(false);
             }} />
         </nav>
-        <div className="mt-auto space-y-6 border-t p-6">
-          <div className="flex flex-wrap gap-4">
-            <SiteLink href="/signup" className="text-link nav-link" onClick={() => setOpen(false)}>{messages.common.signup}</SiteLink>
+        <div className="mobile-menu-footer">
+          <div className="mobile-menu-actions">
+            <Button asChild variant="outline"><SiteLink href="/signup" onClick={() => setOpen(false)}>{messages.common.signup}</SiteLink></Button>
+            <LanguageSwitcher variant="outline" className="w-full justify-center" />
           </div>
-          <LanguageSwitcher />
-          <Brand name={name} />
         </div>
       </SheetContent>
     </Sheet>

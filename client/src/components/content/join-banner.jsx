@@ -12,7 +12,7 @@ export function JoinBanner() {
   return (
     <section className="join-section section-space" aria-labelledby="join-title">
       <Container>
-        <div className="join-banner">
+        <div className="join-banner" data-scroll-reveal>
           <div className="join-decoration" aria-hidden="true" />
           <div className="relative max-w-2xl">
             <p className="text-eyebrow mb-4 text-white/75">{content.eyebrow}</p>

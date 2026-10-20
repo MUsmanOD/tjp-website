@@ -31,6 +31,13 @@ native touch scrolling, built-in live reduced-motion support, and cleanup on
 navigation. Sheets and dialogs opt out with `data-lenis-prevent`. The hero keeps
 its existing horizontal gestures and three-second slideshow.
 
+`ScrollReveals` adds a fade and 20px rise once per element to content marked with
+`data-scroll-reveal`, using one IntersectionObserver per page. Optional
+`data-scroll-delay` staggers card rows by up to 240ms. No wrappers or layout styles
+are added, and content stays visible in static HTML and without JavaScript.
+Filtered cards are observed automatically. Reduced motion, keyboard focus, print,
+and navigation cleanup keep content immediately accessible.
+
 The compact main header sits below an announcement/social bar. `SocialLinks` uses
 brand icons from `react-icons/fa6`. Facebook and X URLs were checked against
 https://tjp.org.pk/contactus/; Instagram and YouTube show a translated availability
@@ -90,6 +97,8 @@ the Express server's `CLIENT_ORIGIN` to allow the client origin.
   providers plus the shared `LanguageProvider`.
 - `src/i18n/messages.js`: centralized English/Urdu copy, supported locales, and fallback policy.
 - `src/components/motion/interactive-text.jsx`: reusable, subtle brand interactions.
+- `src/components/providers/scroll-reveals.jsx`: shared scroll entry animations for
+  annotated content, with reduced-motion support and no persistent hidden state.
 - `src/lib/`: the shared `cn` helper, query policy, API query factory, and deferred
   Motion features.
 
@@ -124,8 +133,8 @@ It displays Urdu when English is selected and English when Urdu is selected.
 
 The compact main header is 60px above the phone breakpoint and 56px on phones,
 below the announcement bar. It displays the emblem and wordmark, navigation,
-and Join TJP. Below 640px the main header hides its language switch and uses
-smaller Join TJP text, padding, and a 36px button height. Language
+and Join TJP. Below 640px the main header hides its language switch and Join TJP.
+Language
 switching remains available in the mobile drawer and footer. The hero fills
 `calc(100svh - var(--header-height))`, so header and hero occupy one viewport.
 `Brand compact` hides adjacent brand text without removing its accessible label.
@@ -134,11 +143,22 @@ The header opts into `showWordmark` to display the small English wordmark
 wrap at spaces on narrow screens, and remain immediately visible with reduced motion.
 Other Brand instances retain their existing presentation.
 
+The mobile drawer uses one compact branded header, 44px navigation rows, and a
+two-column row of matching signup/language buttons. Navigation scrolls independently
+on short screens while the header and actions remain visible. `Brand` accepts an
+optional `onClick` for drawer dismissal; `LanguageSwitcher` accepts a Button `variant`
+and defaults to its existing plain appearance outside the drawer.
+
 The four slides crossfade and gently zoom, with autoplay every 3 seconds.
 They feature the founder banner, the chairman's meeting with China's defence
 attaché, a school prize ceremony, and Islamabad heritage photography.
-Hero text and buttons are centered at 640px and above. On phones, smaller titles,
-body copy, and spacing form a compact block aligned to the bottom and logical end.
+Hero text is centered at 640px and above. On phones, smaller titles,
+body copy, and spacing form a compact block at the bottom, centered horizontally.
+The primary Join TJP button links to membership and shares one centered row with the
+secondary Discover TJP action on every screen size, with compact padding on phones.
+The hero does not include an Our focus button.
+The Make a Connection section uses one shared panel with three adjoining columns,
+plain icons, compact vertical padding, and dividers. Columns stack without gaps on phones.
 No section/location labels or bottom controls are visible. Horizontal trackpad gestures, touch swipes, and keyboard
 Left/Right/Home/End navigate slides. Vertical scrolling and pinch-to-zoom stay
 available. Manual navigation restarts the three-second interval; pointer hover
