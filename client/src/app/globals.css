@@ -279,7 +279,7 @@
   .site-header .language-switcher { padding-inline: 0.5rem; }
   .site-header .language-switcher > svg { display: none; }
   .header-main .header-language { display: none; }
-  .header-membership { font-size: var(--text-xs); padding-inline: 0.625rem; }
+  .header-main .header-membership { min-height: 2.25rem; height: 2.25rem; font-size: var(--text-xs); padding: 0.375rem 0.5rem; }
   .hero-inner { align-items: flex-end; justify-content: flex-end; padding-block: 1.5rem; padding-block-end: calc(1.5rem + env(safe-area-inset-bottom)); }
   .hero-copy { width: 100%; max-width: 22rem; margin-inline: 0; align-items: flex-end; text-align: end; }
   .hero-copy .heading-hero { font-size: var(--text-3xl); line-height: 1.15; }

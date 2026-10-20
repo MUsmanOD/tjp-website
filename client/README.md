@@ -125,7 +125,7 @@ It displays Urdu when English is selected and English when Urdu is selected.
 The compact main header is 60px above the phone breakpoint and 56px on phones,
 below the announcement bar. It displays the emblem and wordmark, navigation,
 and Join TJP. Below 640px the main header hides its language switch and uses
-smaller Join TJP text and padding while retaining the 44px touch target. Language
+smaller Join TJP text, padding, and a 36px button height. Language
 switching remains available in the mobile drawer and footer. The hero fills
 `calc(100svh - var(--header-height))`, so header and hero occupy one viewport.
 `Brand compact` hides adjacent brand text without removing its accessible label.
