@@ -1,11 +1,13 @@
 "use client";
 
-import { ArrowUp, ArrowUpRight } from "lucide-react";
+import { ArrowUp } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { Brand } from "@/components/layout/brand";
 import { Container } from "@/components/layout/container";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { NavigationLinks } from "@/components/layout/navigation-links";
 import { SiteLink } from "@/components/layout/site-link";
+import { SocialLinks } from "@/components/layout/social-links";
 import { useLanguage } from "@/components/providers/language-provider";
 import { Separator } from "@/components/ui/separator";
 import { heroSlides } from "@/config/hero-slides";
@@ -14,33 +16,32 @@ import { cn } from "@/lib/utils";
 
 export function Footer({ name, navigation = siteConfig.navigation, className }) {
   const { messages } = useLanguage();
+  const pathname = usePathname();
+  if (pathname === "/login" || pathname === "/signup") return null;
   return (
     <footer className={cn("footer-inverse shrink-0", className)}>
       <Container>
-        <div className="footer-topline">
-          <h2 className="heading-section">{messages.footer.title}</h2>
-          <SiteLink href="/#home" className="footer-top-link" aria-label={messages.common.backToTop}><ArrowUp className="size-5" aria-hidden="true" /></SiteLink>
-        </div>
         <div className="footer-grid">
-          <div className="space-y-5">
+          <div className="footer-brand">
             <Brand name={name} />
             <p className="text-small footer-muted">{messages.footer.description}</p>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2"><SocialLinks /><LanguageSwitcher /></div>
           </div>
           <div>
-            <h3 className="heading-card mb-4">{messages.footer.explore}</h3>
-            <nav aria-label={messages.common.footerNavigation} className="flex flex-col items-start gap-1">
+            <div className="mb-2 flex items-center justify-between gap-4">
+              <h2 className="heading-card">{messages.footer.explore}</h2>
+              <SiteLink href="/#home" className="footer-top-link" aria-label={messages.common.backToTop}><ArrowUp className="size-4" aria-hidden="true" /></SiteLink>
+            </div>
+            <nav aria-label={messages.common.footerNavigation} className="footer-navigation">
               <NavigationLinks items={navigation} />
-              <SiteLink href="/login" className="nav-link">{messages.common.login}<ArrowUpRight className="ms-2 size-3.5 rtl:-scale-x-100" aria-hidden="true" /></SiteLink>
+              <SiteLink href="/login" className="nav-link">{messages.common.login}</SiteLink>
+              <SiteLink href="/signup" className="nav-link">{messages.common.signup}</SiteLink>
+              <SiteLink href="/membership" className="nav-link">{messages.common.membership}</SiteLink>
             </nav>
-          </div>
-          <div className="space-y-4">
-            <h3 className="heading-card">{messages.footer.language}</h3>
-            <p className="text-small footer-muted">{messages.footer.languageDescription}</p>
-            <LanguageSwitcher />
           </div>
         </div>
         <Separator className="bg-white/20" />
-        <div className="text-small footer-muted flex flex-wrap items-center justify-between gap-x-6 gap-y-3 py-5">
+        <div className="footer-bottom text-small footer-muted">
           <p>&copy; {messages.footer.rights}</p>
           <p>{messages.footer.madeFor}</p>
           <details className="photo-credits">

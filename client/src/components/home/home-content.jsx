@@ -3,6 +3,7 @@
 import { BookOpen, Sprout, Users } from "lucide-react";
 import { HeroSlider } from "@/components/home/hero-slider";
 import { AboutSection } from "@/components/home/about-section";
+import { HomeSections } from "@/components/home/home-sections";
 import { Container } from "@/components/layout/container";
 import { useLanguage } from "@/components/providers/language-provider";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -44,6 +45,7 @@ export function HomeContent() {
           </div>
         </Container>
       </section>
+      <HomeSections />
     </>
   );
 }

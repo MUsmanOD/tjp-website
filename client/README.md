@@ -1,5 +1,45 @@
 # TJP client
 
+## Frontend pages and interactions
+
+- `/gallery`: local licensed photos, category filters, and a keyboard-accessible
+  lightbox with credits. Heritage photos are not presented as event coverage.
+- `/blogs` and `/blogs/[slug]`: local editorial articles, search, topic filters,
+  empty states, and related stories. Edit content in `src/i18n/messages.js` and
+  route/image mappings in `src/config/content.js`.
+- `/contact`: published contact details, FAQs, and a validated message form that
+  downloads a UTF-8 text file. It does not send a message or call an API.
+- `/membership`: validated expression-of-interest form with print/PDF styling.
+  Details stay in the current page; this is not online membership submission.
+- `/login` and `/signup`: shared themed layouts. Credential fields remain disabled
+  until an authorized authentication integration is provided.
+  Header plus authentication content fits one viewport (`100svh`), with local
+  scrolling on short screens. Authentication forms show only a title, fields,
+  button, and account-switch link; the availability description is screen-reader
+  text. Authentication routes omit the footer and keep image credits beside the photo.
+
+Content pages use a compact two-column footer. The header and mobile drawer omit
+the Login link. Contact fields use a single 1px border, including keyboard focus,
+without a focus ring; contact icons have no background badge.
+
+All pages, labels, validation messages, filters, and dialogs support English and
+Urdu through the existing language provider. No backend changes are required.
+
+`SmoothScroll` initializes Lenis with automatic frame updates, anchor support,
+native touch scrolling, built-in live reduced-motion support, and cleanup on
+navigation. Sheets and dialogs opt out with `data-lenis-prevent`. The hero keeps
+its existing horizontal gestures and three-second slideshow.
+
+The compact main header sits below an announcement/social bar. `SocialLinks` uses
+brand icons from `react-icons/fa6`. Facebook and X URLs were checked against
+https://tjp.org.pk/contactus/; Instagram and YouTube show a translated availability
+dialog until confirmed URLs are added to `src/config/site.js`. The homepage
+Facebook card loads the real timeline on request and includes a direct-link fallback.
+
+Section headings, article cards, page introductions, join banners, and form fields
+are shared under `components/content/` and `components/forms/`. Central styles and
+print rules remain in `src/app/globals.css`.
+
 Next.js App Router, React, Tailwind CSS v4, shadcn/ui (Radix), Motion, and
 TanStack Query. A responsive English/Urdu homepage uses the shared Header,
 Footer, and brand design system. Read the root [AI_INSTRUCTIONS.md](../AI_INSTRUCTIONS.md)
@@ -25,7 +65,7 @@ the Express server's `CLIENT_ORIGIN` to allow the client origin.
 ## Component architecture
 
 - `src/config/site.js`: shared navigation with translation keys and implemented
-  homepage anchors. New items need a `key` translated under `navigation` in both dictionaries.
+  homepage anchors and Gallery, Blogs, and Contact routes. New items need a `key` translated under `navigation` in both dictionaries.
 - `src/components/layout/`: reusable `Header`, `Footer`, `Brand`, `Container`,
   `LanguageSwitcher`, `SkipLink`, shared links, and mobile navigation.
   `Header` and `Footer` accept `name`, `navigation`, and `className` overrides;
@@ -34,7 +74,7 @@ the Express server's `CLIENT_ORIGIN` to allow the client origin.
   Gul portrait, and translated homepage composition.
 - `src/config/hero-slides.js`: four local hero photographs and attribution metadata.
 - `src/lib/slider.js`: shared slide wrapping and horizontal wheel normalization.
-- `src/components/auth/`: translated Login unavailable state at `/login`. No
+- `src/components/auth/`: shared login and signup layouts at `/login` and `/signup` with disabled credential fields. No
   credentials are collected and no authentication integration is implemented.
 - `src/components/ui/`: shadcn Button, Sheet, Separator, and Card source files.
   Pass a translated `closeLabel` to `SheetContent`.

@@ -5,6 +5,7 @@ import { Menu } from "lucide-react";
 import { Brand } from "@/components/layout/brand";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { NavigationLinks } from "@/components/layout/navigation-links";
+import { SiteLink } from "@/components/layout/site-link";
 import { useLanguage } from "@/components/providers/language-provider";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -32,7 +33,7 @@ export function MobileNavigation({ name, items }) {
         </Button>
       </SheetTrigger>
       <SheetContent side={direction === "rtl" ? "left" : "right"} dir={direction} lang={locale}
-        closeLabel={messages.common.closeMenu} className="w-[min(22rem,90vw)] overflow-y-auto"
+        closeLabel={messages.common.closeMenu} data-lenis-prevent className="w-[min(22rem,90vw)] overflow-y-auto"
         onCloseAutoFocus={(event) => {
           const target = navigationTarget.current;
           navigationTarget.current = null;
@@ -50,11 +51,16 @@ export function MobileNavigation({ name, items }) {
         <nav aria-label={messages.common.mobileNavigation} className="flex flex-col gap-2 px-6">
           <NavigationLinks items={items} className="rounded-md px-3 py-3 hover:bg-accent"
             onNavigate={(event) => {
-              navigationTarget.current = document.getElementById(event.currentTarget.hash.slice(1));
+              const link = event.currentTarget;
+              navigationTarget.current = link.pathname === window.location.pathname && link.hash
+                ? document.getElementById(link.hash.slice(1)) : null;
               setOpen(false);
             }} />
         </nav>
         <div className="mt-auto space-y-6 border-t p-6">
+          <div className="flex flex-wrap gap-4">
+            <SiteLink href="/signup" className="text-link nav-link" onClick={() => setOpen(false)}>{messages.common.signup}</SiteLink>
+          </div>
           <LanguageSwitcher />
           <Brand name={name} />
         </div>

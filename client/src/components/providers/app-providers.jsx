@@ -5,6 +5,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { LazyMotion, MotionConfig } from "motion/react";
 import { createQueryClient } from "@/lib/query-client.mjs";
 import { LanguageProvider } from "@/components/providers/language-provider";
+import { SmoothScroll } from "@/components/providers/smooth-scroll";
 
 const loadMotionFeatures = () =>
   import("@/lib/motion-features").then((module) => module.default);
@@ -20,7 +21,7 @@ export function AppProviders({ children }) {
         transition={{ duration: 0.2, ease: "easeOut" }}
       >
         <LazyMotion features={loadMotionFeatures} strict>
-          <LanguageProvider>{children}</LanguageProvider>
+          <LanguageProvider><SmoothScroll />{children}</LanguageProvider>
         </LazyMotion>
       </MotionConfig>
     </QueryClientProvider>
