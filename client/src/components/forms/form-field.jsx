@@ -1,10 +1,11 @@
 "use client";
 
 import { Input, Textarea, NativeSelect } from "@/components/ui/input";
+import { SelectField } from "@/components/forms/select-field";
 import { useLanguage } from "@/components/providers/language-provider";
 import { useEffect, useId, useRef } from "react";
 
-export function FormField({ name, type = "text", required = false, options, multiline, className, ...props }) {
+export function FormField({ name, type = "text", required = false, options, optionValues, selectVariant = "native", multiline, className, ...props }) {
   const { messages } = useLanguage();
   const copy = messages.form;
   const id = useId();
@@ -25,6 +26,6 @@ export function FormField({ name, type = "text", required = false, options, mult
   };
   return <div className={className}>
     <label htmlFor={id} className="form-label">{copy[name]} {required ? <span aria-hidden="true">*</span> : <span className="font-normal text-muted-foreground">({copy.optional})</span>}</label>
-    {options ? <NativeSelect {...fieldProps}><option value="">{name === "province" ? copy.choose : name === "interest" ? copy.selectInterest : copy.selectTopic}</option>{options.map((label, index) => <option key={index} value={label}>{label}</option>)}</NativeSelect> : <Component {...fieldProps} />}
+    {options && selectVariant === "custom" ? <SelectField id={id} name={name} options={options} optionValues={optionValues} placeholder={name === "province" ? copy.choose : name === "interest" ? copy.selectInterest : copy.selectTopic} required={required} autoComplete={props.autoComplete} disabled={props.disabled} /> : options ? <NativeSelect {...fieldProps}><option value="">{name === "province" ? copy.choose : name === "interest" ? copy.selectInterest : copy.selectTopic}</option>{options.map((label, index) => <option key={index} value={label}>{label}</option>)}</NativeSelect> : <Component {...fieldProps} />}
   </div>;
 }

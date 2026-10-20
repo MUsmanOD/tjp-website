@@ -216,6 +216,10 @@
   .form-label { @apply mb-2 flex flex-wrap items-center gap-1 text-sm font-medium; }
   .form-input { @apply block min-h-12 w-full rounded-lg border border-input bg-background px-3.5 py-2.5 text-base text-foreground transition-colors placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:bg-muted disabled:opacity-70; border-width: 1px; outline: 0; box-shadow: none; }
   .form-input:focus-visible { border-color: var(--primary); outline: 0; box-shadow: none; }
+  .form-select-trigger > span { @apply min-w-0 whitespace-normal; }
+  .form-select-trigger[data-placeholder] { color: var(--muted-foreground); }
+  .form-select-trigger[aria-invalid="true"] { border-color: var(--destructive); }
+  html[lang="ur"] :is(.select-item, .select-content) { line-height: 2.2; }
   .form-notice { @apply rounded-lg border border-primary/15 bg-surface p-4 text-sm leading-relaxed text-primary; }
   .contact-detail { @apply flex items-start gap-4; }
   .contact-page .page-intro { @apply py-8 sm:py-10; }
@@ -242,6 +246,7 @@
   .faq-item[open] .faq-plus { transform: rotate(45deg); }
   .step-number { @apply flex size-11 shrink-0 items-center justify-center rounded-full border border-primary/20 bg-secondary text-sm font-medium text-primary; }
   .membership-aside { @apply order-2 lg:order-none; }
+  .membership-section { @apply py-10 sm:py-14; }
   .consent-label { @apply flex cursor-pointer items-start gap-3 text-sm leading-relaxed; }
   .consent-label input { @apply mt-1 size-5 shrink-0 cursor-pointer accent-primary; }
   .auth-page { @apply shrink-0 bg-surface; height: calc(100svh - var(--header-height)); min-height: 0; }
@@ -320,6 +325,7 @@
   .membership-form { border: 0; padding: 0; box-shadow: none; break-inside: avoid; }
   .membership-form .heading-section { font-size: 22pt; }
   .membership-form .form-input { border: 0; border-bottom: 1px solid black; border-radius: 0; box-shadow: none; }
+  .membership-form .form-select-trigger > svg { display: none; }
   .membership-form .form-notice { border: 1px solid black; color: black; background: white; }
   .print-only { display: block; }
 }

@@ -12,6 +12,10 @@
   downloads a UTF-8 text file. It does not send a message or call an API.
 - `/membership`: validated expression-of-interest form with print/PDF styling.
   Details stay in the current page; this is not online membership submission.
+  A compact Join TJP hero and short instructions lead into the form. Province and
+  interest use the shared shadcn/Radix Select with keyboard navigation, translated
+  labels, stable values across language changes, native required validation, and
+  visible error focus. Selections clear on form reset and when leaving the page.
 - `/login` and `/signup`: shared themed layouts. Credential fields remain disabled
   until an authorized authentication integration is provided.
   Header plus authentication content fits one viewport (`100svh`), with local
@@ -47,6 +51,10 @@ Facebook card loads the real timeline on request and includes a direct-link fall
 Section headings, article cards, page introductions, join banners, and form fields
 are shared under `components/content/` and `components/forms/`. Central styles and
 print rules remain in `src/app/globals.css`.
+`PageIntro compact` uses smaller headings and spacing; other page intros retain
+their existing layout. `FormField selectVariant="custom"` uses shadcn Select;
+`optionValues` supplies stable values alongside translated `options`. Other fields
+retain the native dropdown. The reusable primitive lives in `components/ui/select.jsx`.
 
 Next.js App Router, React, Tailwind CSS v4, shadcn/ui (Radix), Motion, and
 TanStack Query. A responsive English/Urdu homepage uses the shared Header,

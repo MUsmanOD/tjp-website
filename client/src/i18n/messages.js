@@ -108,11 +108,10 @@ const pageCopy = {
       all: "All photographs", heritage: "Heritage", landscapes: "Landscapes", filter: "Filter photographs", open: "Open photograph", close: "Close photograph", previous: "Previous photograph", next: "Next photograph", count: "of", credit: "Photograph", source: "View original & credits", note: "Open a photograph for its context and source. Archive dates refer to publication; undated portraits are labelled accordingly.",
     },
     form: {
-      name: "Full name", email: "Email address", phone: "Phone number", city: "City / district", province: "Province / region", choose: "Select a region", topic: "Subject", message: "Your message", interest: "Area of interest", password: "Password", confirmPassword: "Confirm password", optional: "Optional", required: "Fields marked * are required.",
+      name: "Full name", email: "Email address", phone: "Phone number", city: "City / district", province: "Province / region", choose: "Select a region", topic: "Subject", message: "Your message", interest: "Area of interest", password: "Password", confirmPassword: "Confirm password", optional: "Optional",
       namePlaceholder: "Your full name", emailPlaceholder: "you@example.com", phonePlaceholder: "+92 300 1234567", cityPlaceholder: "Your city or district", messagePlaceholder: "Tell us what you have in mind…", passwordPlaceholder: "Online access coming soon", selectInterest: "Select an interest",
       regions: ["Punjab", "Sindh", "Khyber Pakhtunkhwa", "Balochistan", "Islamabad Capital Territory", "Gilgit-Baltistan", "Azad Jammu & Kashmir", "Overseas"],
       interests: ["Community participation", "Youth & learning", "Communications & media", "General membership"],
-      privacy: "Your information stays on this page and is cleared when you leave. Nothing is sent or saved online.",
       selectTopic: "Select a subject", requiredError: "Please complete this field.", emailError: "Please enter a valid email address.", invalidError: "Please enter a valid value.", consentError: "Please confirm that you understand how this form works.",
     },
     contact: {
@@ -130,10 +129,10 @@ const pageCopy = {
       eyebrow: "THE TJP COMMUNITY", title: "Your voice.\nOur shared future.", description: "A place for ideas, connection, and a conversation about tomorrow.", signupTitle: "Create your account", signupDescription: "Member registration will be available here when online access opens.", loginDescription: "Welcome back. Your member space will be available here.", notice: "Online account access is not available yet. These fields are disabled and no credentials are collected.", loginAction: "Sign in · coming soon", signupAction: "Create account · coming soon", noAccount: "New here?", hasAccount: "Already have an account?", signupLink: "Explore sign up", loginLink: "Go to login", membership: "Looking for the membership form?", membershipAction: "Prepare your form", benefit: "Explore today", benefitText: "Read the journal, discover the gallery, or prepare a membership interest form.",
     },
     membership: {
-      eyebrow: "TAKE THE FIRST STEP", title: "Your ideas belong\nin the conversation.", description: "Explore membership and prepare your expression of interest.", heading: "Membership interest form", descriptionForm: "Complete your details and print a copy for your records.", action: "Print completed form", notice: "This is an expression of interest, not a confirmed membership. Online applications are not open; contact the team for submission guidance.", consent: "I understand that this form is for my records and does not submit an online membership application.", stepsTitle: "A simple place to start", steps: [
-        { title: "Tell us about yourself", description: "Add your contact details and the area you are interested in." },
-        { title: "Keep a copy", description: "Print your completed form or save it as a PDF from the print dialog." },
-        { title: "Connect with the team", description: "Use the contact page to ask how to submit your expression of interest." },
+      eyebrow: "MEMBERSHIP", title: "Join TJP", description: "Prepare your membership interest form.", heading: "Your details", descriptionForm: "Complete the fields, then print your form.", action: "Print form", consent: "I understand this form is for my records and does not submit an application.", stepsTitle: "How it works", steps: [
+        { title: "Add your details", description: "Enter your contact details and interests." },
+        { title: "Print or save", description: "Print your form or save it as a PDF." },
+        { title: "Contact TJP", description: "Ask the team about the next steps." },
       ], contact: "Contact the team", printed: "Your form is ready to print. No application has been sent.", printTitle: "TJP · Membership expression of interest",
     },
   },
@@ -243,7 +242,6 @@ const pageCopy = {
       namePlaceholder: "آپ کا پورا نام", emailPlaceholder: "you@example.com", phonePlaceholder: "+92 300 1234567", cityPlaceholder: "آپ کا شہر یا ضلع", messagePlaceholder: "اپنی بات یہاں لکھیں…", passwordPlaceholder: "آن لائن رسائی جلد دستیاب ہوگی", selectInterest: "دلچسپی منتخب کریں",
       regions: ["پنجاب", "سندھ", "خیبر پختونخوا", "بلوچستان", "اسلام آباد", "گلگت بلتستان", "آزاد جموں و کشمیر", "بیرونِ ملک"],
       interests: ["سماجی شرکت", "نوجوان اور تعلیم", "ابلاغ اور میڈیا", "عام رکنیت"],
-      privacy: "آپ کی معلومات صرف اس صفحے پر رہتی ہیں اور صفحہ چھوڑنے پر ختم ہو جاتی ہیں۔ کچھ بھی آن لائن بھیجا یا محفوظ نہیں کیا جاتا۔",
       selectTopic: "موضوع منتخب کریں", requiredError: "براہِ کرم یہ خانہ مکمل کریں۔", emailError: "درست ای میل ایڈریس درج کریں۔", invalidError: "براہِ کرم درست معلومات درج کریں۔", consentError: "براہِ کرم فارم کے طریقۂ کار کو سمجھنے کی تصدیق کریں۔",
     },
     contact: {
@@ -261,10 +259,10 @@ const pageCopy = {
       eyebrow: "ٹی جے پی برادری", title: "آپ کی آواز۔\nہمارا مشترکہ مستقبل۔", description: "خیالات، تعلق اور آنے والے کل پر گفتگو کی جگہ۔", signupTitle: "اپنا اکاؤنٹ بنائیں", signupDescription: "آن لائن رسائی کھلنے پر اراکین کی رجسٹریشن یہاں دستیاب ہوگی۔", loginDescription: "خوش آمدید۔ اراکین کی آن لائن سہولت یہاں دستیاب ہوگی۔", notice: "آن لائن اکاؤنٹ کی سہولت ابھی دستیاب نہیں۔ یہ خانے غیر فعال ہیں اور کوئی اسناد جمع نہیں کی جاتیں۔", loginAction: "لاگ اِن · جلد دستیاب", signupAction: "اکاؤنٹ بنائیں · جلد دستیاب", noAccount: "پہلی بار آئے ہیں؟", hasAccount: "پہلے سے اکاؤنٹ ہے؟", signupLink: "رجسٹریشن دیکھیں", loginLink: "لاگ اِن پر جائیں", membership: "رکنیت کا فارم تلاش کر رہے ہیں؟", membershipAction: "اپنا فارم تیار کریں", benefit: "آج ہی دریافت کریں", benefitText: "جریدہ پڑھیں، گیلری دیکھیں یا رکنیت میں دلچسپی کا فارم تیار کریں۔",
     },
     membership: {
-      eyebrow: "پہلا قدم اٹھائیں", title: "آپ کے خیالات\nگفتگو کا حصہ ہیں۔", description: "رکنیت کے بارے میں جانیں اور اپنی دلچسپی کا اظہار تیار کریں۔", heading: "رکنیت میں دلچسپی کا فارم", descriptionForm: "اپنی تفصیلات مکمل کریں اور اپنے ریکارڈ کے لیے نقل پرنٹ کریں۔", action: "مکمل فارم پرنٹ کریں", notice: "یہ دلچسپی کا اظہار ہے، تصدیق شدہ رکنیت نہیں۔ آن لائن درخواستیں کھلی نہیں ہیں؛ جمع کروانے کی رہنمائی کے لیے ٹیم سے رابطہ کریں۔", consent: "میں سمجھتا ہوں کہ یہ فارم میرے ریکارڈ کے لیے ہے اور آن لائن رکنیت کی درخواست جمع نہیں کرتا۔", stepsTitle: "آغاز کے آسان قدم", steps: [
-        { title: "اپنا تعارف دیں", description: "رابطے کی تفصیلات اور اپنی دلچسپی کا شعبہ شامل کریں۔" },
-        { title: "نقل محفوظ رکھیں", description: "مکمل فارم پرنٹ کریں یا پرنٹ ڈائیلاگ سے پی ڈی ایف محفوظ کریں۔" },
-        { title: "ٹیم سے رابطہ کریں", description: "رابطے کے صفحے سے جانیں کہ دلچسپی کا اظہار کیسے جمع کروایا جائے۔" },
+      eyebrow: "رکنیت", title: "ٹی جے پی میں شامل ہوں", description: "رکنیت میں دلچسپی کا فارم تیار کریں۔", heading: "آپ کی تفصیلات", descriptionForm: "خانے مکمل کریں، پھر فارم پرنٹ کریں۔", action: "فارم پرنٹ کریں", consent: "میں سمجھتا ہوں کہ یہ فارم میرے ریکارڈ کے لیے ہے اور درخواست جمع نہیں کرتا۔", stepsTitle: "آسان مراحل", steps: [
+        { title: "تفصیلات درج کریں", description: "رابطے کی معلومات اور دلچسپی شامل کریں۔" },
+        { title: "نقل محفوظ کریں", description: "فارم پرنٹ کریں یا پی ڈی ایف محفوظ کریں۔" },
+        { title: "ٹیم سے رابطہ کریں", description: "اگلے مراحل کے لیے ٹیم سے پوچھیں۔" },
       ], contact: "ٹیم سے رابطہ کریں", printed: "آپ کا فارم پرنٹ کے لیے تیار ہے۔ کوئی درخواست بھیجی نہیں گئی۔", printTitle: "ٹی جے پی · رکنیت میں دلچسپی کا اظہار",
     },
   },
