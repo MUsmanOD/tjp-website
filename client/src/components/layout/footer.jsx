@@ -10,7 +10,7 @@ import { SiteLink } from "@/components/layout/site-link";
 import { SocialLinks } from "@/components/layout/social-links";
 import { useLanguage } from "@/components/providers/language-provider";
 import { Separator } from "@/components/ui/separator";
-import { heroSlides } from "@/config/hero-slides";
+import { mediaCredits } from "@/config/media";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
@@ -47,11 +47,10 @@ export function Footer({ name, navigation = siteConfig.navigation, className }) 
           <details className="photo-credits">
             <summary>{messages.footer.credits}</summary>
             <ul className="space-y-2 py-4">
-              {heroSlides.map((photo, index) => (
+              {mediaCredits.map((photo) => (
                 <li key={photo.src}>
-                  <a href={photo.source} target="_blank" rel="noreferrer" className="underline underline-offset-4">{messages.home.slides[index].location}</a>
-                  {" · "}<span lang="en" dir="ltr">{photo.photographer}</span>
-                  {" · "}<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer" className="underline underline-offset-4" lang="en">{messages.footer.photoLicense}</a>
+                  <a href={photo.source} target="_blank" rel="noreferrer" className="underline underline-offset-4">{messages.media[photo.key].title}</a>
+                  {photo.credit === "commons" ? <>{" · "}<span lang="en" dir="ltr">{photo.photographer}</span>{" · "}<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer" className="underline underline-offset-4" lang="en">{messages.footer.photoLicense}</a></> : <>{" · "}{messages.footer.tjpArchive}</>}
                 </li>
               ))}
             </ul>

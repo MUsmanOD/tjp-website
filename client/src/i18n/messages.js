@@ -8,6 +8,23 @@ export function normalizeLocale(value) {
 const pageCopy = {
   en: {
     announcement: { text: "A shared future starts with you.", action: "Explore membership" },
+    media: {
+      logo: { title: "TJP emblem", alt: "Tehreek Jawanan Pakistan emblem", description: "The emblem published on TJP’s website." },
+      founder: { title: "Gen. Hamid Gul · Founder", alt: "TJP profile portrait of Lieutenant General Hamid Gul", description: "Founder portrait from TJP’s published leadership profile." },
+      founderArchive: { title: "Gen. Hamid Gul · Archive portrait", alt: "Hamid Gul seated in a grey suit with a framed military portrait behind him", description: "A portrait preserved in TJP’s media archive. The photograph’s date is not specified." },
+      founderBanner: { title: "The founder’s vision", alt: "TJP banner showing Hamid Gul beside a montage of infrastructure and renewable energy", description: "An illustrated banner from TJP’s website." },
+      chairman: { title: "Mohammad Abdullah Gul · Chairman", alt: "TJP profile portrait of Chairman Mohammad Abdullah Gul", description: "Chairman portrait from TJP’s published leadership profile." },
+      skills: { title: "Skills & technology address", alt: "Abdullah Hamid Gul speaking at the Lions Club and National Technical Institute event", description: "An address on youth skills and technology, reported by TJP on 30 January 2025." },
+      sports: { title: "Islamabad schools sports festival", alt: "Abdullah Hamid Gul at Islamabad’s 500 Schools Sports Festival", description: "TJP’s report of 22 January 2025 identifies Abdullah Hamid Gul as chief guest at the festival." },
+      chinaMeeting: { title: "Meeting with China’s defence attaché", alt: "Abdullah Hamid Gul shaking hands with General Wang between the Pakistan and China flags", description: "Abdullah Hamid Gul with General Wang, identified by TJP as China’s defence attaché. Report published 29 July 2024." },
+      barVisit: { title: "Central Bar Association · AJK", alt: "TJP’s photograph accompanying its Central Bar Association visit in Muzaffarabad", description: "TJP’s report of 26 June 2024 records a welcome for the chairman and Tehrik Jawanan Kashmir members in Muzaffarabad." },
+      school: { title: "Girls’ education · Sargodha", alt: "Abdullah Hamid Gul at the General Hamid Gul School prize ceremony for orphan girls", description: "A school prize ceremony in Sargodha, reported by TJP on 6 July 2024." },
+      book: { title: "The Lost War · Book launch invitation", alt: "Archived invitation poster for the book launch of The Lost War", description: "An invitation published on 25 July 2024, preserved as an archive item." },
+      islamabad: { title: "Islamabad · Faisal Mosque", alt: "Faisal Mosque framed by the Margalla Hills in Islamabad", description: "Shoaib Zafar · Heritage photography · CC BY-SA 4.0." },
+      lahore: { title: "Lahore · Badshahi Mosque", alt: "The courtyard and domes of Badshahi Mosque in Lahore", description: "Ch Humayun Hanif · Heritage photography · CC BY-SA 4.0." },
+      hunza: { title: "Hunza Valley", alt: "Hunza Valley surrounded by the mountains of northern Pakistan", description: "Rizwan Bhiriya (RB) · Landscape photography · CC BY-SA 4.0." },
+      karachi: { title: "Karachi · Mazar-e-Quaid", alt: "The white marble Mazar-e-Quaid in Karachi", description: "Abbas jaffri.9 · Heritage photography · CC BY-SA 4.0." },
+    },
     notFound: { code: "404 · PAGE NOT FOUND", title: "Let’s find your way back.", description: "This page could not be found. Return home to keep exploring TJP." },
     social: {
       platforms: { facebook: "Facebook", x: "X", instagram: "Instagram", youtube: "YouTube" },
@@ -17,8 +34,8 @@ const pageCopy = {
       description: "Explore our journal, then join the conversation on our social channels.", note: "Journal highlights · not a live Facebook feed", read: "Read the story", highlight: "Journal highlight",
     },
     sections: {
-      journal: { eyebrow: "THE TJP JOURNAL", title: "Fresh perspectives. Shared possibilities.", description: "Thoughts on the people, places, and ideas that connect us.", action: "Explore the journal" },
-      gallery: { eyebrow: "OUR PAKISTAN, IN FOCUS", title: "One country. Countless stories.", description: "A glimpse of the places we call home, from mountain valleys to city landmarks.", action: "View the gallery" },
+      journal: { eyebrow: "THE TJP JOURNAL", title: "Our people. Our work. Our story.", description: "Leadership profiles, documented activities, and perspectives from the TJP journal.", action: "Explore the journal" },
+      gallery: { eyebrow: "THE TJP PHOTO ARCHIVE", title: "People. Purpose. Participation.", description: "Discover our leadership, public engagements, and the places that connect us.", action: "View the gallery" },
       participate: { eyebrow: "MAKE A CONNECTION", title: "There’s a place for your voice.", description: "Start with what matters to you. Discover a way to take part.", items: [
         { title: "Explore membership", description: "Read the membership information and prepare your interest form.", action: "Membership form" },
         { title: "Share a perspective", description: "Questions, ideas, or a conversation worth starting? Get in touch.", action: "Contact us" },
@@ -27,10 +44,44 @@ const pageCopy = {
       join: { eyebrow: "YOUR VOICE MATTERS", title: "A shared tomorrow\nstarts with us.", description: "Bring your ideas, your energy, and your hopes for Pakistan. Take the first step.", action: "Explore membership", secondary: "Let’s talk" },
     },
     journal: {
-      eyebrow: "IDEAS & PERSPECTIVES", title: "The TJP journal.", description: "Room for reflection. Space for a new conversation about Pakistan.",
+      eyebrow: "NEWS, PROFILES & PERSPECTIVES", title: "The TJP journal.", description: "Meet our leadership, explore the activity archive, and read perspectives on Pakistan’s future.",
       all: "All stories", search: "Search the journal", searchPlaceholder: "Search stories…", empty: "No stories match your search.", reset: "Clear filters", read: "Read story", minutes: "min read", back: "Back to the journal", related: "Keep exploring", editorial: "Perspective", categoryLabel: "Filter stories by topic",
-      categories: { youth: "Youth & opportunity", community: "Community", culture: "Culture & heritage" },
+      categories: { leadership: "Leadership", youth: "Youth & opportunity", diplomacy: "Meetings & dialogue", community: "Community", culture: "Culture & heritage" },
+      kinds: { profile: "Leadership profile", archive: "From the archive", editorial: "Editorial example" },
+      exampleNote: "Sample editorial content for this website. This article does not report an actual TJP event or announce a programme.",
+      sourceNote: "Prepared from TJP’s published material.", source: "Read the original source", archiveDate: "Dates refer to the original report’s publication.",
       articles: [
+        { title: "Gen. Hamid Gul: TJP’s founder", excerpt: "A biographical introduction to the founder and the ideas recorded in TJP’s published vision.", paragraphs: [
+          "TJP identifies Lieutenant General Hamid Gul as its founder. Its leadership profile records that he was born in Sargodha on 20 November 1936 and studied at Government College Lahore before entering the Pakistan Military Academy at Kakul.",
+          "He was commissioned into the Pakistan Army’s Armoured Corps in October 1956. He later served as Director-General of Inter-Services Intelligence from 1987 to 1989 and became a public commentator on defence and regional affairs.",
+          "TJP’s account connects its founding vision with national unity, domestic development, and self-reliance. Its published philosophy and manifesto provide further context for these stated priorities.",
+          "The accompanying portrait comes from TJP’s media archive. Its date is not specified. This profile introduces the founder; it does not attribute the chairman’s later engagements to him.",
+        ] },
+        { title: "Youth skills in a changing world", excerpt: "An archived address by Abdullah Hamid Gul on practical learning and technological change.", paragraphs: [
+          "TJP’s report published on 30 January 2025 records an address by Abdullah Hamid Gul to the Lions Club and National Technical Institute. The report centres on the importance of skills as technology changes the workplace.",
+          "In the published account, Gul argues that young people need practical capabilities alongside an understanding of new technology. His comments about artificial intelligence are the speaker’s views, as reported by TJP.",
+          "The address offers a point of reference for the journal’s wider discussion of learning and opportunity. The photograph is the image used by the original publication, which is linked below.",
+        ] },
+        { title: "Dialogue with China’s defence attaché", excerpt: "A documented meeting between Abdullah Hamid Gul and General Wang, published in July 2024.", paragraphs: [
+          "A TJP archive entry published on 29 July 2024 records a meeting with General Wang, identified in the report as China’s defence attaché. The accompanying photograph shows Abdullah Hamid Gul and General Wang between the two countries’ flags.",
+          "The brief report describes a discussion of Pakistan–China relations and a shared interest in regional peace and prosperity. The published account is a short record of the engagement, without a detailed transcript.",
+          "The image is preserved here with its original context and source as part of the chairman’s public engagement archive. Readers can follow the source link to the original report.",
+        ] },
+        { title: "Meet Chairman Mohammad Abdullah Gul", excerpt: "An introduction to TJP’s chairman and the priorities described in his published leadership profile.", paragraphs: [
+          "TJP’s leadership page identifies Mohammad Abdullah Gul as chairman. The published profile places youth participation, self-reliance, and national development at the centre of the movement’s stated outlook.",
+          "His message discusses education, entrepreneurship, technology, agriculture, and sustainable development as areas of ambition. It also describes an interest in cultural diversity, civic responsibility, and economic cooperation.",
+          "These statements describe the movement’s aims. Our journal and photo gallery document individual public engagements for which TJP has published an account and images, including school activities and meetings.",
+        ] },
+        { title: "Sport, confidence, and young people", excerpt: "From the archive: Abdullah Hamid Gul’s appearance at Islamabad’s 500 Schools Sports Festival.", paragraphs: [
+          "TJP’s report published on 22 January 2025 identifies Abdullah Hamid Gul as chief guest at Islamabad’s 500 Schools Sports Festival. Its accompanying image is included here as part of the activity archive.",
+          "The report summarises his remarks on sport’s contribution to children’s physical wellbeing and a positive mindset. It provides a short record of the address, with an emphasis on young people’s development.",
+          "The festival’s title follows the original publication. Readers can consult the linked source for the report and its photograph. The date above is the publication date of the archive entry.",
+        ] },
+        { title: "Education and care in Sargodha", excerpt: "An archived prize ceremony at the General Hamid Gul School for orphan girls.", paragraphs: [
+          "A TJP report published on 6 July 2024 records an annual prize distribution ceremony at the General Hamid Gul School for orphan girls in Sargodha. The report includes a photograph of Abdullah Hamid Gul at the occasion.",
+          "In the accompanying statement, he calls for a collective commitment to the girls’ future. The event connects the archive’s focus on education with the school that carries Gen. Hamid Gul’s name.",
+          "This entry preserves the information and image supplied by the original report. It offers a glimpse of the occasion and its educational context; the source link below provides the published record.",
+        ] },
         { title: "A generation of possibility", excerpt: "Learning, listening, and making room for young people to shape the conversation.", paragraphs: [
           "A conversation about Pakistan’s future begins with the people who will live it. Young people bring questions, creativity, and an instinct to see familiar challenges from a different angle.",
           "Opportunity starts with access to learning. A practical skill, a good teacher, or a space to exchange ideas can open a door. Listening matters just as much: young people need room to explain what they experience and what they hope to change.",
@@ -52,8 +103,9 @@ const pageCopy = {
       ],
     },
     gallery: {
-      eyebrow: "THE VISUAL JOURNAL", title: "A closer look at Pakistan.", description: "Places that inspire us. A shared heritage that connects us. Explore the collection.",
-      all: "All photographs", heritage: "Heritage", landscapes: "Landscapes", filter: "Filter photographs", open: "Open photograph", close: "Close photograph", previous: "Previous photograph", next: "Next photograph", count: "of", credit: "Photograph", source: "View original & credits", note: "Landscape and heritage photography. Event photographs will be added when available.",
+      eyebrow: "LEADERSHIP, ENGAGEMENTS & HERITAGE", title: "The TJP photo gallery.", description: "Explore founder portraits, the chairman’s documented engagements, and Pakistan’s shared heritage.",
+      leadership: "Leadership", meetings: "Meetings & visits", events: "Public engagements",
+      all: "All photographs", heritage: "Heritage", landscapes: "Landscapes", filter: "Filter photographs", open: "Open photograph", close: "Close photograph", previous: "Previous photograph", next: "Next photograph", count: "of", credit: "Photograph", source: "View original & credits", note: "Open a photograph for its context and source. Archive dates refer to publication; undated portraits are labelled accordingly.",
     },
     form: {
       name: "Full name", email: "Email address", phone: "Phone number", city: "City / district", province: "Province / region", choose: "Select a region", topic: "Subject", message: "Your message", interest: "Area of interest", password: "Password", confirmPassword: "Confirm password", optional: "Optional", required: "Fields marked * are required.",
@@ -87,6 +139,23 @@ const pageCopy = {
   },
   ur: {
     announcement: { text: "مشترکہ مستقبل کا آغاز آپ سے۔", action: "رکنیت کے بارے میں جانیں" },
+    media: {
+      logo: { title: "ٹی جے پی کا نشان", alt: "تحریکِ جوانان پاکستان کا نشان", description: "ٹی جے پی کی ویب سائٹ پر شائع شدہ نشان۔" },
+      founder: { title: "جنرل حمید گل · بانی", alt: "ٹی جے پی کے تعارفی صفحے سے لیفٹیننٹ جنرل حمید گل کی تصویر", description: "ٹی جے پی کے شائع شدہ تعارفی صفحے سے بانی کی تصویر۔" },
+      founderArchive: { title: "جنرل حمید گل · محفوظ تصویر", alt: "سرمئی سوٹ میں بیٹھے حمید گل، پس منظر میں ان کی فوجی تصویر", description: "ٹی جے پی کے تصویری ذخیرے سے ایک تصویر۔ اصل ذخیرے میں تصویر کی تاریخ درج نہیں۔" },
+      founderBanner: { title: "بانی کا تصور", alt: "حمید گل کے ساتھ بنیادی ڈھانچے اور قابلِ تجدید توانائی کی تصاویر پر مشتمل ٹی جے پی کا بینر", description: "ٹی جے پی کی ویب سائٹ سے ایک تصویری بینر۔" },
+      chairman: { title: "محمد عبداللہ گل · چیئرمین", alt: "ٹی جے پی کے تعارفی صفحے سے چیئرمین محمد عبداللہ گل کی تصویر", description: "ٹی جے پی کے شائع شدہ تعارفی صفحے سے چیئرمین کی تصویر۔" },
+      skills: { title: "ہنر اور ٹیکنالوجی پر خطاب", alt: "لائنز کلب اور نیشنل ٹیکنیکل انسٹی ٹیوٹ کی تقریب سے خطاب کرتے عبداللہ حمید گل", description: "نوجوانوں کے ہنر اور ٹیکنالوجی پر خطاب، جس کی رپورٹ ۳۰ جنوری ۲۰۲۵ کو شائع ہوئی۔" },
+      sports: { title: "اسلام آباد کا اسکول اسپورٹس فیسٹیول", alt: "اسلام آباد کے ۵۰۰ اسکولز اسپورٹس فیسٹیول میں عبداللہ حمید گل", description: "۲۲ جنوری ۲۰۲۵ کی ٹی جے پی رپورٹ کے مطابق عبداللہ حمید گل تقریب کے مہمانِ خصوصی تھے۔" },
+      chinaMeeting: { title: "چین کے دفاعی اتاشی سے ملاقات", alt: "پاکستان اور چین کے پرچموں کے درمیان جنرل وانگ سے مصافحہ کرتے عبداللہ حمید گل", description: "عبداللہ حمید گل کی جنرل وانگ سے ملاقات، جنہیں ٹی جے پی نے چین کا دفاعی اتاشی بتایا۔ رپورٹ ۲۹ جولائی ۲۰۲۴ کو شائع ہوئی۔" },
+      barVisit: { title: "سنٹرل بار ایسوسی ایشن · آزاد کشمیر", alt: "مظفرآباد میں سنٹرل بار ایسوسی ایشن کے دورے کے ساتھ ٹی جے پی کی شائع شدہ تصویر", description: "۲۶ جون ۲۰۲۴ کی رپورٹ میں مظفرآباد میں چیئرمین اور تحریکِ جوانان کشمیر کے ارکان کے استقبال کا ذکر ہے۔" },
+      school: { title: "بچیوں کی تعلیم · سرگودھا", alt: "یتیم بچیوں کے جنرل حمید گل اسکول کی تقسیمِ انعامات کی تقریب میں عبداللہ حمید گل", description: "سرگودھا میں اسکول کی تقسیمِ انعامات کی تقریب، جس کی رپورٹ ۶ جولائی ۲۰۲۴ کو شائع ہوئی۔" },
+      book: { title: "دی لاسٹ وار · تقریبِ رونمائی کا دعوت نامہ", alt: "کتاب دی لاسٹ وار کی رونمائی کا محفوظ دعوتی پوسٹر", description: "۲۵ جولائی ۲۰۲۴ کو شائع شدہ دعوت نامہ، ماضی کے ریکارڈ کے طور پر محفوظ۔" },
+      islamabad: { title: "اسلام آباد · فیصل مسجد", alt: "اسلام آباد میں مارگلہ کی پہاڑیوں کے دامن میں فیصل مسجد", description: "شعیب ظفر کی ثقافتی تصویر · سی سی بی وائی ایس اے ۴.۰۔" },
+      lahore: { title: "لاہور · بادشاہی مسجد", alt: "لاہور میں بادشاہی مسجد کا صحن اور گنبد", description: "چوہدری ہمایوں حنیف کی ثقافتی تصویر · سی سی بی وائی ایس اے ۴.۰۔" },
+      hunza: { title: "وادیٔ ہنزہ", alt: "شمالی پاکستان کے پہاڑوں میں گھری وادیٔ ہنزہ", description: "رضوان بھیریا کی قدرتی منظر کی تصویر · سی سی بی وائی ایس اے ۴.۰۔" },
+      karachi: { title: "کراچی · مزارِ قائد", alt: "کراچی میں سفید سنگِ مرمر سے بنا مزارِ قائد", description: "عباس جعفری کی ثقافتی تصویر · سی سی بی وائی ایس اے ۴.۰۔" },
+    },
     notFound: { code: "۴۰۴ · صفحہ نہیں ملا", title: "آئیے واپس چلیں۔", description: "یہ صفحہ نہیں مل سکا۔ ٹی جے پی کے بارے میں مزید جاننے کے لیے مرکزی صفحے پر جائیں۔" },
     social: {
       platforms: { facebook: "فیس بک", x: "ایکس", instagram: "انسٹاگرام", youtube: "یوٹیوب" },
@@ -96,8 +165,8 @@ const pageCopy = {
       description: "ہمارا جریدہ پڑھیں اور سوشل میڈیا پر گفتگو کا حصہ بنیں۔", note: "جریدے کی جھلکیاں · براہِ راست فیس بک فیڈ نہیں", read: "مضمون پڑھیں", highlight: "جریدے سے انتخاب",
     },
     sections: {
-      journal: { eyebrow: "ٹی جے پی کا جریدہ", title: "نئے زاویے۔ مشترکہ امکانات۔", description: "ان لوگوں، جگہوں اور خیالات پر غور جو ہمیں یکجا کرتے ہیں۔", action: "جریدہ دیکھیں" },
-      gallery: { eyebrow: "ہمارا پاکستان، تصویروں میں", title: "ایک وطن۔ ان گنت کہانیاں۔", description: "پہاڑی وادیوں سے شہری یادگاروں تک، اپنے وطن کی ایک جھلک۔", action: "گیلری دیکھیں" },
+      journal: { eyebrow: "ٹی جے پی کا جریدہ", title: "ہمارے لوگ۔ ہماری کاوش۔ ہماری کہانی۔", description: "قیادت کا تعارف، شائع شدہ سرگرمیاں اور ٹی جے پی کے جریدے سے نقطۂ نظر۔", action: "جریدہ دیکھیں" },
+      gallery: { eyebrow: "ٹی جے پی کا تصویری ذخیرہ", title: "لوگ۔ مقصد۔ شرکت۔", description: "ہماری قیادت، عوامی سرگرمیوں اور مشترکہ ورثے کی تصویری جھلکیاں۔", action: "گیلری دیکھیں" },
       participate: { eyebrow: "رابطہ بڑھائیں", title: "آپ کی آواز کے لیے جگہ ہے۔", description: "اپنی دلچسپی سے آغاز کریں اور شرکت کا راستہ تلاش کریں۔", items: [
         { title: "رکنیت کے بارے میں جانیں", description: "رکنیت کی معلومات پڑھیں اور اپنی دلچسپی کا فارم تیار کریں۔", action: "رکنیت کا فارم" },
         { title: "اپنا نقطۂ نظر پیش کریں", description: "کوئی سوال، خیال یا اہم گفتگو؟ ہم سے رابطہ کریں۔", action: "رابطہ کریں" },
@@ -106,10 +175,44 @@ const pageCopy = {
       join: { eyebrow: "آپ کی آواز اہم ہے", title: "مشترکہ کل کا آغاز\nہم سے ہوتا ہے۔", description: "پاکستان کے لیے اپنے خیالات، جذبے اور امیدوں کے ساتھ پہلا قدم اٹھائیں۔", action: "رکنیت کے بارے میں جانیں", secondary: "بات کریں" },
     },
     journal: {
-      eyebrow: "خیالات اور نقطۂ نظر", title: "ٹی جے پی کا جریدہ۔", description: "غور و فکر کی جگہ۔ پاکستان کے بارے میں ایک نئی گفتگو کا موقع۔",
+      eyebrow: "خبریں، تعارف اور نقطۂ نظر", title: "ٹی جے پی کا جریدہ۔", description: "قیادت کا تعارف، محفوظ سرگرمیوں کا ریکارڈ اور پاکستان کے مستقبل پر مضامین پڑھیں۔",
       all: "تمام مضامین", search: "جریدے میں تلاش کریں", searchPlaceholder: "مضامین تلاش کریں…", empty: "آپ کی تلاش سے کوئی مضمون نہیں ملا۔", reset: "فلٹر ہٹائیں", read: "مضمون پڑھیں", minutes: "منٹ کا مطالعہ", back: "جریدے پر واپس جائیں", related: "مزید دریافت کریں", editorial: "نقطۂ نظر", categoryLabel: "موضوع کے مطابق مضامین دیکھیں",
-      categories: { youth: "نوجوان اور مواقع", community: "برادری", culture: "ثقافت اور ورثہ" },
+      categories: { leadership: "قیادت", youth: "نوجوان اور مواقع", diplomacy: "ملاقاتیں اور مکالمہ", community: "برادری", culture: "ثقافت اور ورثہ" },
+      kinds: { profile: "قیادت کا تعارف", archive: "محفوظ ریکارڈ سے", editorial: "نمونہ اداریہ" },
+      exampleNote: "یہ ویب سائٹ کے لیے نمونہ اداریہ ہے۔ یہ کسی حقیقی ٹی جے پی تقریب کی خبر یا پروگرام کا اعلان نہیں۔",
+      sourceNote: "ٹی جے پی کے شائع شدہ مواد کی بنیاد پر تیار کردہ۔", source: "اصل ماخذ پڑھیں", archiveDate: "تاریخ اصل رپورٹ کی اشاعت کی ہے۔",
       articles: [
+        { title: "جنرل حمید گل: ٹی جے پی کے بانی", excerpt: "بانی کا مختصر تعارف اور ٹی جے پی کے شائع شدہ تصور میں درج خیالات۔", paragraphs: [
+          "ٹی جے پی لیفٹیننٹ جنرل حمید گل کو اپنا بانی قرار دیتی ہے۔ اس کے تعارفی صفحے کے مطابق وہ ۲۰ نومبر ۱۹۳۶ کو سرگودھا میں پیدا ہوئے۔ پاکستان ملٹری اکیڈمی کاکول میں داخلے سے پہلے انہوں نے گورنمنٹ کالج لاہور میں تعلیم حاصل کی۔",
+          "اکتوبر ۱۹۵۶ میں انہیں پاکستان آرمی کی آرمرڈ کور میں کمیشن ملا۔ وہ ۱۹۸۷ سے ۱۹۸۹ تک انٹر سروسز انٹیلی جنس کے ڈائریکٹر جنرل رہے اور بعد میں دفاع اور علاقائی امور پر اظہارِ خیال کرتے رہے۔",
+          "ٹی جے پی کا بیان اپنے بنیادی تصور کو قومی یکجہتی، مقامی ترقی اور خود انحصاری سے منسلک کرتا ہے۔ شائع شدہ فلسفہ اور منشور ان ترجیحات کی مزید وضاحت کرتے ہیں۔",
+          "ساتھ دی گئی تصویر ٹی جے پی کے تصویری ذخیرے سے ہے اور اس کی تاریخ درج نہیں۔ یہ تحریر بانی کا تعارف پیش کرتی ہے؛ چیئرمین کی بعد کی سرگرمیوں کو ان سے منسوب نہیں کرتی۔",
+        ] },
+        { title: "بدلتی دنیا میں نوجوانوں کے ہنر", excerpt: "عملی تعلیم اور ٹیکنالوجی میں تبدیلی پر عبداللہ حمید گل کے خطاب کا محفوظ ریکارڈ۔", paragraphs: [
+          "۳۰ جنوری ۲۰۲۵ کو شائع شدہ ٹی جے پی رپورٹ میں لائنز کلب اور نیشنل ٹیکنیکل انسٹی ٹیوٹ سے عبداللہ حمید گل کے خطاب کا ذکر ہے۔ رپورٹ میں کام کی دنیا پر ٹیکنالوجی کے اثرات اور ہنر کی اہمیت پر توجہ دی گئی ہے۔",
+          "شائع شدہ بیان میں انہوں نے نوجوانوں کے لیے نئی ٹیکنالوجی کی سمجھ کے ساتھ عملی مہارتوں کو ضروری قرار دیا۔ مصنوعی ذہانت سے متعلق تبصرے مقرر کے خیالات ہیں جنہیں ٹی جے پی نے رپورٹ کیا۔",
+          "یہ خطاب جریدے میں تعلیم اور مواقع کی وسیع گفتگو کا ایک حوالہ ہے۔ تصویر اصل اشاعت سے لی گئی ہے، جس کا لنک نیچے موجود ہے۔",
+        ] },
+        { title: "چین کے دفاعی اتاشی سے مکالمہ", excerpt: "جولائی ۲۰۲۴ میں شائع شدہ عبداللہ حمید گل اور جنرل وانگ کی ملاقات کا ریکارڈ۔", paragraphs: [
+          "۲۹ جولائی ۲۰۲۴ کی ٹی جے پی اشاعت میں جنرل وانگ سے ملاقات کا ذکر ہے، جنہیں رپورٹ میں چین کا دفاعی اتاشی بتایا گیا ہے۔ تصویر میں عبداللہ حمید گل اور جنرل وانگ دونوں ملکوں کے پرچموں کے درمیان کھڑے ہیں۔",
+          "مختصر رپورٹ میں پاکستان اور چین کے تعلقات اور خطے میں امن و خوشحالی کے مشترکہ مفاد پر گفتگو کا ذکر ہے۔ شائع شدہ بیان ملاقات کا مختصر ریکارڈ پیش کرتا ہے۔",
+          "تصویر چیئرمین کی عوامی سرگرمیوں کے محفوظ ریکارڈ میں اپنے اصل سیاق اور ماخذ کے ساتھ پیش کی گئی ہے۔ قارئین اصل رپورٹ پڑھنے کے لیے ماخذ کا لنک کھول سکتے ہیں۔",
+        ] },
+        { title: "چیئرمین محمد عبداللہ گل کا تعارف", excerpt: "ٹی جے پی کے چیئرمین اور ان کے شائع شدہ تعارف میں بیان کردہ ترجیحات۔", paragraphs: [
+          "ٹی جے پی کے قیادت کے صفحے پر محمد عبداللہ گل کو چیئرمین بتایا گیا ہے۔ شائع شدہ تعارف میں نوجوانوں کی شرکت، خود انحصاری اور قومی ترقی کو تحریک کی سوچ کا مرکزی حصہ قرار دیا گیا ہے۔",
+          "ان کے پیغام میں تعلیم، کاروباری صلاحیت، ٹیکنالوجی، زراعت اور پائیدار ترقی کا ذکر ہے۔ ثقافتی تنوع، شہری ذمہ داری اور معاشی تعاون بھی بیان کردہ ترجیحات میں شامل ہیں۔",
+          "یہ بیانات تحریک کے مقاصد کی وضاحت کرتے ہیں۔ جریدے اور تصویری گیلری میں ان عوامی سرگرمیوں کو پیش کیا گیا ہے جن کی رپورٹ اور تصاویر ٹی جے پی نے شائع کی ہیں، جن میں اسکول کی تقریبات اور ملاقاتیں شامل ہیں۔",
+        ] },
+        { title: "کھیل، اعتماد اور نوجوان", excerpt: "محفوظ ریکارڈ سے: اسلام آباد کے ۵۰۰ اسکولز اسپورٹس فیسٹیول میں عبداللہ حمید گل کی شرکت۔", paragraphs: [
+          "۲۲ جنوری ۲۰۲۵ کو شائع شدہ ٹی جے پی رپورٹ میں عبداللہ حمید گل کو اسلام آباد کے ۵۰۰ اسکولز اسپورٹس فیسٹیول کا مہمانِ خصوصی بتایا گیا ہے۔ اصل تصویر یہاں سرگرمیوں کے ریکارڈ کے طور پر شامل ہے۔",
+          "رپورٹ میں بچوں کی جسمانی تندرستی اور مثبت سوچ میں کھیلوں کے کردار پر ان کے خیالات کا خلاصہ ہے۔ یہ خطاب کا مختصر ریکارڈ ہے جس میں نوجوانوں کی نشوونما پر زور دیا گیا ہے۔",
+          "فیسٹیول کا نام اصل اشاعت کے مطابق درج ہے۔ قارئین رپورٹ اور تصویر دیکھنے کے لیے اصل ماخذ کھول سکتے ہیں۔ اوپر درج تاریخ اصل رپورٹ کی اشاعت کی ہے۔",
+        ] },
+        { title: "سرگودھا میں تعلیم اور نگہداشت", excerpt: "یتیم بچیوں کے جنرل حمید گل اسکول کی تقسیمِ انعامات کی تقریب کا محفوظ ریکارڈ۔", paragraphs: [
+          "۶ جولائی ۲۰۲۴ کو شائع شدہ ٹی جے پی رپورٹ میں سرگودھا کے جنرل حمید گل اسکول برائے یتیم بچیاں کی سالانہ تقسیمِ انعامات کا ذکر ہے۔ رپورٹ میں عبداللہ حمید گل کی تقریب میں شرکت کی تصویر بھی شامل ہے۔",
+          "ساتھ دیے گئے بیان میں انہوں نے بچیوں کے بہتر مستقبل کے لیے مشترکہ کوشش پر زور دیا۔ یہ تقریب تعلیم کی اہمیت کو جنرل حمید گل کے نام سے منسوب اسکول سے جوڑتی ہے۔",
+          "یہ تحریر اصل رپورٹ کی معلومات اور تصویر محفوظ کرتی ہے۔ اس سے تقریب اور اس کے تعلیمی پس منظر کی جھلک ملتی ہے۔ شائع شدہ ریکارڈ کے لیے نیچے اصل ماخذ کا لنک موجود ہے۔",
+        ] },
         { title: "امکانات سے بھرپور نسل", excerpt: "سیکھنے، سننے اور نوجوانوں کو گفتگو میں اپنا کردار ادا کرنے کا موقع دینا۔", paragraphs: [
           "پاکستان کے مستقبل کی گفتگو ان لوگوں سے شروع ہوتی ہے جنہوں نے اس مستقبل میں جینا ہے۔ نوجوان سوال، تخلیقی سوچ اور مانوس مسائل کو نئے زاویے سے دیکھنے کی صلاحیت لے کر آتے ہیں۔",
           "مواقع کی ابتدا سیکھنے تک رسائی سے ہوتی ہے۔ کوئی عملی ہنر، اچھا استاد یا خیالات کے تبادلے کی جگہ نئے راستے کھول سکتی ہے۔ سننا بھی اتنا ہی ضروری ہے تاکہ نوجوان اپنے تجربات اور امیدیں بیان کر سکیں۔",
@@ -131,8 +234,9 @@ const pageCopy = {
       ],
     },
     gallery: {
-      eyebrow: "تصویری جریدہ", title: "پاکستان کو قریب سے دیکھیں۔", description: "وہ جگہیں جو ہمیں متاثر کرتی ہیں۔ وہ مشترکہ ورثہ جو ہمیں جوڑتا ہے۔ تصاویر دریافت کریں۔",
-      all: "تمام تصاویر", heritage: "تاریخی ورثہ", landscapes: "قدرتی مناظر", filter: "تصاویر چھانٹیں", open: "تصویر کھولیں", close: "تصویر بند کریں", previous: "پچھلی تصویر", next: "اگلی تصویر", count: "از", credit: "تصویر", source: "اصل تصویر اور حوالہ", note: "قدرتی مناظر اور تاریخی ورثے کی تصاویر۔ تقریبات کی تصاویر دستیاب ہونے پر شامل کی جائیں گی۔",
+      eyebrow: "قیادت، سرگرمیاں اور ورثہ", title: "ٹی جے پی کی تصویری گیلری۔", description: "بانی کی تصاویر، چیئرمین کی شائع شدہ سرگرمیاں اور پاکستان کا مشترکہ ورثہ دیکھیں۔",
+      leadership: "قیادت", meetings: "ملاقاتیں اور دورے", events: "عوامی سرگرمیاں",
+      all: "تمام تصاویر", heritage: "تاریخی ورثہ", landscapes: "قدرتی مناظر", filter: "تصاویر چھانٹیں", open: "تصویر کھولیں", close: "تصویر بند کریں", previous: "پچھلی تصویر", next: "اگلی تصویر", count: "از", credit: "تصویر", source: "اصل تصویر اور حوالہ", note: "سیاق اور ماخذ دیکھنے کے لیے تصویر کھولیں۔ محفوظ تاریخیں اشاعت کی ہیں؛ بغیر تاریخ کی تصاویر کی نشاندہی کی گئی ہے۔",
     },
     form: {
       name: "پورا نام", email: "ای میل ایڈریس", phone: "فون نمبر", city: "شہر / ضلع", province: "صوبہ / علاقہ", choose: "علاقہ منتخب کریں", topic: "موضوع", message: "آپ کا پیغام", interest: "دلچسپی کا شعبہ", password: "پاس ورڈ", confirmPassword: "پاس ورڈ دوبارہ لکھیں", optional: "اختیاری", required: "ستارے * والے خانے لازمی ہیں۔",
@@ -169,7 +273,7 @@ const pageCopy = {
 export const translations = {
   en: {
     ...pageCopy.en,
-    brand: { name: "Tehreek Jawanan Pakistan", short: "TJP", country: "PAKISTAN", home: "TJP home" },
+    brand: { name: "Tehreek Jawanan Pakistan", wordmark: "Tehrik Jawanan Pakistan", short: "TJP", country: "PAKISTAN", home: "TJP home" },
     navigation: { home: "Home", about: "About us", focus: "Our focus", gallery: "Gallery", blogs: "Blogs", contact: "Contact us" },
     common: {
       skip: "Skip to content", mainNavigation: "Main navigation", footerNavigation: "Footer navigation",
@@ -183,41 +287,42 @@ export const translations = {
       eyebrow: "TEHREEK JAWANAN PAKISTAN",
       secondaryAction: "Our focus", scroll: "Discover our story",
       carousel: {
-        label: "Discover Pakistan", role: "carousel", slide: "slide", previous: "Previous slide", next: "Next slide",
+        label: "Discover TJP", role: "carousel", slide: "slide", previous: "Previous slide", next: "Next slide",
         pause: "Pause slideshow", play: "Play slideshow", goTo: "Go to slide", hint: "Swipe or scroll sideways to explore",
       },
       slides: [
-        { location: "ISLAMABAD", title: "Our Pakistan.", accent: "Our shared future.", description: "A shared home. A new conversation. A future we shape together.", alt: "Faisal Mosque framed by the Margalla Hills in Islamabad" },
-        { location: "LAHORE", title: "Rooted in heritage.", accent: "Looking ahead.", description: "Honouring where we come from. Exploring where we go next.", alt: "The courtyard and domes of Badshahi Mosque in Lahore" },
-        { location: "HUNZA", title: "A land of possibility.", accent: "A future to shape.", description: "From our valleys to our cities, every voice has a place.", alt: "Hunza Valley surrounded by the mountains of northern Pakistan" },
-        { location: "KARACHI", title: "Many voices.", accent: "One Pakistan.", description: "Different stories. Shared hopes. One country to call home.", alt: "The white marble Mazar-e-Quaid in Karachi" },
+        { location: "OUR FOUNDER", title: "A shared vision.", accent: "A stronger Pakistan.", description: "Discover Gen. Hamid Gul’s founding vision of unity and self-reliance.", alt: "TJP’s published founder banner featuring Gen. Hamid Gul" },
+        { location: "MEETINGS & DIALOGUE", title: "Building connections.", accent: "Opening dialogue.", description: "Explore the chairman’s meetings and public engagements in our archive.", alt: "Abdullah Hamid Gul meeting General Wang, China’s defence attaché" },
+        { location: "EDUCATION & COMMUNITY", title: "Learning today.", accent: "Possibilities tomorrow.", description: "A look at educational activities and community engagement.", alt: "A school prize ceremony in Sargodha attended by Abdullah Hamid Gul" },
+        { location: "OUR PAKISTAN", title: "Many voices.", accent: "One Pakistan.", description: "Youth participation, civic responsibility, and a shared future.", alt: "Faisal Mosque framed by the Margalla Hills in Islamabad" },
       ],
       about: {
         eyebrow: "ABOUT US", title: "A shared purpose.\nA stronger Pakistan.",
-        description: "Tehreek Jawanan Pakistan brings Pakistan’s voices and aspirations into one conversation. Explore ideas, community, and the possibilities of a shared tomorrow.",
-        note: "Our country. Our responsibility.", name: "Abdullah Gul", imageAlt: "Portrait of Abdullah Gul", link: "Explore our focus",
+        description: "Founded by Gen. Hamid Gul, Tehreek Jawanan Pakistan is a youth-focused political movement. Its published vision centres on national unity, self-reliance, and development through peaceful, lawful participation.",
+        leadership: "Chairman Mohammad Abdullah Gul’s published message highlights education, entrepreneurship, and civic responsibility. Explore our leadership profiles and documented activities in the TJP journal.",
+        note: "Unity. Prosperity. Progress.", name: "Gen. Hamid Gul", role: "Founder · Tehreek Jawanan Pakistan", imageAlt: "Portrait of Gen. Hamid Gul", link: "Meet our leadership",
       },
       focus: {
         eyebrow: "LOOKING AHEAD", title: "Ideas that bring us together.",
-        description: "A conversation about opportunity, community, and our shared future.",
+        description: "Priorities drawn from TJP’s published vision for a self-reliant Pakistan.",
         items: [
-          { number: "01", title: "Youth & opportunity", description: "Space to learn, contribute, and shape the future." },
-          { number: "02", title: "Stronger communities", description: "People connecting through participation and shared purpose." },
-          { number: "03", title: "A shared tomorrow", description: "Ideas for our country and the generations to come." },
+          { number: "01", title: "Education & skills", description: "A stated focus on learning, practical skills, and opportunities for young people." },
+          { number: "02", title: "National unity", description: "Respect for cultural diversity, civic responsibility, and peaceful participation." },
+          { number: "03", title: "Self-reliance & progress", description: "A vision for local enterprise, innovation, and sustainable national development." },
         ],
       },
     },
     login: { eyebrow: "MEMBER ACCESS", title: "Member login", description: "Online sign-in is currently unavailable.", note: "Please check back for updates." },
     footer: {
-      title: "Our Pakistan. Our shared future.", description: "A shared home. A shared responsibility.",
+      title: "Our Pakistan. Our shared future.", description: "Tehreek Jawanan Pakistan · Unity, Prosperity, Progress.",
       explore: "Explore", language: "Stay connected", languageDescription: "Your language. Your voice.",
       rights: "TJP. All rights reserved.", madeFor: "For Pakistan. For tomorrow.", credits: "Photo credits",
-      photoLicense: "CC BY-SA 4.0", photoChanges: "Resized, converted to WebP, and cropped for display. No endorsement implied.",
+      photoLicense: "CC BY-SA 4.0", tjpArchive: "TJP website archive · rights retained by their owners", photoChanges: "Images are hosted locally, resized, and cropped for display. Landscape photographs retain their listed CC BY-SA 4.0 credits. TJP archive images and the emblem retain their original rights; no third-party endorsement is implied.",
     },
   },
   ur: {
     ...pageCopy.ur,
-    brand: { name: "تحریکِ جوانان پاکستان", short: "ٹی جے پی", country: "پاکستان", home: "ٹی جے پی کا مرکزی صفحہ" },
+    brand: { name: "تحریکِ جوانان پاکستان", wordmark: "Tehrik Jawanan Pakistan", short: "ٹی جے پی", country: "پاکستان", home: "ٹی جے پی کا مرکزی صفحہ" },
     navigation: { home: "مرکزی صفحہ", about: "ہمارا تعارف", focus: "ہماری توجہ", gallery: "گیلری", blogs: "بلاگ", contact: "رابطہ کریں" },
     common: {
       skip: "مرکزی مواد پر جائیں", mainNavigation: "مرکزی نیویگیشن", footerNavigation: "فوٹر نیویگیشن",
@@ -230,36 +335,37 @@ export const translations = {
     home: {
       eyebrow: "تحریکِ جوانان پاکستان", secondaryAction: "ہماری توجہ", scroll: "ہماری کہانی جانیں",
       carousel: {
-        label: "پاکستان کو جانیں", role: "تصویری سلسلہ", slide: "تصویر", previous: "پچھلی تصویر", next: "اگلی تصویر",
+        label: "ٹی جے پی کو جانیں", role: "تصویری سلسلہ", slide: "تصویر", previous: "پچھلی تصویر", next: "اگلی تصویر",
         pause: "تصاویر کی خودکار تبدیلی روکیں", play: "تصاویر کی خودکار تبدیلی چلائیں", goTo: "تصویر پر جائیں", hint: "دریافت کرنے کے لیے دائیں یا بائیں سوائپ کریں",
       },
       slides: [
-        { location: "اسلام آباد", title: "ہمارا پاکستان۔", accent: "ہمارا مشترکہ مستقبل۔", description: "مشترکہ وطن۔ نئی گفتگو۔ ایک مستقبل جسے ہم مل کر سنواریں۔", alt: "اسلام آباد میں مارگلہ کی پہاڑیوں کے دامن میں فیصل مسجد" },
-        { location: "لاہور", title: "ورثے سے وابستہ۔", accent: "مستقبل کی جانب۔", description: "اپنی پہچان کا احترام۔ آنے والے کل کے نئے امکانات۔", alt: "لاہور میں بادشاہی مسجد کا صحن اور گنبد" },
-        { location: "ہنزہ", title: "امکانات کی سرزمین۔", accent: "مستقبل کی تعمیر۔", description: "وادیوں سے شہروں تک، ہر آواز کی اپنی جگہ ہے۔", alt: "شمالی پاکستان کے پہاڑوں میں گھری وادیٔ ہنزہ" },
-        { location: "کراچی", title: "مختلف آوازیں۔", accent: "ایک پاکستان۔", description: "مختلف کہانیاں۔ مشترکہ امیدیں۔ ایک وطن، ہمارا گھر۔", alt: "کراچی میں سفید سنگِ مرمر سے بنا مزارِ قائد" },
+        { location: "ہمارے بانی", title: "مشترکہ تصور۔", accent: "مضبوط پاکستان۔", description: "قومی یکجہتی اور خود انحصاری پر جنرل حمید گل کے بنیادی تصور کو جانیں۔", alt: "جنرل حمید گل کی تصویر پر مشتمل ٹی جے پی کا شائع شدہ بینر" },
+        { location: "ملاقاتیں اور مکالمہ", title: "تعلقات کی تعمیر۔", accent: "مکالمے کا آغاز۔", description: "چیئرمین کی ملاقاتیں اور عوامی سرگرمیاں ہمارے محفوظ ریکارڈ میں دیکھیں۔", alt: "چین کے دفاعی اتاشی جنرل وانگ سے ملاقات کرتے عبداللہ حمید گل" },
+        { location: "تعلیم اور برادری", title: "آج کی تعلیم۔", accent: "کل کے امکانات۔", description: "تعلیمی سرگرمیوں اور سماجی شرکت کی ایک جھلک۔", alt: "سرگودھا میں تقسیمِ انعامات کی تقریب میں عبداللہ حمید گل کی شرکت" },
+        { location: "ہمارا پاکستان", title: "مختلف آوازیں۔", accent: "ایک پاکستان۔", description: "نوجوانوں کی شرکت، شہری ذمہ داری اور ایک مشترکہ مستقبل۔", alt: "اسلام آباد میں مارگلہ کی پہاڑیوں کے دامن میں فیصل مسجد" },
       ],
       about: {
         eyebrow: "ہمارا تعارف", title: "مشترکہ مقصد۔\nمضبوط پاکستان۔",
-        description: "تحریکِ جوانان پاکستان، پاکستان کی آوازوں اور امنگوں کو ایک گفتگو میں یکجا کرتی ہے۔ خیالات، برادری اور مشترکہ مستقبل کے امکانات کو جانیں۔",
-        note: "ہمارا وطن۔ ہماری ذمہ داری۔", name: "عبداللہ گل", imageAlt: "عبداللہ گل کی تصویر", link: "ہماری توجہ کے بارے میں جانیں",
+        description: "جنرل حمید گل کی قائم کردہ تحریکِ جوانان پاکستان نوجوانوں پر توجہ دینے والی سیاسی تحریک ہے۔ اس کے شائع شدہ تصور میں قومی یکجہتی، خود انحصاری اور پُرامن قانونی شرکت کے ذریعے ترقی کو اہمیت دی گئی ہے۔",
+        leadership: "چیئرمین محمد عبداللہ گل کے شائع شدہ پیغام میں تعلیم، کاروباری صلاحیت اور شہری ذمہ داری نمایاں ہیں۔ قیادت کا تعارف اور شائع شدہ سرگرمیاں ٹی جے پی کے جریدے میں دیکھیں۔",
+        note: "اتحاد۔ خوشحالی۔ ترقی۔", name: "جنرل حمید گل", role: "بانی · تحریکِ جوانان پاکستان", imageAlt: "جنرل حمید گل کی تصویر", link: "ہماری قیادت کو جانیں",
       },
       focus: {
         eyebrow: "مستقبل کی جانب", title: "وہ خیالات جو ہمیں یکجا کریں۔",
-        description: "مواقع، برادری اور مشترکہ مستقبل پر ایک گفتگو۔",
+        description: "خود انحصار پاکستان کے لیے ٹی جے پی کے شائع شدہ تصور سے اخذ کردہ ترجیحات۔",
         items: [
-          { number: "۰۱", title: "نوجوان اور مواقع", description: "سیکھنے، کردار ادا کرنے اور مستقبل سنوارنے کی جگہ۔" },
-          { number: "۰۲", title: "مضبوط برادریاں", description: "شرکت اور مشترکہ مقصد سے جڑتے لوگ۔" },
-          { number: "۰۳", title: "ایک مشترکہ کل", description: "وطن اور آنے والی نسلوں کے لیے خیالات۔" },
+          { number: "۰۱", title: "تعلیم اور ہنر", description: "تعلیم، عملی مہارتوں اور نوجوانوں کے لیے مواقع پر توجہ۔" },
+          { number: "۰۲", title: "قومی یکجہتی", description: "ثقافتی تنوع کا احترام، شہری ذمہ داری اور پُرامن شرکت۔" },
+          { number: "۰۳", title: "خود انحصاری اور ترقی", description: "مقامی کاروبار، جدت اور پائیدار قومی ترقی کا تصور۔" },
         ],
       },
     },
     login: { eyebrow: "اراکین کے لیے", title: "اراکین کا لاگ اِن", description: "آن لائن لاگ اِن فی الحال دستیاب نہیں ہے۔", note: "تازہ معلومات کے لیے دوبارہ ملاحظہ کریں۔" },
     footer: {
-      title: "ہمارا پاکستان۔ ہمارا مشترکہ مستقبل۔", description: "مشترکہ وطن۔ مشترکہ ذمہ داری۔",
+      title: "ہمارا پاکستان۔ ہمارا مشترکہ مستقبل۔", description: "تحریکِ جوانان پاکستان · اتحاد، خوشحالی، ترقی۔",
       explore: "دریافت کریں", language: "رابطے میں رہیں", languageDescription: "آپ کی زبان۔ آپ کی آواز۔",
       rights: "ٹی جے پی۔ جملہ حقوق محفوظ ہیں۔", madeFor: "پاکستان کے لیے۔ آنے والے کل کے لیے۔", credits: "تصاویر کے حوالہ جات",
-      photoLicense: "CC BY-SA 4.0", photoChanges: "حجم تبدیل کیا گیا، ویب پی میں محفوظ کیا گیا اور نمائش کے لیے تراشا گیا۔ کسی تائید کا اظہار نہیں۔",
+      photoLicense: "CC BY-SA 4.0", tjpArchive: "ٹی جے پی کا ویب ذخیرہ · حقوق اصل مالکان کے پاس محفوظ", photoChanges: "تصاویر مقامی طور پر محفوظ، حجم تبدیل اور نمائش کے لیے تراشی گئی ہیں۔ قدرتی مناظر کی تصاویر کے سی سی بی وائی ایس اے ۴.۰ حوالے برقرار ہیں۔ ٹی جے پی کی تصاویر اور نشان کے اصل حقوق برقرار ہیں؛ کسی تیسرے فریق کی تائید مراد نہیں۔",
     },
   },
 };

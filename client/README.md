@@ -2,9 +2,10 @@
 
 ## Frontend pages and interactions
 
-- `/gallery`: local licensed photos, category filters, and a keyboard-accessible
-  lightbox with credits. Heritage photos are not presented as event coverage.
-- `/blogs` and `/blogs/[slug]`: local editorial articles, search, topic filters,
+- `/gallery`: local TJP archive and licensed heritage photographs, category filters,
+  and a keyboard-accessible lightbox with captions and original source links.
+- `/blogs` and `/blogs/[slug]`: leadership profiles, archived reports, clearly labelled
+  editorial examples, search, topic filters,
   empty states, and related stories. Edit content in `src/i18n/messages.js` and
   route/image mappings in `src/config/content.js`.
 - `/contact`: published contact details, FAQs, and a validated message form that
@@ -70,9 +71,16 @@ the Express server's `CLIENT_ORIGIN` to allow the client origin.
   `LanguageSwitcher`, `SkipLink`, shared links, and mobile navigation.
   `Header` and `Footer` accept `name`, `navigation`, and `className` overrides;
   omit `name` for translated branding. `Container` accepts `as`, `narrow`, and `className`.
-- `src/components/home/`: `HeroSlider`, `AboutSection` with the supplied Abdullah
-  Gul portrait, and translated homepage composition.
-- `src/config/hero-slides.js`: four local hero photographs and attribution metadata.
+- `src/components/home/`: `HeroSlider`, `AboutSection` with the founder portrait,
+  and translated homepage composition. The homepage retains three featured articles.
+- `src/config/hero-slides.js`: four hero selections from the central media registry.
+- `src/config/media.js`: local image paths, originals, source pages, credit types,
+  and crop positions, shared by the hero, gallery, articles, and footer credits.
+- `src/config/content.js`: article slugs, media keys, categories, content kinds, and
+  original publication dates. Article entries correspond to the same index in both
+  `journal.articles` translation arrays. Gallery entries use translated media keys.
+- `src/components/content/article-meta.jsx`: shared translated article type,
+  publication date, and reading-time display.
 - `src/lib/slider.js`: shared slide wrapping and horizontal wheel normalization.
 - `src/components/auth/`: shared login and signup layouts at `/login` and `/signup` with disabled credential fields. No
   credentials are collected and no authentication integration is implemented.
@@ -114,14 +122,24 @@ It displays Urdu when English is selected and English when Urdu is selected.
 
 ## Homepage interactions
 
-The compact header is 72px on desktop and 64px on phones. It displays only the
-brand monogram, navigation, the alternate language, and Login. The hero fills
+The compact main header is 60px above the phone breakpoint and 56px on phones,
+below the announcement bar. It displays the emblem and wordmark, navigation,
+and Join TJP. Below 640px the main header hides its language switch and uses
+smaller Join TJP text and padding while retaining the 44px touch target. Language
+switching remains available in the mobile drawer and footer. The hero fills
 `calc(100svh - var(--header-height))`, so header and hero occupy one viewport.
 `Brand compact` hides adjacent brand text without removing its accessible label.
+The header opts into `showWordmark` to display the small English wordmark
+"Tehrik Jawanan Pakistan" beside the emblem. Its letters reveal once in sequence,
+wrap at spaces on narrow screens, and remain immediately visible with reduced motion.
+Other Brand instances retain their existing presentation.
 
 The four slides crossfade and gently zoom, with autoplay every 3 seconds.
-Hero text and buttons are centered, with no visible section/location labels or
-bottom controls. Horizontal trackpad gestures, touch swipes, and keyboard
+They feature the founder banner, the chairman's meeting with China's defence
+attaché, a school prize ceremony, and Islamabad heritage photography.
+Hero text and buttons are centered at 640px and above. On phones, smaller titles,
+body copy, and spacing form a compact block aligned to the bottom and logical end.
+No section/location labels or bottom controls are visible. Horizontal trackpad gestures, touch swipes, and keyboard
 Left/Right/Home/End navigate slides. Vertical scrolling and pinch-to-zoom stay
 available. Manual navigation restarts the three-second interval; pointer hover
 does not stop it. Keyboard focus pauses autoplay, and a keyboard-accessible
@@ -130,13 +148,18 @@ autoplay and minimizes animation. The shared Button's primary
 variant implements the requested shine and four animated corner borders; reuse
 its `inverse` / `inverse-ghost` variants for controls on dark backgrounds.
 
-Body copy is concise and uses 1.5 line-height in English, with Urdu-specific
-spacing for readability. Local hero WebP assets and their licenses are listed in
-`public/images/home/CREDITS.md`; the footer includes expandable photo credits.
+Body copy uses 1.5 line-height in English, with Urdu-specific spacing. The TJP emblem,
+founder and chairman portraits, meeting photos, and engagement photos were sourced
+from TJP's published website on 20 October 2026. The emblem also supplies the favicon.
+See `public/images/CREDITS.md` for originals, source pages, and rights distinctions;
+`public/images/home/CREDITS.md` retains the four landscape photographers' attribution.
+The footer credits all registered assets without applying a CC license to TJP images.
 
-The homepage copy and TJP monogram are presentation placeholders. Replace them
-with approved party copy and assets before public launch; no official platform,
-membership flow, contact details, or backend integration is asserted.
+Leadership profiles and four archived reports summarise linked TJP sources. Archive
+dates are publication dates, not newly announced events. The three original demo
+articles retain their existing URLs and are labelled "Editorial example" in both
+languages. Do not invent quotations, meetings, statistics, endorsements, or programmes.
+Membership, contact forms, and authentication keep their existing availability states.
 
 ## UI and styles
 
@@ -243,6 +266,7 @@ future Suspense-based data flow needs an appropriate hydration/Suspense boundary
 
 `npm test` verifies translation completeness, matching dictionary keys, locale
 fallbacks, translated navigation, slide wrapping, horizontal gesture handling,
+local media references, bilingual article bodies, content kinds, archive dates,
 and all four local slide assets, alongside freshness, deduplication,
 invalidation, isolation, cancellation, retry limits, error recovery, and request
 encoding using mocked transport. `npm run build` validates the production bundle.

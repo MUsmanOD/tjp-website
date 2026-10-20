@@ -26,7 +26,13 @@ test("all four slides have local assets, credits, and bilingual copy", async () 
   for (const locale of ["en", "ur"]) assert.equal(translations[locale].home.slides.length, 4);
   for (const slide of heroSlides) {
     await access(new URL(`../public${slide.src}`, import.meta.url));
-    assert.ok(slide.photographer);
-    assert.ok(slide.source.startsWith("https://commons.wikimedia.org/wiki/File:"));
+    assert.ok(["tjp", "commons"].includes(slide.credit));
+    assert.equal(new URL(slide.source).protocol, "https:");
+    if (slide.credit === "commons") {
+      assert.ok(slide.photographer);
+      assert.ok(slide.source.startsWith("https://commons.wikimedia.org/wiki/File:"));
+    } else {
+      assert.ok(slide.original.startsWith("https://tjp.org.pk/wp-content/uploads/"));
+    }
   }
 });

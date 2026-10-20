@@ -7,7 +7,7 @@ import { SiteLink } from "@/components/layout/site-link";
 import { FormField } from "@/components/forms/form-field";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/providers/language-provider";
-import { heroSlides } from "@/config/hero-slides";
+import { media } from "@/config/media";
 
 export function AuthContent({ signup = false }) {
   const { messages } = useLanguage();
@@ -15,7 +15,7 @@ export function AuthContent({ signup = false }) {
   return <Container className="auth-container">
     <div className="auth-panel">
       <div className="auth-visual">
-        <Image src="/images/home/islamabad.webp" alt={messages.home.slides[0].alt} fill sizes="(max-width: 1023px) 100vw, 50vw" className="object-cover" />
+        <Image src={media.islamabad.src} alt={messages.media.islamabad.alt} fill sizes="(max-width: 1023px) 100vw, 50vw" className="object-cover" />
         <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
         <div className="auth-visual-copy">
           <Brand compact className="text-white" />
@@ -23,7 +23,7 @@ export function AuthContent({ signup = false }) {
             <p className="text-eyebrow mb-4 text-white/80">{copy.eyebrow}</p>
             <h2 className="heading-section whitespace-pre-line text-white">{copy.title}</h2>
           </div>
-          <a href={heroSlides[0].source} target="_blank" rel="noopener noreferrer" className="text-small min-h-11 text-white/80 underline underline-offset-4">{messages.footer.credits}</a>
+          <a href={media.islamabad.source} target="_blank" rel="noopener noreferrer" className="text-small min-h-11 text-white/80 underline underline-offset-4">{messages.footer.credits}</a>
         </div>
       </div>
       <div className="auth-form-panel" data-lenis-prevent>

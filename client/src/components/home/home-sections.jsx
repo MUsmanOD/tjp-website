@@ -12,6 +12,7 @@ import { ArticleCard } from "@/components/content/article-card";
 import { JoinBanner } from "@/components/content/join-banner";
 import { articles, galleryItems } from "@/config/content";
 import { FacebookFeed } from "@/components/home/facebook-feed";
+import { media } from "@/config/media";
 
 const participation = [
   { icon: UserPlus, href: "/membership" },
@@ -26,7 +27,7 @@ export function HomeSections() {
       <section className="section-space" aria-labelledby="journal-title">
         <Container>
           <SectionHeading content={messages.sections.journal} id="journal-title" href="/blogs" />
-          <div className="grid gap-6 md:grid-cols-3">{articles.map((article, index) => <ArticleCard key={article.slug} article={article} index={index} />)}</div>
+          <div className="grid gap-6 md:grid-cols-3">{articles.slice(0, 3).map((article, index) => <ArticleCard key={article.slug} article={article} index={index} />)}</div>
         </Container>
       </section>
 
@@ -44,10 +45,10 @@ export function HomeSections() {
         <Container>
           <SectionHeading content={messages.sections.gallery} id="gallery-title" href="/gallery" />
           <div className="home-gallery">
-            {galleryItems.slice(0, 3).map((item, index) => <SiteLink key={item.image} href="/gallery" className={`home-gallery-tile home-gallery-tile-${index}`} aria-label={`${messages.gallery.open}: ${messages.home.slides[item.slide].location}`}>
-              <Image src={item.image} alt={messages.home.slides[item.slide].alt} fill sizes="(max-width: 639px) 90vw, (max-width: 1023px) 50vw, 45vw" className="object-cover transition-transform duration-700" />
+            {galleryItems.slice(0, 5).map((item, index) => <SiteLink key={item.media} href="/gallery" className={`home-gallery-tile home-gallery-tile-${index}`} aria-label={`${messages.gallery.open}: ${messages.media[item.media].title}`}>
+              <Image src={media[item.media].src} alt={messages.media[item.media].alt} fill sizes="(max-width: 639px) 90vw, (max-width: 1023px) 50vw, 45vw" className="object-cover transition-transform duration-700" style={{ objectPosition: media[item.media].position }} />
               <span className="gallery-tile-shade" aria-hidden="true" />
-              <span className="gallery-tile-caption"><span>{messages.home.slides[item.slide].location}</span><ArrowUpRight className="size-5 rtl:-scale-x-100" aria-hidden="true" /></span>
+              <span className="gallery-tile-caption"><span>{messages.media[item.media].title}</span><ArrowUpRight className="size-5 shrink-0 rtl:-scale-x-100" aria-hidden="true" /></span>
             </SiteLink>)}
           </div>
         </Container>

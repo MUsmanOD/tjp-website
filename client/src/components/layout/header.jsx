@@ -18,12 +18,12 @@ export function Header({ name, navigation = siteConfig.navigation, className }) 
     <header className={cn("site-header sticky top-0 z-40 shrink-0 border-b bg-background/95 backdrop-blur-md", className)}>
       <AnnouncementBar />
       <Container className="header-main flex items-center justify-between gap-3">
-        <Brand name={name} compact />
+        <Brand name={name} compact showWordmark />
         <nav aria-label={messages.common.mainNavigation} className="hidden items-center gap-5 xl:gap-7 lg:flex">
           <NavigationLinks items={navigation} />
         </nav>
         <div className="flex items-center gap-1 sm:gap-3">
-          <LanguageSwitcher />
+          <LanguageSwitcher className="header-language" />
           <span className="mx-1 hidden h-5 w-px bg-border sm:block" aria-hidden="true" />
           <Button asChild className="header-membership px-3 sm:px-4">
             <SiteLink href="/membership">{messages.common.join}</SiteLink>

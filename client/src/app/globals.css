@@ -116,6 +116,9 @@
   .brand-monogram { @apply flex size-11 shrink-0 items-center justify-center rounded-full border border-primary/25 bg-primary text-base font-bold tracking-tight text-primary-foreground; }
   .brand-name { @apply block max-w-52 text-sm leading-5 font-semibold; }
   .brand-caption { @apply mt-1 block text-xs font-medium tracking-[0.15em] text-muted-foreground rtl:tracking-normal; }
+  .header-brand { @apply min-w-0 gap-1.5; }
+  .header-wordmark { @apply min-w-0 max-w-36 text-xs font-semibold text-primary sm:max-w-44; line-height: 1.25; }
+  .header-brand-letter { animation: brand-letter-in 240ms ease-out both; animation-delay: calc(var(--brand-letter-index) * 40ms); }
 
   .button-primary { @apply relative isolate cursor-pointer overflow-hidden; transition: transform 300ms ease-in-out, background-color 200ms; }
   .button-primary:hover { transform: translateY(-1px); }
@@ -198,9 +201,9 @@
   .gallery-expand { @apply absolute end-5 top-5 flex size-11 items-center justify-center rounded-full border border-white/40 bg-black/20 text-white backdrop-blur-sm; }
   .dialog-panel { @apply fixed start-1/2 top-1/2 z-50 max-h-[90svh] w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-xl border bg-background shadow-2xl rtl:translate-x-1/2; }
   .dialog-close { @apply absolute end-3 top-3 z-10 inline-flex size-11 items-center justify-center rounded-full border bg-background text-foreground shadow-sm; }
-  .gallery-dialog { @apply max-w-5xl overflow-hidden; }
-  .gallery-dialog-image { @apply relative min-h-40 bg-black; height: min(65svh, 44rem); }
-  .gallery-dialog-footer { @apply flex flex-wrap items-center justify-between gap-4 p-5 sm:p-6; }
+  .gallery-dialog { @apply flex max-w-5xl flex-col overflow-hidden; }
+  .gallery-dialog-image { @apply relative shrink bg-black; height: min(65svh, 44rem); min-height: min(30svh, 10rem); }
+  .gallery-dialog-footer { @apply flex shrink-0 flex-col items-start justify-between gap-4 overflow-y-auto p-5 sm:flex-row sm:items-center sm:p-6; max-height: 55svh; }
   .journal-toolbar { @apply mb-10 flex flex-col justify-between gap-6 xl:flex-row xl:items-center; }
   .search-field { @apply flex min-h-12 w-full items-center gap-3 rounded-lg border bg-background px-4 xl:max-w-64; }
   .search-field input { @apply h-12 w-full bg-transparent text-sm outline-none; }
@@ -265,6 +268,7 @@
 
 @keyframes hero-pan { from { transform: scale(1.04); } to { transform: scale(1.12) translateY(-1%); } }
 @keyframes hero-copy-in { from { opacity: 0; transform: translateY(1rem); } to { opacity: 1; transform: translateY(0); } }
+@keyframes brand-letter-in { from { opacity: 0; } to { opacity: 1; } }
 
 @media (max-width: 639px) {
   :root { --header-main-height: 3.5rem; --announcement-height: 2.75rem; }
@@ -274,8 +278,15 @@
   .announcement-bar .social-icon svg { width: 0.75rem; height: 0.75rem; }
   .site-header .language-switcher { padding-inline: 0.5rem; }
   .site-header .language-switcher > svg { display: none; }
-  .hero-inner { padding-block: 1.5rem; }
-  .hero-description { margin-block-start: 1rem; }
+  .header-main .header-language { display: none; }
+  .header-membership { font-size: var(--text-xs); padding-inline: 0.625rem; }
+  .hero-inner { align-items: flex-end; justify-content: flex-end; padding-block: 1.5rem; padding-block-end: calc(1.5rem + env(safe-area-inset-bottom)); }
+  .hero-copy { width: 100%; max-width: 22rem; margin-inline: 0; align-items: flex-end; text-align: end; }
+  .hero-copy .heading-hero { font-size: var(--text-3xl); line-height: 1.15; }
+  html[lang="ur"] .hero-copy .heading-hero { line-height: 1.6; }
+  .hero-description { margin-block-start: 0.75rem; font-size: var(--text-sm); line-height: 1.5; }
+  html[lang="ur"] .hero-description { line-height: 1.9; }
+  .hero-actions { justify-content: flex-end; margin-block-start: 1rem; }
   .header-main { gap: 0.5rem; }
   .header-main .brand-monogram { width: 2.5rem; height: 2.5rem; }
   .home-gallery-tile { min-height: 17rem; }
@@ -296,13 +307,16 @@
 }
 
 @media (max-width: 359px) {
-  html[lang="ur"] .heading-hero { font-size: var(--text-3xl); }
+  .header-main { padding-inline: 0.5rem; }
+  .header-brand { gap: 0.25rem; }
+  .header-brand .brand-emblem { width: 2.25rem; height: 2.25rem; }
+  .hero-copy .heading-hero { font-size: var(--text-2xl); }
 }
 
 @media (max-width: 639px) and (max-height: 640px) {
   .hero-inner { padding-block: 1rem; }
-  .hero-copy > div { margin-block-start: 1.25rem; }
-  .hero-description { margin-block-start: 0.75rem; font-size: var(--text-base); }
+  .hero-actions { margin-block-start: 0.75rem; }
+  .hero-description { margin-block-start: 0.5rem; }
 }
 
 @media (max-height: 540px) and (min-width: 640px) {
@@ -314,6 +328,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .header-brand-letter { animation: none !important; }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;

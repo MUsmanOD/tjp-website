@@ -93,7 +93,7 @@ export function HeroSlider() {
         {heroSlides.map((image, index) => (
           <div key={image.src} className="hero-slide" data-active={index === active}>
             <Image src={image.src} alt="" fill sizes="100vw" preload={index === 0}
-              loading={index === 0 ? undefined : "eager"} draggable={false} className="object-cover" />
+              loading={index === 0 ? undefined : "eager"} draggable={false} className="object-cover" style={{ objectPosition: image.position }} />
           </div>
         ))}
       </div>
@@ -102,7 +102,7 @@ export function HeroSlider() {
         <div className="hero-copy" key={`${locale}-${active}`}>
           <h1 id="home-title" className="heading-hero">{slide.title}<span className="block">{slide.accent}</span></h1>
           <p className="text-lead hero-description text-white/90">{slide.description}</p>
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-2">
+          <div className="hero-actions mt-7 flex flex-wrap items-center justify-center gap-2">
             <Button asChild size="lg"><SiteLink href="/#about">{messages.common.explore}<ArrowRight aria-hidden="true" className="rtl:rotate-180" /></SiteLink></Button>
             <Button asChild variant="inverse"><SiteLink href="/#focus">{content.secondaryAction}</SiteLink></Button>
           </div>

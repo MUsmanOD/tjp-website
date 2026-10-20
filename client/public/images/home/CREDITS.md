@@ -1,4 +1,4 @@
-# Hero photographs
+# Heritage and landscape photographs
 
 All four photographs are licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 Local copies were resized to a maximum width of 1920 pixels, converted to WebP,
@@ -13,4 +13,5 @@ the same license. Use does not imply endorsement by the photographers.
 | karachi.webp | Abbas jaffri.9 | [MAZAR E QUAID](https://commons.wikimedia.org/wiki/File:MAZAR_E_QUAID.jpg) |
 
 The supplied `../abdullah-gul.png` portrait is a separate project asset; this
-license statement applies only to the four hero photographs above.
+license statement applies only to the four photographs above. TJP archive images
+and the emblem have separate provenance in [../CREDITS.md](../CREDITS.md).
