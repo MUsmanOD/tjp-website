@@ -36,7 +36,7 @@ export function HeroSlider() {
     if (paused) return;
     const timer = window.setInterval(() => {
       if (!document.hidden) setActive((previous) => wrapSlide(previous + 1, heroSlides.length));
-    }, 3000);
+    }, 4000);
     return () => window.clearInterval(timer);
   }, [paused, active]);
 

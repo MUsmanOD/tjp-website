@@ -136,10 +136,10 @@
   .hero-slider { @apply relative isolate overflow-hidden bg-primary text-white; height: calc(100svh - var(--header-height)); touch-action: pan-y pinch-zoom; --ring: var(--brand-white); }
   .hero-slider:focus { outline-offset: -4px; }
   .hero-inner { @apply relative z-10 flex h-full items-center justify-center py-8; }
-  .hero-slide { @apply absolute inset-0 overflow-hidden opacity-0; transition: opacity 900ms ease; }
+  .hero-slide { @apply absolute inset-0 overflow-hidden opacity-0; transition: opacity 1400ms cubic-bezier(0.4, 0, 0.2, 1); }
   .hero-slide[data-active="true"] { @apply opacity-100; }
-  .hero-slide img { transform: scale(1.04); }
-  .hero-slide[data-active="true"] img { animation: hero-pan 13s ease-in-out infinite alternate; }
+  .hero-slide img { transform: scale(1.04); animation: hero-pan 16s ease-in-out infinite alternate; animation-play-state: paused; }
+  .hero-slide[data-active="true"] img { animation-play-state: running; }
   .hero-slider[data-paused="true"] .hero-slide img { animation-play-state: paused; }
   .hero-shade { @apply pointer-events-none absolute inset-0; background: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.6)); }
   .hero-copy { @apply mx-auto flex min-w-0 max-w-4xl flex-col items-center justify-center text-center; animation: hero-copy-in 600ms ease-out both; }

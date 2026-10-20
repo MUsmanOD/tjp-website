@@ -33,7 +33,7 @@ Urdu through the existing language provider. No backend changes are required.
 `SmoothScroll` initializes Lenis with automatic frame updates, anchor support,
 native touch scrolling, built-in live reduced-motion support, and cleanup on
 navigation. Sheets and dialogs opt out with `data-lenis-prevent`. The hero keeps
-its existing horizontal gestures and three-second slideshow.
+its existing horizontal gestures and four-second slideshow.
 
 `ScrollReveals` adds a fade and 20px rise once per element to content marked with
 `data-scroll-reveal`, using one IntersectionObserver per page. Optional
@@ -157,7 +157,7 @@ on short screens while the header and actions remain visible. `Brand` accepts an
 optional `onClick` for drawer dismissal; `LanguageSwitcher` accepts a Button `variant`
 and defaults to its existing plain appearance outside the drawer.
 
-The four slides crossfade and gently zoom, with autoplay every 3 seconds.
+The four slides use a smooth 1.4-second crossfade and gentle zoom, with autoplay every 4 seconds. Inactive image zooms pause in place so outgoing images do not snap back during a fade.
 They feature the founder banner, the chairman's meeting with China's defence
 attaché, a school prize ceremony, and Islamabad heritage photography.
 Hero text is centered at 640px and above. On phones, smaller titles,
@@ -169,7 +169,7 @@ The Make a Connection section uses one shared panel with three adjoining columns
 plain icons, compact vertical padding, and dividers. Columns stack without gaps on phones.
 No section/location labels or bottom controls are visible. Horizontal trackpad gestures, touch swipes, and keyboard
 Left/Right/Home/End navigate slides. Vertical scrolling and pinch-to-zoom stay
-available. Manual navigation restarts the three-second interval; pointer hover
+available. Manual navigation restarts the four-second interval; pointer hover
 does not stop it. Keyboard focus pauses autoplay, and a keyboard-accessible
 pause/resume control is visually hidden until focused. Reduced motion disables
 autoplay and minimizes animation. The shared Button's primary
