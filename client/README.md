@@ -147,7 +147,7 @@ switching remains available in the mobile drawer and footer. The hero fills
 `calc(100svh - var(--header-height))`, so header and hero occupy one viewport.
 `Brand compact` hides adjacent brand text without removing its accessible label.
 The header opts into `showWordmark` to display the small English wordmark
-"Tehrik Jawanan Pakistan" beside the emblem. Its letters reveal once in sequence,
+"Tehreek Jawanan Pakistan" beside the emblem. Its letters reveal once in sequence,
 wrap at spaces on narrow screens, and remain immediately visible with reduced motion.
 Other Brand instances retain their existing presentation.
 

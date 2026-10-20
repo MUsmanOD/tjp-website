@@ -271,7 +271,7 @@ const pageCopy = {
 export const translations = {
   en: {
     ...pageCopy.en,
-    brand: { name: "Tehreek Jawanan Pakistan", wordmark: "Tehrik Jawanan Pakistan", short: "TJP", country: "PAKISTAN", home: "TJP home" },
+    brand: { name: "Tehreek Jawanan Pakistan", wordmark: "Tehreek Jawanan Pakistan", short: "TJP", country: "PAKISTAN", home: "TJP home" },
     navigation: { home: "Home", about: "About us", focus: "Our focus", gallery: "Gallery", blogs: "Blogs", contact: "Contact us" },
     common: {
       skip: "Skip to content", mainNavigation: "Main navigation", footerNavigation: "Footer navigation",
@@ -320,7 +320,7 @@ export const translations = {
   },
   ur: {
     ...pageCopy.ur,
-    brand: { name: "تحریکِ جوانان پاکستان", wordmark: "Tehrik Jawanan Pakistan", short: "ٹی جے پی", country: "پاکستان", home: "ٹی جے پی کا مرکزی صفحہ" },
+    brand: { name: "تحریکِ جوانان پاکستان", wordmark: "Tehreek Jawanan Pakistan", short: "ٹی جے پی", country: "پاکستان", home: "ٹی جے پی کا مرکزی صفحہ" },
     navigation: { home: "مرکزی صفحہ", about: "ہمارا تعارف", focus: "ہماری توجہ", gallery: "گیلری", blogs: "بلاگ", contact: "رابطہ کریں" },
     common: {
       skip: "مرکزی مواد پر جائیں", mainNavigation: "مرکزی نیویگیشن", footerNavigation: "فوٹر نیویگیشن",
