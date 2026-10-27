@@ -28,3 +28,6 @@ export const media = {
 };
 
 export const mediaCredits = Object.entries(media).map(([key, photo]) => ({ key, ...photo }));
+
+// AI-generated decorative image, not a photograph from the TJP archive.
+export const joinBannerImage = { src: "/images/home/pakistan-flag-banner.png" };

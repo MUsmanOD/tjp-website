@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { AnnouncementBar } from "@/components/layout/announcement-bar";
 import { Brand } from "@/components/layout/brand";
 import { Container } from "@/components/layout/container";
@@ -14,6 +15,8 @@ import { cn } from "@/lib/utils";
 
 export function Header({ name, navigation = siteConfig.navigation, className }) {
   const { messages } = useLanguage();
+  const pathname = usePathname();
+  if (pathname === "/tjp-punjab-pk-portal" || pathname === "/tjp-admin-dashboard") return null;
   return (
     <header className={cn("site-header sticky top-0 z-40 shrink-0 border-b bg-background/95 backdrop-blur-md", className)}>
       <AnnouncementBar />

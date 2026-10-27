@@ -22,6 +22,9 @@
   scrolling on short screens. Authentication forms show only a title, fields,
   button, and account-switch link; the availability description is screen-reader
   text. Authentication routes omit the footer and keep image credits beside the photo.
+- `/tjp-punjab-pk-portal` and `/tjp-admin-dashboard`: standalone admin interface
+  previews. Admin sign-in is unavailable and its fields are disabled; the dashboard
+  contains no live data and is publicly reachable until authentication is implemented.
 
 Content pages use a compact two-column footer. The header and mobile drawer omit
 the Login link. Contact fields use a single 1px border, including keyboard focus,

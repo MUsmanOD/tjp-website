@@ -41,7 +41,7 @@ const pageCopy = {
         { title: "Share a perspective", description: "Questions, ideas, or a conversation worth starting? Get in touch.", action: "Contact us" },
         { title: "Stay curious", description: "Read perspectives on opportunity, community, and our shared heritage.", action: "Read the journal" },
       ] },
-      join: { eyebrow: "YOUR VOICE MATTERS", title: "A shared tomorrow\nstarts with us.", description: "Bring your ideas, your energy, and your hopes for Pakistan. Take the first step.", action: "Explore membership", secondary: "Let’s talk" },
+      join: { eyebrow: "YOUR VOICE MATTERS", title: "A shared tomorrow\nstarts with us.", description: "", action: "Explore membership", secondary: "Let’s talk" },
     },
     journal: {
       eyebrow: "NEWS, PROFILES & PERSPECTIVES", title: "The TJP journal.", description: "Meet our leadership, explore the activity archive, and read perspectives on Pakistan’s future.",
@@ -310,6 +310,11 @@ export const translations = {
         ],
       },
     },
+    admin: {
+      portal: "Punjab admin portal", login: "Admin login", email: "Email address", password: "Password", signIn: "Sign in", unavailable: "Admin sign-in is not available yet.",
+      dashboard: "Dashboard", overview: "Overview", workspace: "Admin workspace", dashboardDescription: "Your workspace at a glance.",
+      members: "Members", content: "Content", activity: "Recent activity", noData: "No data available", noActivity: "Activity will appear here when connected.", status: "Connection status", notConnected: "Not connected", statusDescription: "The dashboard is awaiting an authentication and data connection.",
+    },
     login: { eyebrow: "MEMBER ACCESS", title: "Member login", description: "Online sign-in is currently unavailable.", note: "Please check back for updates." },
     footer: {
       title: "Our Pakistan. Our shared future.", description: "Tehreek Jawanan Pakistan · Unity, Prosperity, Progress.",
@@ -357,6 +362,11 @@ export const translations = {
           { number: "۰۳", title: "خود انحصاری اور ترقی", description: "مقامی کاروبار، جدت اور پائیدار قومی ترقی کا تصور۔" },
         ],
       },
+    },
+    admin: {
+      portal: "پنجاب ایڈمن پورٹل", login: "ایڈمن لاگ اِن", email: "ای میل ایڈریس", password: "پاس ورڈ", signIn: "لاگ اِن", unavailable: "ایڈمن لاگ اِن فی الحال دستیاب نہیں ہے۔",
+      dashboard: "ڈیش بورڈ", overview: "جائزہ", workspace: "ایڈمن ورک اسپیس", dashboardDescription: "آپ کے ورک اسپیس کا ایک جائزہ۔",
+      members: "اراکین", content: "مواد", activity: "حالیہ سرگرمی", noData: "کوئی معلومات دستیاب نہیں", noActivity: "منسلک ہونے پر سرگرمی یہاں نظر آئے گی۔", status: "کنکشن کی حیثیت", notConnected: "منسلک نہیں", statusDescription: "ڈیش بورڈ تصدیق اور ڈیٹا کنکشن کا منتظر ہے۔",
     },
     login: { eyebrow: "اراکین کے لیے", title: "اراکین کا لاگ اِن", description: "آن لائن لاگ اِن فی الحال دستیاب نہیں ہے۔", note: "تازہ معلومات کے لیے دوبارہ ملاحظہ کریں۔" },
     footer: {

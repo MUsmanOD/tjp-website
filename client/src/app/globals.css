@@ -186,12 +186,6 @@
   .gallery-tile-caption { @apply absolute inset-x-0 bottom-0 z-10 flex items-end justify-between gap-4 p-6 text-start text-sm font-medium text-white; }
   .participation-card { @apply flex min-w-0 flex-col px-7 py-5 sm:px-8 sm:py-6; }
   .participation-card + .participation-card { @apply border-t md:border-t-0 md:border-s; }
-  .join-section { @apply bg-background; }
-  .join-banner { @apply relative isolate flex flex-col items-start justify-between gap-9 overflow-hidden rounded-2xl bg-primary px-7 py-12 sm:px-12 sm:py-16 lg:flex-row lg:items-center lg:px-16; --ring: var(--brand-white); }
-  .join-decoration { @apply pointer-events-none absolute -end-28 -top-32 -z-10 size-[34rem] rounded-full border border-white/15; }
-  .join-decoration::before, .join-decoration::after { content: ""; @apply absolute rounded-full border border-white/15; }
-  .join-decoration::before { inset: 3rem; }
-  .join-decoration::after { inset: 6rem; }
   .page-intro { @apply relative overflow-hidden border-b bg-surface py-10 sm:py-16; }
   .page-intro-mark { @apply hidden size-24 shrink-0 items-center justify-center rounded-full border border-primary/20 text-primary lg:flex; }
   .filter-row { @apply mb-8 flex flex-wrap items-center gap-2; }
@@ -275,6 +269,46 @@
 @keyframes hero-pan { from { transform: scale(1.04); } to { transform: scale(1.12) translateY(-1%); } }
 @keyframes hero-copy-in { from { opacity: 0; transform: translateY(1rem); } to { opacity: 1; transform: translateY(0); } }
 @keyframes brand-letter-in { from { opacity: 0; } to { opacity: 1; } }
+
+@layer components {
+  .admin-login-page { @apply flex min-h-screen items-center justify-center bg-surface px-5 py-10; min-height: 100svh; background-image: radial-gradient(ellipse at top, var(--secondary), var(--surface) 60%); }
+  .admin-login-card { @apply w-full max-w-md p-7 shadow-xl shadow-primary/5 sm:p-10; }
+  .admin-login-heading { @apply flex flex-col items-center text-center; }
+  .admin-login-logo { @apply mb-6 object-contain; }
+  .admin-login-heading .text-eyebrow { @apply mb-2; }
+  .admin-login-form { @apply mt-9 flex flex-col gap-5; }
+  .admin-input-wrap { @apply relative; }
+  .admin-input-wrap > svg { @apply pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-muted-foreground; }
+  .admin-input-wrap .form-input { @apply ps-11; }
+  .admin-login-status { @apply text-center text-muted-foreground; }
+  .admin-dashboard-page { @apply min-h-screen bg-surface; }
+  .admin-shell { @apply min-h-screen lg:grid lg:grid-cols-[15rem_minmax(0,1fr)]; }
+  .admin-sidebar { @apply border-b bg-background px-5 py-5 lg:border-b-0 lg:border-e lg:px-4 lg:py-7; }
+  .admin-sidebar-brand { @apply flex items-center gap-3 px-2; }
+  .admin-sidebar-brand div { @apply flex flex-col; }
+  .admin-sidebar-brand strong { @apply text-base text-heading; }
+  .admin-sidebar-brand span { @apply text-small text-muted-foreground; }
+  .admin-sidebar-current { @apply mt-7 hidden items-center gap-3 rounded-lg bg-secondary px-4 py-3 text-sm font-semibold text-primary lg:flex; }
+  .admin-sidebar-current svg { @apply size-4; }
+  .admin-dashboard-main { @apply min-w-0; }
+  .admin-dashboard-header { @apply flex min-h-16 items-center justify-between border-b bg-background px-5 text-sm font-medium text-muted-foreground sm:px-8 lg:px-10; }
+  .admin-dashboard-content { @apply mx-auto max-w-7xl px-5 py-8 sm:px-8 sm:py-12 lg:px-10; }
+  .admin-dashboard-title h1 { @apply mt-1; }
+  .admin-dashboard-title > p:last-child { @apply mt-2; }
+  .admin-summary-grid { @apply mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3; }
+  .admin-summary { @apply gap-3 p-6; }
+  .admin-summary-top, .admin-panel-heading { @apply flex items-center justify-between gap-4; }
+  .admin-summary-top { @apply text-sm font-medium text-muted-foreground; }
+  .admin-summary-top svg, .admin-panel-heading > svg { @apply size-5 text-primary; }
+  .admin-summary strong { @apply text-2xl font-semibold text-heading; }
+  .admin-dashboard-grid { @apply mt-4 grid gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(15rem,1fr)]; }
+  .admin-activity, .admin-connection { @apply p-6; }
+  .admin-empty { @apply flex min-h-48 flex-col items-center justify-center gap-3 text-center; }
+  .admin-empty svg { @apply size-8 text-primary/40; }
+  .admin-status-pill { @apply mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-secondary px-3 py-1 text-sm font-medium text-primary; }
+  .admin-status-pill span { @apply size-2 rounded-full bg-primary; }
+  .admin-connection > p { @apply mt-4; }
+}
 
 @media (max-width: 1023px) {
   .mobile-menu { width: min(20rem, 90vw); max-width: none; height: 100dvh; max-height: 100dvh; gap: 0; overflow: hidden; }
