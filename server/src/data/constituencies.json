@@ -1,0 +1,13 @@
+{
+  "version":"ecp-general-seats-2024-v1",
+  "source":"https://www.ecp.gov.pk/storage/files/3/General%20Elections%20Report%202024%20Vol-I-compressed.pdf",
+  "reviewedAt":"2026-10-28",
+  "note":"General seat codes by region; these are not a mapping of residential addresses to electoral boundaries. AJK/GB and unlisted entries require manual review.",
+  "regions":{
+    "kp":{"national":[1,45],"prefix":"PK","assembly":115},
+    "ict":{"national":[46,48],"prefix":"","assembly":0},
+    "punjab":{"national":[49,189],"prefix":"PP","assembly":297},
+    "sindh":{"national":[190,250],"prefix":"PS","assembly":130},
+    "balochistan":{"national":[251,266],"prefix":"PB","assembly":51}
+  }
+}

@@ -1,13 +1,13 @@
 # TJP Website
 
-This repository contains separate JavaScript applications:
+This repository contains two applications:
 
-- `client/` — Next.js App Router with Tailwind CSS.
-- `server/` — Express API with MongoDB via Mongoose.
+- `client/` — Next.js App Router, JavaScript/JSX, shadcn/ui, English and Urdu.
+- `server/` — strict TypeScript Express API with MongoDB, membership review and administrator MFA.
 
 ## Requirements
 
-- Node.js 20.9 or newer
+- Node.js 24 LTS
 - npm
 - MongoDB, locally or through a MongoDB hosting provider
 
@@ -24,8 +24,7 @@ npm install
 
 ## Configure the API
 
-Copy `server/.env.example` to `server/.env` and set `MONGODB_URI`.
-`CLIENT_ORIGIN` can be set to a comma-separated list of allowed browser origins.
+From the root run `docker compose up -d`, then run `npm run setup:local` inside `server` to generate an ignored development configuration with random secrets. Run `npm run admin:create` to provision the administrator interactively. See [server setup and security documentation](server/README.md) for MFA enrollment, recovery, key rotation, API contracts, tests and deployment.
 
 ## Run in development
 
@@ -42,13 +41,13 @@ npm run dev
 ```
 
 The client runs at `http://localhost:3000`; the API runs at
-`http://localhost:5000`. The API health endpoint is `/api/health`.
+`http://127.0.0.1:5027`. The browser uses same-origin `/api` requests through Next.js. API health endpoints are `/api/health` and `/api/ready`. The public form is `/membership`; administration is `/admin`.
 
 Run the API tests with `cd server; npm test`.
 
 ## Production
 
-Build the client with `cd client; npm run build`, then start it with
-`npm start`. Start the API with `cd server; npm start`. Configure production
+Build each application with `npm run build` in its directory, then start each with
+`npm start`. Configure production
 environment variables and MongoDB access in the deployment environment; do not
 commit `.env` files.

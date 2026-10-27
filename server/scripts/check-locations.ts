@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {districts,localities,regions,countryCodes,constituencyOptions} from '../src/modules/geography.js';
+assert.equal(new Set(districts.map(d=>d.id)).size,districts.length);
+assert.equal(new Set(localities.map(d=>d.id)).size,localities.length);
+assert.ok(countryCodes.length>240);
+for(const district of districts)assert.ok(regions.some(r=>r.id===district.region));
+for(const place of localities)assert.ok(districts.some(d=>d.id===place.district&&d.region===place.region));
+assert.equal(regions.flatMap(r=>constituencyOptions(r.id,'national')).length,266);
+assert.equal(regions.flatMap(r=>constituencyOptions(r.id,'assembly')).length,593);
+console.info(`${districts.length} districts, ${localities.length} localities; 266 national and 593 provincial seat codes validated.`);

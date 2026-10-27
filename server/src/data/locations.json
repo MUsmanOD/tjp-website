@@ -1,0 +1,5346 @@
+{
+  "version": "pbs-2023-v1",
+  "source": "https://www.pbs.gov.pk/result-excel/",
+  "districts": [
+    {
+      "id": "punjab:attock",
+      "region": "punjab",
+      "en": "Attock",
+      "ur": "Attock"
+    },
+    {
+      "id": "punjab:bahawalnagar",
+      "region": "punjab",
+      "en": "Bahawalnagar",
+      "ur": "Bahawalnagar"
+    },
+    {
+      "id": "punjab:bahawalpur",
+      "region": "punjab",
+      "en": "Bahawalpur",
+      "ur": "Bahawalpur"
+    },
+    {
+      "id": "punjab:bhakkar",
+      "region": "punjab",
+      "en": "Bhakkar",
+      "ur": "Bhakkar"
+    },
+    {
+      "id": "punjab:chakwal",
+      "region": "punjab",
+      "en": "Chakwal",
+      "ur": "Chakwal"
+    },
+    {
+      "id": "punjab:chiniot",
+      "region": "punjab",
+      "en": "Chiniot",
+      "ur": "Chiniot"
+    },
+    {
+      "id": "punjab:dera-ghazi-khan",
+      "region": "punjab",
+      "en": "Dera Ghazi Khan",
+      "ur": "Dera Ghazi Khan"
+    },
+    {
+      "id": "punjab:faisalabad",
+      "region": "punjab",
+      "en": "Faisalabad",
+      "ur": "Faisalabad"
+    },
+    {
+      "id": "punjab:gujranwala",
+      "region": "punjab",
+      "en": "Gujranwala",
+      "ur": "Gujranwala"
+    },
+    {
+      "id": "punjab:gujrat",
+      "region": "punjab",
+      "en": "Gujrat",
+      "ur": "Gujrat"
+    },
+    {
+      "id": "punjab:hafizabad",
+      "region": "punjab",
+      "en": "Hafizabad",
+      "ur": "Hafizabad"
+    },
+    {
+      "id": "punjab:jhang",
+      "region": "punjab",
+      "en": "Jhang",
+      "ur": "Jhang"
+    },
+    {
+      "id": "punjab:jhelum",
+      "region": "punjab",
+      "en": "Jhelum",
+      "ur": "Jhelum"
+    },
+    {
+      "id": "punjab:kasur",
+      "region": "punjab",
+      "en": "Kasur",
+      "ur": "Kasur"
+    },
+    {
+      "id": "punjab:khanewal",
+      "region": "punjab",
+      "en": "Khanewal",
+      "ur": "Khanewal"
+    },
+    {
+      "id": "punjab:khushab",
+      "region": "punjab",
+      "en": "Khushab",
+      "ur": "Khushab"
+    },
+    {
+      "id": "punjab:lahore",
+      "region": "punjab",
+      "en": "Lahore",
+      "ur": "Lahore"
+    },
+    {
+      "id": "punjab:layyah",
+      "region": "punjab",
+      "en": "Layyah",
+      "ur": "Layyah"
+    },
+    {
+      "id": "punjab:lodhran",
+      "region": "punjab",
+      "en": "Lodhran",
+      "ur": "Lodhran"
+    },
+    {
+      "id": "punjab:mandi-bahauddin",
+      "region": "punjab",
+      "en": "Mandi Bahauddin",
+      "ur": "Mandi Bahauddin"
+    },
+    {
+      "id": "punjab:mianwali",
+      "region": "punjab",
+      "en": "Mianwali",
+      "ur": "Mianwali"
+    },
+    {
+      "id": "punjab:multan",
+      "region": "punjab",
+      "en": "Multan",
+      "ur": "Multan"
+    },
+    {
+      "id": "punjab:muzaffargarh",
+      "region": "punjab",
+      "en": "Muzaffargarh",
+      "ur": "Muzaffargarh"
+    },
+    {
+      "id": "punjab:nankana-sahib",
+      "region": "punjab",
+      "en": "Nankana Sahib",
+      "ur": "Nankana Sahib"
+    },
+    {
+      "id": "punjab:narowal",
+      "region": "punjab",
+      "en": "Narowal",
+      "ur": "Narowal"
+    },
+    {
+      "id": "punjab:okara",
+      "region": "punjab",
+      "en": "Okara",
+      "ur": "Okara"
+    },
+    {
+      "id": "punjab:pakpattan",
+      "region": "punjab",
+      "en": "Pakpattan",
+      "ur": "Pakpattan"
+    },
+    {
+      "id": "punjab:rahim-yar-khan",
+      "region": "punjab",
+      "en": "Rahim Yar Khan",
+      "ur": "Rahim Yar Khan"
+    },
+    {
+      "id": "punjab:rajanpur",
+      "region": "punjab",
+      "en": "Rajanpur",
+      "ur": "Rajanpur"
+    },
+    {
+      "id": "punjab:rawalpindi",
+      "region": "punjab",
+      "en": "Rawalpindi",
+      "ur": "Rawalpindi"
+    },
+    {
+      "id": "punjab:sahiwal",
+      "region": "punjab",
+      "en": "Sahiwal",
+      "ur": "Sahiwal"
+    },
+    {
+      "id": "punjab:sargodha",
+      "region": "punjab",
+      "en": "Sargodha",
+      "ur": "Sargodha"
+    },
+    {
+      "id": "punjab:sheikhupura",
+      "region": "punjab",
+      "en": "Sheikhupura",
+      "ur": "Sheikhupura"
+    },
+    {
+      "id": "punjab:sialkot",
+      "region": "punjab",
+      "en": "Sialkot",
+      "ur": "Sialkot"
+    },
+    {
+      "id": "punjab:toba-tek-singh",
+      "region": "punjab",
+      "en": "Toba Tek Singh",
+      "ur": "Toba Tek Singh"
+    },
+    {
+      "id": "punjab:vehari",
+      "region": "punjab",
+      "en": "Vehari",
+      "ur": "Vehari"
+    },
+    {
+      "id": "sindh:badin",
+      "region": "sindh",
+      "en": "Badin",
+      "ur": "Badin"
+    },
+    {
+      "id": "sindh:dadu",
+      "region": "sindh",
+      "en": "Dadu",
+      "ur": "Dadu"
+    },
+    {
+      "id": "sindh:ghotki",
+      "region": "sindh",
+      "en": "Ghotki",
+      "ur": "Ghotki"
+    },
+    {
+      "id": "sindh:hyderabad",
+      "region": "sindh",
+      "en": "Hyderabad",
+      "ur": "Hyderabad"
+    },
+    {
+      "id": "sindh:jacobabad",
+      "region": "sindh",
+      "en": "Jacobabad",
+      "ur": "Jacobabad"
+    },
+    {
+      "id": "sindh:jamshoro",
+      "region": "sindh",
+      "en": "Jamshoro",
+      "ur": "Jamshoro"
+    },
+    {
+      "id": "sindh:kambar-shahdad-kot",
+      "region": "sindh",
+      "en": "Kambar Shahdad Kot",
+      "ur": "Kambar Shahdad Kot"
+    },
+    {
+      "id": "sindh:karachi-central",
+      "region": "sindh",
+      "en": "Karachi Central",
+      "ur": "Karachi Central"
+    },
+    {
+      "id": "sindh:karachi-east",
+      "region": "sindh",
+      "en": "Karachi East",
+      "ur": "Karachi East"
+    },
+    {
+      "id": "sindh:karachi-south",
+      "region": "sindh",
+      "en": "Karachi South",
+      "ur": "Karachi South"
+    },
+    {
+      "id": "sindh:karachi-west",
+      "region": "sindh",
+      "en": "Karachi West",
+      "ur": "Karachi West"
+    },
+    {
+      "id": "sindh:kashmore",
+      "region": "sindh",
+      "en": "Kashmore",
+      "ur": "Kashmore"
+    },
+    {
+      "id": "sindh:keamari",
+      "region": "sindh",
+      "en": "Keamari",
+      "ur": "Keamari"
+    },
+    {
+      "id": "sindh:khairpur",
+      "region": "sindh",
+      "en": "Khairpur",
+      "ur": "Khairpur"
+    },
+    {
+      "id": "sindh:korangi",
+      "region": "sindh",
+      "en": "Korangi",
+      "ur": "Korangi"
+    },
+    {
+      "id": "sindh:larkana",
+      "region": "sindh",
+      "en": "Larkana",
+      "ur": "Larkana"
+    },
+    {
+      "id": "sindh:malir",
+      "region": "sindh",
+      "en": "Malir",
+      "ur": "Malir"
+    },
+    {
+      "id": "sindh:matiari",
+      "region": "sindh",
+      "en": "Matiari",
+      "ur": "Matiari"
+    },
+    {
+      "id": "sindh:mirpur-khas",
+      "region": "sindh",
+      "en": "Mirpur Khas",
+      "ur": "Mirpur Khas"
+    },
+    {
+      "id": "sindh:naushahro-feroze",
+      "region": "sindh",
+      "en": "Naushahro Feroze",
+      "ur": "Naushahro Feroze"
+    },
+    {
+      "id": "sindh:sanghar",
+      "region": "sindh",
+      "en": "Sanghar",
+      "ur": "Sanghar"
+    },
+    {
+      "id": "sindh:shaheed-benazirabad",
+      "region": "sindh",
+      "en": "Shaheed Benazirabad",
+      "ur": "Shaheed Benazirabad"
+    },
+    {
+      "id": "sindh:shikarpur",
+      "region": "sindh",
+      "en": "Shikarpur",
+      "ur": "Shikarpur"
+    },
+    {
+      "id": "sindh:sujawal",
+      "region": "sindh",
+      "en": "Sujawal",
+      "ur": "Sujawal"
+    },
+    {
+      "id": "sindh:sukkur",
+      "region": "sindh",
+      "en": "Sukkur",
+      "ur": "Sukkur"
+    },
+    {
+      "id": "sindh:tando-allahyar",
+      "region": "sindh",
+      "en": "Tando Allahyar",
+      "ur": "Tando Allahyar"
+    },
+    {
+      "id": "sindh:tando-muhammad-khan",
+      "region": "sindh",
+      "en": "Tando Muhammad Khan",
+      "ur": "Tando Muhammad Khan"
+    },
+    {
+      "id": "sindh:tharparkar",
+      "region": "sindh",
+      "en": "Tharparkar",
+      "ur": "Tharparkar"
+    },
+    {
+      "id": "sindh:thatta",
+      "region": "sindh",
+      "en": "Thatta",
+      "ur": "Thatta"
+    },
+    {
+      "id": "sindh:umer-kot",
+      "region": "sindh",
+      "en": "Umer Kot",
+      "ur": "Umer Kot"
+    },
+    {
+      "id": "kp:abbottabad",
+      "region": "kp",
+      "en": "Abbottabad",
+      "ur": "Abbottabad"
+    },
+    {
+      "id": "kp:bannu",
+      "region": "kp",
+      "en": "Bannu",
+      "ur": "Bannu"
+    },
+    {
+      "id": "kp:charsadda",
+      "region": "kp",
+      "en": "Charsadda",
+      "ur": "Charsadda"
+    },
+    {
+      "id": "kp:dera-ismail-khan",
+      "region": "kp",
+      "en": "Dera Ismail Khan",
+      "ur": "Dera Ismail Khan"
+    },
+    {
+      "id": "kp:hangu",
+      "region": "kp",
+      "en": "Hangu",
+      "ur": "Hangu"
+    },
+    {
+      "id": "kp:haripur",
+      "region": "kp",
+      "en": "Haripur",
+      "ur": "Haripur"
+    },
+    {
+      "id": "kp:karak",
+      "region": "kp",
+      "en": "Karak",
+      "ur": "Karak"
+    },
+    {
+      "id": "kp:khyber",
+      "region": "kp",
+      "en": "Khyber",
+      "ur": "Khyber"
+    },
+    {
+      "id": "kp:kohat",
+      "region": "kp",
+      "en": "Kohat",
+      "ur": "Kohat"
+    },
+    {
+      "id": "kp:kurram",
+      "region": "kp",
+      "en": "Kurram",
+      "ur": "Kurram"
+    },
+    {
+      "id": "kp:lakki-marwat",
+      "region": "kp",
+      "en": "Lakki Marwat",
+      "ur": "Lakki Marwat"
+    },
+    {
+      "id": "kp:lower-chitral",
+      "region": "kp",
+      "en": "Lower Chitral",
+      "ur": "Lower Chitral"
+    },
+    {
+      "id": "kp:lower-dir",
+      "region": "kp",
+      "en": "Lower Dir",
+      "ur": "Lower Dir"
+    },
+    {
+      "id": "kp:mansehra",
+      "region": "kp",
+      "en": "Mansehra",
+      "ur": "Mansehra"
+    },
+    {
+      "id": "kp:mardan",
+      "region": "kp",
+      "en": "Mardan",
+      "ur": "Mardan"
+    },
+    {
+      "id": "kp:north-waziristan",
+      "region": "kp",
+      "en": "North Waziristan",
+      "ur": "North Waziristan"
+    },
+    {
+      "id": "kp:nowshera",
+      "region": "kp",
+      "en": "Nowshera",
+      "ur": "Nowshera"
+    },
+    {
+      "id": "kp:peshawar",
+      "region": "kp",
+      "en": "Peshawar",
+      "ur": "Peshawar"
+    },
+    {
+      "id": "kp:swabi",
+      "region": "kp",
+      "en": "Swabi",
+      "ur": "Swabi"
+    },
+    {
+      "id": "kp:swat",
+      "region": "kp",
+      "en": "Swat",
+      "ur": "Swat"
+    },
+    {
+      "id": "kp:tank",
+      "region": "kp",
+      "en": "Tank",
+      "ur": "Tank"
+    },
+    {
+      "id": "kp:upper-dir",
+      "region": "kp",
+      "en": "Upper Dir",
+      "ur": "Upper Dir"
+    },
+    {
+      "id": "balochistan:awaran",
+      "region": "balochistan",
+      "en": "Awaran",
+      "ur": "Awaran"
+    },
+    {
+      "id": "balochistan:barkhan",
+      "region": "balochistan",
+      "en": "Barkhan",
+      "ur": "Barkhan"
+    },
+    {
+      "id": "balochistan:chagai",
+      "region": "balochistan",
+      "en": "Chagai",
+      "ur": "Chagai"
+    },
+    {
+      "id": "balochistan:chaman",
+      "region": "balochistan",
+      "en": "Chaman",
+      "ur": "Chaman"
+    },
+    {
+      "id": "balochistan:dera-bugti",
+      "region": "balochistan",
+      "en": "Dera Bugti",
+      "ur": "Dera Bugti"
+    },
+    {
+      "id": "balochistan:duki",
+      "region": "balochistan",
+      "en": "Duki",
+      "ur": "Duki"
+    },
+    {
+      "id": "balochistan:gwadar",
+      "region": "balochistan",
+      "en": "Gwadar",
+      "ur": "Gwadar"
+    },
+    {
+      "id": "balochistan:harnai",
+      "region": "balochistan",
+      "en": "Harnai",
+      "ur": "Harnai"
+    },
+    {
+      "id": "balochistan:jaffarabad",
+      "region": "balochistan",
+      "en": "Jaffarabad",
+      "ur": "Jaffarabad"
+    },
+    {
+      "id": "balochistan:jhal-magsi",
+      "region": "balochistan",
+      "en": "Jhal Magsi",
+      "ur": "Jhal Magsi"
+    },
+    {
+      "id": "balochistan:kachhi",
+      "region": "balochistan",
+      "en": "Kachhi",
+      "ur": "Kachhi"
+    },
+    {
+      "id": "balochistan:kalat",
+      "region": "balochistan",
+      "en": "Kalat",
+      "ur": "Kalat"
+    },
+    {
+      "id": "balochistan:kech",
+      "region": "balochistan",
+      "en": "Kech",
+      "ur": "Kech"
+    },
+    {
+      "id": "balochistan:kharan",
+      "region": "balochistan",
+      "en": "Kharan",
+      "ur": "Kharan"
+    },
+    {
+      "id": "balochistan:khuzdar",
+      "region": "balochistan",
+      "en": "Khuzdar",
+      "ur": "Khuzdar"
+    },
+    {
+      "id": "balochistan:killa-abdullah",
+      "region": "balochistan",
+      "en": "Killa Abdullah",
+      "ur": "Killa Abdullah"
+    },
+    {
+      "id": "balochistan:killa-saifullah",
+      "region": "balochistan",
+      "en": "Killa Saifullah",
+      "ur": "Killa Saifullah"
+    },
+    {
+      "id": "balochistan:kohlu",
+      "region": "balochistan",
+      "en": "Kohlu",
+      "ur": "Kohlu"
+    },
+    {
+      "id": "balochistan:lasbela",
+      "region": "balochistan",
+      "en": "Lasbela",
+      "ur": "Lasbela"
+    },
+    {
+      "id": "balochistan:loralai",
+      "region": "balochistan",
+      "en": "Loralai",
+      "ur": "Loralai"
+    },
+    {
+      "id": "balochistan:mastung",
+      "region": "balochistan",
+      "en": "Mastung",
+      "ur": "Mastung"
+    },
+    {
+      "id": "balochistan:musakhel",
+      "region": "balochistan",
+      "en": "Musakhel",
+      "ur": "Musakhel"
+    },
+    {
+      "id": "balochistan:nasirabad",
+      "region": "balochistan",
+      "en": "Nasirabad",
+      "ur": "Nasirabad"
+    },
+    {
+      "id": "balochistan:nushki",
+      "region": "balochistan",
+      "en": "Nushki",
+      "ur": "Nushki"
+    },
+    {
+      "id": "balochistan:panjgur",
+      "region": "balochistan",
+      "en": "Panjgur",
+      "ur": "Panjgur"
+    },
+    {
+      "id": "balochistan:pishin",
+      "region": "balochistan",
+      "en": "Pishin",
+      "ur": "Pishin"
+    },
+    {
+      "id": "balochistan:quetta",
+      "region": "balochistan",
+      "en": "Quetta",
+      "ur": "Quetta"
+    },
+    {
+      "id": "balochistan:sibi",
+      "region": "balochistan",
+      "en": "Sibi",
+      "ur": "Sibi"
+    },
+    {
+      "id": "balochistan:sohbatpur",
+      "region": "balochistan",
+      "en": "Sohbatpur",
+      "ur": "Sohbatpur"
+    },
+    {
+      "id": "balochistan:surab",
+      "region": "balochistan",
+      "en": "Surab",
+      "ur": "Surab"
+    },
+    {
+      "id": "balochistan:washuk",
+      "region": "balochistan",
+      "en": "Washuk",
+      "ur": "Washuk"
+    },
+    {
+      "id": "balochistan:zhob",
+      "region": "balochistan",
+      "en": "Zhob",
+      "ur": "Zhob"
+    },
+    {
+      "id": "balochistan:ziarat",
+      "region": "balochistan",
+      "en": "Ziarat",
+      "ur": "Ziarat"
+    },
+    {
+      "id": "ict:islamabad",
+      "region": "ict",
+      "en": "Islamabad",
+      "ur": "Islamabad"
+    }
+  ],
+  "localities": [
+    {
+      "id": "punjab:attock:attock-mc",
+      "region": "punjab",
+      "district": "punjab:attock",
+      "en": "Attock Mc",
+      "ur": "Attock Mc"
+    },
+    {
+      "id": "punjab:attock:fateh-jang-mc",
+      "region": "punjab",
+      "district": "punjab:attock",
+      "en": "Fateh Jang Mc",
+      "ur": "Fateh Jang Mc"
+    },
+    {
+      "id": "punjab:attock:hasan-abdal-mc",
+      "region": "punjab",
+      "district": "punjab:attock",
+      "en": "Hasan Abdal Mc",
+      "ur": "Hasan Abdal Mc"
+    },
+    {
+      "id": "punjab:attock:jand-mc",
+      "region": "punjab",
+      "district": "punjab:attock",
+      "en": "Jand Mc",
+      "ur": "Jand Mc"
+    },
+    {
+      "id": "punjab:attock:kamra-cantonment",
+      "region": "punjab",
+      "district": "punjab:attock",
+      "en": "Kamra Cantonment",
+      "ur": "Kamra Cantonment"
+    },
+    {
+      "id": "punjab:attock:pindi-gheb-mc",
+      "region": "punjab",
+      "district": "punjab:attock",
+      "en": "Pindi Gheb Mc",
+      "ur": "Pindi Gheb Mc"
+    },
+    {
+      "id": "punjab:attock:attock-cantonment",
+      "region": "punjab",
+      "district": "punjab:attock",
+      "en": "Attock Cantonment",
+      "ur": "Attock Cantonment"
+    },
+    {
+      "id": "punjab:attock:hazro-mc",
+      "region": "punjab",
+      "district": "punjab:attock",
+      "en": "Hazro Mc",
+      "ur": "Hazro Mc"
+    },
+    {
+      "id": "punjab:attock:mirza-tc",
+      "region": "punjab",
+      "district": "punjab:attock",
+      "en": "Mirza Tc",
+      "ur": "Mirza Tc"
+    },
+    {
+      "id": "punjab:attock:ghur-ghushti-mc",
+      "region": "punjab",
+      "district": "punjab:attock",
+      "en": "Ghur Ghushti Mc",
+      "ur": "Ghur Ghushti Mc"
+    },
+    {
+      "id": "punjab:attock:sanjwal-cantonment",
+      "region": "punjab",
+      "district": "punjab:attock",
+      "en": "Sanjwal Cantonment",
+      "ur": "Sanjwal Cantonment"
+    },
+    {
+      "id": "punjab:bahawalnagar:bahawalnagar-mc",
+      "region": "punjab",
+      "district": "punjab:bahawalnagar",
+      "en": "Bahawalnagar Mc",
+      "ur": "Bahawalnagar Mc"
+    },
+    {
+      "id": "punjab:bahawalnagar:chishtian-mc",
+      "region": "punjab",
+      "district": "punjab:bahawalnagar",
+      "en": "Chishtian Mc",
+      "ur": "Chishtian Mc"
+    },
+    {
+      "id": "punjab:bahawalnagar:haroonabad-mc",
+      "region": "punjab",
+      "district": "punjab:bahawalnagar",
+      "en": "Haroonabad Mc",
+      "ur": "Haroonabad Mc"
+    },
+    {
+      "id": "punjab:bahawalnagar:faqir-wali-tc",
+      "region": "punjab",
+      "district": "punjab:bahawalnagar",
+      "en": "Faqir Wali Tc",
+      "ur": "Faqir Wali Tc"
+    },
+    {
+      "id": "punjab:bahawalnagar:fort-abbas-mc",
+      "region": "punjab",
+      "district": "punjab:bahawalnagar",
+      "en": "Fort Abbas Mc",
+      "ur": "Fort Abbas Mc"
+    },
+    {
+      "id": "punjab:bahawalnagar:minchinabad-mc",
+      "region": "punjab",
+      "district": "punjab:bahawalnagar",
+      "en": "Minchinabad Mc",
+      "ur": "Minchinabad Mc"
+    },
+    {
+      "id": "punjab:bahawalnagar:ahmed-pur-mecleod-gunj-tc",
+      "region": "punjab",
+      "district": "punjab:bahawalnagar",
+      "en": "Ahmed Pur Mecleod Gunj Tc",
+      "ur": "Ahmed Pur Mecleod Gunj Tc"
+    },
+    {
+      "id": "punjab:bahawalnagar:daharanwala-tc",
+      "region": "punjab",
+      "district": "punjab:bahawalnagar",
+      "en": "Daharanwala Tc",
+      "ur": "Daharanwala Tc"
+    },
+    {
+      "id": "punjab:bahawalnagar:donga-bonga-mc",
+      "region": "punjab",
+      "district": "punjab:bahawalnagar",
+      "en": "Donga Bonga Mc",
+      "ur": "Donga Bonga Mc"
+    },
+    {
+      "id": "punjab:bahawalnagar:khichi-wala-tc",
+      "region": "punjab",
+      "district": "punjab:bahawalnagar",
+      "en": "Khichi Wala Tc",
+      "ur": "Khichi Wala Tc"
+    },
+    {
+      "id": "punjab:bahawalnagar:mandi-sadiq-ganj-tc",
+      "region": "punjab",
+      "district": "punjab:bahawalnagar",
+      "en": "Mandi Sadiq Ganj Tc",
+      "ur": "Mandi Sadiq Ganj Tc"
+    },
+    {
+      "id": "punjab:bahawalnagar:maroot-tc",
+      "region": "punjab",
+      "district": "punjab:bahawalnagar",
+      "en": "Maroot Tc",
+      "ur": "Maroot Tc"
+    },
+    {
+      "id": "punjab:bahawalpur:bahawalpur-metropolitan-corporation",
+      "region": "punjab",
+      "district": "punjab:bahawalpur",
+      "en": "Bahawalpur Metropolitan Corporation",
+      "ur": "Bahawalpur Metropolitan Corporation"
+    },
+    {
+      "id": "punjab:bahawalpur:ahmadpur-east-mc",
+      "region": "punjab",
+      "district": "punjab:bahawalpur",
+      "en": "Ahmadpur East Mc",
+      "ur": "Ahmadpur East Mc"
+    },
+    {
+      "id": "punjab:bahawalpur:hasilpur-mc",
+      "region": "punjab",
+      "district": "punjab:bahawalpur",
+      "en": "Hasilpur Mc",
+      "ur": "Hasilpur Mc"
+    },
+    {
+      "id": "punjab:bahawalpur:bahawalpur-cantonment",
+      "region": "punjab",
+      "district": "punjab:bahawalpur",
+      "en": "Bahawalpur Cantonment",
+      "ur": "Bahawalpur Cantonment"
+    },
+    {
+      "id": "punjab:bahawalpur:uch-sharif-mc",
+      "region": "punjab",
+      "district": "punjab:bahawalpur",
+      "en": "Uch Sharif Mc",
+      "ur": "Uch Sharif Mc"
+    },
+    {
+      "id": "punjab:bahawalpur:yazman-mc",
+      "region": "punjab",
+      "district": "punjab:bahawalpur",
+      "en": "Yazman Mc",
+      "ur": "Yazman Mc"
+    },
+    {
+      "id": "punjab:bahawalpur:chani-goth-tc",
+      "region": "punjab",
+      "district": "punjab:bahawalpur",
+      "en": "Chani Goth Tc",
+      "ur": "Chani Goth Tc"
+    },
+    {
+      "id": "punjab:bahawalpur:khairpur-tamewali-mc",
+      "region": "punjab",
+      "district": "punjab:bahawalpur",
+      "en": "Khairpur Tamewali Mc",
+      "ur": "Khairpur Tamewali Mc"
+    },
+    {
+      "id": "punjab:bahawalpur:khanqah-sharif-tc",
+      "region": "punjab",
+      "district": "punjab:bahawalpur",
+      "en": "Khanqah Sharif Tc",
+      "ur": "Khanqah Sharif Tc"
+    },
+    {
+      "id": "punjab:bahawalpur:mubarak-pur-tc",
+      "region": "punjab",
+      "district": "punjab:bahawalpur",
+      "en": "Mubarak Pur Tc",
+      "ur": "Mubarak Pur Tc"
+    },
+    {
+      "id": "punjab:bahawalpur:qaim-pur-tc",
+      "region": "punjab",
+      "district": "punjab:bahawalpur",
+      "en": "Qaim Pur Tc",
+      "ur": "Qaim Pur Tc"
+    },
+    {
+      "id": "punjab:bahawalpur:samasatta-tc",
+      "region": "punjab",
+      "district": "punjab:bahawalpur",
+      "en": "Samasatta Tc",
+      "ur": "Samasatta Tc"
+    },
+    {
+      "id": "punjab:bhakkar:bhakkar-mc",
+      "region": "punjab",
+      "district": "punjab:bhakkar",
+      "en": "Bhakkar Mc",
+      "ur": "Bhakkar Mc"
+    },
+    {
+      "id": "punjab:bhakkar:darya-khan-mc",
+      "region": "punjab",
+      "district": "punjab:bhakkar",
+      "en": "Darya Khan Mc",
+      "ur": "Darya Khan Mc"
+    },
+    {
+      "id": "punjab:bhakkar:dullewala-mc",
+      "region": "punjab",
+      "district": "punjab:bhakkar",
+      "en": "Dullewala Mc",
+      "ur": "Dullewala Mc"
+    },
+    {
+      "id": "punjab:bhakkar:hyderabad-tc",
+      "region": "punjab",
+      "district": "punjab:bhakkar",
+      "en": "Hyderabad Tc",
+      "ur": "Hyderabad Tc"
+    },
+    {
+      "id": "punjab:bhakkar:kalur-kot-mc",
+      "region": "punjab",
+      "district": "punjab:bhakkar",
+      "en": "Kalur Kot Mc",
+      "ur": "Kalur Kot Mc"
+    },
+    {
+      "id": "punjab:bhakkar:kotla-jam-dagger-tc",
+      "region": "punjab",
+      "district": "punjab:bhakkar",
+      "en": "Kotla Jam Dagger Tc",
+      "ur": "Kotla Jam Dagger Tc"
+    },
+    {
+      "id": "punjab:bhakkar:jandanwala-mc",
+      "region": "punjab",
+      "district": "punjab:bhakkar",
+      "en": "Jandanwala Mc",
+      "ur": "Jandanwala Mc"
+    },
+    {
+      "id": "punjab:bhakkar:mankera-mc",
+      "region": "punjab",
+      "district": "punjab:bhakkar",
+      "en": "Mankera Mc",
+      "ur": "Mankera Mc"
+    },
+    {
+      "id": "punjab:chakwal:chakwal-mc",
+      "region": "punjab",
+      "district": "punjab:chakwal",
+      "en": "Chakwal Mc",
+      "ur": "Chakwal Mc"
+    },
+    {
+      "id": "punjab:chakwal:talagang-mc",
+      "region": "punjab",
+      "district": "punjab:chakwal",
+      "en": "Talagang Mc",
+      "ur": "Talagang Mc"
+    },
+    {
+      "id": "punjab:chakwal:choa-saidan-shah-mc",
+      "region": "punjab",
+      "district": "punjab:chakwal",
+      "en": "Choa Saidan Shah Mc",
+      "ur": "Choa Saidan Shah Mc"
+    },
+    {
+      "id": "punjab:chakwal:dhudial-tc",
+      "region": "punjab",
+      "district": "punjab:chakwal",
+      "en": "Dhudial Tc",
+      "ur": "Dhudial Tc"
+    },
+    {
+      "id": "punjab:chakwal:kallar-kahar-mc",
+      "region": "punjab",
+      "district": "punjab:chakwal",
+      "en": "Kallar Kahar Mc",
+      "ur": "Kallar Kahar Mc"
+    },
+    {
+      "id": "punjab:chakwal:bhaun-mc",
+      "region": "punjab",
+      "district": "punjab:chakwal",
+      "en": "Bhaun Mc",
+      "ur": "Bhaun Mc"
+    },
+    {
+      "id": "punjab:chakwal:lawa-mc",
+      "region": "punjab",
+      "district": "punjab:chakwal",
+      "en": "Lawa Mc",
+      "ur": "Lawa Mc"
+    },
+    {
+      "id": "punjab:chiniot:chiniot-mc",
+      "region": "punjab",
+      "district": "punjab:chiniot",
+      "en": "Chiniot Mc",
+      "ur": "Chiniot Mc"
+    },
+    {
+      "id": "punjab:chiniot:chenab-nagar-mc",
+      "region": "punjab",
+      "district": "punjab:chiniot",
+      "en": "Chenab Nagar Mc",
+      "ur": "Chenab Nagar Mc"
+    },
+    {
+      "id": "punjab:chiniot:lalian-mc",
+      "region": "punjab",
+      "district": "punjab:chiniot",
+      "en": "Lalian Mc",
+      "ur": "Lalian Mc"
+    },
+    {
+      "id": "punjab:chiniot:bhawana-mc",
+      "region": "punjab",
+      "district": "punjab:chiniot",
+      "en": "Bhawana Mc",
+      "ur": "Bhawana Mc"
+    },
+    {
+      "id": "punjab:dera-ghazi-khan:dera-ghazi-khan-municipal-corporation",
+      "region": "punjab",
+      "district": "punjab:dera-ghazi-khan",
+      "en": "Dera Ghazi Khan Municipal Corporation",
+      "ur": "Dera Ghazi Khan Municipal Corporation"
+    },
+    {
+      "id": "punjab:dera-ghazi-khan:taunsa-mc",
+      "region": "punjab",
+      "district": "punjab:dera-ghazi-khan",
+      "en": "Taunsa Mc",
+      "ur": "Taunsa Mc"
+    },
+    {
+      "id": "punjab:dera-ghazi-khan:kot-chhuta-mc",
+      "region": "punjab",
+      "district": "punjab:dera-ghazi-khan",
+      "en": "Kot Chhuta Mc",
+      "ur": "Kot Chhuta Mc"
+    },
+    {
+      "id": "punjab:dera-ghazi-khan:choti-zareen-tc",
+      "region": "punjab",
+      "district": "punjab:dera-ghazi-khan",
+      "en": "Choti Zareen Tc",
+      "ur": "Choti Zareen Tc"
+    },
+    {
+      "id": "punjab:dera-ghazi-khan:shadan-lund-tc",
+      "region": "punjab",
+      "district": "punjab:dera-ghazi-khan",
+      "en": "Shadan Lund Tc",
+      "ur": "Shadan Lund Tc"
+    },
+    {
+      "id": "punjab:dera-ghazi-khan:vehowa-tc",
+      "region": "punjab",
+      "district": "punjab:dera-ghazi-khan",
+      "en": "Vehowa Tc",
+      "ur": "Vehowa Tc"
+    },
+    {
+      "id": "punjab:dera-ghazi-khan:sakhi-sarwar-tc",
+      "region": "punjab",
+      "district": "punjab:dera-ghazi-khan",
+      "en": "Sakhi Sarwar Tc",
+      "ur": "Sakhi Sarwar Tc"
+    },
+    {
+      "id": "punjab:faisalabad:faisalabad-municipal-corporation",
+      "region": "punjab",
+      "district": "punjab:faisalabad",
+      "en": "Faisalabad Municipal Corporation",
+      "ur": "Faisalabad Municipal Corporation"
+    },
+    {
+      "id": "punjab:faisalabad:jaranwala-mc",
+      "region": "punjab",
+      "district": "punjab:faisalabad",
+      "en": "Jaranwala Mc",
+      "ur": "Jaranwala Mc"
+    },
+    {
+      "id": "punjab:faisalabad:sammundari-mc",
+      "region": "punjab",
+      "district": "punjab:faisalabad",
+      "en": "Sammundari Mc",
+      "ur": "Sammundari Mc"
+    },
+    {
+      "id": "punjab:faisalabad:chak-jhumra-mc",
+      "region": "punjab",
+      "district": "punjab:faisalabad",
+      "en": "Chak Jhumra Mc",
+      "ur": "Chak Jhumra Mc"
+    },
+    {
+      "id": "punjab:faisalabad:dijkot-mc",
+      "region": "punjab",
+      "district": "punjab:faisalabad",
+      "en": "Dijkot Mc",
+      "ur": "Dijkot Mc"
+    },
+    {
+      "id": "punjab:faisalabad:khurian-wala-mc",
+      "region": "punjab",
+      "district": "punjab:faisalabad",
+      "en": "Khurian Wala Mc",
+      "ur": "Khurian Wala Mc"
+    },
+    {
+      "id": "punjab:faisalabad:mamu-kanjan-mc",
+      "region": "punjab",
+      "district": "punjab:faisalabad",
+      "en": "Mamu Kanjan Mc",
+      "ur": "Mamu Kanjan Mc"
+    },
+    {
+      "id": "punjab:faisalabad:tandlian-wala-mc",
+      "region": "punjab",
+      "district": "punjab:faisalabad",
+      "en": "Tandlian Wala Mc",
+      "ur": "Tandlian Wala Mc"
+    },
+    {
+      "id": "punjab:gujranwala:gujranwala-metropolitan-corporation",
+      "region": "punjab",
+      "district": "punjab:gujranwala",
+      "en": "Gujranwala Metropolitan Corporation",
+      "ur": "Gujranwala Metropolitan Corporation"
+    },
+    {
+      "id": "punjab:gujranwala:kamoke-municipal-corporation",
+      "region": "punjab",
+      "district": "punjab:gujranwala",
+      "en": "Kamoke Municipal Corporation",
+      "ur": "Kamoke Municipal Corporation"
+    },
+    {
+      "id": "punjab:gujranwala:gujranwala-cantonment",
+      "region": "punjab",
+      "district": "punjab:gujranwala",
+      "en": "Gujranwala Cantonment",
+      "ur": "Gujranwala Cantonment"
+    },
+    {
+      "id": "punjab:gujranwala:ludhewala-waraich-mc",
+      "region": "punjab",
+      "district": "punjab:gujranwala",
+      "en": "Ludhewala Waraich Mc",
+      "ur": "Ludhewala Waraich Mc"
+    },
+    {
+      "id": "punjab:gujranwala:wazirabad-mc",
+      "region": "punjab",
+      "district": "punjab:gujranwala",
+      "en": "Wazirabad Mc",
+      "ur": "Wazirabad Mc"
+    },
+    {
+      "id": "punjab:gujranwala:ali-pur-chatha-mc",
+      "region": "punjab",
+      "district": "punjab:gujranwala",
+      "en": "Ali Pur Chatha Mc",
+      "ur": "Ali Pur Chatha Mc"
+    },
+    {
+      "id": "punjab:gujranwala:ghakkhar-mc",
+      "region": "punjab",
+      "district": "punjab:gujranwala",
+      "en": "Ghakkhar Mc",
+      "ur": "Ghakkhar Mc"
+    },
+    {
+      "id": "punjab:gujranwala:nowshera-virkan-mc",
+      "region": "punjab",
+      "district": "punjab:gujranwala",
+      "en": "Nowshera Virkan Mc",
+      "ur": "Nowshera Virkan Mc"
+    },
+    {
+      "id": "punjab:gujranwala:qila-didar-singh-mc",
+      "region": "punjab",
+      "district": "punjab:gujranwala",
+      "en": "Qila Didar Singh Mc",
+      "ur": "Qila Didar Singh Mc"
+    },
+    {
+      "id": "punjab:gujranwala:eminabad-tc",
+      "region": "punjab",
+      "district": "punjab:gujranwala",
+      "en": "Eminabad Tc",
+      "ur": "Eminabad Tc"
+    },
+    {
+      "id": "punjab:gujranwala:dhonkal-mc",
+      "region": "punjab",
+      "district": "punjab:gujranwala",
+      "en": "Dhonkal Mc",
+      "ur": "Dhonkal Mc"
+    },
+    {
+      "id": "punjab:gujranwala:rasool-nagar-tc",
+      "region": "punjab",
+      "district": "punjab:gujranwala",
+      "en": "Rasool Nagar Tc",
+      "ur": "Rasool Nagar Tc"
+    },
+    {
+      "id": "punjab:gujranwala:sohdhra-tc",
+      "region": "punjab",
+      "district": "punjab:gujranwala",
+      "en": "Sohdhra Tc",
+      "ur": "Sohdhra Tc"
+    },
+    {
+      "id": "punjab:gujrat:gujrat-metropolitan-corporation",
+      "region": "punjab",
+      "district": "punjab:gujrat",
+      "en": "Gujrat Metropolitan Corporation",
+      "ur": "Gujrat Metropolitan Corporation"
+    },
+    {
+      "id": "punjab:gujrat:jalalpur-jattan-mc",
+      "region": "punjab",
+      "district": "punjab:gujrat",
+      "en": "Jalalpur Jattan Mc",
+      "ur": "Jalalpur Jattan Mc"
+    },
+    {
+      "id": "punjab:gujrat:lala-musa-mc",
+      "region": "punjab",
+      "district": "punjab:gujrat",
+      "en": "Lala Musa Mc",
+      "ur": "Lala Musa Mc"
+    },
+    {
+      "id": "punjab:gujrat:dinga-mc",
+      "region": "punjab",
+      "district": "punjab:gujrat",
+      "en": "Dinga Mc",
+      "ur": "Dinga Mc"
+    },
+    {
+      "id": "punjab:gujrat:kharian-cantonment",
+      "region": "punjab",
+      "district": "punjab:gujrat",
+      "en": "Kharian Cantonment",
+      "ur": "Kharian Cantonment"
+    },
+    {
+      "id": "punjab:gujrat:kunjah-mc",
+      "region": "punjab",
+      "district": "punjab:gujrat",
+      "en": "Kunjah Mc",
+      "ur": "Kunjah Mc"
+    },
+    {
+      "id": "punjab:gujrat:mangowal-tc",
+      "region": "punjab",
+      "district": "punjab:gujrat",
+      "en": "Mangowal Tc",
+      "ur": "Mangowal Tc"
+    },
+    {
+      "id": "punjab:gujrat:sarai-alamgir-mc",
+      "region": "punjab",
+      "district": "punjab:gujrat",
+      "en": "Sarai Alamgir Mc",
+      "ur": "Sarai Alamgir Mc"
+    },
+    {
+      "id": "punjab:gujrat:kharian-mc",
+      "region": "punjab",
+      "district": "punjab:gujrat",
+      "en": "Kharian Mc",
+      "ur": "Kharian Mc"
+    },
+    {
+      "id": "punjab:gujrat:shadiwal-tc",
+      "region": "punjab",
+      "district": "punjab:gujrat",
+      "en": "Shadiwal Tc",
+      "ur": "Shadiwal Tc"
+    },
+    {
+      "id": "punjab:hafizabad:hafizabad-mc",
+      "region": "punjab",
+      "district": "punjab:hafizabad",
+      "en": "Hafizabad Mc",
+      "ur": "Hafizabad Mc"
+    },
+    {
+      "id": "punjab:hafizabad:pindi-bhattian-mc",
+      "region": "punjab",
+      "district": "punjab:hafizabad",
+      "en": "Pindi Bhattian Mc",
+      "ur": "Pindi Bhattian Mc"
+    },
+    {
+      "id": "punjab:hafizabad:sukheke-mc",
+      "region": "punjab",
+      "district": "punjab:hafizabad",
+      "en": "Sukheke Mc",
+      "ur": "Sukheke Mc"
+    },
+    {
+      "id": "punjab:hafizabad:jalalpur-bhattian-mc",
+      "region": "punjab",
+      "district": "punjab:hafizabad",
+      "en": "Jalalpur Bhattian Mc",
+      "ur": "Jalalpur Bhattian Mc"
+    },
+    {
+      "id": "punjab:hafizabad:vanike-tarar-tc",
+      "region": "punjab",
+      "district": "punjab:hafizabad",
+      "en": "Vanike Tarar Tc",
+      "ur": "Vanike Tarar Tc"
+    },
+    {
+      "id": "punjab:jhang:jhang-mc",
+      "region": "punjab",
+      "district": "punjab:jhang",
+      "en": "Jhang Mc",
+      "ur": "Jhang Mc"
+    },
+    {
+      "id": "punjab:jhang:18-hazari-mc",
+      "region": "punjab",
+      "district": "punjab:jhang",
+      "en": "18-Hazari Mc",
+      "ur": "18-Hazari Mc"
+    },
+    {
+      "id": "punjab:jhang:ahmadpur-sial-mc",
+      "region": "punjab",
+      "district": "punjab:jhang",
+      "en": "Ahmadpur Sial Mc",
+      "ur": "Ahmadpur Sial Mc"
+    },
+    {
+      "id": "punjab:jhang:garh-maharaja-mc",
+      "region": "punjab",
+      "district": "punjab:jhang",
+      "en": "Garh Maharaja Mc",
+      "ur": "Garh Maharaja Mc"
+    },
+    {
+      "id": "punjab:jhang:shorkot-mc",
+      "region": "punjab",
+      "district": "punjab:jhang",
+      "en": "Shorkot Mc",
+      "ur": "Shorkot Mc"
+    },
+    {
+      "id": "punjab:jhang:bagh-tc",
+      "region": "punjab",
+      "district": "punjab:jhang",
+      "en": "Bagh Tc",
+      "ur": "Bagh Tc"
+    },
+    {
+      "id": "punjab:jhang:shorkot-cantonment-part-of-shorkot-tehsil",
+      "region": "punjab",
+      "district": "punjab:jhang",
+      "en": "Shorkot Cantonment (Part Of Shorkot Tehsil)",
+      "ur": "Shorkot Cantonment (Part Of Shorkot Tehsil)"
+    },
+    {
+      "id": "punjab:jhelum:jhelum-municipal-corporation",
+      "region": "punjab",
+      "district": "punjab:jhelum",
+      "en": "Jhelum Municipal Corporation",
+      "ur": "Jhelum Municipal Corporation"
+    },
+    {
+      "id": "punjab:jhelum:dina-mc",
+      "region": "punjab",
+      "district": "punjab:jhelum",
+      "en": "Dina Mc",
+      "ur": "Dina Mc"
+    },
+    {
+      "id": "punjab:jhelum:khewra-mc",
+      "region": "punjab",
+      "district": "punjab:jhelum",
+      "en": "Khewra Mc",
+      "ur": "Khewra Mc"
+    },
+    {
+      "id": "punjab:jhelum:pind-dadan-khan-mc",
+      "region": "punjab",
+      "district": "punjab:jhelum",
+      "en": "Pind Dadan Khan Mc",
+      "ur": "Pind Dadan Khan Mc"
+    },
+    {
+      "id": "punjab:jhelum:sohawa-mc",
+      "region": "punjab",
+      "district": "punjab:jhelum",
+      "en": "Sohawa Mc",
+      "ur": "Sohawa Mc"
+    },
+    {
+      "id": "punjab:jhelum:domeli-tc",
+      "region": "punjab",
+      "district": "punjab:jhelum",
+      "en": "Domeli Tc",
+      "ur": "Domeli Tc"
+    },
+    {
+      "id": "punjab:jhelum:jhelum-cantonment",
+      "region": "punjab",
+      "district": "punjab:jhelum",
+      "en": "Jhelum Cantonment",
+      "ur": "Jhelum Cantonment"
+    },
+    {
+      "id": "punjab:jhelum:mangla-cantonment",
+      "region": "punjab",
+      "district": "punjab:jhelum",
+      "en": "Mangla Cantonment",
+      "ur": "Mangla Cantonment"
+    },
+    {
+      "id": "punjab:kasur:kasur-mc",
+      "region": "punjab",
+      "district": "punjab:kasur",
+      "en": "Kasur Mc",
+      "ur": "Kasur Mc"
+    },
+    {
+      "id": "punjab:kasur:kot-radha-kishan-mc",
+      "region": "punjab",
+      "district": "punjab:kasur",
+      "en": "Kot Radha Kishan Mc",
+      "ur": "Kot Radha Kishan Mc"
+    },
+    {
+      "id": "punjab:kasur:pattoki-mc",
+      "region": "punjab",
+      "district": "punjab:kasur",
+      "en": "Pattoki Mc",
+      "ur": "Pattoki Mc"
+    },
+    {
+      "id": "punjab:kasur:phool-nagar-mc",
+      "region": "punjab",
+      "district": "punjab:kasur",
+      "en": "Phool Nagar Mc",
+      "ur": "Phool Nagar Mc"
+    },
+    {
+      "id": "punjab:kasur:alahabad-mc",
+      "region": "punjab",
+      "district": "punjab:kasur",
+      "en": "Alahabad Mc",
+      "ur": "Alahabad Mc"
+    },
+    {
+      "id": "punjab:kasur:chunian-mc",
+      "region": "punjab",
+      "district": "punjab:kasur",
+      "en": "Chunian Mc",
+      "ur": "Chunian Mc"
+    },
+    {
+      "id": "punjab:kasur:mustafabad-mc",
+      "region": "punjab",
+      "district": "punjab:kasur",
+      "en": "Mustafabad Mc",
+      "ur": "Mustafabad Mc"
+    },
+    {
+      "id": "punjab:kasur:raja-jang-mc",
+      "region": "punjab",
+      "district": "punjab:kasur",
+      "en": "Raja Jang Mc",
+      "ur": "Raja Jang Mc"
+    },
+    {
+      "id": "punjab:kasur:kanganpur-mc",
+      "region": "punjab",
+      "district": "punjab:kasur",
+      "en": "Kanganpur Mc",
+      "ur": "Kanganpur Mc"
+    },
+    {
+      "id": "punjab:kasur:khadian-mc",
+      "region": "punjab",
+      "district": "punjab:kasur",
+      "en": "Khadian Mc",
+      "ur": "Khadian Mc"
+    },
+    {
+      "id": "punjab:khanewal:khanewal-mc",
+      "region": "punjab",
+      "district": "punjab:khanewal",
+      "en": "Khanewal Mc",
+      "ur": "Khanewal Mc"
+    },
+    {
+      "id": "punjab:khanewal:mian-channu-mc",
+      "region": "punjab",
+      "district": "punjab:khanewal",
+      "en": "Mian Channu Mc",
+      "ur": "Mian Channu Mc"
+    },
+    {
+      "id": "punjab:khanewal:abdul-hakim-tc",
+      "region": "punjab",
+      "district": "punjab:khanewal",
+      "en": "Abdul Hakim Tc",
+      "ur": "Abdul Hakim Tc"
+    },
+    {
+      "id": "punjab:khanewal:jahanian-mc",
+      "region": "punjab",
+      "district": "punjab:khanewal",
+      "en": "Jahanian Mc",
+      "ur": "Jahanian Mc"
+    },
+    {
+      "id": "punjab:khanewal:kabirwala-mc",
+      "region": "punjab",
+      "district": "punjab:khanewal",
+      "en": "Kabirwala Mc",
+      "ur": "Kabirwala Mc"
+    },
+    {
+      "id": "punjab:khanewal:makhdoompur-pahoran-tc",
+      "region": "punjab",
+      "district": "punjab:khanewal",
+      "en": "Makhdoompur Pahoran Tc",
+      "ur": "Makhdoompur Pahoran Tc"
+    },
+    {
+      "id": "punjab:khanewal:tulamba-tc",
+      "region": "punjab",
+      "district": "punjab:khanewal",
+      "en": "Tulamba Tc",
+      "ur": "Tulamba Tc"
+    },
+    {
+      "id": "punjab:khanewal:sarai-sidhu-tc",
+      "region": "punjab",
+      "district": "punjab:khanewal",
+      "en": "Sarai Sidhu Tc",
+      "ur": "Sarai Sidhu Tc"
+    },
+    {
+      "id": "punjab:khushab:jauharabad-mc",
+      "region": "punjab",
+      "district": "punjab:khushab",
+      "en": "Jauharabad Mc",
+      "ur": "Jauharabad Mc"
+    },
+    {
+      "id": "punjab:khushab:khushab-mc",
+      "region": "punjab",
+      "district": "punjab:khushab",
+      "en": "Khushab Mc",
+      "ur": "Khushab Mc"
+    },
+    {
+      "id": "punjab:khushab:hadali-mc",
+      "region": "punjab",
+      "district": "punjab:khushab",
+      "en": "Hadali Mc",
+      "ur": "Hadali Mc"
+    },
+    {
+      "id": "punjab:khushab:mitha-tawana-mc",
+      "region": "punjab",
+      "district": "punjab:khushab",
+      "en": "Mitha Tawana Mc",
+      "ur": "Mitha Tawana Mc"
+    },
+    {
+      "id": "punjab:khushab:girote-tc",
+      "region": "punjab",
+      "district": "punjab:khushab",
+      "en": "Girote Tc",
+      "ur": "Girote Tc"
+    },
+    {
+      "id": "punjab:khushab:noor-pur-mc",
+      "region": "punjab",
+      "district": "punjab:khushab",
+      "en": "Noor Pur Mc",
+      "ur": "Noor Pur Mc"
+    },
+    {
+      "id": "punjab:khushab:nowshera-mc",
+      "region": "punjab",
+      "district": "punjab:khushab",
+      "en": "Nowshera Mc",
+      "ur": "Nowshera Mc"
+    },
+    {
+      "id": "punjab:khushab:quaidabad-mc",
+      "region": "punjab",
+      "district": "punjab:khushab",
+      "en": "Quaidabad Mc",
+      "ur": "Quaidabad Mc"
+    },
+    {
+      "id": "punjab:lahore:lahore-metropolitan-corporation-part-of-lahore-cantonment-tehsil",
+      "region": "punjab",
+      "district": "punjab:lahore",
+      "en": "Lahore Metropolitan Corporation (Part Of Lahore Cantonment Tehsil)",
+      "ur": "Lahore Metropolitan Corporation (Part Of Lahore Cantonment Tehsil)"
+    },
+    {
+      "id": "punjab:lahore:lahore-metropolitan-corporation-part-of-lahore-city-tehsil",
+      "region": "punjab",
+      "district": "punjab:lahore",
+      "en": "Lahore Metropolitan Corporation (Part Of Lahore City Tehsil)",
+      "ur": "Lahore Metropolitan Corporation (Part Of Lahore City Tehsil)"
+    },
+    {
+      "id": "punjab:lahore:lahore-metropolitan-corporation-part-of-model-town-tehsil",
+      "region": "punjab",
+      "district": "punjab:lahore",
+      "en": "Lahore Metropolitan Corporation (Part Of Model Town Tehsil)",
+      "ur": "Lahore Metropolitan Corporation (Part Of Model Town Tehsil)"
+    },
+    {
+      "id": "punjab:lahore:lahore-metropolitan-corporation-part-of-raiwind-tehsil",
+      "region": "punjab",
+      "district": "punjab:lahore",
+      "en": "Lahore Metropolitan Corporation (Part Of Raiwind Tehsil)",
+      "ur": "Lahore Metropolitan Corporation (Part Of Raiwind Tehsil)"
+    },
+    {
+      "id": "punjab:lahore:lahore-metropolitan-corporation-part-of-shalimar-tehsil",
+      "region": "punjab",
+      "district": "punjab:lahore",
+      "en": "Lahore Metropolitan Corporation (Part Of Shalimar Tehsil)",
+      "ur": "Lahore Metropolitan Corporation (Part Of Shalimar Tehsil)"
+    },
+    {
+      "id": "punjab:lahore:walton-cantonment",
+      "region": "punjab",
+      "district": "punjab:lahore",
+      "en": "Walton Cantonment",
+      "ur": "Walton Cantonment"
+    },
+    {
+      "id": "punjab:lahore:lahore-cantonment",
+      "region": "punjab",
+      "district": "punjab:lahore",
+      "en": "Lahore Cantonment",
+      "ur": "Lahore Cantonment"
+    },
+    {
+      "id": "punjab:layyah:layyah-mc",
+      "region": "punjab",
+      "district": "punjab:layyah",
+      "en": "Layyah Mc",
+      "ur": "Layyah Mc"
+    },
+    {
+      "id": "punjab:layyah:chaubara-mc",
+      "region": "punjab",
+      "district": "punjab:layyah",
+      "en": "Chaubara Mc",
+      "ur": "Chaubara Mc"
+    },
+    {
+      "id": "punjab:layyah:chowk-azam-mc",
+      "region": "punjab",
+      "district": "punjab:layyah",
+      "en": "Chowk Azam Mc",
+      "ur": "Chowk Azam Mc"
+    },
+    {
+      "id": "punjab:layyah:fateh-pur-mc",
+      "region": "punjab",
+      "district": "punjab:layyah",
+      "en": "Fateh Pur Mc",
+      "ur": "Fateh Pur Mc"
+    },
+    {
+      "id": "punjab:layyah:karor-lal-esan-mc",
+      "region": "punjab",
+      "district": "punjab:layyah",
+      "en": "Karor Lal Esan Mc",
+      "ur": "Karor Lal Esan Mc"
+    },
+    {
+      "id": "punjab:lodhran:lodhran-mc",
+      "region": "punjab",
+      "district": "punjab:lodhran",
+      "en": "Lodhran Mc",
+      "ur": "Lodhran Mc"
+    },
+    {
+      "id": "punjab:lodhran:dunyapur-mc",
+      "region": "punjab",
+      "district": "punjab:lodhran",
+      "en": "Dunyapur Mc",
+      "ur": "Dunyapur Mc"
+    },
+    {
+      "id": "punjab:lodhran:kahror-pacca-mc",
+      "region": "punjab",
+      "district": "punjab:lodhran",
+      "en": "Kahror Pacca Mc",
+      "ur": "Kahror Pacca Mc"
+    },
+    {
+      "id": "punjab:lodhran:dhanote-tc",
+      "region": "punjab",
+      "district": "punjab:lodhran",
+      "en": "Dhanote Tc",
+      "ur": "Dhanote Tc"
+    },
+    {
+      "id": "punjab:mandi-bahauddin:mandi-bahauddin-mc",
+      "region": "punjab",
+      "district": "punjab:mandi-bahauddin",
+      "en": "Mandi Bahauddin Mc",
+      "ur": "Mandi Bahauddin Mc"
+    },
+    {
+      "id": "punjab:mandi-bahauddin:malakwal-mc",
+      "region": "punjab",
+      "district": "punjab:mandi-bahauddin",
+      "en": "Malakwal Mc",
+      "ur": "Malakwal Mc"
+    },
+    {
+      "id": "punjab:mandi-bahauddin:phalia-mc",
+      "region": "punjab",
+      "district": "punjab:mandi-bahauddin",
+      "en": "Phalia Mc",
+      "ur": "Phalia Mc"
+    },
+    {
+      "id": "punjab:mianwali:mianwali-mc",
+      "region": "punjab",
+      "district": "punjab:mianwali",
+      "en": "Mianwali Mc",
+      "ur": "Mianwali Mc"
+    },
+    {
+      "id": "punjab:mianwali:daud-khel-mc",
+      "region": "punjab",
+      "district": "punjab:mianwali",
+      "en": "Daud Khel Mc",
+      "ur": "Daud Khel Mc"
+    },
+    {
+      "id": "punjab:mianwali:isa-khel-mc",
+      "region": "punjab",
+      "district": "punjab:mianwali",
+      "en": "Isa Khel Mc",
+      "ur": "Isa Khel Mc"
+    },
+    {
+      "id": "punjab:mianwali:kalabagh-mc",
+      "region": "punjab",
+      "district": "punjab:mianwali",
+      "en": "Kalabagh Mc",
+      "ur": "Kalabagh Mc"
+    },
+    {
+      "id": "punjab:mianwali:kamar-mashani-mc",
+      "region": "punjab",
+      "district": "punjab:mianwali",
+      "en": "Kamar Mashani Mc",
+      "ur": "Kamar Mashani Mc"
+    },
+    {
+      "id": "punjab:mianwali:kundian-mc",
+      "region": "punjab",
+      "district": "punjab:mianwali",
+      "en": "Kundian Mc",
+      "ur": "Kundian Mc"
+    },
+    {
+      "id": "punjab:mianwali:liaqatabad-mc",
+      "region": "punjab",
+      "district": "punjab:mianwali",
+      "en": "Liaqatabad Mc",
+      "ur": "Liaqatabad Mc"
+    },
+    {
+      "id": "punjab:mianwali:harnoli-tc",
+      "region": "punjab",
+      "district": "punjab:mianwali",
+      "en": "Harnoli Tc",
+      "ur": "Harnoli Tc"
+    },
+    {
+      "id": "punjab:multan:multan-municipal-corporation",
+      "region": "punjab",
+      "district": "punjab:multan",
+      "en": "Multan Municipal Corporation",
+      "ur": "Multan Municipal Corporation"
+    },
+    {
+      "id": "punjab:multan:shujabad-mc",
+      "region": "punjab",
+      "district": "punjab:multan",
+      "en": "Shujabad Mc",
+      "ur": "Shujabad Mc"
+    },
+    {
+      "id": "punjab:multan:jalalpur-pirwala-mc",
+      "region": "punjab",
+      "district": "punjab:multan",
+      "en": "Jalalpur Pirwala Mc",
+      "ur": "Jalalpur Pirwala Mc"
+    },
+    {
+      "id": "punjab:multan:multan-cantonment",
+      "region": "punjab",
+      "district": "punjab:multan",
+      "en": "Multan Cantonment",
+      "ur": "Multan Cantonment"
+    },
+    {
+      "id": "punjab:multan:qadirpur-ran-tc",
+      "region": "punjab",
+      "district": "punjab:multan",
+      "en": "Qadirpur Ran Tc",
+      "ur": "Qadirpur Ran Tc"
+    },
+    {
+      "id": "punjab:multan:makhdoom-rashid-tc",
+      "region": "punjab",
+      "district": "punjab:multan",
+      "en": "Makhdoom Rashid Tc",
+      "ur": "Makhdoom Rashid Tc"
+    },
+    {
+      "id": "punjab:muzaffargarh:muzaffargarh-mc",
+      "region": "punjab",
+      "district": "punjab:muzaffargarh",
+      "en": "Muzaffargarh Mc",
+      "ur": "Muzaffargarh Mc"
+    },
+    {
+      "id": "punjab:muzaffargarh:jatoi-mc",
+      "region": "punjab",
+      "district": "punjab:muzaffargarh",
+      "en": "Jatoi Mc",
+      "ur": "Jatoi Mc"
+    },
+    {
+      "id": "punjab:muzaffargarh:kot-addu-mc",
+      "region": "punjab",
+      "district": "punjab:muzaffargarh",
+      "en": "Kot Addu Mc",
+      "ur": "Kot Addu Mc"
+    },
+    {
+      "id": "punjab:muzaffargarh:alipur-mc",
+      "region": "punjab",
+      "district": "punjab:muzaffargarh",
+      "en": "Alipur Mc",
+      "ur": "Alipur Mc"
+    },
+    {
+      "id": "punjab:muzaffargarh:chowk-sarwar-shaheed-mc",
+      "region": "punjab",
+      "district": "punjab:muzaffargarh",
+      "en": "Chowk Sarwar Shaheed Mc",
+      "ur": "Chowk Sarwar Shaheed Mc"
+    },
+    {
+      "id": "punjab:muzaffargarh:shehr-sultan-mc",
+      "region": "punjab",
+      "district": "punjab:muzaffargarh",
+      "en": "Shehr Sultan Mc",
+      "ur": "Shehr Sultan Mc"
+    },
+    {
+      "id": "punjab:muzaffargarh:daira-din-panah-tc",
+      "region": "punjab",
+      "district": "punjab:muzaffargarh",
+      "en": "Daira Din Panah Tc",
+      "ur": "Daira Din Panah Tc"
+    },
+    {
+      "id": "punjab:muzaffargarh:ghalwan-tc",
+      "region": "punjab",
+      "district": "punjab:muzaffargarh",
+      "en": "Ghalwan Tc",
+      "ur": "Ghalwan Tc"
+    },
+    {
+      "id": "punjab:muzaffargarh:khair-pur-sadat-tc",
+      "region": "punjab",
+      "district": "punjab:muzaffargarh",
+      "en": "Khair Pur Sadat Tc",
+      "ur": "Khair Pur Sadat Tc"
+    },
+    {
+      "id": "punjab:muzaffargarh:khangarh-mc",
+      "region": "punjab",
+      "district": "punjab:muzaffargarh",
+      "en": "Khangarh Mc",
+      "ur": "Khangarh Mc"
+    },
+    {
+      "id": "punjab:muzaffargarh:seet-pur-tc",
+      "region": "punjab",
+      "district": "punjab:muzaffargarh",
+      "en": "Seet Pur Tc",
+      "ur": "Seet Pur Tc"
+    },
+    {
+      "id": "punjab:muzaffargarh:sinawan-mc",
+      "region": "punjab",
+      "district": "punjab:muzaffargarh",
+      "en": "Sinawan Mc",
+      "ur": "Sinawan Mc"
+    },
+    {
+      "id": "punjab:nankana-sahib:sangla-hill-mc",
+      "region": "punjab",
+      "district": "punjab:nankana-sahib",
+      "en": "Sangla Hill Mc",
+      "ur": "Sangla Hill Mc"
+    },
+    {
+      "id": "punjab:nankana-sahib:nankana-mc",
+      "region": "punjab",
+      "district": "punjab:nankana-sahib",
+      "en": "Nankana Mc",
+      "ur": "Nankana Mc"
+    },
+    {
+      "id": "punjab:nankana-sahib:shahkot-mc",
+      "region": "punjab",
+      "district": "punjab:nankana-sahib",
+      "en": "Shahkot Mc",
+      "ur": "Shahkot Mc"
+    },
+    {
+      "id": "punjab:nankana-sahib:warburton-mc",
+      "region": "punjab",
+      "district": "punjab:nankana-sahib",
+      "en": "Warburton Mc",
+      "ur": "Warburton Mc"
+    },
+    {
+      "id": "punjab:narowal:narowal-mc",
+      "region": "punjab",
+      "district": "punjab:narowal",
+      "en": "Narowal Mc",
+      "ur": "Narowal Mc"
+    },
+    {
+      "id": "punjab:narowal:shakargarh-mc",
+      "region": "punjab",
+      "district": "punjab:narowal",
+      "en": "Shakargarh Mc",
+      "ur": "Shakargarh Mc"
+    },
+    {
+      "id": "punjab:narowal:zafarwal-mc",
+      "region": "punjab",
+      "district": "punjab:narowal",
+      "en": "Zafarwal Mc",
+      "ur": "Zafarwal Mc"
+    },
+    {
+      "id": "punjab:narowal:badhomalhi-tc",
+      "region": "punjab",
+      "district": "punjab:narowal",
+      "en": "Badhomalhi Tc",
+      "ur": "Badhomalhi Tc"
+    },
+    {
+      "id": "punjab:narowal:qila-sobha-singh-tc",
+      "region": "punjab",
+      "district": "punjab:narowal",
+      "en": "Qila Sobha Singh Tc",
+      "ur": "Qila Sobha Singh Tc"
+    },
+    {
+      "id": "punjab:okara:okara-municipal-corporation",
+      "region": "punjab",
+      "district": "punjab:okara",
+      "en": "Okara Municipal Corporation",
+      "ur": "Okara Municipal Corporation"
+    },
+    {
+      "id": "punjab:okara:depalpur-mc",
+      "region": "punjab",
+      "district": "punjab:okara",
+      "en": "Depalpur Mc",
+      "ur": "Depalpur Mc"
+    },
+    {
+      "id": "punjab:okara:haveli-lakha-wasawewala-mc",
+      "region": "punjab",
+      "district": "punjab:okara",
+      "en": "Haveli Lakha Wasawewala Mc",
+      "ur": "Haveli Lakha Wasawewala Mc"
+    },
+    {
+      "id": "punjab:okara:renala-khurd-mc",
+      "region": "punjab",
+      "district": "punjab:okara",
+      "en": "Renala Khurd Mc",
+      "ur": "Renala Khurd Mc"
+    },
+    {
+      "id": "punjab:okara:basirpur-tc",
+      "region": "punjab",
+      "district": "punjab:okara",
+      "en": "Basirpur Tc",
+      "ur": "Basirpur Tc"
+    },
+    {
+      "id": "punjab:okara:hujra-shah-muqeem-mc",
+      "region": "punjab",
+      "district": "punjab:okara",
+      "en": "Hujra Shah Muqeem Mc",
+      "ur": "Hujra Shah Muqeem Mc"
+    },
+    {
+      "id": "punjab:okara:mandi-ahmad-abad-tc",
+      "region": "punjab",
+      "district": "punjab:okara",
+      "en": "Mandi Ahmad Abad Tc",
+      "ur": "Mandi Ahmad Abad Tc"
+    },
+    {
+      "id": "punjab:okara:okara-cantonment",
+      "region": "punjab",
+      "district": "punjab:okara",
+      "en": "Okara Cantonment",
+      "ur": "Okara Cantonment"
+    },
+    {
+      "id": "punjab:okara:bangla-gogera-tc",
+      "region": "punjab",
+      "district": "punjab:okara",
+      "en": "Bangla Gogera Tc",
+      "ur": "Bangla Gogera Tc"
+    },
+    {
+      "id": "punjab:pakpattan:pakpattan-mc",
+      "region": "punjab",
+      "district": "punjab:pakpattan",
+      "en": "Pakpattan Mc",
+      "ur": "Pakpattan Mc"
+    },
+    {
+      "id": "punjab:pakpattan:arif-wala-mc",
+      "region": "punjab",
+      "district": "punjab:pakpattan",
+      "en": "Arif Wala Mc",
+      "ur": "Arif Wala Mc"
+    },
+    {
+      "id": "punjab:pakpattan:qabula-tc",
+      "region": "punjab",
+      "district": "punjab:pakpattan",
+      "en": "Qabula Tc",
+      "ur": "Qabula Tc"
+    },
+    {
+      "id": "punjab:pakpattan:malka-hans-tc",
+      "region": "punjab",
+      "district": "punjab:pakpattan",
+      "en": "Malka Hans Tc",
+      "ur": "Malka Hans Tc"
+    },
+    {
+      "id": "punjab:rahim-yar-khan:rahim-yar-khan-municipal-corporation",
+      "region": "punjab",
+      "district": "punjab:rahim-yar-khan",
+      "en": "Rahim Yar Khan Municipal Corporation",
+      "ur": "Rahim Yar Khan Municipal Corporation"
+    },
+    {
+      "id": "punjab:rahim-yar-khan:khanpur-mc",
+      "region": "punjab",
+      "district": "punjab:rahim-yar-khan",
+      "en": "Khanpur Mc",
+      "ur": "Khanpur Mc"
+    },
+    {
+      "id": "punjab:rahim-yar-khan:sadiqabad-municipal-corporation",
+      "region": "punjab",
+      "district": "punjab:rahim-yar-khan",
+      "en": "Sadiqabad Municipal Corporation",
+      "ur": "Sadiqabad Municipal Corporation"
+    },
+    {
+      "id": "punjab:rahim-yar-khan:liaquatpur-mc",
+      "region": "punjab",
+      "district": "punjab:rahim-yar-khan",
+      "en": "Liaquatpur Mc",
+      "ur": "Liaquatpur Mc"
+    },
+    {
+      "id": "punjab:rahim-yar-khan:zahirpir-mc",
+      "region": "punjab",
+      "district": "punjab:rahim-yar-khan",
+      "en": "Zahirpir Mc",
+      "ur": "Zahirpir Mc"
+    },
+    {
+      "id": "punjab:rahim-yar-khan:ahmadpur-lumma-tc",
+      "region": "punjab",
+      "district": "punjab:rahim-yar-khan",
+      "en": "Ahmadpur Lumma Tc",
+      "ur": "Ahmadpur Lumma Tc"
+    },
+    {
+      "id": "punjab:rahim-yar-khan:khan-bela-tc",
+      "region": "punjab",
+      "district": "punjab:rahim-yar-khan",
+      "en": "Khan Bela Tc",
+      "ur": "Khan Bela Tc"
+    },
+    {
+      "id": "punjab:rahim-yar-khan:kot-samaba-mc",
+      "region": "punjab",
+      "district": "punjab:rahim-yar-khan",
+      "en": "Kot Samaba Mc",
+      "ur": "Kot Samaba Mc"
+    },
+    {
+      "id": "punjab:rahim-yar-khan:trinda-sawai-khan-mc",
+      "region": "punjab",
+      "district": "punjab:rahim-yar-khan",
+      "en": "Trinda Sawai Khan Mc",
+      "ur": "Trinda Sawai Khan Mc"
+    },
+    {
+      "id": "punjab:rahim-yar-khan:sanjar-pur-nao-tc",
+      "region": "punjab",
+      "district": "punjab:rahim-yar-khan",
+      "en": "Sanjar Pur Nao Tc",
+      "ur": "Sanjar Pur Nao Tc"
+    },
+    {
+      "id": "punjab:rajanpur:jampur-mc",
+      "region": "punjab",
+      "district": "punjab:rajanpur",
+      "en": "Jampur Mc",
+      "ur": "Jampur Mc"
+    },
+    {
+      "id": "punjab:rajanpur:rajanpur-mc",
+      "region": "punjab",
+      "district": "punjab:rajanpur",
+      "en": "Rajanpur Mc",
+      "ur": "Rajanpur Mc"
+    },
+    {
+      "id": "punjab:rajanpur:fazalpur-mc",
+      "region": "punjab",
+      "district": "punjab:rajanpur",
+      "en": "Fazalpur Mc",
+      "ur": "Fazalpur Mc"
+    },
+    {
+      "id": "punjab:rajanpur:kot-mithan-mc",
+      "region": "punjab",
+      "district": "punjab:rajanpur",
+      "en": "Kot Mithan Mc",
+      "ur": "Kot Mithan Mc"
+    },
+    {
+      "id": "punjab:rajanpur:dajal-tc",
+      "region": "punjab",
+      "district": "punjab:rajanpur",
+      "en": "Dajal Tc",
+      "ur": "Dajal Tc"
+    },
+    {
+      "id": "punjab:rajanpur:haji-pur-tc",
+      "region": "punjab",
+      "district": "punjab:rajanpur",
+      "en": "Haji Pur Tc",
+      "ur": "Haji Pur Tc"
+    },
+    {
+      "id": "punjab:rajanpur:kotla-mughlan-tc",
+      "region": "punjab",
+      "district": "punjab:rajanpur",
+      "en": "Kotla Mughlan Tc",
+      "ur": "Kotla Mughlan Tc"
+    },
+    {
+      "id": "punjab:rajanpur:mohammad-pur-tc",
+      "region": "punjab",
+      "district": "punjab:rajanpur",
+      "en": "Mohammad Pur Tc",
+      "ur": "Mohammad Pur Tc"
+    },
+    {
+      "id": "punjab:rajanpur:rojhan-mc",
+      "region": "punjab",
+      "district": "punjab:rajanpur",
+      "en": "Rojhan Mc",
+      "ur": "Rojhan Mc"
+    },
+    {
+      "id": "punjab:rawalpindi:rawalpindi-cantonment",
+      "region": "punjab",
+      "district": "punjab:rawalpindi",
+      "en": "Rawalpindi Cantonment",
+      "ur": "Rawalpindi Cantonment"
+    },
+    {
+      "id": "punjab:rawalpindi:rawalpindi-metropolitan-corporation",
+      "region": "punjab",
+      "district": "punjab:rawalpindi",
+      "en": "Rawalpindi Metropolitan Corporation",
+      "ur": "Rawalpindi Metropolitan Corporation"
+    },
+    {
+      "id": "punjab:rawalpindi:chaklala-cantonment",
+      "region": "punjab",
+      "district": "punjab:rawalpindi",
+      "en": "Chaklala Cantonment",
+      "ur": "Chaklala Cantonment"
+    },
+    {
+      "id": "punjab:rawalpindi:wah-cantonment",
+      "region": "punjab",
+      "district": "punjab:rawalpindi",
+      "en": "Wah Cantonment",
+      "ur": "Wah Cantonment"
+    },
+    {
+      "id": "punjab:rawalpindi:gujar-khan-mc",
+      "region": "punjab",
+      "district": "punjab:rawalpindi",
+      "en": "Gujar Khan Mc",
+      "ur": "Gujar Khan Mc"
+    },
+    {
+      "id": "punjab:rawalpindi:kahuta-mc",
+      "region": "punjab",
+      "district": "punjab:rawalpindi",
+      "en": "Kahuta Mc",
+      "ur": "Kahuta Mc"
+    },
+    {
+      "id": "punjab:rawalpindi:kallar-syedan-mc",
+      "region": "punjab",
+      "district": "punjab:rawalpindi",
+      "en": "Kallar Syedan Mc",
+      "ur": "Kallar Syedan Mc"
+    },
+    {
+      "id": "punjab:rawalpindi:taxila-cantonment",
+      "region": "punjab",
+      "district": "punjab:rawalpindi",
+      "en": "Taxila Cantonment",
+      "ur": "Taxila Cantonment"
+    },
+    {
+      "id": "punjab:rawalpindi:taxila-mc",
+      "region": "punjab",
+      "district": "punjab:rawalpindi",
+      "en": "Taxila Mc",
+      "ur": "Taxila Mc"
+    },
+    {
+      "id": "punjab:rawalpindi:daultala-mc",
+      "region": "punjab",
+      "district": "punjab:rawalpindi",
+      "en": "Daultala Mc",
+      "ur": "Daultala Mc"
+    },
+    {
+      "id": "punjab:rawalpindi:kotli-sattian-mc",
+      "region": "punjab",
+      "district": "punjab:rawalpindi",
+      "en": "Kotli Sattian Mc",
+      "ur": "Kotli Sattian Mc"
+    },
+    {
+      "id": "punjab:rawalpindi:murree-mc",
+      "region": "punjab",
+      "district": "punjab:rawalpindi",
+      "en": "Murree Mc",
+      "ur": "Murree Mc"
+    },
+    {
+      "id": "punjab:rawalpindi:murree-hills-cantonment",
+      "region": "punjab",
+      "district": "punjab:rawalpindi",
+      "en": "Murree Hills Cantonment",
+      "ur": "Murree Hills Cantonment"
+    },
+    {
+      "id": "punjab:sahiwal:sahiwal-metropolitan-corporation",
+      "region": "punjab",
+      "district": "punjab:sahiwal",
+      "en": "Sahiwal Metropolitan Corporation",
+      "ur": "Sahiwal Metropolitan Corporation"
+    },
+    {
+      "id": "punjab:sahiwal:chichawatni-mc",
+      "region": "punjab",
+      "district": "punjab:sahiwal",
+      "en": "Chichawatni Mc",
+      "ur": "Chichawatni Mc"
+    },
+    {
+      "id": "punjab:sahiwal:harappa-tc",
+      "region": "punjab",
+      "district": "punjab:sahiwal",
+      "en": "Harappa Tc",
+      "ur": "Harappa Tc"
+    },
+    {
+      "id": "punjab:sahiwal:kameer-tc",
+      "region": "punjab",
+      "district": "punjab:sahiwal",
+      "en": "Kameer Tc",
+      "ur": "Kameer Tc"
+    },
+    {
+      "id": "punjab:sargodha:sargodha-municipal-corporation",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Sargodha Municipal Corporation",
+      "ur": "Sargodha Municipal Corporation"
+    },
+    {
+      "id": "punjab:sargodha:bhalwal-mc",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Bhalwal Mc",
+      "ur": "Bhalwal Mc"
+    },
+    {
+      "id": "punjab:sargodha:sargodha-cantonment",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Sargodha Cantonment",
+      "ur": "Sargodha Cantonment"
+    },
+    {
+      "id": "punjab:sargodha:bhera-mc",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Bhera Mc",
+      "ur": "Bhera Mc"
+    },
+    {
+      "id": "punjab:sargodha:kot-momin-mc",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Kot Momin Mc",
+      "ur": "Kot Momin Mc"
+    },
+    {
+      "id": "punjab:sargodha:sahiwal-mc",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Sahiwal Mc",
+      "ur": "Sahiwal Mc"
+    },
+    {
+      "id": "punjab:sargodha:46-adda-tc",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "46-Adda Tc",
+      "ur": "46-Adda Tc"
+    },
+    {
+      "id": "punjab:sargodha:bhagtan-wala-tc",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Bhagtan Wala Tc",
+      "ur": "Bhagtan Wala Tc"
+    },
+    {
+      "id": "punjab:sargodha:dharema-tc",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Dharema Tc",
+      "ur": "Dharema Tc"
+    },
+    {
+      "id": "punjab:sargodha:farooka-tc",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Farooka Tc",
+      "ur": "Farooka Tc"
+    },
+    {
+      "id": "punjab:sargodha:jhawarian-tc",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Jhawarian Tc",
+      "ur": "Jhawarian Tc"
+    },
+    {
+      "id": "punjab:sargodha:miani-tc",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Miani Tc",
+      "ur": "Miani Tc"
+    },
+    {
+      "id": "punjab:sargodha:phularwan-tc",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Phularwan Tc",
+      "ur": "Phularwan Tc"
+    },
+    {
+      "id": "punjab:sargodha:shahpur-city-tc",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Shahpur City Tc",
+      "ur": "Shahpur City Tc"
+    },
+    {
+      "id": "punjab:sargodha:shahpur-saddar-mc",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Shahpur Saddar Mc",
+      "ur": "Shahpur Saddar Mc"
+    },
+    {
+      "id": "punjab:sargodha:sillanwali-mc",
+      "region": "punjab",
+      "district": "punjab:sargodha",
+      "en": "Sillanwali Mc",
+      "ur": "Sillanwali Mc"
+    },
+    {
+      "id": "punjab:sheikhupura:sheikhupura-mc",
+      "region": "punjab",
+      "district": "punjab:sheikhupura",
+      "en": "Sheikhupura Mc",
+      "ur": "Sheikhupura Mc"
+    },
+    {
+      "id": "punjab:sheikhupura:muridke-mc",
+      "region": "punjab",
+      "district": "punjab:sheikhupura",
+      "en": "Muridke Mc",
+      "ur": "Muridke Mc"
+    },
+    {
+      "id": "punjab:sheikhupura:farooq-abad-mc",
+      "region": "punjab",
+      "district": "punjab:sheikhupura",
+      "en": "Farooq Abad Mc",
+      "ur": "Farooq Abad Mc"
+    },
+    {
+      "id": "punjab:sheikhupura:ferozewala-mc",
+      "region": "punjab",
+      "district": "punjab:sheikhupura",
+      "en": "Ferozewala Mc",
+      "ur": "Ferozewala Mc"
+    },
+    {
+      "id": "punjab:sheikhupura:kot-abdul-malik-mc",
+      "region": "punjab",
+      "district": "punjab:sheikhupura",
+      "en": "Kot Abdul Malik Mc",
+      "ur": "Kot Abdul Malik Mc"
+    },
+    {
+      "id": "punjab:sheikhupura:manawala-jodh-singh-mc",
+      "region": "punjab",
+      "district": "punjab:sheikhupura",
+      "en": "Manawala Jodh Singh Mc",
+      "ur": "Manawala Jodh Singh Mc"
+    },
+    {
+      "id": "punjab:sheikhupura:narang-mandi-mc",
+      "region": "punjab",
+      "district": "punjab:sheikhupura",
+      "en": "Narang Mandi Mc",
+      "ur": "Narang Mandi Mc"
+    },
+    {
+      "id": "punjab:sheikhupura:safdarabad-mc",
+      "region": "punjab",
+      "district": "punjab:sheikhupura",
+      "en": "Safdarabad Mc",
+      "ur": "Safdarabad Mc"
+    },
+    {
+      "id": "punjab:sheikhupura:khanqah-dogran-mc",
+      "region": "punjab",
+      "district": "punjab:sheikhupura",
+      "en": "Khanqah Dogran Mc",
+      "ur": "Khanqah Dogran Mc"
+    },
+    {
+      "id": "punjab:sheikhupura:sharak-pur-mc",
+      "region": "punjab",
+      "district": "punjab:sheikhupura",
+      "en": "Sharak Pur Mc",
+      "ur": "Sharak Pur Mc"
+    },
+    {
+      "id": "punjab:sialkot:sialkot-municipal-corporation",
+      "region": "punjab",
+      "district": "punjab:sialkot",
+      "en": "Sialkot Municipal Corporation",
+      "ur": "Sialkot Municipal Corporation"
+    },
+    {
+      "id": "punjab:sialkot:daska-mc",
+      "region": "punjab",
+      "district": "punjab:sialkot",
+      "en": "Daska Mc",
+      "ur": "Daska Mc"
+    },
+    {
+      "id": "punjab:sialkot:pasrur-mc",
+      "region": "punjab",
+      "district": "punjab:sialkot",
+      "en": "Pasrur Mc",
+      "ur": "Pasrur Mc"
+    },
+    {
+      "id": "punjab:sialkot:sambrial-mc",
+      "region": "punjab",
+      "district": "punjab:sialkot",
+      "en": "Sambrial Mc",
+      "ur": "Sambrial Mc"
+    },
+    {
+      "id": "punjab:sialkot:sialkot-cantonment",
+      "region": "punjab",
+      "district": "punjab:sialkot",
+      "en": "Sialkot Cantonment",
+      "ur": "Sialkot Cantonment"
+    },
+    {
+      "id": "punjab:sialkot:chawinda-tc",
+      "region": "punjab",
+      "district": "punjab:sialkot",
+      "en": "Chawinda Tc",
+      "ur": "Chawinda Tc"
+    },
+    {
+      "id": "punjab:sialkot:jamke-cheema-tc",
+      "region": "punjab",
+      "district": "punjab:sialkot",
+      "en": "Jamke Cheema Tc",
+      "ur": "Jamke Cheema Tc"
+    },
+    {
+      "id": "punjab:sialkot:kotli-loharan-tc",
+      "region": "punjab",
+      "district": "punjab:sialkot",
+      "en": "Kotli Loharan Tc",
+      "ur": "Kotli Loharan Tc"
+    },
+    {
+      "id": "punjab:sialkot:bhopalwala-tc",
+      "region": "punjab",
+      "district": "punjab:sialkot",
+      "en": "Bhopalwala Tc",
+      "ur": "Bhopalwala Tc"
+    },
+    {
+      "id": "punjab:toba-tek-singh:gojra-mc",
+      "region": "punjab",
+      "district": "punjab:toba-tek-singh",
+      "en": "Gojra Mc",
+      "ur": "Gojra Mc"
+    },
+    {
+      "id": "punjab:toba-tek-singh:kamalia-mc",
+      "region": "punjab",
+      "district": "punjab:toba-tek-singh",
+      "en": "Kamalia Mc",
+      "ur": "Kamalia Mc"
+    },
+    {
+      "id": "punjab:toba-tek-singh:toba-tek-singh-mc",
+      "region": "punjab",
+      "district": "punjab:toba-tek-singh",
+      "en": "Toba Tek Singh Mc",
+      "ur": "Toba Tek Singh Mc"
+    },
+    {
+      "id": "punjab:toba-tek-singh:pir-mahal-mc",
+      "region": "punjab",
+      "district": "punjab:toba-tek-singh",
+      "en": "Pir Mahal Mc",
+      "ur": "Pir Mahal Mc"
+    },
+    {
+      "id": "punjab:toba-tek-singh:shorkot-cantonment-part-of-pirmahal-tehsil",
+      "region": "punjab",
+      "district": "punjab:toba-tek-singh",
+      "en": "Shorkot Cantonment (Part Of Pirmahal Tehsil)",
+      "ur": "Shorkot Cantonment (Part Of Pirmahal Tehsil)"
+    },
+    {
+      "id": "punjab:vehari:burewala-mc",
+      "region": "punjab",
+      "district": "punjab:vehari",
+      "en": "Burewala Mc",
+      "ur": "Burewala Mc"
+    },
+    {
+      "id": "punjab:vehari:vehari-mc",
+      "region": "punjab",
+      "district": "punjab:vehari",
+      "en": "Vehari Mc",
+      "ur": "Vehari Mc"
+    },
+    {
+      "id": "punjab:vehari:mailsi-mc",
+      "region": "punjab",
+      "district": "punjab:vehari",
+      "en": "Mailsi Mc",
+      "ur": "Mailsi Mc"
+    },
+    {
+      "id": "punjab:vehari:jalla-jeem-tc",
+      "region": "punjab",
+      "district": "punjab:vehari",
+      "en": "Jalla Jeem Tc",
+      "ur": "Jalla Jeem Tc"
+    },
+    {
+      "id": "punjab:vehari:karampur-tc",
+      "region": "punjab",
+      "district": "punjab:vehari",
+      "en": "Karampur Tc",
+      "ur": "Karampur Tc"
+    },
+    {
+      "id": "punjab:vehari:tibba-sultanpur-tc",
+      "region": "punjab",
+      "district": "punjab:vehari",
+      "en": "Tibba Sultanpur Tc",
+      "ur": "Tibba Sultanpur Tc"
+    },
+    {
+      "id": "sindh:badin:badin-mc",
+      "region": "sindh",
+      "district": "sindh:badin",
+      "en": "Badin Mc",
+      "ur": "Badin Mc"
+    },
+    {
+      "id": "sindh:badin:matli-mc",
+      "region": "sindh",
+      "district": "sindh:badin",
+      "en": "Matli Mc",
+      "ur": "Matli Mc"
+    },
+    {
+      "id": "sindh:badin:khoski-tc",
+      "region": "sindh",
+      "district": "sindh:badin",
+      "en": "Khoski Tc",
+      "ur": "Khoski Tc"
+    },
+    {
+      "id": "sindh:badin:shaheed-fazal-rahu-tc",
+      "region": "sindh",
+      "district": "sindh:badin",
+      "en": "Shaheed Fazal Rahu Tc",
+      "ur": "Shaheed Fazal Rahu Tc"
+    },
+    {
+      "id": "sindh:badin:talhar-tc",
+      "region": "sindh",
+      "district": "sindh:badin",
+      "en": "Talhar Tc",
+      "ur": "Talhar Tc"
+    },
+    {
+      "id": "sindh:badin:tando-ghulam-ali-tc",
+      "region": "sindh",
+      "district": "sindh:badin",
+      "en": "Tando Ghulam Ali Tc",
+      "ur": "Tando Ghulam Ali Tc"
+    },
+    {
+      "id": "sindh:badin:kadhan-tc",
+      "region": "sindh",
+      "district": "sindh:badin",
+      "en": "Kadhan Tc",
+      "ur": "Kadhan Tc"
+    },
+    {
+      "id": "sindh:badin:kario-ghanwar-tc",
+      "region": "sindh",
+      "district": "sindh:badin",
+      "en": "Kario Ghanwar Tc",
+      "ur": "Kario Ghanwar Tc"
+    },
+    {
+      "id": "sindh:badin:nindo-tc",
+      "region": "sindh",
+      "district": "sindh:badin",
+      "en": "Nindo Tc",
+      "ur": "Nindo Tc"
+    },
+    {
+      "id": "sindh:badin:pangrio-tc",
+      "region": "sindh",
+      "district": "sindh:badin",
+      "en": "Pangrio Tc",
+      "ur": "Pangrio Tc"
+    },
+    {
+      "id": "sindh:badin:rajo-khanani-tc",
+      "region": "sindh",
+      "district": "sindh:badin",
+      "en": "Rajo Khanani Tc",
+      "ur": "Rajo Khanani Tc"
+    },
+    {
+      "id": "sindh:badin:tando-bago-mc",
+      "region": "sindh",
+      "district": "sindh:badin",
+      "en": "Tando Bago Mc",
+      "ur": "Tando Bago Mc"
+    },
+    {
+      "id": "sindh:dadu:dadu-mc",
+      "region": "sindh",
+      "district": "sindh:dadu",
+      "en": "Dadu Mc",
+      "ur": "Dadu Mc"
+    },
+    {
+      "id": "sindh:dadu:khair-pur-nathan-shah-mc",
+      "region": "sindh",
+      "district": "sindh:dadu",
+      "en": "Khair Pur Nathan Shah Mc",
+      "ur": "Khair Pur Nathan Shah Mc"
+    },
+    {
+      "id": "sindh:dadu:mehar-mc",
+      "region": "sindh",
+      "district": "sindh:dadu",
+      "en": "Mehar Mc",
+      "ur": "Mehar Mc"
+    },
+    {
+      "id": "sindh:dadu:johi-tc",
+      "region": "sindh",
+      "district": "sindh:dadu",
+      "en": "Johi Tc",
+      "ur": "Johi Tc"
+    },
+    {
+      "id": "sindh:dadu:radhan-tc",
+      "region": "sindh",
+      "district": "sindh:dadu",
+      "en": "Radhan Tc",
+      "ur": "Radhan Tc"
+    },
+    {
+      "id": "sindh:dadu:sita-road-tc",
+      "region": "sindh",
+      "district": "sindh:dadu",
+      "en": "Sita Road Tc",
+      "ur": "Sita Road Tc"
+    },
+    {
+      "id": "sindh:dadu:phulji-tc",
+      "region": "sindh",
+      "district": "sindh:dadu",
+      "en": "Phulji Tc",
+      "ur": "Phulji Tc"
+    },
+    {
+      "id": "sindh:dadu:thari-mohabat-tc",
+      "region": "sindh",
+      "district": "sindh:dadu",
+      "en": "Thari Mohabat Tc",
+      "ur": "Thari Mohabat Tc"
+    },
+    {
+      "id": "sindh:ghotki:ghotki-mc",
+      "region": "sindh",
+      "district": "sindh:ghotki",
+      "en": "Ghotki Mc",
+      "ur": "Ghotki Mc"
+    },
+    {
+      "id": "sindh:ghotki:daharki-tc",
+      "region": "sindh",
+      "district": "sindh:ghotki",
+      "en": "Daharki Tc",
+      "ur": "Daharki Tc"
+    },
+    {
+      "id": "sindh:ghotki:mirpur-mathelo-mc",
+      "region": "sindh",
+      "district": "sindh:ghotki",
+      "en": "Mirpur Mathelo Mc",
+      "ur": "Mirpur Mathelo Mc"
+    },
+    {
+      "id": "sindh:ghotki:ubauro-tc",
+      "region": "sindh",
+      "district": "sindh:ghotki",
+      "en": "Ubauro Tc",
+      "ur": "Ubauro Tc"
+    },
+    {
+      "id": "sindh:ghotki:khangarh-tc",
+      "region": "sindh",
+      "district": "sindh:ghotki",
+      "en": "Khangarh Tc",
+      "ur": "Khangarh Tc"
+    },
+    {
+      "id": "sindh:ghotki:adilpur-tc",
+      "region": "sindh",
+      "district": "sindh:ghotki",
+      "en": "Adilpur Tc",
+      "ur": "Adilpur Tc"
+    },
+    {
+      "id": "sindh:hyderabad:hyderabad-municipal-corporation-part-of-hyderabad-city-taluka",
+      "region": "sindh",
+      "district": "sindh:hyderabad",
+      "en": "Hyderabad Municipal Corporation (Part Of Hyderabad City Taluka)",
+      "ur": "Hyderabad Municipal Corporation (Part Of Hyderabad City Taluka)"
+    },
+    {
+      "id": "sindh:hyderabad:hyderabad-municipal-corporation-part-of-latifabad-taluka",
+      "region": "sindh",
+      "district": "sindh:hyderabad",
+      "en": "Hyderabad Municipal Corporation (Part Of Latifabad Taluka)",
+      "ur": "Hyderabad Municipal Corporation (Part Of Latifabad Taluka)"
+    },
+    {
+      "id": "sindh:hyderabad:qasimabad-mc",
+      "region": "sindh",
+      "district": "sindh:hyderabad",
+      "en": "Qasimabad Mc",
+      "ur": "Qasimabad Mc"
+    },
+    {
+      "id": "sindh:hyderabad:hyderabad-cantonment-part-of-hyderabad-city-taluka",
+      "region": "sindh",
+      "district": "sindh:hyderabad",
+      "en": "Hyderabad Cantonment (Part Of Hyderabad City Taluka)",
+      "ur": "Hyderabad Cantonment (Part Of Hyderabad City Taluka)"
+    },
+    {
+      "id": "sindh:hyderabad:tando-jam-mc",
+      "region": "sindh",
+      "district": "sindh:hyderabad",
+      "en": "Tando Jam Mc",
+      "ur": "Tando Jam Mc"
+    },
+    {
+      "id": "sindh:hyderabad:husri-tc",
+      "region": "sindh",
+      "district": "sindh:hyderabad",
+      "en": "Husri Tc",
+      "ur": "Husri Tc"
+    },
+    {
+      "id": "sindh:hyderabad:hyderabad-cantonment-part-of-latifabad-taluka",
+      "region": "sindh",
+      "district": "sindh:hyderabad",
+      "en": "Hyderabad Cantonment (Part Of Latifabad Taluka)",
+      "ur": "Hyderabad Cantonment (Part Of Latifabad Taluka)"
+    },
+    {
+      "id": "sindh:hyderabad:hyderabad-cantonment-part-of-qasimabad-taluka",
+      "region": "sindh",
+      "district": "sindh:hyderabad",
+      "en": "Hyderabad Cantonment (Part Of Qasimabad Taluka)",
+      "ur": "Hyderabad Cantonment (Part Of Qasimabad Taluka)"
+    },
+    {
+      "id": "sindh:jacobabad:jacobabad-mc",
+      "region": "sindh",
+      "district": "sindh:jacobabad",
+      "en": "Jacobabad Mc",
+      "ur": "Jacobabad Mc"
+    },
+    {
+      "id": "sindh:jacobabad:thul-mc",
+      "region": "sindh",
+      "district": "sindh:jacobabad",
+      "en": "Thul Mc",
+      "ur": "Thul Mc"
+    },
+    {
+      "id": "sindh:jacobabad:garhi-khairo-tc",
+      "region": "sindh",
+      "district": "sindh:jacobabad",
+      "en": "Garhi Khairo Tc",
+      "ur": "Garhi Khairo Tc"
+    },
+    {
+      "id": "sindh:jacobabad:mirpur-buriro-tc",
+      "region": "sindh",
+      "district": "sindh:jacobabad",
+      "en": "Mirpur Buriro Tc",
+      "ur": "Mirpur Buriro Tc"
+    },
+    {
+      "id": "sindh:jacobabad:sohrab-khan-sarki-tc",
+      "region": "sindh",
+      "district": "sindh:jacobabad",
+      "en": "Sohrab Khan Sarki Tc",
+      "ur": "Sohrab Khan Sarki Tc"
+    },
+    {
+      "id": "sindh:jamshoro:bolhari-mc",
+      "region": "sindh",
+      "district": "sindh:jamshoro",
+      "en": "Bolhari Mc",
+      "ur": "Bolhari Mc"
+    },
+    {
+      "id": "sindh:jamshoro:kotri-mc",
+      "region": "sindh",
+      "district": "sindh:jamshoro",
+      "en": "Kotri Mc",
+      "ur": "Kotri Mc"
+    },
+    {
+      "id": "sindh:jamshoro:jamshoro-tc",
+      "region": "sindh",
+      "district": "sindh:jamshoro",
+      "en": "Jamshoro Tc",
+      "ur": "Jamshoro Tc"
+    },
+    {
+      "id": "sindh:jamshoro:sehwan-tc",
+      "region": "sindh",
+      "district": "sindh:jamshoro",
+      "en": "Sehwan Tc",
+      "ur": "Sehwan Tc"
+    },
+    {
+      "id": "sindh:jamshoro:bhan-tc",
+      "region": "sindh",
+      "district": "sindh:jamshoro",
+      "en": "Bhan Tc",
+      "ur": "Bhan Tc"
+    },
+    {
+      "id": "sindh:jamshoro:sann-tc",
+      "region": "sindh",
+      "district": "sindh:jamshoro",
+      "en": "Sann Tc",
+      "ur": "Sann Tc"
+    },
+    {
+      "id": "sindh:jamshoro:thano-bula-khan-tc",
+      "region": "sindh",
+      "district": "sindh:jamshoro",
+      "en": "Thano Bula Khan Tc",
+      "ur": "Thano Bula Khan Tc"
+    },
+    {
+      "id": "sindh:jamshoro:manjhand-tc",
+      "region": "sindh",
+      "district": "sindh:jamshoro",
+      "en": "Manjhand Tc",
+      "ur": "Manjhand Tc"
+    },
+    {
+      "id": "sindh:kambar-shahdad-kot:kambar-mc",
+      "region": "sindh",
+      "district": "sindh:kambar-shahdad-kot",
+      "en": "Kambar Mc",
+      "ur": "Kambar Mc"
+    },
+    {
+      "id": "sindh:kambar-shahdad-kot:shahdad-kot-mc",
+      "region": "sindh",
+      "district": "sindh:kambar-shahdad-kot",
+      "en": "Shahdad Kot Mc",
+      "ur": "Shahdad Kot Mc"
+    },
+    {
+      "id": "sindh:kambar-shahdad-kot:behram-tc",
+      "region": "sindh",
+      "district": "sindh:kambar-shahdad-kot",
+      "en": "Behram Tc",
+      "ur": "Behram Tc"
+    },
+    {
+      "id": "sindh:kambar-shahdad-kot:nasirabad-tc",
+      "region": "sindh",
+      "district": "sindh:kambar-shahdad-kot",
+      "en": "Nasirabad Tc",
+      "ur": "Nasirabad Tc"
+    },
+    {
+      "id": "sindh:kambar-shahdad-kot:qubo-saeed-khan-tc",
+      "region": "sindh",
+      "district": "sindh:kambar-shahdad-kot",
+      "en": "Qubo Saeed Khan Tc",
+      "ur": "Qubo Saeed Khan Tc"
+    },
+    {
+      "id": "sindh:kambar-shahdad-kot:warah-tc",
+      "region": "sindh",
+      "district": "sindh:kambar-shahdad-kot",
+      "en": "Warah Tc",
+      "ur": "Warah Tc"
+    },
+    {
+      "id": "sindh:kambar-shahdad-kot:gaji-khuhawar-tc",
+      "region": "sindh",
+      "district": "sindh:kambar-shahdad-kot",
+      "en": "Gaji Khuhawar Tc",
+      "ur": "Gaji Khuhawar Tc"
+    },
+    {
+      "id": "sindh:kambar-shahdad-kot:miro-khan-tc",
+      "region": "sindh",
+      "district": "sindh:kambar-shahdad-kot",
+      "en": "Miro Khan Tc",
+      "ur": "Miro Khan Tc"
+    },
+    {
+      "id": "sindh:kambar-shahdad-kot:wagan-tc",
+      "region": "sindh",
+      "district": "sindh:kambar-shahdad-kot",
+      "en": "Wagan Tc",
+      "ur": "Wagan Tc"
+    },
+    {
+      "id": "sindh:karachi-central:district-municipal-corporation-karachi-central-part-of-gulberg-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-central",
+      "en": "District Municipal Corporation Karachi Central (Part Of Gulberg Sub-Division)",
+      "ur": "District Municipal Corporation Karachi Central (Part Of Gulberg Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-central:district-municipal-corporation-karachi-central-part-of-liaquatabad-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-central",
+      "en": "District Municipal Corporation Karachi Central (Part Of Liaquatabad Sub-Division)",
+      "ur": "District Municipal Corporation Karachi Central (Part Of Liaquatabad Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-central:district-municipal-corporation-karachi-central-part-of-nazimabad-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-central",
+      "en": "District Municipal Corporation Karachi Central (Part Of Nazimabad Sub-Division)",
+      "ur": "District Municipal Corporation Karachi Central (Part Of Nazimabad Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-central:district-municipal-corporation-karachi-central-part-of-new-karachi-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-central",
+      "en": "District Municipal Corporation Karachi Central (Part Of New Karachi Sub-Division)",
+      "ur": "District Municipal Corporation Karachi Central (Part Of New Karachi Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-central:district-municipal-corporation-karachi-central-part-of-north-nazimabad-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-central",
+      "en": "District Municipal Corporation Karachi Central (Part Of North Nazimabad Sub-Division)",
+      "ur": "District Municipal Corporation Karachi Central (Part Of North Nazimabad Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-east:district-municipal-corporation-karachi-east-part-of-ferozabad-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-east",
+      "en": "District Municipal Corporation Karachi East (Part Of Ferozabad Sub-Division)",
+      "ur": "District Municipal Corporation Karachi East (Part Of Ferozabad Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-east:district-municipal-corporation-karachi-east-part-of-gulshan-e-iqbal-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-east",
+      "en": "District Municipal Corporation Karachi East (Part Of Gulshan-E-Iqbal Sub-Division)",
+      "ur": "District Municipal Corporation Karachi East (Part Of Gulshan-E-Iqbal Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-east:district-municipal-corporation-karachi-east-part-of-gulzar-e-hijri-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-east",
+      "en": "District Municipal Corporation Karachi East (Part Of Gulzar-E-Hijri Sub-Division)",
+      "ur": "District Municipal Corporation Karachi East (Part Of Gulzar-E-Hijri Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-east:district-municipal-corporation-karachi-east-part-of-jamshed-quarters-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-east",
+      "en": "District Municipal Corporation Karachi East (Part Of Jamshed Quarters Sub-Division)",
+      "ur": "District Municipal Corporation Karachi East (Part Of Jamshed Quarters Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-east:faisal-cantonment-part-of-gulshan-e-iqbal-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-east",
+      "en": "Faisal Cantonment (Part Of Gulshan-E-Iqbal Sub-Division)",
+      "ur": "Faisal Cantonment (Part Of Gulshan-E-Iqbal Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-east:malir-cantonment-part-of-gulzar-e-hijri-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-east",
+      "en": "Malir Cantonment (Part Of Gulzar-E-Hijri Sub-Division)",
+      "ur": "Malir Cantonment (Part Of Gulzar-E-Hijri Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-east:karachi-cantonment-part-of-jamshed-quarters-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-east",
+      "en": "Karachi Cantonment (Part Of Jamshed Quarters Sub-Division)",
+      "ur": "Karachi Cantonment (Part Of Jamshed Quarters Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-south:district-municipal-corporation-karachi-south-part-of-garden-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-south",
+      "en": "District Municipal Corporation Karachi South (Part Of Garden Sub-Division)",
+      "ur": "District Municipal Corporation Karachi South (Part Of Garden Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-south:district-municipal-corporation-karachi-south-part-of-lyari-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-south",
+      "en": "District Municipal Corporation Karachi South (Part Of Lyari Sub-Division)",
+      "ur": "District Municipal Corporation Karachi South (Part Of Lyari Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-south:district-municipal-corporation-karachi-south-part-of-aram-bagh-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-south",
+      "en": "District Municipal Corporation Karachi South (Part Of Aram Bagh Sub-Division)",
+      "ur": "District Municipal Corporation Karachi South (Part Of Aram Bagh Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-south:district-municipal-corporation-karachi-south-part-of-civil-lines-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-south",
+      "en": "District Municipal Corporation Karachi South (Part Of Civil Lines Sub-Division)",
+      "ur": "District Municipal Corporation Karachi South (Part Of Civil Lines Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-south:clifton-cantonment-part-of-civil-lines-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-south",
+      "en": "Clifton Cantonment (Part Of Civil Lines Sub-Division)",
+      "ur": "Clifton Cantonment (Part Of Civil Lines Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-south:karachi-cantonment-part-of-sadar-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-south",
+      "en": "Karachi Cantonment (Part Of Sadar Sub-Division)",
+      "ur": "Karachi Cantonment (Part Of Sadar Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-south:clifton-cantonment-part-of-saddar-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-south",
+      "en": "Clifton Cantonment (Part Of Saddar Sub-Division)",
+      "ur": "Clifton Cantonment (Part Of Saddar Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-south:district-municipal-corporation-karachi-south-part-of-saddar-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-south",
+      "en": "District Municipal Corporation Karachi South (Part Of Saddar Sub-Division)",
+      "ur": "District Municipal Corporation Karachi South (Part Of Saddar Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-south:karachi-cantonment-part-of-civil-lines-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-south",
+      "en": "Karachi Cantonment (Part Of Civil Lines Sub-Division)",
+      "ur": "Karachi Cantonment (Part Of Civil Lines Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-west:district-municipal-corporation-karachi-west-part-of-manghopir-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-west",
+      "en": "District Municipal Corporation Karachi West (Part Of Manghopir Sub-Division)",
+      "ur": "District Municipal Corporation Karachi West (Part Of Manghopir Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-west:district-municipal-corporation-karachi-west-part-of-mominabad-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-west",
+      "en": "District Municipal Corporation Karachi West (Part Of Mominabad Sub-Division)",
+      "ur": "District Municipal Corporation Karachi West (Part Of Mominabad Sub-Division)"
+    },
+    {
+      "id": "sindh:karachi-west:district-municipal-corporation-karachi-west-part-of-orangi-sub-division",
+      "region": "sindh",
+      "district": "sindh:karachi-west",
+      "en": "District Municipal Corporation Karachi West (Part Of Orangi Sub-Division)",
+      "ur": "District Municipal Corporation Karachi West (Part Of Orangi Sub-Division)"
+    },
+    {
+      "id": "sindh:kashmore:kandhkot-mc",
+      "region": "sindh",
+      "district": "sindh:kashmore",
+      "en": "Kandhkot Mc",
+      "ur": "Kandhkot Mc"
+    },
+    {
+      "id": "sindh:kashmore:kashmore-tc",
+      "region": "sindh",
+      "district": "sindh:kashmore",
+      "en": "Kashmore Tc",
+      "ur": "Kashmore Tc"
+    },
+    {
+      "id": "sindh:kashmore:ghouspur-tc",
+      "region": "sindh",
+      "district": "sindh:kashmore",
+      "en": "Ghouspur Tc",
+      "ur": "Ghouspur Tc"
+    },
+    {
+      "id": "sindh:kashmore:guddu-tc",
+      "region": "sindh",
+      "district": "sindh:kashmore",
+      "en": "Guddu Tc",
+      "ur": "Guddu Tc"
+    },
+    {
+      "id": "sindh:kashmore:karampur-tc",
+      "region": "sindh",
+      "district": "sindh:kashmore",
+      "en": "Karampur Tc",
+      "ur": "Karampur Tc"
+    },
+    {
+      "id": "sindh:kashmore:tangwani-tc",
+      "region": "sindh",
+      "district": "sindh:kashmore",
+      "en": "Tangwani Tc",
+      "ur": "Tangwani Tc"
+    },
+    {
+      "id": "sindh:kashmore:buxapur-tc",
+      "region": "sindh",
+      "district": "sindh:kashmore",
+      "en": "Buxapur Tc",
+      "ur": "Buxapur Tc"
+    },
+    {
+      "id": "sindh:keamari:district-municipal-corporation-keamari-part-of-baldia-sub-division",
+      "region": "sindh",
+      "district": "sindh:keamari",
+      "en": "District Municipal Corporation Keamari (Part Of Baldia Sub-Division)",
+      "ur": "District Municipal Corporation Keamari (Part Of Baldia Sub-Division)"
+    },
+    {
+      "id": "sindh:keamari:district-municipal-corporation-keamari-part-of-keamari-sub-division",
+      "region": "sindh",
+      "district": "sindh:keamari",
+      "en": "District Municipal Corporation Keamari (Part Of Keamari Sub-Division)",
+      "ur": "District Municipal Corporation Keamari (Part Of Keamari Sub-Division)"
+    },
+    {
+      "id": "sindh:keamari:district-municipal-corporation-keamari-part-of-mauripur-sub-division",
+      "region": "sindh",
+      "district": "sindh:keamari",
+      "en": "District Municipal Corporation Keamari (Part Of Mauripur Sub-Division)",
+      "ur": "District Municipal Corporation Keamari (Part Of Mauripur Sub-Division)"
+    },
+    {
+      "id": "sindh:keamari:district-municipal-corporation-keamari-part-of-s-i-t-e-sub-division",
+      "region": "sindh",
+      "district": "sindh:keamari",
+      "en": "District Municipal Corporation Keamari (Part Of S.I.T.E. Sub-Division)",
+      "ur": "District Municipal Corporation Keamari (Part Of S.I.T.E. Sub-Division)"
+    },
+    {
+      "id": "sindh:keamari:manora-cantonment-part-of-keamari-sub-division",
+      "region": "sindh",
+      "district": "sindh:keamari",
+      "en": "Manora Cantonment (Part Of Keamari Sub-Division)",
+      "ur": "Manora Cantonment (Part Of Keamari Sub-Division)"
+    },
+    {
+      "id": "sindh:khairpur:khairpur-mc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Khairpur Mc",
+      "ur": "Khairpur Mc"
+    },
+    {
+      "id": "sindh:khairpur:gambat-mc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Gambat Mc",
+      "ur": "Gambat Mc"
+    },
+    {
+      "id": "sindh:khairpur:kingri-pirjo-goth-mc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Kingri (Pirjo Goth) Mc",
+      "ur": "Kingri (Pirjo Goth) Mc"
+    },
+    {
+      "id": "sindh:khairpur:chowndiko-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Chowndiko Tc",
+      "ur": "Chowndiko Tc"
+    },
+    {
+      "id": "sindh:khairpur:faqirabad-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Faqirabad Tc",
+      "ur": "Faqirabad Tc"
+    },
+    {
+      "id": "sindh:khairpur:hingorja-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Hingorja Tc",
+      "ur": "Hingorja Tc"
+    },
+    {
+      "id": "sindh:khairpur:kot-diji-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Kot Diji Tc",
+      "ur": "Kot Diji Tc"
+    },
+    {
+      "id": "sindh:khairpur:pacca-chang-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Pacca Chang Tc",
+      "ur": "Pacca Chang Tc"
+    },
+    {
+      "id": "sindh:khairpur:piryaloi-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Piryaloi Tc",
+      "ur": "Piryaloi Tc"
+    },
+    {
+      "id": "sindh:khairpur:ranipur-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Ranipur Tc",
+      "ur": "Ranipur Tc"
+    },
+    {
+      "id": "sindh:khairpur:setharja-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Setharja Tc",
+      "ur": "Setharja Tc"
+    },
+    {
+      "id": "sindh:khairpur:sobho-dero-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Sobho Dero Tc",
+      "ur": "Sobho Dero Tc"
+    },
+    {
+      "id": "sindh:khairpur:thari-mirwah-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Thari Mirwah Tc",
+      "ur": "Thari Mirwah Tc"
+    },
+    {
+      "id": "sindh:khairpur:agra-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Agra Tc",
+      "ur": "Agra Tc"
+    },
+    {
+      "id": "sindh:khairpur:ahmed-pur-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Ahmed Pur Tc",
+      "ur": "Ahmed Pur Tc"
+    },
+    {
+      "id": "sindh:khairpur:babarloi-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Babarloi Tc",
+      "ur": "Babarloi Tc"
+    },
+    {
+      "id": "sindh:khairpur:bozdar-wada-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Bozdar Wada Tc",
+      "ur": "Bozdar Wada Tc"
+    },
+    {
+      "id": "sindh:khairpur:karondi-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Karondi Tc",
+      "ur": "Karondi Tc"
+    },
+    {
+      "id": "sindh:khairpur:khuhra-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Khuhra Tc",
+      "ur": "Khuhra Tc"
+    },
+    {
+      "id": "sindh:khairpur:kumb-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Kumb Tc",
+      "ur": "Kumb Tc"
+    },
+    {
+      "id": "sindh:khairpur:tando-mir-ali-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Tando Mir Ali Tc",
+      "ur": "Tando Mir Ali Tc"
+    },
+    {
+      "id": "sindh:khairpur:therhi-ii-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Therhi Ii Tc",
+      "ur": "Therhi Ii Tc"
+    },
+    {
+      "id": "sindh:khairpur:therhi-i-tc",
+      "region": "sindh",
+      "district": "sindh:khairpur",
+      "en": "Therhi-I Tc",
+      "ur": "Therhi-I Tc"
+    },
+    {
+      "id": "sindh:korangi:district-municipal-corporation-korangi-part-of-korangi-sub-division",
+      "region": "sindh",
+      "district": "sindh:korangi",
+      "en": "District Municipal Corporation Korangi (Part Of Korangi Sub-Division)",
+      "ur": "District Municipal Corporation Korangi (Part Of Korangi Sub-Division)"
+    },
+    {
+      "id": "sindh:korangi:district-municipal-corporation-korangi-part-of-landhi-sub-division",
+      "region": "sindh",
+      "district": "sindh:korangi",
+      "en": "District Municipal Corporation Korangi (Part Of Landhi Sub-Division)",
+      "ur": "District Municipal Corporation Korangi (Part Of Landhi Sub-Division)"
+    },
+    {
+      "id": "sindh:korangi:district-municipal-corporation-korangi-part-of-shah-faisal-sub-division",
+      "region": "sindh",
+      "district": "sindh:korangi",
+      "en": "District Municipal Corporation Korangi (Part Of Shah Faisal Sub-Division)",
+      "ur": "District Municipal Corporation Korangi (Part Of Shah Faisal Sub-Division)"
+    },
+    {
+      "id": "sindh:korangi:district-municipal-corporation-korangi-part-of-model-colony-sub-division",
+      "region": "sindh",
+      "district": "sindh:korangi",
+      "en": "District Municipal Corporation Korangi (Part Of Model Colony Sub-Division)",
+      "ur": "District Municipal Corporation Korangi (Part Of Model Colony Sub-Division)"
+    },
+    {
+      "id": "sindh:korangi:korangi-creek-cantonment-part-of-korangi-sub-division",
+      "region": "sindh",
+      "district": "sindh:korangi",
+      "en": "Korangi Creek Cantonment (Part Of Korangi Sub-Division)",
+      "ur": "Korangi Creek Cantonment (Part Of Korangi Sub-Division)"
+    },
+    {
+      "id": "sindh:korangi:faisal-cantonment-part-of-shah-faisal-sub-division",
+      "region": "sindh",
+      "district": "sindh:korangi",
+      "en": "Faisal Cantonment (Part Of Shah Faisal Sub-Division)",
+      "ur": "Faisal Cantonment (Part Of Shah Faisal Sub-Division)"
+    },
+    {
+      "id": "sindh:korangi:clifton-cantonment-part-of-korangi-sub-division",
+      "region": "sindh",
+      "district": "sindh:korangi",
+      "en": "Clifton Cantonment (Part Of Korangi Sub-Division)",
+      "ur": "Clifton Cantonment (Part Of Korangi Sub-Division)"
+    },
+    {
+      "id": "sindh:larkana:larkana-municipal-corporation",
+      "region": "sindh",
+      "district": "sindh:larkana",
+      "en": "Larkana Municipal Corporation",
+      "ur": "Larkana Municipal Corporation"
+    },
+    {
+      "id": "sindh:larkana:naudero-mc",
+      "region": "sindh",
+      "district": "sindh:larkana",
+      "en": "Naudero Mc",
+      "ur": "Naudero Mc"
+    },
+    {
+      "id": "sindh:larkana:ratodero-mc",
+      "region": "sindh",
+      "district": "sindh:larkana",
+      "en": "Ratodero Mc",
+      "ur": "Ratodero Mc"
+    },
+    {
+      "id": "sindh:larkana:arija-tc",
+      "region": "sindh",
+      "district": "sindh:larkana",
+      "en": "Arija Tc",
+      "ur": "Arija Tc"
+    },
+    {
+      "id": "sindh:larkana:badah-tc",
+      "region": "sindh",
+      "district": "sindh:larkana",
+      "en": "Badah Tc",
+      "ur": "Badah Tc"
+    },
+    {
+      "id": "sindh:larkana:dokri-tc",
+      "region": "sindh",
+      "district": "sindh:larkana",
+      "en": "Dokri Tc",
+      "ur": "Dokri Tc"
+    },
+    {
+      "id": "sindh:larkana:garello-tc",
+      "region": "sindh",
+      "district": "sindh:larkana",
+      "en": "Garello Tc",
+      "ur": "Garello Tc"
+    },
+    {
+      "id": "sindh:malir:district-municipal-corporation-malir-part-of-ibrahim-hydri-sub-division",
+      "region": "sindh",
+      "district": "sindh:malir",
+      "en": "District Municipal Corporation Malir (Part Of Ibrahim Hydri Sub-Division)",
+      "ur": "District Municipal Corporation Malir (Part Of Ibrahim Hydri Sub-Division)"
+    },
+    {
+      "id": "sindh:malir:district-municipal-corporation-malir-part-of-murad-memon-sub-division",
+      "region": "sindh",
+      "district": "sindh:malir",
+      "en": "District Municipal Corporation Malir (Part Of Murad Memon Sub-Division)",
+      "ur": "District Municipal Corporation Malir (Part Of Murad Memon Sub-Division)"
+    },
+    {
+      "id": "sindh:malir:district-municipal-corporation-malir-part-of-airport-sub-division",
+      "region": "sindh",
+      "district": "sindh:malir",
+      "en": "District Municipal Corporation Malir (Part Of Airport Sub-Division)",
+      "ur": "District Municipal Corporation Malir (Part Of Airport Sub-Division)"
+    },
+    {
+      "id": "sindh:malir:malir-cantonment-part-of-airport-sub-division",
+      "region": "sindh",
+      "district": "sindh:malir",
+      "en": "Malir Cantonment (Part Of Airport Sub-Division)",
+      "ur": "Malir Cantonment (Part Of Airport Sub-Division)"
+    },
+    {
+      "id": "sindh:malir:faisal-cantonment-part-of-airport-sub-division",
+      "region": "sindh",
+      "district": "sindh:malir",
+      "en": "Faisal Cantonment (Part Of Airport Sub-Division)",
+      "ur": "Faisal Cantonment (Part Of Airport Sub-Division)"
+    },
+    {
+      "id": "sindh:malir:korangi-creek-cantonment-part-of-ibrahim-hydri-sub-division",
+      "region": "sindh",
+      "district": "sindh:malir",
+      "en": "Korangi Creek Cantonment (Part Of Ibrahim Hydri Sub-Division)",
+      "ur": "Korangi Creek Cantonment (Part Of Ibrahim Hydri Sub-Division)"
+    },
+    {
+      "id": "sindh:malir:malir-cantonment-part-of-murad-memon-sub-division",
+      "region": "sindh",
+      "district": "sindh:malir",
+      "en": "Malir Cantonment (Part Of Murad Memon Sub-Division)",
+      "ur": "Malir Cantonment (Part Of Murad Memon Sub-Division)"
+    },
+    {
+      "id": "sindh:matiari:hala-mc",
+      "region": "sindh",
+      "district": "sindh:matiari",
+      "en": "Hala Mc",
+      "ur": "Hala Mc"
+    },
+    {
+      "id": "sindh:matiari:bhit-shah-tc",
+      "region": "sindh",
+      "district": "sindh:matiari",
+      "en": "Bhit Shah Tc",
+      "ur": "Bhit Shah Tc"
+    },
+    {
+      "id": "sindh:matiari:hala-old-tc",
+      "region": "sindh",
+      "district": "sindh:matiari",
+      "en": "Hala Old Tc",
+      "ur": "Hala Old Tc"
+    },
+    {
+      "id": "sindh:matiari:khyber-tc",
+      "region": "sindh",
+      "district": "sindh:matiari",
+      "en": "Khyber Tc",
+      "ur": "Khyber Tc"
+    },
+    {
+      "id": "sindh:matiari:matiari-tc",
+      "region": "sindh",
+      "district": "sindh:matiari",
+      "en": "Matiari Tc",
+      "ur": "Matiari Tc"
+    },
+    {
+      "id": "sindh:matiari:new-saeedabad-tc",
+      "region": "sindh",
+      "district": "sindh:matiari",
+      "en": "New Saeedabad Tc",
+      "ur": "New Saeedabad Tc"
+    },
+    {
+      "id": "sindh:matiari:odero-lal-station-tc",
+      "region": "sindh",
+      "district": "sindh:matiari",
+      "en": "Odero Lal Station Tc",
+      "ur": "Odero Lal Station Tc"
+    },
+    {
+      "id": "sindh:mirpur-khas:mirpur-khas-mc",
+      "region": "sindh",
+      "district": "sindh:mirpur-khas",
+      "en": "Mirpur Khas Mc",
+      "ur": "Mirpur Khas Mc"
+    },
+    {
+      "id": "sindh:mirpur-khas:digri-tc",
+      "region": "sindh",
+      "district": "sindh:mirpur-khas",
+      "en": "Digri Tc",
+      "ur": "Digri Tc"
+    },
+    {
+      "id": "sindh:mirpur-khas:jhudo-tc",
+      "region": "sindh",
+      "district": "sindh:mirpur-khas",
+      "en": "Jhudo Tc",
+      "ur": "Jhudo Tc"
+    },
+    {
+      "id": "sindh:mirpur-khas:kot-ghulam-muhammad-tc",
+      "region": "sindh",
+      "district": "sindh:mirpur-khas",
+      "en": "Kot Ghulam Muhammad Tc",
+      "ur": "Kot Ghulam Muhammad Tc"
+    },
+    {
+      "id": "sindh:mirpur-khas:naukot-tc",
+      "region": "sindh",
+      "district": "sindh:mirpur-khas",
+      "en": "Naukot Tc",
+      "ur": "Naukot Tc"
+    },
+    {
+      "id": "sindh:mirpur-khas:tando-jan-muhammad-tc",
+      "region": "sindh",
+      "district": "sindh:mirpur-khas",
+      "en": "Tando Jan Muhammad Tc",
+      "ur": "Tando Jan Muhammad Tc"
+    },
+    {
+      "id": "sindh:mirpur-khas:hingorno-tc",
+      "region": "sindh",
+      "district": "sindh:mirpur-khas",
+      "en": "Hingorno Tc",
+      "ur": "Hingorno Tc"
+    },
+    {
+      "id": "sindh:mirpur-khas:mirwah-tc",
+      "region": "sindh",
+      "district": "sindh:mirpur-khas",
+      "en": "Mirwah Tc",
+      "ur": "Mirwah Tc"
+    },
+    {
+      "id": "sindh:naushahro-feroze:moro-mc",
+      "region": "sindh",
+      "district": "sindh:naushahro-feroze",
+      "en": "Moro Mc",
+      "ur": "Moro Mc"
+    },
+    {
+      "id": "sindh:naushahro-feroze:mehrabpur-tc",
+      "region": "sindh",
+      "district": "sindh:naushahro-feroze",
+      "en": "Mehrabpur Tc",
+      "ur": "Mehrabpur Tc"
+    },
+    {
+      "id": "sindh:naushahro-feroze:naushahro-feroze-tc",
+      "region": "sindh",
+      "district": "sindh:naushahro-feroze",
+      "en": "Naushahro Feroze Tc",
+      "ur": "Naushahro Feroze Tc"
+    },
+    {
+      "id": "sindh:naushahro-feroze:bhiria-road-tc",
+      "region": "sindh",
+      "district": "sindh:naushahro-feroze",
+      "en": "Bhiria Road Tc",
+      "ur": "Bhiria Road Tc"
+    },
+    {
+      "id": "sindh:naushahro-feroze:halani-tc",
+      "region": "sindh",
+      "district": "sindh:naushahro-feroze",
+      "en": "Halani Tc",
+      "ur": "Halani Tc"
+    },
+    {
+      "id": "sindh:naushahro-feroze:kandiaro-tc",
+      "region": "sindh",
+      "district": "sindh:naushahro-feroze",
+      "en": "Kandiaro Tc",
+      "ur": "Kandiaro Tc"
+    },
+    {
+      "id": "sindh:naushahro-feroze:mithiani-tc",
+      "region": "sindh",
+      "district": "sindh:naushahro-feroze",
+      "en": "Mithiani Tc",
+      "ur": "Mithiani Tc"
+    },
+    {
+      "id": "sindh:naushahro-feroze:padidan-tc",
+      "region": "sindh",
+      "district": "sindh:naushahro-feroze",
+      "en": "Padidan Tc",
+      "ur": "Padidan Tc"
+    },
+    {
+      "id": "sindh:naushahro-feroze:tharu-shah-tc",
+      "region": "sindh",
+      "district": "sindh:naushahro-feroze",
+      "en": "Tharu Shah Tc",
+      "ur": "Tharu Shah Tc"
+    },
+    {
+      "id": "sindh:naushahro-feroze:bhiria-city-tc",
+      "region": "sindh",
+      "district": "sindh:naushahro-feroze",
+      "en": "Bhiria City Tc",
+      "ur": "Bhiria City Tc"
+    },
+    {
+      "id": "sindh:naushahro-feroze:darya-khan-marri-tc",
+      "region": "sindh",
+      "district": "sindh:naushahro-feroze",
+      "en": "Darya Khan Marri Tc",
+      "ur": "Darya Khan Marri Tc"
+    },
+    {
+      "id": "sindh:sanghar:shahdadpur-mc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Shahdadpur Mc",
+      "ur": "Shahdadpur Mc"
+    },
+    {
+      "id": "sindh:sanghar:tando-adam-mc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Tando Adam Mc",
+      "ur": "Tando Adam Mc"
+    },
+    {
+      "id": "sindh:sanghar:khipro-tc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Khipro Tc",
+      "ur": "Khipro Tc"
+    },
+    {
+      "id": "sindh:sanghar:sanghar-mc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Sanghar Mc",
+      "ur": "Sanghar Mc"
+    },
+    {
+      "id": "sindh:sanghar:jatia-tc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Jatia Tc",
+      "ur": "Jatia Tc"
+    },
+    {
+      "id": "sindh:sanghar:shahpur-chakar-tc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Shahpur Chakar Tc",
+      "ur": "Shahpur Chakar Tc"
+    },
+    {
+      "id": "sindh:sanghar:berani-tc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Berani Tc",
+      "ur": "Berani Tc"
+    },
+    {
+      "id": "sindh:sanghar:jhol-tc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Jhol Tc",
+      "ur": "Jhol Tc"
+    },
+    {
+      "id": "sindh:sanghar:kandiari-tc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Kandiari Tc",
+      "ur": "Kandiari Tc"
+    },
+    {
+      "id": "sindh:sanghar:khadro-tc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Khadro Tc",
+      "ur": "Khadro Tc"
+    },
+    {
+      "id": "sindh:sanghar:sarhari-tc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Sarhari Tc",
+      "ur": "Sarhari Tc"
+    },
+    {
+      "id": "sindh:sanghar:sinjhoro-mc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Sinjhoro Mc",
+      "ur": "Sinjhoro Mc"
+    },
+    {
+      "id": "sindh:sanghar:jam-nawaz-ali-tc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Jam Nawaz Ali Tc",
+      "ur": "Jam Nawaz Ali Tc"
+    },
+    {
+      "id": "sindh:sanghar:perumal-tc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Perumal Tc",
+      "ur": "Perumal Tc"
+    },
+    {
+      "id": "sindh:sanghar:tando-mitha-khan-tc",
+      "region": "sindh",
+      "district": "sindh:sanghar",
+      "en": "Tando Mitha Khan Tc",
+      "ur": "Tando Mitha Khan Tc"
+    },
+    {
+      "id": "sindh:shaheed-benazirabad:nawabshah-mc",
+      "region": "sindh",
+      "district": "sindh:shaheed-benazirabad",
+      "en": "Nawabshah Mc",
+      "ur": "Nawabshah Mc"
+    },
+    {
+      "id": "sindh:shaheed-benazirabad:sakrand-tc",
+      "region": "sindh",
+      "district": "sindh:shaheed-benazirabad",
+      "en": "Sakrand Tc",
+      "ur": "Sakrand Tc"
+    },
+    {
+      "id": "sindh:shaheed-benazirabad:bandhi-tc",
+      "region": "sindh",
+      "district": "sindh:shaheed-benazirabad",
+      "en": "Bandhi Tc",
+      "ur": "Bandhi Tc"
+    },
+    {
+      "id": "sindh:shaheed-benazirabad:daur-tc",
+      "region": "sindh",
+      "district": "sindh:shaheed-benazirabad",
+      "en": "Daur Tc",
+      "ur": "Daur Tc"
+    },
+    {
+      "id": "sindh:shaheed-benazirabad:kazi-ahmed-tc",
+      "region": "sindh",
+      "district": "sindh:shaheed-benazirabad",
+      "en": "Kazi Ahmed Tc",
+      "ur": "Kazi Ahmed Tc"
+    },
+    {
+      "id": "sindh:shaheed-benazirabad:buchery-tc",
+      "region": "sindh",
+      "district": "sindh:shaheed-benazirabad",
+      "en": "Buchery Tc",
+      "ur": "Buchery Tc"
+    },
+    {
+      "id": "sindh:shaheed-benazirabad:daulatpur-tc",
+      "region": "sindh",
+      "district": "sindh:shaheed-benazirabad",
+      "en": "Daulatpur Tc",
+      "ur": "Daulatpur Tc"
+    },
+    {
+      "id": "sindh:shaheed-benazirabad:jam-sahib-tc",
+      "region": "sindh",
+      "district": "sindh:shaheed-benazirabad",
+      "en": "Jam Sahib Tc",
+      "ur": "Jam Sahib Tc"
+    },
+    {
+      "id": "sindh:shaheed-benazirabad:shahpur-jahania-tc",
+      "region": "sindh",
+      "district": "sindh:shaheed-benazirabad",
+      "en": "Shahpur Jahania Tc",
+      "ur": "Shahpur Jahania Tc"
+    },
+    {
+      "id": "sindh:shikarpur:shikarpur-mc",
+      "region": "sindh",
+      "district": "sindh:shikarpur",
+      "en": "Shikarpur Mc",
+      "ur": "Shikarpur Mc"
+    },
+    {
+      "id": "sindh:shikarpur:lakhi-tc",
+      "region": "sindh",
+      "district": "sindh:shikarpur",
+      "en": "Lakhi Tc",
+      "ur": "Lakhi Tc"
+    },
+    {
+      "id": "sindh:shikarpur:chak-tc",
+      "region": "sindh",
+      "district": "sindh:shikarpur",
+      "en": "Chak Tc",
+      "ur": "Chak Tc"
+    },
+    {
+      "id": "sindh:shikarpur:garhi-yasin-tc",
+      "region": "sindh",
+      "district": "sindh:shikarpur",
+      "en": "Garhi Yasin Tc",
+      "ur": "Garhi Yasin Tc"
+    },
+    {
+      "id": "sindh:shikarpur:khanpur-tc",
+      "region": "sindh",
+      "district": "sindh:shikarpur",
+      "en": "Khanpur Tc",
+      "ur": "Khanpur Tc"
+    },
+    {
+      "id": "sindh:shikarpur:madeji-tc",
+      "region": "sindh",
+      "district": "sindh:shikarpur",
+      "en": "Madeji Tc",
+      "ur": "Madeji Tc"
+    },
+    {
+      "id": "sindh:shikarpur:rustam-tc",
+      "region": "sindh",
+      "district": "sindh:shikarpur",
+      "en": "Rustam Tc",
+      "ur": "Rustam Tc"
+    },
+    {
+      "id": "sindh:sujawal:sujawal-tc",
+      "region": "sindh",
+      "district": "sindh:sujawal",
+      "en": "Sujawal Tc",
+      "ur": "Sujawal Tc"
+    },
+    {
+      "id": "sindh:sujawal:chuhar-jamali-tc",
+      "region": "sindh",
+      "district": "sindh:sujawal",
+      "en": "Chuhar Jamali Tc",
+      "ur": "Chuhar Jamali Tc"
+    },
+    {
+      "id": "sindh:sujawal:daro-tc",
+      "region": "sindh",
+      "district": "sindh:sujawal",
+      "en": "Daro Tc",
+      "ur": "Daro Tc"
+    },
+    {
+      "id": "sindh:sujawal:jati-tc",
+      "region": "sindh",
+      "district": "sindh:sujawal",
+      "en": "Jati Tc",
+      "ur": "Jati Tc"
+    },
+    {
+      "id": "sindh:sujawal:mirpur-bathoro-tc",
+      "region": "sindh",
+      "district": "sindh:sujawal",
+      "en": "Mirpur Bathoro Tc",
+      "ur": "Mirpur Bathoro Tc"
+    },
+    {
+      "id": "sindh:sukkur:sukkur-municipal-corporation-part-of-new-sukkur-taluka",
+      "region": "sindh",
+      "district": "sindh:sukkur",
+      "en": "Sukkur Municipal Corporation (Part Of New Sukkur Taluka)",
+      "ur": "Sukkur Municipal Corporation (Part Of New Sukkur Taluka)"
+    },
+    {
+      "id": "sindh:sukkur:sukkur-municipal-corporation-part-of-sukkur-city-taluka",
+      "region": "sindh",
+      "district": "sindh:sukkur",
+      "en": "Sukkur Municipal Corporation (Part Of Sukkur City Taluka)",
+      "ur": "Sukkur Municipal Corporation (Part Of Sukkur City Taluka)"
+    },
+    {
+      "id": "sindh:sukkur:pano-aqil-tc",
+      "region": "sindh",
+      "district": "sindh:sukkur",
+      "en": "Pano Aqil Tc",
+      "ur": "Pano Aqil Tc"
+    },
+    {
+      "id": "sindh:sukkur:rohri-mc",
+      "region": "sindh",
+      "district": "sindh:sukkur",
+      "en": "Rohri Mc",
+      "ur": "Rohri Mc"
+    },
+    {
+      "id": "sindh:sukkur:pano-aqil-cantonment",
+      "region": "sindh",
+      "district": "sindh:sukkur",
+      "en": "Pano Aqil Cantonment",
+      "ur": "Pano Aqil Cantonment"
+    },
+    {
+      "id": "sindh:sukkur:salehpat-tc",
+      "region": "sindh",
+      "district": "sindh:sukkur",
+      "en": "Salehpat Tc",
+      "ur": "Salehpat Tc"
+    },
+    {
+      "id": "sindh:sukkur:kandhra-tc",
+      "region": "sindh",
+      "district": "sindh:sukkur",
+      "en": "Kandhra Tc",
+      "ur": "Kandhra Tc"
+    },
+    {
+      "id": "sindh:sukkur:bagerji-tc",
+      "region": "sindh",
+      "district": "sindh:sukkur",
+      "en": "Bagerji Tc",
+      "ur": "Bagerji Tc"
+    },
+    {
+      "id": "sindh:tando-allahyar:tando-allahyar-mc",
+      "region": "sindh",
+      "district": "sindh:tando-allahyar",
+      "en": "Tando Allahyar Mc",
+      "ur": "Tando Allahyar Mc"
+    },
+    {
+      "id": "sindh:tando-allahyar:nasirpur-tc",
+      "region": "sindh",
+      "district": "sindh:tando-allahyar",
+      "en": "Nasirpur Tc",
+      "ur": "Nasirpur Tc"
+    },
+    {
+      "id": "sindh:tando-allahyar:chambar-tc",
+      "region": "sindh",
+      "district": "sindh:tando-allahyar",
+      "en": "Chambar Tc",
+      "ur": "Chambar Tc"
+    },
+    {
+      "id": "sindh:tando-allahyar:pyaro-lund-tc",
+      "region": "sindh",
+      "district": "sindh:tando-allahyar",
+      "en": "Pyaro Lund Tc",
+      "ur": "Pyaro Lund Tc"
+    },
+    {
+      "id": "sindh:tando-allahyar:sanjar-chang-tc",
+      "region": "sindh",
+      "district": "sindh:tando-allahyar",
+      "en": "Sanjar Chang Tc",
+      "ur": "Sanjar Chang Tc"
+    },
+    {
+      "id": "sindh:tando-allahyar:sultanabad-tc",
+      "region": "sindh",
+      "district": "sindh:tando-allahyar",
+      "en": "Sultanabad Tc",
+      "ur": "Sultanabad Tc"
+    },
+    {
+      "id": "sindh:tando-muhammad-khan:tando-muhammad-khan-mc",
+      "region": "sindh",
+      "district": "sindh:tando-muhammad-khan",
+      "en": "Tando Muhammad Khan Mc",
+      "ur": "Tando Muhammad Khan Mc"
+    },
+    {
+      "id": "sindh:tando-muhammad-khan:tando-ghulam-hyder-tc",
+      "region": "sindh",
+      "district": "sindh:tando-muhammad-khan",
+      "en": "Tando Ghulam Hyder Tc",
+      "ur": "Tando Ghulam Hyder Tc"
+    },
+    {
+      "id": "sindh:tando-muhammad-khan:bulri-shah-karim-tc",
+      "region": "sindh",
+      "district": "sindh:tando-muhammad-khan",
+      "en": "Bulri Shah Karim Tc",
+      "ur": "Bulri Shah Karim Tc"
+    },
+    {
+      "id": "sindh:tharparkar:mithi-mc",
+      "region": "sindh",
+      "district": "sindh:tharparkar",
+      "en": "Mithi Mc",
+      "ur": "Mithi Mc"
+    },
+    {
+      "id": "sindh:tharparkar:chachro-tc",
+      "region": "sindh",
+      "district": "sindh:tharparkar",
+      "en": "Chachro Tc",
+      "ur": "Chachro Tc"
+    },
+    {
+      "id": "sindh:tharparkar:chelhar-tc",
+      "region": "sindh",
+      "district": "sindh:tharparkar",
+      "en": "Chelhar Tc",
+      "ur": "Chelhar Tc"
+    },
+    {
+      "id": "sindh:tharparkar:diplo-tc",
+      "region": "sindh",
+      "district": "sindh:tharparkar",
+      "en": "Diplo Tc",
+      "ur": "Diplo Tc"
+    },
+    {
+      "id": "sindh:tharparkar:islamkot-tc",
+      "region": "sindh",
+      "district": "sindh:tharparkar",
+      "en": "Islamkot Tc",
+      "ur": "Islamkot Tc"
+    },
+    {
+      "id": "sindh:tharparkar:nagar-parkar-tc",
+      "region": "sindh",
+      "district": "sindh:tharparkar",
+      "en": "Nagar Parkar Tc",
+      "ur": "Nagar Parkar Tc"
+    },
+    {
+      "id": "sindh:tharparkar:kheme-jo-par-tc",
+      "region": "sindh",
+      "district": "sindh:tharparkar",
+      "en": "Kheme-Jo-Par Tc",
+      "ur": "Kheme-Jo-Par Tc"
+    },
+    {
+      "id": "sindh:thatta:makli-tc",
+      "region": "sindh",
+      "district": "sindh:thatta",
+      "en": "Makli Tc",
+      "ur": "Makli Tc"
+    },
+    {
+      "id": "sindh:thatta:thatta-mc",
+      "region": "sindh",
+      "district": "sindh:thatta",
+      "en": "Thatta Mc",
+      "ur": "Thatta Mc"
+    },
+    {
+      "id": "sindh:thatta:gharo-tc",
+      "region": "sindh",
+      "district": "sindh:thatta",
+      "en": "Gharo Tc",
+      "ur": "Gharo Tc"
+    },
+    {
+      "id": "sindh:thatta:garho-tc",
+      "region": "sindh",
+      "district": "sindh:thatta",
+      "en": "Garho Tc",
+      "ur": "Garho Tc"
+    },
+    {
+      "id": "sindh:thatta:ghorabari-tc",
+      "region": "sindh",
+      "district": "sindh:thatta",
+      "en": "Ghorabari Tc",
+      "ur": "Ghorabari Tc"
+    },
+    {
+      "id": "sindh:thatta:mirpur-sakro-tc",
+      "region": "sindh",
+      "district": "sindh:thatta",
+      "en": "Mirpur Sakro Tc",
+      "ur": "Mirpur Sakro Tc"
+    },
+    {
+      "id": "sindh:umer-kot:umerkot-mc",
+      "region": "sindh",
+      "district": "sindh:umer-kot",
+      "en": "Umerkot Mc",
+      "ur": "Umerkot Mc"
+    },
+    {
+      "id": "sindh:umer-kot:dhoronaro-tc",
+      "region": "sindh",
+      "district": "sindh:umer-kot",
+      "en": "Dhoronaro Tc",
+      "ur": "Dhoronaro Tc"
+    },
+    {
+      "id": "sindh:umer-kot:kunri-tc",
+      "region": "sindh",
+      "district": "sindh:umer-kot",
+      "en": "Kunri Tc",
+      "ur": "Kunri Tc"
+    },
+    {
+      "id": "sindh:umer-kot:chhore-old-tc",
+      "region": "sindh",
+      "district": "sindh:umer-kot",
+      "en": "Chhore Old Tc",
+      "ur": "Chhore Old Tc"
+    },
+    {
+      "id": "sindh:umer-kot:nabi-sar-road-tc",
+      "region": "sindh",
+      "district": "sindh:umer-kot",
+      "en": "Nabi Sar Road Tc",
+      "ur": "Nabi Sar Road Tc"
+    },
+    {
+      "id": "sindh:umer-kot:pithoro-tc",
+      "region": "sindh",
+      "district": "sindh:umer-kot",
+      "en": "Pithoro Tc",
+      "ur": "Pithoro Tc"
+    },
+    {
+      "id": "sindh:umer-kot:samaro-tc",
+      "region": "sindh",
+      "district": "sindh:umer-kot",
+      "en": "Samaro Tc",
+      "ur": "Samaro Tc"
+    },
+    {
+      "id": "sindh:umer-kot:shadi-pali-tc",
+      "region": "sindh",
+      "district": "sindh:umer-kot",
+      "en": "Shadi Pali Tc",
+      "ur": "Shadi Pali Tc"
+    },
+    {
+      "id": "kp:abbottabad:abbottabad-cantonment",
+      "region": "kp",
+      "district": "kp:abbottabad",
+      "en": "Abbottabad Cantonment",
+      "ur": "Abbottabad Cantonment"
+    },
+    {
+      "id": "kp:abbottabad:abbottabad-mc",
+      "region": "kp",
+      "district": "kp:abbottabad",
+      "en": "Abbottabad Mc",
+      "ur": "Abbottabad Mc"
+    },
+    {
+      "id": "kp:abbottabad:havelian-cantonment",
+      "region": "kp",
+      "district": "kp:abbottabad",
+      "en": "Havelian Cantonment",
+      "ur": "Havelian Cantonment"
+    },
+    {
+      "id": "kp:abbottabad:nawan-shehr-tc",
+      "region": "kp",
+      "district": "kp:abbottabad",
+      "en": "Nawan Shehr Tc",
+      "ur": "Nawan Shehr Tc"
+    },
+    {
+      "id": "kp:abbottabad:havelian-mc",
+      "region": "kp",
+      "district": "kp:abbottabad",
+      "en": "Havelian Mc",
+      "ur": "Havelian Mc"
+    },
+    {
+      "id": "kp:abbottabad:murree-gallies-cantonment",
+      "region": "kp",
+      "district": "kp:abbottabad",
+      "en": "Murree Gallies Cantonment",
+      "ur": "Murree Gallies Cantonment"
+    },
+    {
+      "id": "kp:bannu:bannu-mc",
+      "region": "kp",
+      "district": "kp:bannu",
+      "en": "Bannu Mc",
+      "ur": "Bannu Mc"
+    },
+    {
+      "id": "kp:bannu:bannu-cantonment",
+      "region": "kp",
+      "district": "kp:bannu",
+      "en": "Bannu Cantonment",
+      "ur": "Bannu Cantonment"
+    },
+    {
+      "id": "kp:charsadda:charsadda-mc",
+      "region": "kp",
+      "district": "kp:charsadda",
+      "en": "Charsadda Mc",
+      "ur": "Charsadda Mc"
+    },
+    {
+      "id": "kp:charsadda:shabqadar-mc",
+      "region": "kp",
+      "district": "kp:charsadda",
+      "en": "Shabqadar Mc",
+      "ur": "Shabqadar Mc"
+    },
+    {
+      "id": "kp:charsadda:tangi-mc",
+      "region": "kp",
+      "district": "kp:charsadda",
+      "en": "Tangi Mc",
+      "ur": "Tangi Mc"
+    },
+    {
+      "id": "kp:charsadda:utmanzai-mc",
+      "region": "kp",
+      "district": "kp:charsadda",
+      "en": "Utmanzai Mc",
+      "ur": "Utmanzai Mc"
+    },
+    {
+      "id": "kp:dera-ismail-khan:dera-ismail-khan-mc",
+      "region": "kp",
+      "district": "kp:dera-ismail-khan",
+      "en": "Dera Ismail Khan Mc",
+      "ur": "Dera Ismail Khan Mc"
+    },
+    {
+      "id": "kp:dera-ismail-khan:paharpur-mc",
+      "region": "kp",
+      "district": "kp:dera-ismail-khan",
+      "en": "Paharpur Mc",
+      "ur": "Paharpur Mc"
+    },
+    {
+      "id": "kp:dera-ismail-khan:paroa-mc",
+      "region": "kp",
+      "district": "kp:dera-ismail-khan",
+      "en": "Paroa Mc",
+      "ur": "Paroa Mc"
+    },
+    {
+      "id": "kp:dera-ismail-khan:kulachi-mc",
+      "region": "kp",
+      "district": "kp:dera-ismail-khan",
+      "en": "Kulachi Mc",
+      "ur": "Kulachi Mc"
+    },
+    {
+      "id": "kp:dera-ismail-khan:panyala-tc",
+      "region": "kp",
+      "district": "kp:dera-ismail-khan",
+      "en": "Panyala Tc",
+      "ur": "Panyala Tc"
+    },
+    {
+      "id": "kp:dera-ismail-khan:dera-ismail-khan-cantonment",
+      "region": "kp",
+      "district": "kp:dera-ismail-khan",
+      "en": "Dera Ismail Khan Cantonment",
+      "ur": "Dera Ismail Khan Cantonment"
+    },
+    {
+      "id": "kp:hangu:hangu-mc",
+      "region": "kp",
+      "district": "kp:hangu",
+      "en": "Hangu Mc",
+      "ur": "Hangu Mc"
+    },
+    {
+      "id": "kp:hangu:tall-mc",
+      "region": "kp",
+      "district": "kp:hangu",
+      "en": "Tall Mc",
+      "ur": "Tall Mc"
+    },
+    {
+      "id": "kp:hangu:doaba-tc",
+      "region": "kp",
+      "district": "kp:hangu",
+      "en": "Doaba Tc",
+      "ur": "Doaba Tc"
+    },
+    {
+      "id": "kp:haripur:haripur-mc",
+      "region": "kp",
+      "district": "kp:haripur",
+      "en": "Haripur Mc",
+      "ur": "Haripur Mc"
+    },
+    {
+      "id": "kp:haripur:khalabat-mc",
+      "region": "kp",
+      "district": "kp:haripur",
+      "en": "Khalabat Mc",
+      "ur": "Khalabat Mc"
+    },
+    {
+      "id": "kp:karak:karak-mc",
+      "region": "kp",
+      "district": "kp:karak",
+      "en": "Karak Mc",
+      "ur": "Karak Mc"
+    },
+    {
+      "id": "kp:khyber:jamrud-tc",
+      "region": "kp",
+      "district": "kp:khyber",
+      "en": "Jamrud Tc",
+      "ur": "Jamrud Tc"
+    },
+    {
+      "id": "kp:khyber:landi-kotal-tc",
+      "region": "kp",
+      "district": "kp:khyber",
+      "en": "Landi Kotal Tc",
+      "ur": "Landi Kotal Tc"
+    },
+    {
+      "id": "kp:kohat:kohat-mc",
+      "region": "kp",
+      "district": "kp:kohat",
+      "en": "Kohat Mc",
+      "ur": "Kohat Mc"
+    },
+    {
+      "id": "kp:kohat:kohat-cantonment",
+      "region": "kp",
+      "district": "kp:kohat",
+      "en": "Kohat Cantonment",
+      "ur": "Kohat Cantonment"
+    },
+    {
+      "id": "kp:kohat:lachi-tc",
+      "region": "kp",
+      "district": "kp:kohat",
+      "en": "Lachi Tc",
+      "ur": "Lachi Tc"
+    },
+    {
+      "id": "kp:kohat:shakardara-tc",
+      "region": "kp",
+      "district": "kp:kohat",
+      "en": "Shakardara Tc",
+      "ur": "Shakardara Tc"
+    },
+    {
+      "id": "kp:kurram:sadda-tc",
+      "region": "kp",
+      "district": "kp:kurram",
+      "en": "Sadda Tc",
+      "ur": "Sadda Tc"
+    },
+    {
+      "id": "kp:kurram:parachinar-tc",
+      "region": "kp",
+      "district": "kp:kurram",
+      "en": "Parachinar Tc",
+      "ur": "Parachinar Tc"
+    },
+    {
+      "id": "kp:lakki-marwat:lakki-marwat-mc",
+      "region": "kp",
+      "district": "kp:lakki-marwat",
+      "en": "Lakki Marwat Mc",
+      "ur": "Lakki Marwat Mc"
+    },
+    {
+      "id": "kp:lakki-marwat:naurang-tc",
+      "region": "kp",
+      "district": "kp:lakki-marwat",
+      "en": "Naurang Tc",
+      "ur": "Naurang Tc"
+    },
+    {
+      "id": "kp:lower-chitral:chitral-mc",
+      "region": "kp",
+      "district": "kp:lower-chitral",
+      "en": "Chitral Mc",
+      "ur": "Chitral Mc"
+    },
+    {
+      "id": "kp:lower-dir:timargara-mc",
+      "region": "kp",
+      "district": "kp:lower-dir",
+      "en": "Timargara Mc",
+      "ur": "Timargara Mc"
+    },
+    {
+      "id": "kp:lower-dir:batkhela-mc",
+      "region": "kp",
+      "district": "kp:lower-dir",
+      "en": "Batkhela Mc",
+      "ur": "Batkhela Mc"
+    },
+    {
+      "id": "kp:mansehra:mansehra-mc",
+      "region": "kp",
+      "district": "kp:mansehra",
+      "en": "Mansehra Mc",
+      "ur": "Mansehra Mc"
+    },
+    {
+      "id": "kp:mansehra:baffa-tc",
+      "region": "kp",
+      "district": "kp:mansehra",
+      "en": "Baffa Tc",
+      "ur": "Baffa Tc"
+    },
+    {
+      "id": "kp:mardan:mardan-mc",
+      "region": "kp",
+      "district": "kp:mardan",
+      "en": "Mardan Mc",
+      "ur": "Mardan Mc"
+    },
+    {
+      "id": "kp:mardan:takht-bhai-mc",
+      "region": "kp",
+      "district": "kp:mardan",
+      "en": "Takht Bhai Mc",
+      "ur": "Takht Bhai Mc"
+    },
+    {
+      "id": "kp:mardan:mardan-cantonment",
+      "region": "kp",
+      "district": "kp:mardan",
+      "en": "Mardan Cantonment",
+      "ur": "Mardan Cantonment"
+    },
+    {
+      "id": "kp:north-waziristan:miran-shah-tc",
+      "region": "kp",
+      "district": "kp:north-waziristan",
+      "en": "Miran Shah Tc",
+      "ur": "Miran Shah Tc"
+    },
+    {
+      "id": "kp:nowshera:jehangira-mc",
+      "region": "kp",
+      "district": "kp:nowshera",
+      "en": "Jehangira Mc",
+      "ur": "Jehangira Mc"
+    },
+    {
+      "id": "kp:nowshera:nowshera-kalan-mc",
+      "region": "kp",
+      "district": "kp:nowshera",
+      "en": "Nowshera Kalan Mc",
+      "ur": "Nowshera Kalan Mc"
+    },
+    {
+      "id": "kp:nowshera:pabbi-mc",
+      "region": "kp",
+      "district": "kp:nowshera",
+      "en": "Pabbi Mc",
+      "ur": "Pabbi Mc"
+    },
+    {
+      "id": "kp:nowshera:akora-khattak-mc",
+      "region": "kp",
+      "district": "kp:nowshera",
+      "en": "Akora Khattak Mc",
+      "ur": "Akora Khattak Mc"
+    },
+    {
+      "id": "kp:nowshera:amangarh-tc",
+      "region": "kp",
+      "district": "kp:nowshera",
+      "en": "Amangarh Tc",
+      "ur": "Amangarh Tc"
+    },
+    {
+      "id": "kp:nowshera:nowshera-cantonment",
+      "region": "kp",
+      "district": "kp:nowshera",
+      "en": "Nowshera Cantonment",
+      "ur": "Nowshera Cantonment"
+    },
+    {
+      "id": "kp:nowshera:risalpur-cantonment",
+      "region": "kp",
+      "district": "kp:nowshera",
+      "en": "Risalpur Cantonment",
+      "ur": "Risalpur Cantonment"
+    },
+    {
+      "id": "kp:nowshera:cherat-cantonment",
+      "region": "kp",
+      "district": "kp:nowshera",
+      "en": "Cherat Cantonment",
+      "ur": "Cherat Cantonment"
+    },
+    {
+      "id": "kp:peshawar:peshawar-municipal-corporation",
+      "region": "kp",
+      "district": "kp:peshawar",
+      "en": "Peshawar Municipal Corporation",
+      "ur": "Peshawar Municipal Corporation"
+    },
+    {
+      "id": "kp:peshawar:peshawar-cantonment",
+      "region": "kp",
+      "district": "kp:peshawar",
+      "en": "Peshawar Cantonment",
+      "ur": "Peshawar Cantonment"
+    },
+    {
+      "id": "kp:peshawar:peshawar-university-tc",
+      "region": "kp",
+      "district": "kp:peshawar",
+      "en": "Peshawar University Tc",
+      "ur": "Peshawar University Tc"
+    },
+    {
+      "id": "kp:swabi:swabi-mc",
+      "region": "kp",
+      "district": "kp:swabi",
+      "en": "Swabi Mc",
+      "ur": "Swabi Mc"
+    },
+    {
+      "id": "kp:swabi:topi-mc",
+      "region": "kp",
+      "district": "kp:swabi",
+      "en": "Topi Mc",
+      "ur": "Topi Mc"
+    },
+    {
+      "id": "kp:swabi:kernal-sher-killi-tc",
+      "region": "kp",
+      "district": "kp:swabi",
+      "en": "Kernal Sher Killi Tc",
+      "ur": "Kernal Sher Killi Tc"
+    },
+    {
+      "id": "kp:swabi:tordher-tc",
+      "region": "kp",
+      "district": "kp:swabi",
+      "en": "Tordher Tc",
+      "ur": "Tordher Tc"
+    },
+    {
+      "id": "kp:swabi:zaida-mc",
+      "region": "kp",
+      "district": "kp:swabi",
+      "en": "Zaida Mc",
+      "ur": "Zaida Mc"
+    },
+    {
+      "id": "kp:swat:mingora-mc",
+      "region": "kp",
+      "district": "kp:swat",
+      "en": "Mingora Mc",
+      "ur": "Mingora Mc"
+    },
+    {
+      "id": "kp:swat:barri-kot-mc",
+      "region": "kp",
+      "district": "kp:swat",
+      "en": "Barri Kot Mc",
+      "ur": "Barri Kot Mc"
+    },
+    {
+      "id": "kp:swat:kabal-mc",
+      "region": "kp",
+      "district": "kp:swat",
+      "en": "Kabal Mc",
+      "ur": "Kabal Mc"
+    },
+    {
+      "id": "kp:swat:behrain-mc",
+      "region": "kp",
+      "district": "kp:swat",
+      "en": "Behrain Mc",
+      "ur": "Behrain Mc"
+    },
+    {
+      "id": "kp:swat:khawaza-khela-mc",
+      "region": "kp",
+      "district": "kp:swat",
+      "en": "Khawaza Khela Mc",
+      "ur": "Khawaza Khela Mc"
+    },
+    {
+      "id": "kp:swat:matta-mc",
+      "region": "kp",
+      "district": "kp:swat",
+      "en": "Matta Mc",
+      "ur": "Matta Mc"
+    },
+    {
+      "id": "kp:tank:tank-mc",
+      "region": "kp",
+      "district": "kp:tank",
+      "en": "Tank Mc",
+      "ur": "Tank Mc"
+    },
+    {
+      "id": "kp:upper-dir:dir-tc",
+      "region": "kp",
+      "district": "kp:upper-dir",
+      "en": "Dir Tc",
+      "ur": "Dir Tc"
+    },
+    {
+      "id": "balochistan:awaran:awaran-mc",
+      "region": "balochistan",
+      "district": "balochistan:awaran",
+      "en": "Awaran Mc",
+      "ur": "Awaran Mc"
+    },
+    {
+      "id": "balochistan:awaran:gujar-mashkai-mc",
+      "region": "balochistan",
+      "district": "balochistan:awaran",
+      "en": "Gujar Mashkai Mc",
+      "ur": "Gujar Mashkai Mc"
+    },
+    {
+      "id": "balochistan:barkhan:barkhan-mc",
+      "region": "balochistan",
+      "district": "balochistan:barkhan",
+      "en": "Barkhan Mc",
+      "ur": "Barkhan Mc"
+    },
+    {
+      "id": "balochistan:chagai:dalbandin-mc",
+      "region": "balochistan",
+      "district": "balochistan:chagai",
+      "en": "Dalbandin Mc",
+      "ur": "Dalbandin Mc"
+    },
+    {
+      "id": "balochistan:chaman:chaman-municipal-corporation",
+      "region": "balochistan",
+      "district": "balochistan:chaman",
+      "en": "Chaman Municipal Corporation",
+      "ur": "Chaman Municipal Corporation"
+    },
+    {
+      "id": "balochistan:dera-bugti:sui-mc",
+      "region": "balochistan",
+      "district": "balochistan:dera-bugti",
+      "en": "Sui Mc",
+      "ur": "Sui Mc"
+    },
+    {
+      "id": "balochistan:dera-bugti:dera-bugti-mc",
+      "region": "balochistan",
+      "district": "balochistan:dera-bugti",
+      "en": "Dera Bugti Mc",
+      "ur": "Dera Bugti Mc"
+    },
+    {
+      "id": "balochistan:duki:duki-mc",
+      "region": "balochistan",
+      "district": "balochistan:duki",
+      "en": "Duki Mc",
+      "ur": "Duki Mc"
+    },
+    {
+      "id": "balochistan:gwadar:gwadar-mc",
+      "region": "balochistan",
+      "district": "balochistan:gwadar",
+      "en": "Gwadar Mc",
+      "ur": "Gwadar Mc"
+    },
+    {
+      "id": "balochistan:gwadar:jiwani-mc",
+      "region": "balochistan",
+      "district": "balochistan:gwadar",
+      "en": "Jiwani Mc",
+      "ur": "Jiwani Mc"
+    },
+    {
+      "id": "balochistan:gwadar:pasni-mc",
+      "region": "balochistan",
+      "district": "balochistan:gwadar",
+      "en": "Pasni Mc",
+      "ur": "Pasni Mc"
+    },
+    {
+      "id": "balochistan:gwadar:ormara-mc",
+      "region": "balochistan",
+      "district": "balochistan:gwadar",
+      "en": "Ormara Mc",
+      "ur": "Ormara Mc"
+    },
+    {
+      "id": "balochistan:gwadar:ormara-cantonment",
+      "region": "balochistan",
+      "district": "balochistan:gwadar",
+      "en": "Ormara Cantonment",
+      "ur": "Ormara Cantonment"
+    },
+    {
+      "id": "balochistan:harnai:harnai-mc",
+      "region": "balochistan",
+      "district": "balochistan:harnai",
+      "en": "Harnai Mc",
+      "ur": "Harnai Mc"
+    },
+    {
+      "id": "balochistan:harnai:shahrig-mc",
+      "region": "balochistan",
+      "district": "balochistan:harnai",
+      "en": "Shahrig Mc",
+      "ur": "Shahrig Mc"
+    },
+    {
+      "id": "balochistan:jaffarabad:dera-allah-yar-municipal-corporation",
+      "region": "balochistan",
+      "district": "balochistan:jaffarabad",
+      "en": "Dera Allah Yar Municipal Corporation",
+      "ur": "Dera Allah Yar Municipal Corporation"
+    },
+    {
+      "id": "balochistan:jaffarabad:usta-muhammad-municipal-corporation",
+      "region": "balochistan",
+      "district": "balochistan:jaffarabad",
+      "en": "Usta Muhammad Municipal Corporation",
+      "ur": "Usta Muhammad Municipal Corporation"
+    },
+    {
+      "id": "balochistan:jhal-magsi:gandawa-mc",
+      "region": "balochistan",
+      "district": "balochistan:jhal-magsi",
+      "en": "Gandawa Mc",
+      "ur": "Gandawa Mc"
+    },
+    {
+      "id": "balochistan:kachhi:mach-mc",
+      "region": "balochistan",
+      "district": "balochistan:kachhi",
+      "en": "Mach Mc",
+      "ur": "Mach Mc"
+    },
+    {
+      "id": "balochistan:kachhi:bhag-mc",
+      "region": "balochistan",
+      "district": "balochistan:kachhi",
+      "en": "Bhag Mc",
+      "ur": "Bhag Mc"
+    },
+    {
+      "id": "balochistan:kachhi:dhadar-mc",
+      "region": "balochistan",
+      "district": "balochistan:kachhi",
+      "en": "Dhadar Mc",
+      "ur": "Dhadar Mc"
+    },
+    {
+      "id": "balochistan:kalat:kalat-mc",
+      "region": "balochistan",
+      "district": "balochistan:kalat",
+      "en": "Kalat Mc",
+      "ur": "Kalat Mc"
+    },
+    {
+      "id": "balochistan:kech:turbat-municipal-corporation",
+      "region": "balochistan",
+      "district": "balochistan:kech",
+      "en": "Turbat Municipal Corporation",
+      "ur": "Turbat Municipal Corporation"
+    },
+    {
+      "id": "balochistan:kech:bulaida-mc",
+      "region": "balochistan",
+      "district": "balochistan:kech",
+      "en": "Bulaida Mc",
+      "ur": "Bulaida Mc"
+    },
+    {
+      "id": "balochistan:kech:tump-mc",
+      "region": "balochistan",
+      "district": "balochistan:kech",
+      "en": "Tump Mc",
+      "ur": "Tump Mc"
+    },
+    {
+      "id": "balochistan:kharan:kharan-mc",
+      "region": "balochistan",
+      "district": "balochistan:kharan",
+      "en": "Kharan Mc",
+      "ur": "Kharan Mc"
+    },
+    {
+      "id": "balochistan:khuzdar:khuzdar-municipal-corporation",
+      "region": "balochistan",
+      "district": "balochistan:khuzdar",
+      "en": "Khuzdar Municipal Corporation",
+      "ur": "Khuzdar Municipal Corporation"
+    },
+    {
+      "id": "balochistan:khuzdar:zehri-mc",
+      "region": "balochistan",
+      "district": "balochistan:khuzdar",
+      "en": "Zehri Mc",
+      "ur": "Zehri Mc"
+    },
+    {
+      "id": "balochistan:khuzdar:nal-mc",
+      "region": "balochistan",
+      "district": "balochistan:khuzdar",
+      "en": "Nal Mc",
+      "ur": "Nal Mc"
+    },
+    {
+      "id": "balochistan:khuzdar:wadh-mc",
+      "region": "balochistan",
+      "district": "balochistan:khuzdar",
+      "en": "Wadh Mc",
+      "ur": "Wadh Mc"
+    },
+    {
+      "id": "balochistan:killa-abdullah:killa-abdullah-mc",
+      "region": "balochistan",
+      "district": "balochistan:killa-abdullah",
+      "en": "Killa Abdullah Mc",
+      "ur": "Killa Abdullah Mc"
+    },
+    {
+      "id": "balochistan:killa-saifullah:killa-saifullah-mc",
+      "region": "balochistan",
+      "district": "balochistan:killa-saifullah",
+      "en": "Killa Saifullah Mc",
+      "ur": "Killa Saifullah Mc"
+    },
+    {
+      "id": "balochistan:killa-saifullah:muslim-bagh-mc",
+      "region": "balochistan",
+      "district": "balochistan:killa-saifullah",
+      "en": "Muslim Bagh Mc",
+      "ur": "Muslim Bagh Mc"
+    },
+    {
+      "id": "balochistan:kohlu:kohlu-mc",
+      "region": "balochistan",
+      "district": "balochistan:kohlu",
+      "en": "Kohlu Mc",
+      "ur": "Kohlu Mc"
+    },
+    {
+      "id": "balochistan:lasbela:hub-mc",
+      "region": "balochistan",
+      "district": "balochistan:lasbela",
+      "en": "Hub Mc",
+      "ur": "Hub Mc"
+    },
+    {
+      "id": "balochistan:lasbela:bela-mc",
+      "region": "balochistan",
+      "district": "balochistan:lasbela",
+      "en": "Bela Mc",
+      "ur": "Bela Mc"
+    },
+    {
+      "id": "balochistan:lasbela:uthal-mc",
+      "region": "balochistan",
+      "district": "balochistan:lasbela",
+      "en": "Uthal Mc",
+      "ur": "Uthal Mc"
+    },
+    {
+      "id": "balochistan:lasbela:winder-mc",
+      "region": "balochistan",
+      "district": "balochistan:lasbela",
+      "en": "Winder Mc",
+      "ur": "Winder Mc"
+    },
+    {
+      "id": "balochistan:lasbela:dureji-mc",
+      "region": "balochistan",
+      "district": "balochistan:lasbela",
+      "en": "Dureji Mc",
+      "ur": "Dureji Mc"
+    },
+    {
+      "id": "balochistan:lasbela:gaddani-mc",
+      "region": "balochistan",
+      "district": "balochistan:lasbela",
+      "en": "Gaddani Mc",
+      "ur": "Gaddani Mc"
+    },
+    {
+      "id": "balochistan:loralai:loralai-mc",
+      "region": "balochistan",
+      "district": "balochistan:loralai",
+      "en": "Loralai Mc",
+      "ur": "Loralai Mc"
+    },
+    {
+      "id": "balochistan:loralai:loralai-cantonment",
+      "region": "balochistan",
+      "district": "balochistan:loralai",
+      "en": "Loralai Cantonment",
+      "ur": "Loralai Cantonment"
+    },
+    {
+      "id": "balochistan:mastung:mastung-mc",
+      "region": "balochistan",
+      "district": "balochistan:mastung",
+      "en": "Mastung Mc",
+      "ur": "Mastung Mc"
+    },
+    {
+      "id": "balochistan:musakhel:musakhel-mc",
+      "region": "balochistan",
+      "district": "balochistan:musakhel",
+      "en": "Musakhel Mc",
+      "ur": "Musakhel Mc"
+    },
+    {
+      "id": "balochistan:nasirabad:dera-murad-jamali-mc",
+      "region": "balochistan",
+      "district": "balochistan:nasirabad",
+      "en": "Dera Murad Jamali Mc",
+      "ur": "Dera Murad Jamali Mc"
+    },
+    {
+      "id": "balochistan:nushki:nushki-mc",
+      "region": "balochistan",
+      "district": "balochistan:nushki",
+      "en": "Nushki Mc",
+      "ur": "Nushki Mc"
+    },
+    {
+      "id": "balochistan:panjgur:tasp-mc",
+      "region": "balochistan",
+      "district": "balochistan:panjgur",
+      "en": "Tasp Mc",
+      "ur": "Tasp Mc"
+    },
+    {
+      "id": "balochistan:panjgur:chitkan-municipal-corporation",
+      "region": "balochistan",
+      "district": "balochistan:panjgur",
+      "en": "Chitkan Municipal Corporation",
+      "ur": "Chitkan Municipal Corporation"
+    },
+    {
+      "id": "balochistan:panjgur:washbood-mc",
+      "region": "balochistan",
+      "district": "balochistan:panjgur",
+      "en": "Washbood Mc",
+      "ur": "Washbood Mc"
+    },
+    {
+      "id": "balochistan:pishin:pishin-municipal-corporation",
+      "region": "balochistan",
+      "district": "balochistan:pishin",
+      "en": "Pishin Municipal Corporation",
+      "ur": "Pishin Municipal Corporation"
+    },
+    {
+      "id": "balochistan:pishin:hurram-zai-mc",
+      "region": "balochistan",
+      "district": "balochistan:pishin",
+      "en": "Hurram Zai Mc",
+      "ur": "Hurram Zai Mc"
+    },
+    {
+      "id": "balochistan:pishin:khanozai-mc",
+      "region": "balochistan",
+      "district": "balochistan:pishin",
+      "en": "Khanozai Mc",
+      "ur": "Khanozai Mc"
+    },
+    {
+      "id": "balochistan:pishin:saranan-mc",
+      "region": "balochistan",
+      "district": "balochistan:pishin",
+      "en": "Saranan Mc",
+      "ur": "Saranan Mc"
+    },
+    {
+      "id": "balochistan:quetta:quetta-metropolitan-corporation-part-of-sub-division-city",
+      "region": "balochistan",
+      "district": "balochistan:quetta",
+      "en": "Quetta Metropolitan Corporation (Part Of Sub-Division City)",
+      "ur": "Quetta Metropolitan Corporation (Part Of Sub-Division City)"
+    },
+    {
+      "id": "balochistan:quetta:quetta-metropolitan-corporation-part-of-sub-division-saddar-tehsil",
+      "region": "balochistan",
+      "district": "balochistan:quetta",
+      "en": "Quetta Metropolitan Corporation (Part Of Sub-Division Saddar Tehsil)",
+      "ur": "Quetta Metropolitan Corporation (Part Of Sub-Division Saddar Tehsil)"
+    },
+    {
+      "id": "balochistan:quetta:quetta-cantonment",
+      "region": "balochistan",
+      "district": "balochistan:quetta",
+      "en": "Quetta Cantonment",
+      "ur": "Quetta Cantonment"
+    },
+    {
+      "id": "balochistan:quetta:quetta-metropolitan-corporation-part-of-sub-division-kuchlak",
+      "region": "balochistan",
+      "district": "balochistan:quetta",
+      "en": "Quetta Metropolitan Corporation (Part Of Sub-Division Kuchlak)",
+      "ur": "Quetta Metropolitan Corporation (Part Of Sub-Division Kuchlak)"
+    },
+    {
+      "id": "balochistan:quetta:quetta-metropolitan-corporation-part-of-sub-division-sariab",
+      "region": "balochistan",
+      "district": "balochistan:quetta",
+      "en": "Quetta Metropolitan Corporation (Part Of Sub-Division Sariab)",
+      "ur": "Quetta Metropolitan Corporation (Part Of Sub-Division Sariab)"
+    },
+    {
+      "id": "balochistan:sibi:sibi-mc",
+      "region": "balochistan",
+      "district": "balochistan:sibi",
+      "en": "Sibi Mc",
+      "ur": "Sibi Mc"
+    },
+    {
+      "id": "balochistan:sohbatpur:sohbatpur-mc",
+      "region": "balochistan",
+      "district": "balochistan:sohbatpur",
+      "en": "Sohbatpur Mc",
+      "ur": "Sohbatpur Mc"
+    },
+    {
+      "id": "balochistan:surab:surab-mc",
+      "region": "balochistan",
+      "district": "balochistan:surab",
+      "en": "Surab Mc",
+      "ur": "Surab Mc"
+    },
+    {
+      "id": "balochistan:washuk:washuk-mc",
+      "region": "balochistan",
+      "district": "balochistan:washuk",
+      "en": "Washuk Mc",
+      "ur": "Washuk Mc"
+    },
+    {
+      "id": "balochistan:zhob:zhob-mc",
+      "region": "balochistan",
+      "district": "balochistan:zhob",
+      "en": "Zhob Mc",
+      "ur": "Zhob Mc"
+    },
+    {
+      "id": "balochistan:zhob:zhob-cantonment",
+      "region": "balochistan",
+      "district": "balochistan:zhob",
+      "en": "Zhob Cantonment",
+      "ur": "Zhob Cantonment"
+    },
+    {
+      "id": "balochistan:ziarat:sinjawi-mc",
+      "region": "balochistan",
+      "district": "balochistan:ziarat",
+      "en": "Sinjawi Mc",
+      "ur": "Sinjawi Mc"
+    },
+    {
+      "id": "balochistan:ziarat:ziarat-mc",
+      "region": "balochistan",
+      "district": "balochistan:ziarat",
+      "en": "Ziarat Mc",
+      "ur": "Ziarat Mc"
+    },
+    {
+      "id": "ict:islamabad:islamabad-metropolitan-corporation",
+      "region": "ict",
+      "district": "ict:islamabad",
+      "en": "Islamabad Metropolitan Corporation",
+      "ur": "Islamabad Metropolitan Corporation"
+    }
+  ],
+  "sources": [
+    "https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_2_punjab_districts.xlsx",
+    "https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_2_sindh_districts.xlsx",
+    "https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_2_kp_districts.xlsx",
+    "https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_2_balochistan_districts.xlsx",
+    "https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_2_islamabad.xlsx"
+  ]
+}

@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 export function Footer({ name, navigation = siteConfig.navigation, className }) {
   const { messages } = useLanguage();
   const pathname = usePathname();
-  if (pathname === "/login" || pathname === "/signup" || pathname === "/tjp-punjab-pk-portal" || pathname === "/tjp-admin-dashboard") return null;
+  if (pathname.startsWith("/admin") || pathname === "/login" || pathname === "/signup" || pathname === "/tjp-punjab-pk-portal" || pathname === "/tjp-admin-dashboard") return null;
   return (
     <footer className={cn("footer-inverse shrink-0", className)}>
       <Container>

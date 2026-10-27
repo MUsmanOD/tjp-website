@@ -1,5 +1,19 @@
 # TJP client
 
+## Membership and administration
+
+The functional membership form is `/membership`. It supports English/Urdu, contact alternatives, optional identity numbers, minors, overseas residence plus Pakistani home area, searchable location/constituency catalogues, and manual entries. Submissions await administrator approval. No personal drafts are stored in localStorage.
+
+`/admin/login` uses email and password, asking for an authenticator/recovery code only when 2FA is enabled. Optional 2FA is managed from the admin **Security** page; setup, verification, one-time recovery-code display, cancellation, and disabling are supported. `/admin` provides live totals/charts, geographic drill-down, filtered/paginated membership listings, protected exact search, full profiles, corrections, review actions, audit history, step-up protected ID reveal/removal, and session revocation. Legacy admin URLs redirect. An icon button in the sidebar footer opens the shadcn-style theme menu (light, dark, system); the sign-out action also remains in the footer. A top-bar dropdown selects English or Urdu using the existing language provider. Member account login/signup remain outside this release.
+
+Run `npm ci`, `npm run dev`, `npm test`, and `npm run build` here using Node 24. Start the TypeScript API separately as described in [the server README](../server/README.md). `API_INTERNAL_URL` defaults to `http://127.0.0.1:5027`; browser requests go to same-origin `/api`. No server encryption/signing key belongs in frontend environment variables.
+
+Admin responses are never stored in Next shared caches or persistent browser storage. Refresh is serialized within a tab and across tabs using Web Locks. Private state clears on session expiry/logout, including a BroadcastChannel logout notification. The API is the authorization boundary; the admin route initially renders only a loading shell.
+
+The membership/admin pages render at request time with nonce-based script CSP, no framing, no referrer, and no-store responses. CSS inline styles are allowed for Radix positioning and chart bars. Cache Components and partial prefetching are disabled because nonce CSP requires complete per-request rendering. Public content retains normal static rendering. The existing language, animation and query providers remain in place.
+
+Place labels use the versioned backend catalogue. Proper names without a reviewed Urdu equivalent retain source spelling. Form labels, help, validation, feedback, menus and accessibility controls have matching English/Urdu translation keys in `src/i18n/messages.js`.
+
 ## Frontend pages and interactions
 
 - `/gallery`: local TJP archive and licensed heritage photographs, category filters,
@@ -10,28 +24,21 @@
   route/image mappings in `src/config/content.js`.
 - `/contact`: published contact details, FAQs, and a validated message form that
   downloads a UTF-8 text file. It does not send a message or call an API.
-- `/membership`: validated expression-of-interest form with print/PDF styling.
-  Details stay in the current page; this is not online membership submission.
-  A compact Join TJP hero and short instructions lead into the form. Province and
-  interest use the shared shadcn/Radix Select with keyboard navigation, translated
-  labels, stable values across language changes, native required validation, and
-  visible error focus. Selections clear on form reset and when leaving the page.
+- `/membership`: live application submission; see the flow above.
 - `/login` and `/signup`: shared themed layouts. Credential fields remain disabled
   until an authorized authentication integration is provided.
   Header plus authentication content fits one viewport (`100svh`), with local
   scrolling on short screens. Authentication forms show only a title, fields,
   button, and account-switch link; the availability description is screen-reader
   text. Authentication routes omit the footer and keep image credits beside the photo.
-- `/tjp-punjab-pk-portal` and `/tjp-admin-dashboard`: standalone admin interface
-  previews. Admin sign-in is unavailable and its fields are disabled; the dashboard
-  contains no live data and is publicly reachable until authentication is implemented.
+- Legacy admin pages redirect to `/admin/login` and `/admin`.
 
 Content pages use a compact two-column footer. The header and mobile drawer omit
 the Login link. Contact fields use a single 1px border, including keyboard focus,
 without a focus ring; contact icons have no background badge.
 
 All pages, labels, validation messages, filters, and dialogs support English and
-Urdu through the existing language provider. No backend changes are required.
+Urdu through the existing language provider. The membership and admin features require the API.
 
 `SmoothScroll` initializes Lenis with automatic frame updates, anchor support,
 native touch scrolling, built-in live reduced-motion support, and cleanup on
@@ -75,11 +82,7 @@ npm run build
 npm start
 ```
 
-The development server uses http://localhost:3000. Copy `.env.example` to
-`.env.local` when configuring the API. `NEXT_PUBLIC_API_URL` defaults to
-`http://localhost:5000`; set the production API origin before building because
-Next.js embeds public environment variables in the browser bundle. Configure
-the Express server's `CLIENT_ORIGIN` to allow the client origin.
+The development server uses http://localhost:3000. Set `API_INTERNAL_URL` for the internal API destination. The browser uses same-origin `/api` routes; configure the API's `CLIENT_ORIGIN` to match this frontend origin.
 
 ## Component architecture
 
@@ -310,3 +313,6 @@ currently reports five high-severity findings in the pre-existing
 The registry's newest braces release is still 3.0.3; the suggested automatic fix
 downgrades Next's ESLint configuration to 14.x. Retain the matching 16.4.0 tooling
 and revisit this audit when a compatible upstream patch is available.
+
+
+The admin workspace uses shared shadcn primitives for navigation actions, selects, cards, dialogs, sheets, tables and status badges. The overview charts use live API aggregates and show empty states when no data exists. Membership geography is presented before collapsible refinements. Admin and sign-in dark mode use neutral charcoal surfaces with green accents; light/dark/system selection remains in the admin workspace.
