@@ -359,7 +359,6 @@ export function AdminWorkspace() {
                 <div className="admin-section-heading">
                   <div>
                     <h2>{t.dashboardUi.browseByLocation}</h2>
-                    <p>{t.dashboardUi.locationDescription}</p>
                   </div>
                   <MapPinned aria-hidden="true" />
                 </div>
@@ -590,7 +589,6 @@ export function AdminWorkspace() {
                   <div className="admin-table-heading">
                     <div>
                       <h2>{t.dashboardUi.memberRecords}</h2>
-                      <p>{t.dashboardUi.recordsDescription}</p>
                     </div>
                     <span className="admin-period">
                       {listing?.total ?? listing?.rows?.length ?? 0}
@@ -714,6 +712,8 @@ export function AdminWorkspace() {
                     "membershipNumber",
                     "email",
                     "phone",
+                    "gender",
+                    "age",
                     "ageGroup",
                     "identity",
                     "country",

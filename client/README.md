@@ -2,7 +2,7 @@
 
 ## Membership and administration
 
-The functional membership form is `/membership`. It supports English/Urdu, contact alternatives, optional identity numbers, minors, overseas residence plus Pakistani home area, searchable location/constituency catalogues, and manual entries. Submissions await administrator approval. No personal drafts are stored in localStorage.
+The functional membership form is `/membership`. It supports English/Urdu, gender and age, contact alternatives, optional CNIC/NICOP numbers based on residence, overseas residence plus Pakistani home area, searchable location/constituency catalogues, and manual entries. New applications require age and gender; older records may lack them. Submissions await administrator approval. No personal drafts are stored in localStorage. The page layout remains left-to-right when Urdu is selected, with Urdu text and fonts applied separately.
 
 `/admin/login` uses email and password, asking for an authenticator/recovery code only when 2FA is enabled. Optional 2FA is managed from the admin **Security** page; setup, verification, one-time recovery-code display, cancellation, and disabling are supported. `/admin` provides live totals/charts, geographic drill-down, filtered/paginated membership listings, protected exact search, full profiles, corrections, review actions, audit history, step-up protected ID reveal/removal, and session revocation. Legacy admin URLs redirect. An icon button in the sidebar footer opens the shadcn-style theme menu (light, dark, system); the sign-out action also remains in the footer. A top-bar dropdown selects English or Urdu using the existing language provider. Member account login/signup remain outside this release.
 
@@ -25,6 +25,7 @@ Place labels use the versioned backend catalogue. Proper names without a reviewe
 - `/contact`: published contact details, FAQs, and a validated message form that
   downloads a UTF-8 text file. It does not send a message or call an API.
 - `/membership`: live application submission; see the flow above.
+- The homepage manifesto section uses `manifestoEntries` in `src/config/content.js`. Each verified entry has `title` and `name` objects with `en` and `ur` values; cards appear in two columns. An empty state is shown until entries are supplied.
 - `/login` and `/signup`: shared themed layouts. Credential fields remain disabled
   until an authorized authentication integration is provided.
   Header plus authentication content fits one viewport (`100svh`), with local

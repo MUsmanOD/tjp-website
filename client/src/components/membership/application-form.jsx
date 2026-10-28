@@ -17,6 +17,8 @@ const blank = {
   email: "",
   phone: "",
   ageGroup: "",
+  gender: "",
+  age: null,
   identity: "",
   identityType: "cnic",
   country: "PK",
@@ -160,14 +162,15 @@ export function ApplicationForm({ initial, onSave }) {
           }
         : {}),
       ...(name === "district" ? { locality: "", localityManual: false } : {}),
-      ...(name === "country" ? { overseasCity: "", overseasRegion: "" } : {}),
+      ...(name === "country" ? { overseasCity: "", overseasRegion: "", identityType: value === "PK" ? "cnic" : "nicop" } : {}),
+      ...(name === "age" ? { ageGroup: value === null ? (initial?.ageGroup || "") : value < 18 ? "under18" : "adult" } : {}),
     }));
     setErrors((old) => ({ ...old, [name]: undefined }));
   };
   const field = (name, required = false, type = "text") => (
     <div key={name}>
       <label className="form-label" htmlFor={"application-" + name}>
-        {t[name]} {required ? "*" : `(${t.optional})`}
+        {name === "identity" ? (data.country === "PK" ? t.cnicNumber : t.nicopNumber) : t[name]} {required ? "*" : `(${t.optional})`}
       </label>
       <Input
         id={"application-" + name}
@@ -178,10 +181,12 @@ export function ApplicationForm({ initial, onSave }) {
           ["email", "tel"].includes(type) ||
           ["identity", "national", "assembly"].includes(name)
             ? "ltr"
-            : undefined
+            : "auto"
         }
-        value={data[name]}
-        onChange={(e) => change(name, e.target.value)}
+        value={data[name] ?? ""}
+        onChange={(e) => change(name, name === "age" ? (e.target.value === "" ? null : Number(e.target.value)) : e.target.value)}
+        min={name === "age" ? 1 : undefined}
+        max={name === "age" ? 120 : undefined}
         maxLength={name === "interests" ? 500 : 150}
         aria-invalid={!!errors[name]}
         aria-describedby={errors[name] ? name + "-error" : undefined}
@@ -193,10 +198,10 @@ export function ApplicationForm({ initial, onSave }) {
       )}
     </div>
   );
-  const select = (name, options) => (
+  const select = (name, options, required = true) => (
     <div key={name}>
       <label className="form-label" htmlFor={"application-" + name}>
-        {t[name]} *
+        {t[name]} {required ? "*" : `(${t.optional})`}
       </label>
       <Select
         dir={direction}
@@ -225,8 +230,10 @@ export function ApplicationForm({ initial, onSave }) {
     e.preventDefault();
     setNotice("");
     const invalid = {};
-    for (const name of ["name", "ageGroup", "region", "district", "locality"])
+    for (const name of ["name", "region", "district", "locality"])
       if (!data[name].trim()) invalid[name] = "REQUIRED";
+    if ((!initial || data.age !== null) && (!Number.isInteger(data.age) || data.age < 1 || data.age > 120)) invalid.age = "INVALID";
+    if (!initial && !data.gender) invalid.gender = "REQUIRED";
     if (!data.email && !data.phone) invalid.email = "CONTACT_REQUIRED";
     if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
       invalid.email = "INVALID";
@@ -273,7 +280,7 @@ export function ApplicationForm({ initial, onSave }) {
       </div>
     );
   return (
-    <form noValidate onSubmit={submit} className="space-y-8">
+    <form noValidate onSubmit={submit} className="membership-form space-y-6">
       <div ref={summary} tabIndex={-1} role="alert">
         {notice && (t.errors[notice] || t.errors.INTERNAL)}
         {Object.values(errors).some(Boolean) && <p>{t.fixErrors}</p>}
@@ -282,40 +289,19 @@ export function ApplicationForm({ initial, onSave }) {
         <legend className="heading-card mb-5">{t.personal}</legend>
         <div className="grid gap-5 sm:grid-cols-2">
           {field("name", true)}
-          {select("ageGroup", [
-            { id: "under18", label: t.under18 },
-            { id: "adult", label: t.adult },
-          ])}
+          {select("gender", [
+            { id: "male", label: t.male },
+            { id: "female", label: t.female },
+          ], !initial)}
+          {field("age", !initial, "number")}
           {field("email", false, "email")}
           {field("phone", false, "tel")}
-        </div>
-        <p className="text-small text-muted-foreground">{t.contactHelp}</p>
-        <div className="grid gap-5 sm:grid-cols-2">
+          <LocationPicker name="country" value={data.country} options={countries} onChange={(v) => change("country", v)} error={errors.country} />
           {field("identity")}
-          {select("identityType", [
-            { id: "cnic", label: t.cnic },
-            { id: "nicop", label: t.nicop },
-          ])}
         </div>
-        <details>
-          <summary className="cursor-pointer text-link">{t.more}</summary>
-          <div className="grid gap-5 pt-4 sm:grid-cols-2">
-            {field("occupation")}
-            {field("interests")}
-          </div>
-        </details>
       </fieldset>
       <fieldset className="space-y-5 border-t pt-6">
         <legend className="heading-card mb-5">{t.location}</legend>
-        {
-          <LocationPicker
-            name="country"
-            value={data.country}
-            options={countries}
-            onChange={(v) => change("country", v)}
-            error={errors.country}
-          />
-        }
         {data.country !== "PK" && (
           <div className="grid gap-5 sm:grid-cols-2">
             {field("overseasRegion")}
@@ -342,7 +328,6 @@ export function ApplicationForm({ initial, onSave }) {
             />
           ))}
         </div>
-        <p className="text-small text-muted-foreground">{t.manualHelp}</p>
       </fieldset>
       <fieldset className="space-y-5 border-t pt-6">
         <legend className="heading-card mb-5">{t.electoral}</legend>

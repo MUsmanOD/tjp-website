@@ -7,16 +7,32 @@ import { HomeSections } from "@/components/home/home-sections";
 import { Container } from "@/components/layout/container";
 import { useLanguage } from "@/components/providers/language-provider";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { manifestoEntries } from "@/config/content";
 
 const focusIcons = [BookOpen, Users, Sprout];
 
 export function HomeContent() {
-  const { messages } = useLanguage();
+  const { messages, locale } = useLanguage();
   const content = messages.home.focus;
   return (
     <>
       <HeroSlider />
       <AboutSection />
+      <section id="manifesto" aria-labelledby="manifesto-title" className="section-space border-t">
+        <Container>
+          <h2 id="manifesto-title" className="heading-section mb-8" data-scroll-reveal>{messages.home.manifesto.title}</h2>
+          {manifestoEntries.length ? (
+            <div className="grid grid-cols-2 gap-3 sm:gap-5">
+              {manifestoEntries.map((entry, index) => (
+                <Card key={index} className="p-4 sm:p-6" data-scroll-reveal>
+                  <h3 className="heading-card break-words">{entry.title[locale]}</h3>
+                  <p className="text-small mt-2 break-words text-muted-foreground">{entry.name[locale]}</p>
+                </Card>
+              ))}
+            </div>
+          ) : <p className="text-body text-muted-foreground">{messages.home.manifesto.empty}</p>}
+        </Container>
+      </section>
       <section id="focus" tabIndex={-1} aria-labelledby="focus-title" className="section-space border-t bg-surface">
         <Container>
           <div className="mb-10 flex flex-col justify-between gap-5 lg:flex-row lg:items-end" data-scroll-reveal>

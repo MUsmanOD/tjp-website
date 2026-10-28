@@ -4483,6 +4483,28 @@
               "adult"
             ]
           },
+          "gender": {
+            "default": "",
+            "type": "string",
+            "enum": [
+              "male",
+              "female",
+              ""
+            ]
+          },
+          "age": {
+            "default": null,
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 120
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "identity": {
             "default": "",
             "type": "string",

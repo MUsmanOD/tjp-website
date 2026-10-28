@@ -97,6 +97,8 @@ const application = {
   identity: "35202-1234567-1",
   identityType: "cnic",
   ageGroup: "under18",
+  age: 16,
+  gender: "female",
   country: "PK",
   region: "punjab",
   district: "punjab:lahore",

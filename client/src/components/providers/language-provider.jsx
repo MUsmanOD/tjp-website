@@ -39,7 +39,7 @@ function setLocale(value) {
 
 export function LanguageProvider({ children }) {
   const locale = useSyncExternalStore(subscribe, getSnapshot, () => defaultLocale);
-  const direction = locale === "ur" ? "rtl" : "ltr";
+  const direction = "ltr";
 
   useEffect(() => {
     document.documentElement.lang = locale;

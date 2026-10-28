@@ -18,6 +18,8 @@ export const membershipSchema = z
     email: z.union([z.literal(""), z.email()]).default(""),
     phone: text(30).default(""),
     ageGroup: z.enum(["under18", "adult"]),
+    gender: z.enum(["male", "female", ""]).default(""),
+    age: z.number().int().min(1).max(120).nullable().default(null),
     identity: text(20).default(""),
     identityType: z.enum(["cnic", "nicop"]).default("cnic"),
     country: text(2).regex(/^[A-Z]{2}$/),
@@ -42,6 +44,7 @@ export const membershipSchema = z
   .superRefine((data, ctx) => {
     const error = (path: string, code: string) =>
       ctx.addIssue({ code: "custom", path: [path], message: code });
+    if (data.age !== null && data.ageGroup !== (data.age < 18 ? "under18" : "adult")) error("age", "INVALID");
     if (!countryCodes.includes(data.country)) error("country", "INVALID");
     if (
       !data.districtManual &&

@@ -79,7 +79,6 @@ export function Overview({ stats }) {
               <CardTitle as="h2" className="admin-card-title">
                 {t.regions}
               </CardTitle>
-              <p className="admin-card-description">{ui.regionDescription}</p>
             </div>
             <span className="admin-card-icon">
               <MapPin />

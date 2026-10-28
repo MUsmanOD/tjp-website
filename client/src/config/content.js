@@ -10,6 +10,9 @@ export const articles = [
   { slug: "the-places-that-connect-us", media: "hunza", category: "culture", kind: "editorial", minutes: 4 },
 ];
 
+// Add verified manifesto entries here, with title and name in both languages.
+export const manifestoEntries = [];
+
 export const galleryItems = [
   { media: "founderArchive", category: "leadership" },
   { media: "chinaMeeting", category: "meetings" },

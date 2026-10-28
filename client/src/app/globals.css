@@ -73,6 +73,7 @@
   button:not(:disabled), [role="button"] { cursor: pointer; }
   input, textarea, select { min-width: 0; }
   [lang="ur"] { font-family: var(--font-urdu); line-height: 1.8; letter-spacing: 0; }
+  html[lang="ur"] :is(h1, h2, h3, h4, h5, h6, p, label, legend, dt, dd) { direction: rtl; text-align: right; }
   [lang="en"] { font-family: var(--font-geist-sans), sans-serif; }
   html[lang="ur"] :is(.heading-page, .heading-section) { line-height: 1.8; letter-spacing: 0; }
   html[lang="ur"] :is(.text-body, .text-lead, .text-small, .nav-link, .heading-card) { line-height: 1.8; }
@@ -445,6 +446,9 @@ html.dark:has(.admin-login-page) .admin-login-page{background-image:radial-gradi
  .admin-brand{padding:.35rem .65rem 1.4rem}.admin-brand-caption{margin-inline-start:3.25rem;margin-top:.2rem;letter-spacing:.01em}
  .admin-nav-link{border-radius:.5rem}.admin-nav-link.is-active{box-shadow:inset 3px 0 0 var(--primary)}
  [dir="rtl"] .admin-nav-link.is-active{box-shadow:inset -3px 0 0 var(--primary)}
+
+ .membership-form .form-input { min-height: 2.75rem; padding-block: 0.4rem; }
+ html[lang="ur"] .membership-form .form-input { padding-block: 0.4rem; line-height: 1.8; }
  .admin-topbar{min-height:3.75rem}.admin-topbar-right{font-size:.75rem}.admin-topbar-dot{display:none}
  .admin-welcome{background:var(--card);border:1px solid var(--border);color:var(--foreground);padding:1.5rem;gap:1.5rem}
  .admin-welcome:after{display:none}.admin-welcome-icon{display:none}.admin-welcome .admin-kicker{color:var(--primary)}

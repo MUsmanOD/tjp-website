@@ -14,6 +14,10 @@ publicMemberships.post("/", async (req, res) => {
   const data = membershipSchema.parse(req.body),
     idempotency = z.uuid().parse(req.get("idempotency-key")),
     payloadHash = digest(JSON.stringify(data));
+  const missing: Record<string, string> = {};
+  if (!data.gender) missing.gender = "REQUIRED";
+  if (data.age === null) missing.age = "REQUIRED";
+  if (Object.keys(missing).length) throw new ApiError(422, "VALIDATION", missing);
   const previous = await Membership.findOne({
     idempotency: digest(idempotency),
   });
