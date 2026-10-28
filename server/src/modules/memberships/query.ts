@@ -8,7 +8,7 @@ const filters = z
     overseasRegion: z.string().max(150).optional(),
     overseasCity: z.string().max(150).optional(),
     status: z.enum(["pending", "approved", "rejected", "archived"]).optional(),
-    ageGroup: z.enum(["adult", "under18"]).optional(),
+    ageGroup: z.enum(["under18", "age18to29", "age30to49", "age50plus", "adult"]).optional(),
     national: z.string().max(30).optional(),
     assembly: z.string().max(30).optional(),
     union: z.string().max(150).optional(),

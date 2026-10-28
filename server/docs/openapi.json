@@ -4480,6 +4480,9 @@
             "type": "string",
             "enum": [
               "under18",
+              "age18to29",
+              "age30to49",
+              "age50plus",
               "adult"
             ]
           },

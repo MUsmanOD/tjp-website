@@ -163,7 +163,6 @@ export function ApplicationForm({ initial, onSave }) {
         : {}),
       ...(name === "district" ? { locality: "", localityManual: false } : {}),
       ...(name === "country" ? { overseasCity: "", overseasRegion: "", identityType: value === "PK" ? "cnic" : "nicop" } : {}),
-      ...(name === "age" ? { ageGroup: value === null ? (initial?.ageGroup || "") : value < 18 ? "under18" : "adult" } : {}),
     }));
     setErrors((old) => ({ ...old, [name]: undefined }));
   };
@@ -221,7 +220,7 @@ export function ApplicationForm({ initial, onSave }) {
       </Select>
       {errors[name] && (
         <p role="alert" className="text-small">
-          {t.errors.INVALID}
+          {t.errors[errors[name]] || t.errors.INVALID}
         </p>
       )}
     </div>
@@ -230,9 +229,9 @@ export function ApplicationForm({ initial, onSave }) {
     e.preventDefault();
     setNotice("");
     const invalid = {};
-    for (const name of ["name", "region", "district", "locality"])
+    for (const name of ["name", "ageGroup", "region", "district", "locality"])
       if (!data[name].trim()) invalid[name] = "REQUIRED";
-    if ((!initial || data.age !== null) && (!Number.isInteger(data.age) || data.age < 1 || data.age > 120)) invalid.age = "INVALID";
+    if (data.age !== null && (!Number.isInteger(data.age) || data.age < 1 || data.age > 120)) invalid.age = "INVALID";
     if (!initial && !data.gender) invalid.gender = "REQUIRED";
     if (!data.email && !data.phone) invalid.email = "CONTACT_REQUIRED";
     if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
@@ -293,7 +292,14 @@ export function ApplicationForm({ initial, onSave }) {
             { id: "male", label: t.male },
             { id: "female", label: t.female },
           ], !initial)}
-          {field("age", !initial, "number")}
+          {select("ageGroup", [
+            { id: "under18", label: t.under18 },
+            { id: "age18to29", label: t.age18to29 },
+            { id: "age30to49", label: t.age30to49 },
+            { id: "age50plus", label: t.age50plus },
+            ...(initial?.ageGroup === "adult" ? [{ id: "adult", label: t.adult }] : []),
+          ])}
+          {initial?.age != null && field("age", false, "number")}
           {field("email", false, "email")}
           {field("phone", false, "tel")}
           <LocationPicker name="country" value={data.country} options={countries} onChange={(v) => change("country", v)} error={errors.country} />
@@ -349,9 +355,11 @@ export function ApplicationForm({ initial, onSave }) {
         </label>
         {errors.consent && <p role="alert">{t.errors.REQUIRED}</p>}
       </fieldset>
-      <Button size="lg" disabled={busy}>
-        {busy ? t.saving : onSave ? t.save : t.submit}
-      </Button>
+      <div className="flex justify-end">
+        <Button size="lg" disabled={busy}>
+          {busy ? t.saving : onSave ? t.save : t.submit}
+        </Button>
+      </div>
     </form>
   );
 }

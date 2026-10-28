@@ -409,3 +409,7 @@ translations.en.membership.description = translations.en.portal.intro;
 translations.ur.membership.description = translations.ur.portal.intro;
 translations.en.home.manifesto = { title: 'Manifesto', empty: 'Manifesto entries will appear here.' };
 translations.ur.home.manifesto = { title: 'منشور', empty: 'منشور کی تفصیلات یہاں شامل کی جائیں گی۔' };
+Object.assign(translations.en.portal, { ageGroup: 'Age', age18to29: '18–29', age30to49: '30–49', age50plus: '50 or older', adult: '18 or older (legacy)' });
+Object.assign(translations.ur.portal, { ageGroup: 'عمر', age18to29: '۱۸ سے ۲۹ سال', age30to49: '۳۰ سے ۴۹ سال', age50plus: '۵۰ سال یا اس سے زیادہ', adult: '۱۸ سال یا اس سے زیادہ (پرانا ریکارڈ)' });
+translations.en.portal.errors.AGE_GROUP_MISMATCH = 'Choose a group that matches the recorded age, or clear the recorded age.';
+translations.ur.portal.errors.AGE_GROUP_MISMATCH = 'درج شدہ عمر کے مطابق عمر کا زمرہ منتخب کریں، یا درج شدہ عمر خالی کر دیں۔';

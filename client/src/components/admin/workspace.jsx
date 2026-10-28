@@ -483,7 +483,7 @@ export function AdminWorkspace() {
                         "status",
                         ["pending", "approved", "rejected", "archived"],
                       ],
-                      ["ageGroup", ["under18", "adult"]],
+                      ["ageGroup", ["under18", "age18to29", "age30to49", "age50plus", "adult"]],
                       ["manual", ["true", "false"]],
                     ].map(([field, options]) => (
                       <div key={field}>

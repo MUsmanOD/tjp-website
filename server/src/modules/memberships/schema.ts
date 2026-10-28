@@ -17,7 +17,7 @@ export const membershipSchema = z
     name: text(100).min(2),
     email: z.union([z.literal(""), z.email()]).default(""),
     phone: text(30).default(""),
-    ageGroup: z.enum(["under18", "adult"]),
+    ageGroup: z.enum(["under18", "age18to29", "age30to49", "age50plus", "adult"]),
     gender: z.enum(["male", "female", ""]).default(""),
     age: z.number().int().min(1).max(120).nullable().default(null),
     identity: text(20).default(""),
@@ -44,7 +44,10 @@ export const membershipSchema = z
   .superRefine((data, ctx) => {
     const error = (path: string, code: string) =>
       ctx.addIssue({ code: "custom", path: [path], message: code });
-    if (data.age !== null && data.ageGroup !== (data.age < 18 ? "under18" : "adult")) error("age", "INVALID");
+    if (data.age !== null) {
+      const matching = data.age < 18 ? "under18" : data.age < 30 ? "age18to29" : data.age < 50 ? "age30to49" : "age50plus";
+      if (data.ageGroup !== matching && !(data.ageGroup === "adult" && data.age >= 18)) error("ageGroup", "AGE_GROUP_MISMATCH");
+    }
     if (!countryCodes.includes(data.country)) error("country", "INVALID");
     if (
       !data.districtManual &&
