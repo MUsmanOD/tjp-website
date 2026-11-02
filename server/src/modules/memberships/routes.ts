@@ -16,6 +16,7 @@ publicMemberships.post("/", async (req, res) => {
     payloadHash = digest(JSON.stringify(data));
   const missing: Record<string, string> = {};
   if (!data.gender) missing.gender = "REQUIRED";
+  if (!data.religiousCommunity) missing.religiousCommunity = "REQUIRED";
   if (Object.keys(missing).length) throw new ApiError(422, "VALIDATION", missing);
   const previous = await Membership.findOne({
     idempotency: digest(idempotency),
@@ -152,6 +153,8 @@ adminMemberships.patch("/:id", async (req, res) => {
     ...req.body,
     identity:
       req.body.identity === undefined ? old.identity : req.body.identity,
+    religiousCommunity:
+      req.body.religiousCommunity ?? old.religiousCommunity ?? "",
   });
   if (
     data.identity !== old.identity ||

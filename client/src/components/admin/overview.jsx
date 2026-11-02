@@ -54,6 +54,15 @@ export function Overview({ stats }) {
       <div className="admin-insight-grid">
         <Card className="admin-chart-card">
           <CardHeader className="admin-card-header">
+            <div><CardTitle as="h2" className="admin-card-title">{ui.ageBreakdown}</CardTitle><p className="admin-card-description">{ui.allStatuses}</p></div>
+            <span className="admin-card-icon"><Users aria-hidden="true" /></span>
+          </CardHeader>
+          <CardContent className="admin-card-content">
+            <Bars values={["under18", "age18to29", "age30to49", "age50plus", "adult", "__none__"].map((group) => ({ label: group === "__none__" ? t.unspecified : t[group], value: stats.ageGroups?.find((item) => item._id === group)?.count || 0 }))} />
+          </CardContent>
+        </Card>
+        <Card className="admin-chart-card">
+          <CardHeader className="admin-card-header">
             <div>
               <CardTitle as="h2" className="admin-card-title">
                 {t.applicationsTrend}

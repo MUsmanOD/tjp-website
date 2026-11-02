@@ -19,6 +19,7 @@ export const membershipSchema = z
     phone: text(30).default(""),
     ageGroup: z.enum(["under18", "age18to29", "age30to49", "age50plus", "adult"]),
     gender: z.enum(["male", "female", ""]).default(""),
+    religiousCommunity: z.enum(["muslim", "minority", ""]),
     age: z.number().int().min(1).max(120).nullable().default(null),
     identity: text(20).default(""),
     identityType: z.enum(["cnic", "nicop"]).default("cnic"),

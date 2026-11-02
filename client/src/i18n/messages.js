@@ -413,3 +413,13 @@ Object.assign(translations.en.portal, { ageGroup: 'Age', age18to29: '18–29', a
 Object.assign(translations.ur.portal, { ageGroup: 'عمر', age18to29: '۱۸ سے ۲۹ سال', age30to49: '۳۰ سے ۴۹ سال', age50plus: '۵۰ سال یا اس سے زیادہ', adult: '۱۸ سال یا اس سے زیادہ (پرانا ریکارڈ)' });
 translations.en.portal.errors.AGE_GROUP_MISMATCH = 'Choose a group that matches the recorded age, or clear the recorded age.';
 translations.ur.portal.errors.AGE_GROUP_MISMATCH = 'درج شدہ عمر کے مطابق عمر کا زمرہ منتخب کریں، یا درج شدہ عمر خالی کر دیں۔';
+translations.en.portal.dashboardUi.ageBreakdown = 'Applications by age group';
+translations.ur.portal.dashboardUi.ageBreakdown = 'عمر کے لحاظ سے درخواستیں';
+Object.assign(translations.en.portal, { applicationSubmitted: 'Application submitted', thankYou: 'Thank you', receivedText: 'Thank you for applying to join TJP. Your application is awaiting review. Keep your reference number for your records.' });
+Object.assign(translations.ur.portal, { applicationSubmitted: 'درخواست جمع ہوگئی', thankYou: 'شکریہ', receivedText: 'ٹی جے پی میں شمولیت کی درخواست دینے کا شکریہ۔ آپ کی درخواست کا جائزہ لیا جائے گا۔ اپنا حوالہ نمبر محفوظ رکھیں۔' });
+translations.en.portal.consent = 'I confirm my details are correct and agree to TJP using them for my membership.';
+translations.ur.portal.consent = 'میں تصدیق کرتا/کرتی ہوں کہ میری معلومات درست ہیں اور ٹی جے پی کو رکنیت کے لیے ان کے استعمال کی اجازت دیتا/دیتی ہوں۔';
+translations.en.portal.membershipBannerAlt = 'Illustrated view of the Pakistani flag, Faisal Mosque and Margalla Hills';
+translations.ur.portal.membershipBannerAlt = 'پاکستانی پرچم، فیصل مسجد اور مارگلہ کی پہاڑیوں کا تخیلاتی منظر';
+Object.assign(translations.en.portal, { religiousCommunity: 'Religious community', muslim: 'Muslim', minority: 'Religious minority' });
+Object.assign(translations.ur.portal, { religiousCommunity: 'مذہبی برادری', muslim: 'مسلمان', minority: 'مذہبی اقلیت' });

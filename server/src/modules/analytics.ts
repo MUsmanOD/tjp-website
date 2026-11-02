@@ -55,8 +55,9 @@ analyticsRouter.post("/events", async (req, res) => {
 export const adminAnalytics = Router();
 adminAnalytics.use(requireAdmin);
 adminAnalytics.get("/", async (_req, res) => {
-  const [statuses, regions, trend, traffic, overseas] = await Promise.all([
+  const [statuses, ageGroups, regions, trend, traffic, overseas] = await Promise.all([
     Membership.aggregate([{ $group: { _id: "$status", count: { $sum: 1 } } }]),
+    Membership.aggregate([{ $group: { _id: { $ifNull: ["$ageGroup", "__none__"] }, count: { $sum: 1 } } }]),
     Membership.aggregate([
       { $match: { status: "approved" } },
       { $group: { _id: "$region", count: { $sum: 1 } } },
@@ -84,5 +85,5 @@ adminAnalytics.get("/", async (_req, res) => {
     }).select("-_id day path views sessions"),
     Membership.countDocuments({ country: { $ne: "PK" } }),
   ]);
-  res.json({ statuses, regions, trend, traffic, overseas });
+  res.json({ statuses, ageGroups, regions, trend, traffic, overseas });
 });

@@ -17,6 +17,7 @@ lightbox views retain the complete images. The favicon is a 64px copy of the emb
 | /images/leadership/hamid-gul.webp | [Original](https://tjp.org.pk/wp-content/uploads/2024/06/HAMID-gul.jpg) | [TJP source](https://tjp.org.pk/founder-lt-gen-hamid-gul/) |
 | /images/leadership/hamid-gul-archive.webp | [Original](https://tjp.org.pk/wp-content/uploads/2024/06/Wright-Hamid-Gul.jpg) | [TJP source](https://tjp.org.pk/founder-lt-gen-hamid-gul/) |
 | /images/archive/founder-banner.webp | [Original](https://tjp.org.pk/wp-content/uploads/2024/06/banner02.jpg) | [TJP source](https://tjp.org.pk/) |
+| /images/archive/membership-banner.jpg | [Original](https://tjp.org.pk/wp-content/uploads/2024/06/banner02.jpg) | [TJP source](https://tjp.org.pk/) |
 | /images/leadership/abdullah-gul.webp | [Original](https://tjp.org.pk/wp-content/uploads/2024/06/abdullah-gul.jpg) | [TJP source](https://tjp.org.pk/chairman-abdullah-gul/) |
 | /images/archive/skills-address.webp | [Original](https://tjp.org.pk/wp-content/uploads/2025/01/30-01-2025-Copy.jpg) | [TJP source](https://tjp.org.pk/artificial-intelligence-cant-compete-human-intelligence/) |
 | /images/archive/schools-sports-festival.webp | [Original](https://tjp.org.pk/wp-content/uploads/2025/01/22jan25-2.jpg) | [TJP source](https://tjp.org.pk/sports-instills-an-energetic-and-positive-mindset-along-with-health-in-children/) |

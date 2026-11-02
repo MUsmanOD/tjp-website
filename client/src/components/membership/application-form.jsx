@@ -18,6 +18,7 @@ const blank = {
   phone: "",
   ageGroup: "",
   gender: "",
+  religiousCommunity: "",
   age: null,
   identity: "",
   identityType: "cnic",
@@ -53,13 +54,18 @@ export function ApplicationForm({ initial, onSave }) {
     [busy, setBusy] = useState(false),
     [notice, setNotice] = useState(""),
     [reference, setReference] = useState(""),
+    [applicantName, setApplicantName] = useState(""),
     [countries, setCountries] = useState([]),
     [regions, setRegions] = useState([]),
     [districts, setDistricts] = useState([]),
     [localities, setLocalities] = useState([]),
     [electoral, setElectoral] = useState({ national: [], assembly: [] });
   const key = useRef(null),
-    summary = useRef(null);
+    summary = useRef(null),
+    confirmation = useRef(null);
+  useEffect(() => {
+    if (reference) confirmation.current?.focus();
+  }, [reference]);
   useEffect(() => {
     let live = true;
     Promise.all([api("/locations/countries"), api("/locations/regions")])
@@ -164,7 +170,7 @@ export function ApplicationForm({ initial, onSave }) {
       ...(name === "district" ? { locality: "", localityManual: false } : {}),
       ...(name === "country" ? { overseasCity: "", overseasRegion: "", identityType: value === "PK" ? "cnic" : "nicop" } : {}),
     }));
-    setErrors((old) => ({ ...old, [name]: undefined }));
+    setErrors((old) => ({ ...old, [name]: undefined, ...((name === "ward" || name === "union") && value.trim() ? { union: undefined } : {}) }));
   };
   const field = (name, required = false, type = "text") => (
     <div key={name}>
@@ -207,7 +213,7 @@ export function ApplicationForm({ initial, onSave }) {
         value={data[name]}
         onValueChange={(v) => change(name, v)}
       >
-        <SelectTrigger id={"application-" + name} aria-invalid={!!errors[name]}>
+        <SelectTrigger id={"application-" + name} aria-invalid={!!errors[name]} aria-describedby={errors[name] ? name + "-error" : undefined}>
           <SelectValue placeholder={t.choose} />
         </SelectTrigger>
         <SelectContent>
@@ -219,7 +225,7 @@ export function ApplicationForm({ initial, onSave }) {
         </SelectContent>
       </Select>
       {errors[name] && (
-        <p role="alert" className="text-small">
+        <p id={name + "-error"} role="alert" className="text-small">
           {t.errors[errors[name]] || t.errors.INVALID}
         </p>
       )}
@@ -231,11 +237,17 @@ export function ApplicationForm({ initial, onSave }) {
     const invalid = {};
     for (const name of ["name", "ageGroup", "region", "district", "locality"])
       if (!data[name].trim()) invalid[name] = "REQUIRED";
+    if (data.name.trim() && data.name.trim().length < 2) invalid.name = "INVALID";
     if (data.age !== null && (!Number.isInteger(data.age) || data.age < 1 || data.age > 120)) invalid.age = "INVALID";
     if (!initial && !data.gender) invalid.gender = "REQUIRED";
+    if (!initial && !data.religiousCommunity) invalid.religiousCommunity = "REQUIRED";
     if (!data.email && !data.phone) invalid.email = "CONTACT_REQUIRED";
     if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
       invalid.email = "INVALID";
+    if (data.country !== "PK" && !data.overseasCity.trim()) invalid.overseasCity = "REQUIRED";
+    if (!data.union.trim() && !data.ward.trim()) invalid.union = "LOCAL_REQUIRED";
+    if (data.region && !["ajk", "gb"].includes(data.region) && !data.national.trim()) invalid.national = "REQUIRED";
+    if (data.region && data.region !== "ict" && !data.assembly.trim()) invalid.assembly = "REQUIRED";
     if (!data.consent) invalid.consent = "REQUIRED";
     if (Object.keys(invalid).length) {
       setErrors(invalid);
@@ -256,6 +268,7 @@ export function ApplicationForm({ initial, onSave }) {
           body: data,
           headers: { "Idempotency-Key": key.current.id },
         });
+        setApplicantName(data.name.trim());
         setReference(result.reference);
         setData(blank);
         key.current = null;
@@ -270,19 +283,24 @@ export function ApplicationForm({ initial, onSave }) {
   }
   if (reference)
     return (
-      <div role="status" className="space-y-4 py-8">
-        <h2 className="heading-section">{t.received}</h2>
-        <p>{t.receivedText}</p>
-        <p dir="ltr" className="break-all font-mono">
-          {reference}
-        </p>
+      <div ref={confirmation} tabIndex={-1} role="status" className="membership-success">
+        <div className="membership-success-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><path d="M13 24.5 20.5 32 35.5 16" /></svg>
+        </div>
+        <p className="membership-success-eyebrow">{t.applicationSubmitted}</p>
+        <h2 className="membership-success-title">{t.thankYou}, <bdi>{applicantName}</bdi>.</h2>
+        <p className="membership-success-description">{t.receivedText}</p>
+        <div className="membership-success-reference">
+          <span>{t.reference}</span>
+          <strong dir="ltr">{reference}</strong>
+        </div>
       </div>
     );
   return (
     <form noValidate onSubmit={submit} className="membership-form space-y-6">
       <div ref={summary} tabIndex={-1} role="alert">
-        {notice && (t.errors[notice] || t.errors.INTERNAL)}
-        {Object.values(errors).some(Boolean) && <p>{t.fixErrors}</p>}
+        {notice && notice !== "VALIDATION" && (t.errors[notice] || t.errors.INTERNAL)}
+        {Object.values(errors).some(Boolean) && <><p>{t.fixErrors}</p><ul className="mt-2 list-inside list-disc">{Object.entries(errors).filter(([, code]) => code).map(([name, code]) => <li key={name}><a className="text-link" href={"#application-" + name} onClick={(event) => { event.preventDefault(); document.getElementById("application-" + name)?.focus(); }}>{t[name] || name}: {t.errors[code] || t.errors.INVALID}</a></li>)}</ul></>}
       </div>
       <fieldset className="space-y-5">
         <legend className="heading-card mb-5">{t.personal}</legend>
@@ -291,6 +309,10 @@ export function ApplicationForm({ initial, onSave }) {
           {select("gender", [
             { id: "male", label: t.male },
             { id: "female", label: t.female },
+          ], !initial)}
+          {select("religiousCommunity", [
+            { id: "muslim", label: t.muslim },
+            { id: "minority", label: t.minority },
           ], !initial)}
           {select("ageGroup", [
             { id: "under18", label: t.under18 },
@@ -305,6 +327,7 @@ export function ApplicationForm({ initial, onSave }) {
           <LocationPicker name="country" value={data.country} options={countries} onChange={(v) => change("country", v)} error={errors.country} />
           {field("identity")}
         </div>
+        <p className="text-small text-muted-foreground">{t.contactHelp}</p>
       </fieldset>
       <fieldset className="space-y-5 border-t pt-6">
         <legend className="heading-card mb-5">{t.location}</legend>
@@ -343,17 +366,19 @@ export function ApplicationForm({ initial, onSave }) {
           {!["ajk", "gb"].includes(data.region) && constituency("national")}
           {data.region !== "ict" && constituency("assembly")}
         </div>
-        <p className="text-small text-muted-foreground">{t.localHelp}</p>
-        <label className="flex items-start gap-3">
+        <label className="membership-consent flex items-start gap-3">
           <input
+            id="application-consent"
             className="mt-1 size-5"
             type="checkbox"
+            aria-invalid={!!errors.consent}
+            aria-describedby={errors.consent ? "consent-error" : undefined}
             checked={data.consent}
             onChange={(e) => change("consent", e.target.checked)}
           />
           <span>{t.consent}</span>
         </label>
-        {errors.consent && <p role="alert">{t.errors.REQUIRED}</p>}
+        {errors.consent && <p id="consent-error" role="alert">{t.errors.REQUIRED}</p>}
       </fieldset>
       <div className="flex justify-end">
         <Button size="lg" disabled={busy}>

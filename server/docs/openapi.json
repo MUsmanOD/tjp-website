@@ -4495,6 +4495,14 @@
               ""
             ]
           },
+          "religiousCommunity": {
+            "type": "string",
+            "enum": [
+              "muslim",
+              "minority",
+              ""
+            ]
+          },
           "age": {
             "default": null,
             "anyOf": [
@@ -4612,6 +4620,7 @@
         "required": [
           "name",
           "ageGroup",
+          "religiousCommunity",
           "country",
           "region",
           "district",

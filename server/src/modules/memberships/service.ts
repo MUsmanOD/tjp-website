@@ -43,6 +43,7 @@ export function view(row: HydratedDocument<MembershipRecord>, reveal = false) {
     createdAt: row.createdAt,
     updatedAt: row.updatedAt,
     ...personal,
+    religiousCommunity: personal.religiousCommunity ?? "",
     identity: reveal
       ? personal.identity
       : personal.identity

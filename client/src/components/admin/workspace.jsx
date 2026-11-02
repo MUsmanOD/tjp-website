@@ -222,6 +222,7 @@ export function AdminWorkspace() {
         <Brand compact showWordmark />
       </div>
       <nav aria-label={t.workspace} className="admin-navigation">
+        <span className="admin-sidebar-label">{t.workspace}</span>
         {["overview", "members", "sessions", "security"].map((view) => (
           <Link
             key={view}
@@ -246,7 +247,7 @@ export function AdminWorkspace() {
           </div>
         </div>
         <Button
-          variant="outline"
+          variant="plain"
           className="admin-signout"
           onClick={async () => {
             try {
@@ -597,7 +598,7 @@ export function AdminWorkspace() {
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        {["name", "region", "status", "createdAt"].map((k) => (
+                        {["name", "ageGroup", "region", "status", "createdAt"].map((k) => (
                           <TableHead key={k}>{t[k]}</TableHead>
                         ))}
                       </TableRow>
@@ -613,6 +614,7 @@ export function AdminWorkspace() {
                               {row.name}
                             </button>
                           </TableCell>
+                          <TableCell>{t[row.ageGroup] || t.unspecified}</TableCell>
                           <TableCell>{placeName(row.region)}</TableCell>
                           <TableCell>
                             <Badge
@@ -706,13 +708,19 @@ export function AdminWorkspace() {
               />
             ) : (
               <>
-                <dl className="my-6 grid gap-5 sm:grid-cols-2">
+                <div className="admin-profile-table my-6">
+                <Table>
+                <TableBody>
                   {[
+                    "name",
                     "reference",
+                    "status",
                     "membershipNumber",
+                    "createdAt",
                     "email",
                     "phone",
                     "gender",
+                    "religiousCommunity",
                     "age",
                     "ageGroup",
                     "identity",
@@ -728,21 +736,25 @@ export function AdminWorkspace() {
                     "ward",
                     "occupation",
                     "interests",
-                  ].map((k) => (
-                    <div key={k}>
-                      <dt className="text-small text-muted-foreground">
-                        {t[k]}
-                      </dt>
-                      <dd className="break-words">
-                        {placeName(member[k]) !== member[k]
-                          ? placeName(member[k])
-                          : (typeof t[member[k]] === "string"
-                              ? t[member[k]]
-                              : member[k]) || "—"}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
+                  ].map((k) => {
+                    const value = member[k];
+                    const label = ["status", "gender", "religiousCommunity", "ageGroup"].includes(k)
+                      ? t[value] || value
+                      : ["country", "region", "district", "locality"].includes(k)
+                        ? placeName(value)
+                        : k === "createdAt" && value
+                          ? new Date(value).toLocaleDateString(locale)
+                          : value;
+                    return (
+                      <TableRow key={k}>
+                        <th scope="row">{t[k]}</th>
+                        <TableCell>{k === "status" && value ? <Badge className={"admin-status admin-status-" + value}>{label}</Badge> : label ?? "—"}{label === "" ? "—" : null}</TableCell>
+                      </TableRow>
+                    );
+                  })}
+                </TableBody>
+                </Table>
+                </div>
                 <p>
                   {t.duplicates}: {member.duplicates?.length || 0}
                 </p>

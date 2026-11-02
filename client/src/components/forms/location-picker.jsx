@@ -33,11 +33,13 @@ export function LocationPicker({
         {t[name]} *
       </label>
       <Button
+        id={"application-" + name}
         type="button"
         variant="outline"
         disabled={disabled}
         aria-labelledby={name + "-label"}
         aria-invalid={!!error}
+        aria-describedby={error ? name + "-error" : undefined}
         className="w-full justify-between whitespace-normal text-start"
         onClick={() => {
           setSearch("");
@@ -51,13 +53,15 @@ export function LocationPicker({
         <Input
           className="mt-2"
           aria-label={t[name] + " " + t.other}
+          aria-invalid={!!error}
+          aria-describedby={error ? name + "-error" : undefined}
           value={value}
           onChange={(e) => onChange(e.target.value)}
           maxLength={150}
         />
       )}
       {error && (
-        <p role="alert" className="text-small mt-2">
+        <p id={name + "-error"} role="alert" className="text-small mt-2">
           {t.errors[error] || t.errors.INVALID}
         </p>
       )}

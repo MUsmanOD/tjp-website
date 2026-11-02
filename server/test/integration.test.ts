@@ -17,7 +17,7 @@ process.env.MONGODB_URI =
   (process.env.TEST_MONGODB_BASE || "mongodb://127.0.0.1:27027") +
   "/" +
   database +
-  "?replicaSet=rs0";
+  "?replicaSet=" + encodeURIComponent(process.env.TEST_MONGODB_REPLICA_SET || "rs0");
 const { app } = await import("../src/app.js");
 const { Admin, Membership, Session, Audit, Limit, Analytics } =
   await import("../src/infrastructure/models.js");
@@ -99,6 +99,7 @@ const application = {
   ageGroup: "under18",
   age: 16,
   gender: "female",
+  religiousCommunity: "muslim",
   country: "PK",
   region: "punjab",
   district: "punjab:lahore",
@@ -460,6 +461,8 @@ test("analytics stores aggregates and rejects arbitrary paths and personal value
   assert.equal(row!.sessions, 1);
   const overview = await admin.request("/api/v1/admin/analytics");
   assert.equal(overview.status, 200);
+  const expectedUnder18 = await Membership.countDocuments({ ageGroup: "under18" });
+  assert.equal(overview.data.ageGroups.find((group: any) => group._id === "under18")?.count || 0, expectedUnder18);
   assert.ok(!JSON.stringify(overview.data).includes(application.email));
 });
 test("permanent removal requires MFA and leaves no personal audit values", async () => {

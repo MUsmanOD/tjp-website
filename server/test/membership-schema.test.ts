@@ -5,7 +5,7 @@ import { query } from "../src/modules/memberships/query.js";
 
 const application = {
   name: "Test Applicant", email: "person@example.test", ageGroup: "adult",
-  gender: "female", age: 25, country: "PK", region: "punjab",
+  gender: "female", religiousCommunity: "muslim", age: 25, country: "PK", region: "punjab",
   district: "punjab:lahore", locality: "Test Village", localityManual: true,
   union: "UC 12", national: "NA-120", assembly: "PP-150", consent: true,
 };

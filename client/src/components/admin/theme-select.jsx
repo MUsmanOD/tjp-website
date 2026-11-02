@@ -71,7 +71,7 @@ export function ThemeSelect() {
       <DropdownMenuTrigger asChild>
         <Button
           type="button"
-          variant="ghost"
+          variant="plain"
           size="icon"
           className="admin-theme-button"
           aria-label={`${t.theme}: ${t[theme]}`}

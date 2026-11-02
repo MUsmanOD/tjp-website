@@ -10,6 +10,7 @@
     "start": "node dist/server.js",
     "test": "tsx --test test/*.test.ts",
     "admin:create": "tsx src/admin-cli.ts",
+    "admin:seed": "tsx src/seed-admin.ts",
     "admin:recover": "tsx src/admin-cli.ts recover",
     "setup:local": "node scripts/setup-local.mjs",
     "docs:api": "tsx scripts/openapi.ts",
