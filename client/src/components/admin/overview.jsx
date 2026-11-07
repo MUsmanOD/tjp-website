@@ -12,45 +12,45 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/components/providers/language-provider";
 import { Bars } from "./bars";
-const cards = [
-  ["pending", Clock3],
-  ["approved", UserCheck],
-  ["rejected", UserX],
-  ["archived", Archive],
-];
-export function Overview({ stats }) {
+const statusIcons = { pending: Clock3, approved: UserCheck, rejected: UserX, archived: Archive };
+export function StatusCards({ stats, variant = "members" }) {
   const { messages, locale } = useLanguage(),
     t = messages.portal,
     ui = t.dashboardUi;
   const count = (status) =>
-    stats.statuses.find((x) => x._id === status)?.count || 0;
-  const total = stats.statuses.reduce((sum, item) => sum + item.count, 0);
+    stats.statuses?.find((x) => x._id === status)?.count || 0;
+  const total = (stats.statuses || []).reduce((sum, item) => sum + item.count, 0);
+  const number = (value) => new Intl.NumberFormat(locale).format(value || 0);
+  const items = [
+    { key: "members", label: ui.totalMembers, value: total, Icon: Users },
+    ...["pending", "approved", "rejected"].map((key) => ({ key, label: t[key], value: count(key), Icon: statusIcons[key] })),
+    ...(variant === "overview"
+      ? [
+          { key: "views", label: ui.viewsShort, value: (stats.traffic || []).reduce((sum, item) => sum + item.views, 0), Icon: Globe2 },
+          { key: "visits", label: ui.visitsShort, value: (stats.traffic || []).reduce((sum, item) => sum + item.sessions, 0), Icon: BarChart3 },
+        ]
+      : [
+          { key: "archived", label: t.archived, value: count("archived"), Icon: Archive },
+          { key: "overseas", label: t.overseas, value: stats.overseas, Icon: Globe2 },
+        ]),
+  ];
+  return (
+    <div className="admin-metric-grid" role="group" aria-label={t[variant]}>
+      {items.map(({ key, label, value, Icon }) => <Card className="admin-metric" key={key}>
+        <div className="admin-metric-top"><span>{label}</span><span className="admin-metric-icon"><Icon aria-hidden="true" /></span></div>
+        <strong>{number(value)}</strong>
+      </Card>)}
+    </div>
+  );
+}
+export function Overview({ stats }) {
+  const { messages, locale } = useLanguage(),
+    t = messages.portal,
+    ui = t.dashboardUi;
   const views = stats.traffic.reduce((sum, item) => sum + item.views, 0);
   const sessions = stats.traffic.reduce((sum, item) => sum + item.sessions, 0);
   return (
     <div className="admin-overview space-y-6">
-      <div className="admin-metric-grid">
-        <Card className="admin-metric">
-          <div className="admin-metric-top">
-            <span>{ui.totalApplications}</span>
-            <span className="admin-metric-icon">
-              <Users aria-hidden="true" />
-            </span>
-          </div>
-          <strong>{new Intl.NumberFormat(locale).format(total)}</strong>
-        </Card>
-        {cards.map(([key, Icon]) => (
-          <Card className="admin-metric" key={key}>
-            <div className="admin-metric-top">
-              <span>{t[key]}</span>
-              <span className="admin-metric-icon">
-                <Icon aria-hidden="true" />
-              </span>
-            </div>
-            <strong>{new Intl.NumberFormat(locale).format(count(key))}</strong>
-          </Card>
-        ))}
-      </div>
       <div className="admin-insight-grid">
         <Card className="admin-chart-card">
           <CardHeader className="admin-card-header">
@@ -144,11 +144,6 @@ export function Overview({ stats }) {
             }))}
           />
         </Card>
-      </div>
-      <div className="admin-overseas">
-        <Globe2 aria-hidden="true" />
-        <span>{t.overseas}</span>
-        <strong>{new Intl.NumberFormat(locale).format(stats.overseas)}</strong>
       </div>
     </div>
   );

@@ -10,6 +10,17 @@ const application = {
   union: "UC 12", national: "NA-120", assembly: "PP-150", consent: true,
 };
 
+test("CNIC and NICOP numbers are validated and normalized by the membership schema", () => {
+  for (const details of [
+    { country: "PK", identityType: "cnic" },
+    { country: "GB", identityType: "nicop", overseasCity: "London" },
+  ]) {
+    assert.equal(membershipSchema.parse({ ...application, ...details, identity: "۳۵۲۰۲-۱۲۳۴۵۶۷-۱" }).identity, "3520212345671");
+    assert.equal(membershipSchema.safeParse({ ...application, ...details, identity: "123" }).success, false);
+    assert.equal(membershipSchema.parse({ ...application, ...details, identity: "" }).identity, "");
+  }
+});
+
 test("membership age and gender validate while legacy records remain editable", () => {
   assert.equal(membershipSchema.parse(application).age, 25);
   assert.equal(membershipSchema.parse({ ...application, age: undefined, gender: undefined }).age, null);
@@ -26,4 +37,15 @@ test("age ranges are saved and filterable, with non-overlapping boundaries", () 
   }
   assert.equal(membershipSchema.safeParse({ ...application, age: 30, ageGroup: "age18to29" }).success, false);
   assert.equal(membershipSchema.parse({ ...application, age: null, ageGroup: "adult" }).ageGroup, "adult");
+});
+
+test("education and profession use supported values and default for older records", () => {
+  const legacy = membershipSchema.parse(application);
+  assert.equal(legacy.education, "");
+  assert.equal(legacy.profession, "");
+  const updated = membershipSchema.parse({ ...application, education: "bachelors", profession: "student" });
+  assert.equal(updated.education, "bachelors");
+  assert.equal(updated.profession, "student");
+  assert.equal(membershipSchema.safeParse({ ...application, education: "invalid" }).success, false);
+  assert.equal(membershipSchema.safeParse({ ...application, profession: "invalid" }).success, false);
 });

@@ -4,11 +4,13 @@
 
 The functional membership form is `/membership`. It supports English/Urdu, gender and age groups (under 18, 18–29, 30–49 and 50+), contact alternatives, optional CNIC/NICOP numbers based on residence, overseas residence plus Pakistani home area, searchable location/constituency catalogues, and manual entries. New applications require an age group and gender; older records remain editable and any previously recorded exact age is retained. Submissions await administrator approval. No personal drafts are stored in localStorage. The page layout remains left-to-right when Urdu is selected, with Urdu text and fonts applied separately.
 
-`/admin/login` uses email and password, asking for an authenticator/recovery code only when 2FA is enabled. Optional 2FA is managed from the admin **Security** page; setup, verification, one-time recovery-code display, cancellation, and disabling are supported. `/admin` provides live totals/charts, geographic drill-down, filtered/paginated membership listings, protected exact search, full profiles, corrections, review actions, audit history, step-up protected ID reveal/removal, and session revocation. Legacy admin URLs redirect. An icon button in the sidebar footer opens the shadcn-style theme menu (light, dark, system); the sign-out action also remains in the footer. A top-bar dropdown selects English or Urdu using the existing language provider. Member account login/signup remain outside this release.
+`/tjp-portal-pubjab-0001-login` uses email and password, asking for an authenticator/recovery code only when 2FA is enabled. Optional 2FA is managed from the admin **Security** page; setup, verification, one-time recovery-code display, cancellation, and disabling are supported. `/tjp-portal-pubjab-0001-login/dashboard` provides live totals/charts, geographic drill-down, filtered/paginated membership listings, protected exact search, full profiles, corrections, review actions, audit history, step-up protected ID reveal/removal, and session revocation. Former admin paths return 404; the API continues to enforce session authorization. An icon button in the sidebar footer opens the shadcn-style theme menu (light, dark, system); the sign-out action also remains in the footer. A top-bar dropdown selects English or Urdu using the existing language provider. Member account login/signup remain outside this release.
 
 Run `npm ci`, `npm run dev`, `npm test`, and `npm run build` here using Node 24. Start the TypeScript API separately as described in [the server README](../server/README.md). `API_INTERNAL_URL` defaults to `http://127.0.0.1:5027`; browser requests go to same-origin `/api`. No server encryption/signing key belongs in frontend environment variables.
 
 Admin responses are never stored in Next shared caches or persistent browser storage. Refresh is serialized within a tab and across tabs using Web Locks. Private state clears on session expiry/logout, including a BroadcastChannel logout notification. The API is the authorization boundary; the admin route initially renders only a loading shell.
+
+The admin sidebar includes Site settings, Contact details, Leadership, Gallery, and Inbox. Site settings controls the visible brand and social links. Contact details controls the public address, phone, and email. Leadership and Gallery start with the existing website content and support image uploads, display order, and a Published switch. The contact form sends messages to the private Inbox. The Memberships view also accepts manual applications with applicant consent and keeps them pending for review.
 
 The membership/admin pages render at request time with nonce-based script CSP, no framing, no referrer, and no-store responses. CSS inline styles are allowed for Radix positioning and chart bars. Cache Components and partial prefetching are disabled because nonce CSP requires complete per-request rendering. Public content retains normal static rendering. The existing language, animation and query providers remain in place.
 
@@ -18,21 +20,18 @@ Place labels use the versioned backend catalogue. Proper names without a reviewe
 
 - `/gallery`: local TJP archive and licensed heritage photographs, category filters,
   and a keyboard-accessible lightbox with captions and original source links.
-- `/blogs` and `/blogs/[slug]`: leadership profiles, archived reports, clearly labelled
-  editorial examples, search, topic filters,
-  empty states, and related stories. Edit content in `src/i18n/messages.js` and
-  route/image mappings in `src/config/content.js`.
-- `/contact`: published contact details, FAQs, and a validated message form that
-  downloads a UTF-8 text file. It does not send a message or call an API.
+- `/leadership`: leadership information and imagery, also featured on the homepage.
+- `/contact`: published contact details, FAQs, and a validated form that sends
+  messages to the administrator inbox.
 - `/membership`: live application submission; see the flow above.
 - The homepage manifesto section uses `manifestoEntries` in `src/config/content.js`. Each verified entry has `title` and `name` objects with `en` and `ur` values; cards appear in two columns. An empty state is shown until entries are supplied.
-- `/login` and `/signup`: shared themed layouts. Credential fields remain disabled
+- `/signup`: themed layout. Credential fields remain disabled
   until an authorized authentication integration is provided.
   Header plus authentication content fits one viewport (`100svh`), with local
   scrolling on short screens. Authentication forms show only a title, fields,
-  button, and account-switch link; the availability description is screen-reader
+  button; the availability description is screen-reader
   text. Authentication routes omit the footer and keep image credits beside the photo.
-- Legacy admin pages redirect to `/admin/login` and `/admin`.
+- Former admin pages return the branded 404 page.
 
 Content pages use a compact two-column footer. The header and mobile drawer omit
 the Login link. Contact fields use a single 1px border, including keyboard focus,
@@ -88,13 +87,13 @@ The development server uses http://localhost:3000. Set `API_INTERNAL_URL` for th
 ## Component architecture
 
 - `src/config/site.js`: shared navigation with translation keys and implemented
-  homepage anchors and Gallery, Blogs, and Contact routes. New items need a `key` translated under `navigation` in both dictionaries.
+  homepage anchors and Gallery, Leadership, and Contact routes. New items need a `key` translated under `navigation` in both dictionaries.
 - `src/components/layout/`: reusable `Header`, `Footer`, `Brand`, `Container`,
   `LanguageSwitcher`, `SkipLink`, shared links, and mobile navigation.
   `Header` and `Footer` accept `name`, `navigation`, and `className` overrides;
   omit `name` for translated branding. `Container` accepts `as`, `narrow`, and `className`.
 - `src/components/home/`: `HeroSlider`, `AboutSection` with the founder portrait,
-  and translated homepage composition. The homepage retains three featured articles.
+  and translated homepage composition.
 - `src/config/hero-slides.js`: four hero selections from the central media registry.
 - `src/config/media.js`: local image paths, originals, source pages, credit types,
   and crop positions, shared by the hero, gallery, articles, and footer credits.
@@ -104,7 +103,7 @@ The development server uses http://localhost:3000. Set `API_INTERNAL_URL` for th
 - `src/components/content/article-meta.jsx`: shared translated article type,
   publication date, and reading-time display.
 - `src/lib/slider.js`: shared slide wrapping and horizontal wheel normalization.
-- `src/components/auth/`: shared login and signup layouts at `/login` and `/signup` with disabled credential fields. No
+- `src/components/auth/`: the public signup layout at `/signup` with disabled credential fields. No
   credentials are collected and no authentication integration is implemented.
 - `src/components/ui/`: shadcn Button, Sheet, Separator, and Card source files.
   Pass a translated `closeLabel` to `SheetContent`.
@@ -317,3 +316,7 @@ and revisit this audit when a compatible upstream patch is available.
 
 
 The admin workspace uses shared shadcn primitives for navigation actions, selects, cards, dialogs, sheets, tables and status badges. The overview charts use live API aggregates and show empty states when no data exists. Membership geography is presented before collapsible refinements. Admin and sign-in dark mode use neutral charcoal surfaces with green accents; light/dark/system selection remains in the admin workspace.
+
+The About Us page presents the movement’s existing story, manifesto, priorities and leadership. The home archive scrolls horizontally, pauses on pointer or keyboard focus and respects reduced motion; selecting a photograph opens a full-screen view. Education and profession are optional membership dropdowns with server-validated stable values; older records remain editable.
+
+Founder and chairman portraits use the shared `PortraitBadge` component: provide a transparent portrait, localized name and alt text to reuse the gradient circle and ribbon.

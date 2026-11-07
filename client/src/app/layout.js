@@ -1,25 +1,27 @@
-import { Geist, Geist_Mono, Noto_Nastaliq_Urdu } from "next/font/google";
+import localFont from "next/font/local";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { AppProviders } from "@/components/providers/app-providers";
 import { SkipLink } from "@/components/layout/skip-link";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const urdu = Noto_Nastaliq_Urdu({
-  variable: "--font-noto-urdu",
-  subsets: ["arabic"],
-  weight: ["400", "600"],
+const rajdhani = localFont({
+  variable: "--font-rajdhani",
+  src: [
+    { path: "./fonts/rajdhani-400.woff2", weight: "400" },
+    { path: "./fonts/rajdhani-500.woff2", weight: "500" },
+    { path: "./fonts/rajdhani-600.woff2", weight: "600" },
+    { path: "./fonts/rajdhani-700.woff2", weight: "700" },
+  ],
   display: "swap",
+});
+
+const urdu = localFont({
+  variable: "--font-noto-urdu",
+  src: "./fonts/noto-nastaliq-urdu.woff2",
+  weight: "400 700",
+  display: "swap",
+  adjustFontFallback: false,
   preload: false,
 });
 
@@ -33,7 +35,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       dir="ltr"
-      className={`${geistSans.variable} ${geistMono.variable} ${urdu.variable} h-full antialiased`}
+      className={`${rajdhani.variable} ${urdu.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col" cz-shortcut-listen="true">
         <AppProviders>

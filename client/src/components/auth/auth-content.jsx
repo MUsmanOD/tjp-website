@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { Container } from "@/components/layout/container";
 import { Brand } from "@/components/layout/brand";
-import { SiteLink } from "@/components/layout/site-link";
 import { FormField } from "@/components/forms/form-field";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/providers/language-provider";
@@ -37,7 +36,6 @@ export function AuthContent({ signup = false }) {
             {signup && <FormField name="confirmPassword" type="password" required autoComplete="off" placeholder="" />}
             <Button disabled className="w-full" size="lg">{signup ? copy.signupAction : copy.loginAction}</Button>
           </fieldset>
-          <SiteLink className="auth-switch text-link" href={signup ? "/login" : "/signup"}>{signup ? messages.common.login : messages.common.signup}</SiteLink>
         </div>
       </div>
     </div>

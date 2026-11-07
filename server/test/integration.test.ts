@@ -1,6 +1,6 @@
 import { test, before, after } from "node:test";
 import assert from "node:assert/strict";
-import { randomBytes, randomUUID } from "node:crypto";
+import { createHash, randomBytes, randomUUID } from "node:crypto";
 import mongoose from "mongoose";
 import argon2 from "argon2";
 import { TOTP, Secret } from "otpauth";
@@ -12,6 +12,9 @@ process.env.TOKEN_KEY = random();
 process.env.CURRENT_KEY = "1";
 process.env.CLIENT_ORIGIN = "http://localhost:3000";
 process.env.TRUST_PROXY = "";
+process.env.CLOUDINARY_CLOUD_NAME = "tjp-test";
+process.env.CLOUDINARY_API_KEY = "12345";
+process.env.CLOUDINARY_API_SECRET = "test-only-cloudinary-secret";
 const database = "tjp_test_" + randomUUID().replaceAll("-", "");
 process.env.MONGODB_URI =
   (process.env.TEST_MONGODB_BASE || "mongodb://127.0.0.1:27027") +
@@ -329,6 +332,154 @@ test("password-only login and optional MFA setup, enablement and challenge repla
   );
   assert.ok(!JSON.stringify(await Admin.findOne()).includes(recovery[0]));
 });
+test("website edits require an admin and CSRF, and Cloudinary media stays private until published", async (context) => {
+  const fetchHttp = globalThis.fetch;
+  const assets = new Map<string, ArrayBuffer>();
+  context.mock.method(globalThis, "fetch", async (input: string, options?: RequestInit) => {
+    const url = new URL(input);
+    if (url.hostname !== "api.cloudinary.com") return fetchHttp(input, options);
+    assert.equal(options?.redirect, "error");
+    const uploading = url.pathname.endsWith("/upload");
+    const body = uploading ? options?.body as FormData : url.searchParams;
+    const fields = Object.fromEntries(Array.from(body.entries()).filter(([key]) => key !== "file"));
+    const { signature, api_key: key, ...params } = fields;
+    const signedInput = Object.keys(params).sort().map((name) => name + "=" + params[name]).join("&");
+    assert.equal(key, process.env.CLOUDINARY_API_KEY);
+    assert.equal(signature, createHash("sha256").update(signedInput + process.env.CLOUDINARY_API_SECRET).digest("hex"));
+    assert.equal(params.type, "authenticated");
+    const id = String(params.public_id);
+    if (uploading) {
+      assert.equal(options?.method, "POST");
+      assert.equal(params.overwrite, "false");
+      assets.set(id, await (body.get("file") as Blob).arrayBuffer());
+      return Response.json({ public_id: id, type: "authenticated", format: "webp" });
+    }
+    assert.equal(url.pathname, "/v1_1/tjp-test/image/download");
+    assert.equal(Number(params.expires_at) - Number(params.timestamp), 30);
+    return new Response(assets.get(id), { headers: { "Content-Type": "image/webp" } });
+  });
+  const guest = await new Browser().init();
+  const publicSite = "/api/v1/website";
+  const editor = "/api/v1/admin/website";
+  const image = "UklGRlQAAABXRUJQVlA4WAoAAAAQAAAABwAABwAAQUxQSAoAAAABB1DAiAhERP8DVlA4ICQAAABQAQCdASoIAAgAAUAmJQBOgCgAAP76eV+RzvSpVevWlubcQAA=";
+  const key = randomUUID();
+  const edit = editor + "/gallery/" + key;
+  const item = {
+    title: { en: "Test archive", ur: "" }, alt: { en: "", ur: "" },
+    description: { en: "", ur: "" }, source: "", credit: "",
+    category: "events", published: true, order: 50, image,
+  };
+  const defaults = await guest.request(publicSite);
+  assert.equal(defaults.status, 200);
+  assert.ok(defaults.data.leaders.some((entry: { id: string }) => entry.id === "founder"));
+  assert.equal((await guest.request(editor)).status, 401);
+  assert.equal((await guest.request(edit, item, { method: "PUT" })).status, 401);
+  assert.equal((await admin.request(edit, item, { method: "PUT", headers: { "X-CSRF-Token": "" } })).status, 403);
+  assert.equal((await admin.request(edit, { ...item, image: Buffer.from("<svg/>").toString("base64") }, { method: "PUT" })).status, 422);
+  assert.equal((await admin.request(edit, item, { method: "PUT" })).status, 200);
+  const published = (await guest.request(publicSite)).data.gallery.find((entry: { id: string }) => entry.id === key);
+  assert.match(published.imageUrl, /^\/api\/v1\/website\/media\//);
+  const photo = await fetch(base + published.imageUrl);
+  assert.equal(photo.headers.get("content-type"), "image/webp");
+  assert.deepEqual(Buffer.from(await photo.arrayBuffer()), Buffer.from(image, "base64"));
+  assert.match(photo.headers.get("x-robots-tag") || "", /noai/);
+  const { image: _image, ...metadata } = item;
+  assert.equal((await admin.request(edit, { ...metadata, published: false }, { method: "PUT" })).status, 200);
+  assert.equal((await fetch(base + published.imageUrl)).status, 404);
+  assert.ok(!(await guest.request(publicSite)).data.gallery.some((entry: { id: string }) => entry.id === key));
+  const draft = (await admin.request(editor)).data.gallery.find((entry: { id: string }) => entry.id === key);
+  assert.match(draft.imageUrl, /^\/api\/v1\/admin\/website\/media\//);
+  assert.equal((await fetch(base + draft.imageUrl)).status, 401);
+  assert.equal((await fetch(base + draft.imageUrl, {
+    headers: { Cookie: Object.entries(admin.cookies).map(([name, value]) => name + "=" + value).join("; ") },
+  })).status, 200);
+  assert.equal((await admin.request(editor + "/favicon", { image }, { method: "PUT" })).status, 200);
+  const { favicon } = (await guest.request(publicSite)).data.settings;
+  assert.equal((await fetch(base + favicon)).status, 200);
+  assert.equal((await admin.request(editor + "/favicon", { reset: true }, { method: "PUT" })).status, 200);
+  assert.equal((await fetch(base + favicon)).status, 404);
+  assert.equal(assets.size, 2);
+});
+
+test("website import persists defaults once and keeps page, navigation and contact edits", async () => {
+  const guest = await new Browser().init();
+  const editor = "/api/v1/admin/website";
+  const site = "/api/v1/website";
+  assert.equal((await guest.request(editor + "/import", {})).status, 401);
+  assert.equal((await admin.request(editor + "/import", {}, { headers: { "X-CSRF-Token": "" } })).status, 403);
+  const before = (await guest.request(site)).data;
+  const fields = Object.fromEntries(before.pages.home.map(({ path, value }: { path: string; value: object }) => [path, value]));
+  const firstPath = before.pages.home[0].path;
+  fields[firstPath] = { en: "Edited heading", ur: "ترمیم شدہ عنوان" };
+  assert.equal((await admin.request(editor + "/pages/home", { ...fields, invalid: fields[firstPath] }, { method: "PUT" })).status, 422);
+  assert.equal((await admin.request(editor + "/pages/home", fields, { method: "PUT" })).status, 200);
+  const response = await admin.request(editor + "/import", {});
+  assert.equal(response.status, 200);
+  assert.equal(response.data.imported, response.data.total - 2); // Previously edited Home and favicon.
+  const repeat = await admin.request(editor + "/import", {});
+  assert.equal(repeat.data.imported, 0);
+  const persisted = (await guest.request(site)).data;
+  assert.deepEqual(persisted.pages.home[0].value, fields[firstPath]);
+  assert.deepEqual(persisted.leaders, before.leaders);
+  assert.deepEqual(persisted.menu, before.menu);
+
+  const id = randomUUID();
+  const href = editor + "/menu/" + id;
+  const link = { label: { en: "Our team", ur: "ہماری ٹیم" }, href: "/leadership", published: false, order: 0 };
+  for (const invalid of ["javascript:alert(1)", "//untrusted.test", "/api/v1/auth/me"]) {
+    assert.equal((await admin.request(href, { ...link, href: invalid }, { method: "PUT" })).status, 422);
+  }
+  assert.equal((await admin.request(href, link, { method: "PUT" })).status, 200);
+  assert.ok(!(await guest.request(site)).data.menu.some((entry: { id: string }) => entry.id === id));
+  assert.equal((await admin.request(href, { ...link, published: true }, { method: "PUT" })).status, 200);
+  assert.deepEqual((await guest.request(site)).data.menu.find((entry: { id: string }) => entry.id === id), { ...link, id, published: true });
+  const contact = { ...before.contact, name: { en: "Membership desk", ur: "رکنیت ڈیسک" }, email: "contact@example.test" };
+  assert.equal((await admin.request(editor + "/contact", contact, { method: "PUT" })).status, 200);
+  assert.deepEqual((await guest.request(site)).data.contact, contact);
+});
+
+test("contact submissions are retry safe and readable only in the admin inbox", async () => {
+  const guest = await new Browser().init();
+  const id = randomUUID();
+  const body = { id, name: "Test Sender", email: "sender@example.test", topic: "general", message: "Private message" };
+  const submit = "/api/v1/website/messages";
+  const inbox = "/api/v1/admin/website/messages";
+  assert.equal((await guest.request(submit, body, { headers: { Origin: "https://untrusted.example" } })).status, 403);
+  assert.equal((await guest.request(submit, body)).status, 201);
+  assert.equal((await guest.request(submit, body)).status, 201);
+  assert.equal((await guest.request(submit, { ...body, message: "Different message" })).status, 409);
+  assert.equal((await guest.request(inbox)).status, 401);
+  assert.equal((await guest.request(submit + "/" + id)).status, 404);
+  const list = await admin.request(inbox);
+  assert.equal(list.data.rows.filter((row: { _id: string }) => row._id === id).length, 1);
+  assert.ok(!JSON.stringify(list.data).includes(body.email));
+  const detail = await admin.request(inbox + "/" + id);
+  assert.equal(detail.data.message, body.message);
+  assert.equal(detail.data.privateData, undefined);
+  assert.equal((await admin.request(inbox + "/" + id + "/read", {}, { method: "PATCH" })).status, 200);
+  assert.ok((await admin.request(inbox + "/" + id)).data.readAt);
+});
+
+test("an administrator can enter a consented application without approving it", async () => {
+  const path = "/api/v1/admin/memberships";
+  const guest = await new Browser().init();
+  const headers = { "Idempotency-Key": randomUUID() };
+  const input = { ...application, name: "Admin entered applicant", identity: "" };
+  assert.equal((await guest.request(path, input, { headers })).status, 401);
+  assert.equal((await admin.request(path, { ...input, consent: false }, { headers })).status, 422);
+  const result = await admin.request(path, input, { headers });
+  assert.equal(result.status, 201);
+  try {
+    const replay = await admin.request(path, input, { headers });
+    assert.deepEqual(replay.data, result.data);
+    const member = await Membership.findById(result.data.id);
+    assert.equal(member?.status, "pending");
+    assert.ok(await Audit.exists({ target: result.data.id, action: "membership-create" }));
+  } finally {
+    await Membership.deleteOne({ _id: result.data.id });
+  }
+});
+
 test("profiles mask IDs, flag duplicates, require step-up and preserve IDs on corrections", async () => {
   const profile = await admin.request(
     "/api/v1/admin/memberships/" + member._id,

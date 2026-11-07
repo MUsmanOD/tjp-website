@@ -37,6 +37,8 @@ export const membershipSchema = z
     assemblyManual: z.boolean().default(false),
     union: text().default(""),
     ward: text(40).default(""),
+    education: z.enum(["", "noFormalEducation", "primary", "middle", "matric", "intermediate", "diploma", "bachelors", "masters", "doctorate", "otherEducation"]).default(""),
+    profession: z.enum(["", "student", "employed", "business", "selfEmployed", "agriculture", "homemaker", "retired", "unemployed", "otherProfession"]).default(""),
     occupation: text().default(""),
     interests: text(500).default(""),
     consent: z.literal(true),

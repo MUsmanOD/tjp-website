@@ -36,11 +36,13 @@ const blank = {
   assemblyManual: false,
   union: "",
   ward: "",
+  education: "",
+  profession: "",
   occupation: "",
   interests: "",
   consent: false,
 };
-export function ApplicationForm({ initial, onSave }) {
+export function ApplicationForm({ initial, onSave, onAdminCreate }) {
   const { messages, locale, direction } = useLanguage(),
     t = messages.portal;
   const [data, setData] = useState(
@@ -175,12 +177,14 @@ export function ApplicationForm({ initial, onSave }) {
   const field = (name, required = false, type = "text") => (
     <div key={name}>
       <label className="form-label" htmlFor={"application-" + name}>
-        {name === "identity" ? (data.country === "PK" ? t.cnicNumber : t.nicopNumber) : t[name]} {required ? "*" : `(${t.optional})`}
+        {name === "identity" ? (data.country === "PK" ? t.cnicNumber : t.nicopNumber) : t[name]} {required && <span className="form-required">*</span>}
       </label>
       <Input
         id={"application-" + name}
         name={name}
         type={type}
+        placeholder={name === "identity" ? t.formPlaceholders[data.country === "PK" ? "cnic" : "nicop"] : t.formPlaceholders[name]}
+        aria-required={required || undefined}
         disabled={!!initial?.identityLocked && name === "identity"}
         dir={
           ["email", "tel"].includes(type) ||
@@ -206,15 +210,15 @@ export function ApplicationForm({ initial, onSave }) {
   const select = (name, options, required = true) => (
     <div key={name}>
       <label className="form-label" htmlFor={"application-" + name}>
-        {t[name]} {required ? "*" : `(${t.optional})`}
+        {t[name]} {required && <span className="form-required">*</span>}
       </label>
       <Select
         dir={direction}
         value={data[name]}
         onValueChange={(v) => change(name, v)}
       >
-        <SelectTrigger id={"application-" + name} aria-invalid={!!errors[name]} aria-describedby={errors[name] ? name + "-error" : undefined}>
-          <SelectValue placeholder={t.choose} />
+        <SelectTrigger id={"application-" + name} aria-required={required || undefined} aria-invalid={!!errors[name]} aria-describedby={errors[name] ? name + "-error" : undefined}>
+          <SelectValue placeholder={t.formPlaceholders[name] || t.choose} />
         </SelectTrigger>
         <SelectContent>
           {options.map((o) => (
@@ -241,7 +245,8 @@ export function ApplicationForm({ initial, onSave }) {
     if (data.age !== null && (!Number.isInteger(data.age) || data.age < 1 || data.age > 120)) invalid.age = "INVALID";
     if (!initial && !data.gender) invalid.gender = "REQUIRED";
     if (!initial && !data.religiousCommunity) invalid.religiousCommunity = "REQUIRED";
-    if (!data.email && !data.phone) invalid.email = "CONTACT_REQUIRED";
+    if (!initial && !data.phone.trim()) invalid.phone = "REQUIRED";
+    if (initial && !data.email && !data.phone.trim()) invalid.email = "CONTACT_REQUIRED";
     if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
       invalid.email = "INVALID";
     if (data.country !== "PK" && !data.overseasCity.trim()) invalid.overseasCity = "REQUIRED";
@@ -263,11 +268,15 @@ export function ApplicationForm({ initial, onSave }) {
         const payload = JSON.stringify(data);
         if (key.current?.payload !== payload)
           key.current = { payload, id: crypto.randomUUID() };
-        const result = await api("/memberships", {
+        const result = await api(onAdminCreate ? "/admin/memberships" : "/memberships", {
           method: "POST",
           body: data,
           headers: { "Idempotency-Key": key.current.id },
         });
+        if (onAdminCreate) {
+          await onAdminCreate(result);
+          return;
+        }
         setApplicantName(data.name.trim());
         setReference(result.reference);
         setData(blank);
@@ -322,12 +331,13 @@ export function ApplicationForm({ initial, onSave }) {
             ...(initial?.ageGroup === "adult" ? [{ id: "adult", label: t.adult }] : []),
           ])}
           {initial?.age != null && field("age", false, "number")}
+          {select("education", ["noFormalEducation", "primary", "middle", "matric", "intermediate", "diploma", "bachelors", "masters", "doctorate", "otherEducation"].map((id) => ({ id, label: t[id] })), false)}
+          {select("profession", ["student", "employed", "business", "selfEmployed", "agriculture", "homemaker", "retired", "unemployed", "otherProfession"].map((id) => ({ id, label: t[id] })), false)}
           {field("email", false, "email")}
-          {field("phone", false, "tel")}
+          {field("phone", !initial, "tel")}
           <LocationPicker name="country" value={data.country} options={countries} onChange={(v) => change("country", v)} error={errors.country} />
           {field("identity")}
         </div>
-        <p className="text-small text-muted-foreground">{t.contactHelp}</p>
       </fieldset>
       <fieldset className="space-y-5 border-t pt-6">
         <legend className="heading-card mb-5">{t.location}</legend>
@@ -337,7 +347,6 @@ export function ApplicationForm({ initial, onSave }) {
             {field("overseasCity", true)}
           </div>
         )}
-        <p className="text-small text-muted-foreground">{t.homeHelp}</p>
         <div className="grid gap-5 sm:grid-cols-3">
           {select("region", regions)}
           {["district", "locality"].map((name) => (
@@ -376,13 +385,13 @@ export function ApplicationForm({ initial, onSave }) {
             checked={data.consent}
             onChange={(e) => change("consent", e.target.checked)}
           />
-          <span>{t.consent}</span>
+          <span>{onAdminCreate ? messages.websiteAdmin.applicantConsent : t.consent}</span>
         </label>
         {errors.consent && <p id="consent-error" role="alert">{t.errors.REQUIRED}</p>}
       </fieldset>
       <div className="flex justify-end">
         <Button size="lg" disabled={busy}>
-          {busy ? t.saving : onSave ? t.save : t.submit}
+          {busy ? t.saving : onSave || onAdminCreate ? t.save : t.submit}
         </Button>
       </div>
     </form>

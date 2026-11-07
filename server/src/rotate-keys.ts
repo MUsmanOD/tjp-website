@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import { config } from "./config.js";
 import { Membership, Admin, audit } from "./infrastructure/models.js";
+import { ContactMessage } from "./infrastructure/website-models.js";
 import { seal, unseal } from "./infrastructure/crypto.js";
 await mongoose.connect(config.MONGODB_URI);
 try {
@@ -14,6 +15,14 @@ try {
       { _id: row._id, privateData: row.privateData },
       { $set: { privateData: encrypted } },
       { timestamps: false },
+    );
+  }
+  for await (const message of ContactMessage.find().cursor()) {
+    if (message.privateData.startsWith(config.CURRENT_KEY + ".")) continue;
+    const context = "contact:" + message._id;
+    await ContactMessage.updateOne(
+      { _id: message._id, privateData: message.privateData },
+      { $set: { privateData: seal(unseal(message.privateData, context), context) } },
     );
   }
   for await (const admin of Admin.find().cursor()) {

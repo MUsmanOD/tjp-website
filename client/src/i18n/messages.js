@@ -25,7 +25,7 @@ const pageCopy = {
       hunza: { title: "Hunza Valley", alt: "Hunza Valley surrounded by the mountains of northern Pakistan", description: "Rizwan Bhiriya (RB) · Landscape photography · CC BY-SA 4.0." },
       karachi: { title: "Karachi · Mazar-e-Quaid", alt: "The white marble Mazar-e-Quaid in Karachi", description: "Abbas jaffri.9 · Heritage photography · CC BY-SA 4.0." },
     },
-    notFound: { code: "404 · PAGE NOT FOUND", title: "Let’s find your way back.", description: "This page could not be found. Return home to keep exploring TJP." },
+    notFound: { title: "Page not found", description: "The page may have moved." },
     social: {
       platforms: { facebook: "Facebook", x: "X", instagram: "Instagram", youtube: "YouTube" },
       pending: "Channel coming soon", unavailable: "This channel’s official link will be added once confirmed. In the meantime, find us on Facebook.",
@@ -115,14 +115,13 @@ const pageCopy = {
       selectTopic: "Select a subject", requiredError: "Please complete this field.", emailError: "Please enter a valid email address.", invalidError: "Please enter a valid value.", consentError: "Please confirm that you understand how this form works.",
     },
     contact: {
-      downloadHint: "Saves a copy to your device. Nothing is sent online.",
       eyebrow: "LET’S CONNECT", title: "Let’s start a conversation.", description: "Ask a question, share an idea, or find your next step with TJP.",
-      heading: "How can we help?", formDescription: "Prepare your enquiry and download a copy to keep.", addressTitle: "Visit the head office", address: "House No. 4, Lane 1, Park Road, Chak Shehzad, Islamabad, Pakistan", phoneTitle: "General enquiries", phone: "+92 300 5221884", source: "Contact details on TJP’s website", channels: "Find us online", topics: ["General enquiry", "Membership information", "Media enquiry", "Share an idea"],
-      action: "Download message", note: "Online message delivery is not connected. Download a copy, then use the published contact details to reach the team.", saved: "Your message was downloaded. It has not been sent to TJP.",
+      heading: "Send a message", formDescription: "Your message goes to the TJP team.", addressTitle: "Visit the head office", address: "House No. 4, Lane 1, Park Road, Chak Shehzad, Islamabad, Pakistan", phoneTitle: "General enquiries", phone: "+92 300 5221884", source: "Contact details on TJP’s website", channels: "Find us online", topics: ["General enquiry", "Membership information", "Media enquiry", "Share an idea"],
+      action: "Send message", saved: "Your message was sent.",
       faqTitle: "A little more information", faqs: [
         { question: "How do I enquire about membership?", answer: "Complete the membership form online. The team will review your application." },
         { question: "Can I browse in Urdu?", answer: "Yes. Select اردو in the header to switch the whole website, including forms and navigation, to Urdu." },
-        { question: "Is my message sent through this website?", answer: "No. The form downloads a copy to your device. You can then contact the team directly. Nothing is submitted online." },
+        { question: "Where does my message go?", answer: "It goes to the TJP team’s inbox." },
       ],
     },
     auth: {
@@ -155,7 +154,7 @@ const pageCopy = {
       hunza: { title: "وادیٔ ہنزہ", alt: "شمالی پاکستان کے پہاڑوں میں گھری وادیٔ ہنزہ", description: "رضوان بھیریا کی قدرتی منظر کی تصویر · سی سی بی وائی ایس اے ۴.۰۔" },
       karachi: { title: "کراچی · مزارِ قائد", alt: "کراچی میں سفید سنگِ مرمر سے بنا مزارِ قائد", description: "عباس جعفری کی ثقافتی تصویر · سی سی بی وائی ایس اے ۴.۰۔" },
     },
-    notFound: { code: "۴۰۴ · صفحہ نہیں ملا", title: "آئیے واپس چلیں۔", description: "یہ صفحہ نہیں مل سکا۔ ٹی جے پی کے بارے میں مزید جاننے کے لیے مرکزی صفحے پر جائیں۔" },
+    notFound: { title: "صفحہ نہیں ملا", description: "ممکن ہے یہ صفحہ منتقل ہو گیا ہو۔" },
     social: {
       platforms: { facebook: "فیس بک", x: "ایکس", instagram: "انسٹاگرام", youtube: "یوٹیوب" },
       pending: "چینل جلد دستیاب ہوگا", unavailable: "تصدیق کے بعد اس چینل کا آفیشل لنک شامل کیا جائے گا۔ اس دوران ہم سے فیس بک پر رابطے میں رہیں۔",
@@ -245,14 +244,13 @@ const pageCopy = {
       selectTopic: "موضوع منتخب کریں", requiredError: "براہِ کرم یہ خانہ مکمل کریں۔", emailError: "درست ای میل ایڈریس درج کریں۔", invalidError: "براہِ کرم درست معلومات درج کریں۔", consentError: "براہِ کرم فارم کے طریقۂ کار کو سمجھنے کی تصدیق کریں۔",
     },
     contact: {
-      downloadHint: "نقل آپ کے آلے پر محفوظ ہوگی۔ کچھ بھی آن لائن نہیں بھیجا جاتا۔",
       eyebrow: "آئیے رابطہ کریں", title: "آئیے گفتگو کا آغاز کریں۔", description: "کوئی سوال پوچھیں، خیال پیش کریں یا ٹی جے پی کے ساتھ اگلا قدم جانیں۔",
-      heading: "ہم کیسے مدد کر سکتے ہیں؟", formDescription: "اپنا پیغام لکھیں اور اپنے پاس رکھنے کے لیے نقل ڈاؤن لوڈ کریں۔", addressTitle: "مرکزی دفتر", address: "مکان نمبر ۴، لین ۱، پارک روڈ، چک شہزاد، اسلام آباد، پاکستان", phoneTitle: "عام معلومات", phone: "+92 300 5221884", source: "ٹی جے پی کی ویب سائٹ پر رابطے کی تفصیلات", channels: "آن لائن رابطے", topics: ["عام معلومات", "رکنیت کی معلومات", "میڈیا سے متعلق سوال", "کوئی خیال پیش کریں"],
-      action: "پیغام ڈاؤن لوڈ کریں", note: "آن لائن پیغام بھیجنے کی سہولت منسلک نہیں ہے۔ نقل ڈاؤن لوڈ کریں اور شائع شدہ رابطے کی تفصیلات سے ٹیم تک پہنچیں۔", saved: "آپ کا پیغام ڈاؤن لوڈ ہو گیا ہے۔ یہ ٹی جے پی کو بھیجا نہیں گیا۔",
+      heading: "پیغام بھیجیں", formDescription: "آپ کا پیغام ٹی جے پی کی ٹیم کو بھیجا جائے گا۔", addressTitle: "مرکزی دفتر", address: "مکان نمبر ۴، لین ۱، پارک روڈ، چک شہزاد، اسلام آباد، پاکستان", phoneTitle: "عام معلومات", phone: "+92 300 5221884", source: "ٹی جے پی کی ویب سائٹ پر رابطے کی تفصیلات", channels: "آن لائن رابطے", topics: ["عام معلومات", "رکنیت کی معلومات", "میڈیا سے متعلق سوال", "کوئی خیال پیش کریں"],
+      action: "پیغام بھیجیں", saved: "آپ کا پیغام بھیج دیا گیا ہے۔",
       faqTitle: "کچھ مزید معلومات", faqs: [
         { question: "رکنیت کے بارے میں کیسے پوچھوں؟", answer: "رکنیت کے صفحے پر آن لائن درخواست دیں۔ ٹیم آپ کی درخواست کا جائزہ لے گی۔" },
         { question: "کیا ویب سائٹ اردو میں دیکھ سکتا ہوں؟", answer: "جی ہاں۔ ہیڈر میں اردو منتخب کریں۔ فارم اور نیویگیشن سمیت پوری ویب سائٹ اردو میں بدل جائے گی۔" },
-        { question: "کیا میرا پیغام ویب سائٹ سے بھیجا جاتا ہے؟", answer: "نہیں۔ فارم آپ کے آلے پر پیغام کی نقل ڈاؤن لوڈ کرتا ہے۔ اس کے بعد آپ براہِ راست ٹیم سے رابطہ کر سکتے ہیں۔ کچھ بھی آن لائن جمع نہیں ہوتا۔" },
+        { question: "میرا پیغام کہاں جاتا ہے؟", answer: "یہ ٹی جے پی ٹیم کے ان باکس میں جاتا ہے۔" },
       ],
     },
     auth: {
@@ -379,10 +377,10 @@ export const translations = {
 };
 
 translations.en.portal = {
- intro:'Apply for membership. Our team will review your details.',personal:'01 · Personal details',location:'02 · Where you live',electoral:'03 · Your local area',name:'Full name',email:'Email',phone:'Phone number',ageGroup:'Age group',under18:'Under 18',adult:'18 or older',identity:'CNIC / NICOP number',identityType:'Identity document',cnic:'CNIC',nicop:'NICOP',optional:'optional',choose:'Choose an option',more:'Additional information',occupation:'Occupation',interests:'Volunteering interests',country:'Country of residence',overseasRegion:'Overseas state / region',overseasCity:'Overseas city',region:'Province / region',district:'District',locality:'City / locality',national:'National Assembly constituency',assembly:'Provincial / local assembly constituency',union:'Union Council name / number',ward:'Ward number',contactHelp:'Enter an email address, phone number, or both.',homeHelp:'Enter your Pakistani home area, including if you live overseas.',manualHelp:'Missing places can be entered manually and will be reviewed by the administrator.',localHelp:'Provide at least a Union Council or ward. Enter the constituencies applicable to your home area.',consent:'I confirm these details are accurate and agree that TJP may use them to review and administer my membership application.',submit:'Submit application',save:'Save changes',saving:'Please wait…',received:'Application received',receivedText:'Your application is awaiting review. Keep this reference for your records.',fixErrors:'Please check the highlighted fields.',signIn:'Administrator sign in',password:'Password',code:'Authenticator or recovery code',continue:'Continue',enrollHelp:'Add this setup key to your authenticator app, then enter its six-digit code.',recoveryHelp:'Save these recovery codes somewhere secure. Each code works once and they will not be displayed again.',workspace:'TJP administration',overview:'Overview',members:'Memberships',sessions:'Sessions',theme:'Appearance',system:'System',light:'Light',dark:'Dark',logout:'Sign out',loading:'Loading…',pending:'Pending review',approved:'Approved',rejected:'Rejected',archived:'Archived',restore:'Restore',applicationsTrend:'Applications · last 30 days',regions:'Members by region',views:'Page views · last 30 days',sessionsEstimate:'Anonymous sessions by page · estimates',overseas:'Overseas applications',currentSession:'This session',session:'Administrator session',revoke:'Revoke session',all:'All',homeArea:'Browse Pakistani home areas',unspecified:'Not specified',status:'Status',manual:'Manual entries',yes:'Yes',no:'No',from:'From date',to:'To date',filter:'Apply filters',search:'Search',exactSearch:'Enter the full value',reference:'Application reference',membershipNumber:'Membership number',createdAt:'Applied on',empty:'No records yet.',previous:'Previous',next:'Next',profile:'Membership application details',duplicates:'Possible duplicate applications',edit:'Edit details',reveal:'Reveal ID number',remove:'Remove permanently',history:'Activity history',confirmIdentity:'Confirm your identity',removeWarning:'This permanently removes the application and its personal details. Enter your password and a fresh authenticator code to continue.',stepUpHelp:'Enter your password and a fresh authenticator code to continue.',confirm:'Confirm',regionNames:{punjab:'Punjab',sindh:'Sindh',kp:'Khyber Pakhtunkhwa',balochistan:'Balochistan',ict:'Islamabad',ajk:'Azad Jammu & Kashmir',gb:'Gilgit-Baltistan'},audit:{view:'Profile viewed',correct:'Details corrected','reveal-id':'ID number revealed','status-approved':'Membership approved','status-rejected':'Application rejected','status-pending':'Returned to review','status-archived':'Record archived'},errors:{INTERNAL:'Unable to complete the request. Please try again.',INVALID:'Please enter a valid value.',REQUIRED:'Please complete this field.',CONTACT_REQUIRED:'Enter at least an email address or phone number.',PHONE_INVALID:'Please enter a valid phone number including its country code.',IDENTITY_INVALID:'Enter a 13-digit CNIC/NICOP number, with or without hyphens.',LOCAL_REQUIRED:'Enter your Union Council or ward.',VALIDATION:'Please check the highlighted fields.',RATE_LIMIT:'Too many attempts. Please wait before trying again.',CREDENTIALS:'The details or code could not be verified.',UNAUTHORIZED:'Your session has expired. Please sign in again.',CSRF:'Please refresh the page and try again.',ORIGIN:'This request could not be accepted.',STEP_UP:'Confirm your password and authenticator code first.',STATUS:'The record has changed. Please reload and try again.',IDEMPOTENCY:'This submission has changed. Please try again.',NOT_FOUND:'The requested record was not found.',SAVED:'Changes saved.'}
+ intro:'Apply for membership. Our team will review your details.',personal:'01 · Personal details',location:'02 · Where you live',electoral:'03 · Your local area',name:'Full name',email:'Email',phone:'Phone number',ageGroup:'Age group',under18:'Under 18',adult:'18 or older',identity:'CNIC / NICOP number',identityType:'Identity document',cnic:'CNIC',nicop:'NICOP',optional:'optional',choose:'Choose an option',more:'Additional information',occupation:'Occupation',interests:'Volunteering interests',country:'Country of residence',overseasRegion:'Overseas state / region',overseasCity:'Overseas city',region:'Province / region',district:'District',locality:'City / locality',national:'National Assembly constituency',assembly:'Provincial / local assembly constituency',union:'Union Council',ward:'Ward number',contactHelp:'Enter an email address, phone number, or both.',homeHelp:'Enter your Pakistani home area, including if you live overseas.',manualHelp:'Missing places can be entered manually and will be reviewed by the administrator.',localHelp:'Provide at least a Union Council or ward. Enter the constituencies applicable to your home area.',consent:'I confirm these details are accurate and agree that TJP may use them to review and administer my membership application.',submit:'Submit application',save:'Save changes',saving:'Please wait…',received:'Application received',receivedText:'Your application is awaiting review. Keep this reference for your records.',fixErrors:'Please check the highlighted fields.',signIn:'Administrator sign in',password:'Password',code:'Authenticator or recovery code',continue:'Continue',enrollHelp:'Add this setup key to your authenticator app, then enter its six-digit code.',recoveryHelp:'Save these recovery codes somewhere secure. Each code works once and they will not be displayed again.',workspace:'TJP administration',overview:'Overview',members:'Memberships',sessions:'Sessions',theme:'Appearance',system:'System',light:'Light',dark:'Dark',logout:'Sign out',loading:'Loading…',pending:'Pending review',approved:'Approved',rejected:'Rejected',archived:'Archived',restore:'Restore',applicationsTrend:'Applications · last 30 days',regions:'Members by region',views:'Page views · last 30 days',sessionsEstimate:'Anonymous sessions by page · estimates',overseas:'Overseas applications',currentSession:'This session',session:'Administrator session',revoke:'Revoke session',all:'All',homeArea:'Browse Pakistani home areas',unspecified:'Not specified',status:'Status',manual:'Manual entries',yes:'Yes',no:'No',from:'From date',to:'To date',filter:'Apply filters',search:'Search',exactSearch:'Enter the full value',reference:'Application reference',membershipNumber:'Membership number',createdAt:'Applied on',empty:'No records yet.',previous:'Previous',next:'Next',profile:'Membership application details',duplicates:'Possible duplicate applications',edit:'Edit details',reveal:'Reveal ID number',remove:'Remove permanently',history:'Activity history',confirmIdentity:'Confirm your identity',removeWarning:'This permanently removes the application and its personal details. Enter your password and a fresh authenticator code to continue.',stepUpHelp:'Enter your password and a fresh authenticator code to continue.',confirm:'Confirm',regionNames:{punjab:'Punjab',sindh:'Sindh',kp:'Khyber Pakhtunkhwa',balochistan:'Balochistan',ict:'Islamabad',ajk:'Azad Jammu & Kashmir',gb:'Gilgit-Baltistan'},audit:{view:'Profile viewed',correct:'Details corrected','reveal-id':'ID number revealed','status-approved':'Membership approved','status-rejected':'Application rejected','status-pending':'Returned to review','status-archived':'Record archived'},errors:{INTERNAL:'Unable to complete the request. Please try again.',INVALID:'Please enter a valid value.',REQUIRED:'Please complete this field.',CONTACT_REQUIRED:'Enter at least an email address or phone number.',PHONE_INVALID:'Please enter a valid phone number including its country code.',IDENTITY_INVALID:'Enter a 13-digit CNIC/NICOP number, with or without hyphens.',LOCAL_REQUIRED:'Enter your Union Council or ward.',VALIDATION:'Please check the highlighted fields.',RATE_LIMIT:'Too many attempts. Please wait before trying again.',CREDENTIALS:'The details or code could not be verified.',UNAUTHORIZED:'Your session has expired. Please sign in again.',CSRF:'Please refresh the page and try again.',ORIGIN:'This request could not be accepted.',STEP_UP:'Confirm your password and authenticator code first.',STATUS:'The record has changed. Please reload and try again.',IDEMPOTENCY:'This submission has changed. Please try again.',NOT_FOUND:'The requested record was not found.',SAVED:'Changes saved.'}
 };
 translations.ur.portal = {
- intro:'رکنیت کے لیے درخواست دیں۔ ہماری ٹیم آپ کی معلومات کا جائزہ لے گی۔',personal:'۰۱ · آپ کا تعارف',location:'۰۲ · رہائش کی تفصیل',electoral:'۰۳ · مقامی اور انتخابی علاقہ',name:'پورا نام',email:'ای میل',phone:'فون نمبر',ageGroup:'عمر کا زمرہ',under18:'۱۸ سال سے کم',adult:'۱۸ سال یا اس سے زیادہ',identity:'شناختی کارڈ / نائیکوپ نمبر',identityType:'شناختی دستاویز',cnic:'قومی شناختی کارڈ',nicop:'نائیکوپ',optional:'اختیاری',choose:'منتخب کریں',more:'مزید معلومات',occupation:'پیشہ',interests:'رضاکارانہ کام میں دلچسپی',country:'موجودہ رہائش کا ملک',overseasRegion:'بیرونِ ملک ریاست / علاقہ',overseasCity:'بیرونِ ملک شہر',region:'صوبہ / خطہ',district:'ضلع',locality:'شہر / آبادی',national:'قومی اسمبلی کا حلقہ',assembly:'صوبائی / مقامی اسمبلی کا حلقہ',union:'یونین کونسل کا نام / نمبر',ward:'وارڈ نمبر',contactHelp:'ای میل یا فون نمبر ضرور درج کریں۔ دونوں بھی دے سکتے ہیں۔',homeHelp:'پاکستان میں اپنے آبائی علاقے کی تفصیل دیں، چاہے آپ بیرونِ ملک رہتے ہوں۔',manualHelp:'فہرست میں جگہ نہ ملے تو خود درج کریں۔ منتظم اس کی جانچ کرے گا۔',localHelp:'یونین کونسل یا وارڈ میں سے کم از کم ایک درج کریں، اور اپنے علاقے کے متعلقہ حلقے لکھیں۔',consent:'میں تصدیق کرتا/کرتی ہوں کہ یہ معلومات درست ہیں اور ٹی جے پی کو اپنی رکنیت کی درخواست کی جانچ اور انتظام کے لیے ان کے استعمال کی اجازت دیتا/دیتی ہوں۔',submit:'درخواست جمع کریں',save:'تبدیلیاں محفوظ کریں',saving:'براہِ کرم انتظار کریں…',received:'درخواست موصول ہوگئی',receivedText:'آپ کی درخواست کا جائزہ لیا جائے گا۔ یہ حوالہ نمبر اپنے پاس محفوظ رکھیں۔',fixErrors:'براہِ کرم نشان زدہ خانے درست کریں۔',signIn:'منتظم کا لاگ اِن',password:'پاس ورڈ',code:'تصدیقی یا ریکوری کوڈ',continue:'آگے بڑھیں',enrollHelp:'یہ سیٹ اَپ کی اپنی تصدیقی ایپ میں شامل کریں، پھر چھ ہندسوں کا کوڈ درج کریں۔',recoveryHelp:'یہ ریکوری کوڈ محفوظ جگہ رکھ لیں۔ ہر کوڈ صرف ایک بار استعمال ہوگا اور دوبارہ دکھایا نہیں جائے گا۔',workspace:'ٹی جے پی انتظامیہ',overview:'مجموعی جائزہ',members:'رکنیت کی درخواستیں',sessions:'لاگ اِن سیشن',theme:'ظاہری انداز',system:'سسٹم کے مطابق',light:'روشن',dark:'تاریک',logout:'لاگ آؤٹ',loading:'معلومات آرہی ہیں…',pending:'زیرِ جائزہ',approved:'منظور شدہ',rejected:'نامنظور',archived:'محفوظ شدہ',restore:'بحال کریں',applicationsTrend:'گزشتہ ۳۰ دن کی درخواستیں',regions:'علاقوں کے لحاظ سے اراکین',views:'گزشتہ ۳۰ دن میں صفحات کے مشاہدات',sessionsEstimate:'ہر صفحے کے گمنام سیشن · تخمینہ',overseas:'بیرونِ ملک درخواستیں',currentSession:'موجودہ سیشن',session:'منتظم کا سیشن',revoke:'سیشن ختم کریں',all:'سب',homeArea:'پاکستانی آبائی علاقوں کے مطابق دیکھیں',unspecified:'درج نہیں',status:'حیثیت',manual:'خود درج کردہ علاقے',yes:'ہاں',no:'نہیں',from:'ابتدائی تاریخ',to:'آخری تاریخ',filter:'فلٹر لگائیں',search:'تلاش کریں',exactSearch:'مکمل نام، نمبر یا پتہ درج کریں',reference:'درخواست کا حوالہ',membershipNumber:'رکنیت نمبر',createdAt:'درخواست کی تاریخ',empty:'ابھی کوئی ریکارڈ نہیں۔',previous:'پچھلا',next:'اگلا',profile:'رکنیت کی درخواست کی تفصیل',duplicates:'ممکنہ طور پر دہرائی گئی درخواستیں',edit:'معلومات درست کریں',reveal:'شناختی نمبر دیکھیں',remove:'مستقل حذف کریں',history:'کارروائیوں کا ریکارڈ',confirmIdentity:'اپنی شناخت کی تصدیق کریں',removeWarning:'درخواست اور اس کی ذاتی معلومات مستقل حذف ہوجائیں گی۔ جاری رکھنے کے لیے پاس ورڈ اور تازہ تصدیقی کوڈ دیں۔',stepUpHelp:'جاری رکھنے کے لیے پاس ورڈ اور تازہ تصدیقی کوڈ درج کریں۔',confirm:'تصدیق کریں',regionNames:{punjab:'پنجاب',sindh:'سندھ',kp:'خیبر پختونخوا',balochistan:'بلوچستان',ict:'اسلام آباد',ajk:'آزاد جموں و کشمیر',gb:'گلگت بلتستان'},audit:{view:'تفصیل دیکھی گئی',correct:'معلومات درست کی گئیں','reveal-id':'شناختی نمبر دیکھا گیا','status-approved':'رکنیت منظور ہوئی','status-rejected':'درخواست نامنظور ہوئی','status-pending':'دوبارہ جائزے کے لیے بھیجی گئی','status-archived':'ریکارڈ محفوظ کیا گیا'},errors:{INTERNAL:'درخواست مکمل نہیں ہوسکی۔ دوبارہ کوشش کریں۔',INVALID:'براہِ کرم درست معلومات درج کریں۔',REQUIRED:'یہ خانہ پُر کریں۔',CONTACT_REQUIRED:'ای میل یا فون نمبر میں سے کم از کم ایک درج کریں۔',PHONE_INVALID:'درست فون نمبر ملک کے کوڈ سمیت درج کریں۔',IDENTITY_INVALID:'۱۳ ہندسوں کا شناختی کارڈ یا نائیکوپ نمبر درج کریں۔ درمیان میں ڈیش لگانا اختیاری ہے۔',LOCAL_REQUIRED:'یونین کونسل یا وارڈ درج کریں۔',VALIDATION:'نشان زدہ خانے درست کریں۔',RATE_LIMIT:'کوششوں کی حد پوری ہوگئی ہے۔ کچھ دیر بعد دوبارہ کوشش کریں۔',CREDENTIALS:'معلومات یا تصدیقی کوڈ درست نہیں۔',UNAUTHORIZED:'سیشن ختم ہوگیا ہے۔ دوبارہ لاگ اِن کریں۔',CSRF:'صفحہ تازہ کرکے دوبارہ کوشش کریں۔',ORIGIN:'یہ درخواست قبول نہیں ہوسکی۔',STEP_UP:'پہلے پاس ورڈ اور تصدیقی کوڈ سے شناخت کی تصدیق کریں۔',STATUS:'ریکارڈ تبدیل ہوگیا ہے۔ تازہ کرکے دوبارہ کوشش کریں۔',IDEMPOTENCY:'درخواست کی معلومات بدل گئی ہیں۔ دوبارہ کوشش کریں۔',NOT_FOUND:'مطلوبہ ریکارڈ نہیں ملا۔',SAVED:'تبدیلیاں محفوظ ہوگئیں۔'}
+ intro:'رکنیت کے لیے درخواست دیں۔ ہماری ٹیم آپ کی معلومات کا جائزہ لے گی۔',personal:'۰۱ · آپ کا تعارف',location:'۰۲ · رہائش کی تفصیل',electoral:'۰۳ · مقامی اور انتخابی علاقہ',name:'پورا نام',email:'ای میل',phone:'فون نمبر',ageGroup:'عمر کا زمرہ',under18:'۱۸ سال سے کم',adult:'۱۸ سال یا اس سے زیادہ',identity:'شناختی کارڈ / نائیکوپ نمبر',identityType:'شناختی دستاویز',cnic:'قومی شناختی کارڈ',nicop:'نائیکوپ',optional:'اختیاری',choose:'منتخب کریں',more:'مزید معلومات',occupation:'پیشہ',interests:'رضاکارانہ کام میں دلچسپی',country:'موجودہ رہائش کا ملک',overseasRegion:'بیرونِ ملک ریاست / علاقہ',overseasCity:'بیرونِ ملک شہر',region:'صوبہ / خطہ',district:'ضلع',locality:'شہر / آبادی',national:'قومی اسمبلی کا حلقہ',assembly:'صوبائی / مقامی اسمبلی کا حلقہ',union:'یونین کونسل',ward:'وارڈ نمبر',contactHelp:'ای میل یا فون نمبر ضرور درج کریں۔ دونوں بھی دے سکتے ہیں۔',homeHelp:'پاکستان میں اپنے آبائی علاقے کی تفصیل دیں، چاہے آپ بیرونِ ملک رہتے ہوں۔',manualHelp:'فہرست میں جگہ نہ ملے تو خود درج کریں۔ منتظم اس کی جانچ کرے گا۔',localHelp:'یونین کونسل یا وارڈ میں سے کم از کم ایک درج کریں، اور اپنے علاقے کے متعلقہ حلقے لکھیں۔',consent:'میں تصدیق کرتا/کرتی ہوں کہ یہ معلومات درست ہیں اور ٹی جے پی کو اپنی رکنیت کی درخواست کی جانچ اور انتظام کے لیے ان کے استعمال کی اجازت دیتا/دیتی ہوں۔',submit:'درخواست جمع کریں',save:'تبدیلیاں محفوظ کریں',saving:'براہِ کرم انتظار کریں…',received:'درخواست موصول ہوگئی',receivedText:'آپ کی درخواست کا جائزہ لیا جائے گا۔ یہ حوالہ نمبر اپنے پاس محفوظ رکھیں۔',fixErrors:'براہِ کرم نشان زدہ خانے درست کریں۔',signIn:'منتظم کا لاگ اِن',password:'پاس ورڈ',code:'تصدیقی یا ریکوری کوڈ',continue:'آگے بڑھیں',enrollHelp:'یہ سیٹ اَپ کی اپنی تصدیقی ایپ میں شامل کریں، پھر چھ ہندسوں کا کوڈ درج کریں۔',recoveryHelp:'یہ ریکوری کوڈ محفوظ جگہ رکھ لیں۔ ہر کوڈ صرف ایک بار استعمال ہوگا اور دوبارہ دکھایا نہیں جائے گا۔',workspace:'ٹی جے پی انتظامیہ',overview:'مجموعی جائزہ',members:'رکنیت کی درخواستیں',sessions:'لاگ اِن سیشن',theme:'ظاہری انداز',system:'سسٹم کے مطابق',light:'روشن',dark:'تاریک',logout:'لاگ آؤٹ',loading:'معلومات آرہی ہیں…',pending:'زیرِ جائزہ',approved:'منظور شدہ',rejected:'نامنظور',archived:'محفوظ شدہ',restore:'بحال کریں',applicationsTrend:'گزشتہ ۳۰ دن کی درخواستیں',regions:'علاقوں کے لحاظ سے اراکین',views:'گزشتہ ۳۰ دن میں صفحات کے مشاہدات',sessionsEstimate:'ہر صفحے کے گمنام سیشن · تخمینہ',overseas:'بیرونِ ملک درخواستیں',currentSession:'موجودہ سیشن',session:'منتظم کا سیشن',revoke:'سیشن ختم کریں',all:'سب',homeArea:'پاکستانی آبائی علاقوں کے مطابق دیکھیں',unspecified:'درج نہیں',status:'حیثیت',manual:'خود درج کردہ علاقے',yes:'ہاں',no:'نہیں',from:'ابتدائی تاریخ',to:'آخری تاریخ',filter:'فلٹر لگائیں',search:'تلاش کریں',exactSearch:'مکمل نام، نمبر یا پتہ درج کریں',reference:'درخواست کا حوالہ',membershipNumber:'رکنیت نمبر',createdAt:'درخواست کی تاریخ',empty:'ابھی کوئی ریکارڈ نہیں۔',previous:'پچھلا',next:'اگلا',profile:'رکنیت کی درخواست کی تفصیل',duplicates:'ممکنہ طور پر دہرائی گئی درخواستیں',edit:'معلومات درست کریں',reveal:'شناختی نمبر دیکھیں',remove:'مستقل حذف کریں',history:'کارروائیوں کا ریکارڈ',confirmIdentity:'اپنی شناخت کی تصدیق کریں',removeWarning:'درخواست اور اس کی ذاتی معلومات مستقل حذف ہوجائیں گی۔ جاری رکھنے کے لیے پاس ورڈ اور تازہ تصدیقی کوڈ دیں۔',stepUpHelp:'جاری رکھنے کے لیے پاس ورڈ اور تازہ تصدیقی کوڈ درج کریں۔',confirm:'تصدیق کریں',regionNames:{punjab:'پنجاب',sindh:'سندھ',kp:'خیبر پختونخوا',balochistan:'بلوچستان',ict:'اسلام آباد',ajk:'آزاد جموں و کشمیر',gb:'گلگت بلتستان'},audit:{view:'تفصیل دیکھی گئی',correct:'معلومات درست کی گئیں','reveal-id':'شناختی نمبر دیکھا گیا','status-approved':'رکنیت منظور ہوئی','status-rejected':'درخواست نامنظور ہوئی','status-pending':'دوبارہ جائزے کے لیے بھیجی گئی','status-archived':'ریکارڈ محفوظ کیا گیا'},errors:{INTERNAL:'درخواست مکمل نہیں ہوسکی۔ دوبارہ کوشش کریں۔',INVALID:'براہِ کرم درست معلومات درج کریں۔',REQUIRED:'یہ خانہ پُر کریں۔',CONTACT_REQUIRED:'ای میل یا فون نمبر میں سے کم از کم ایک درج کریں۔',PHONE_INVALID:'درست فون نمبر ملک کے کوڈ سمیت درج کریں۔',IDENTITY_INVALID:'۱۳ ہندسوں کا شناختی کارڈ یا نائیکوپ نمبر درج کریں۔ درمیان میں ڈیش لگانا اختیاری ہے۔',LOCAL_REQUIRED:'یونین کونسل یا وارڈ درج کریں۔',VALIDATION:'نشان زدہ خانے درست کریں۔',RATE_LIMIT:'کوششوں کی حد پوری ہوگئی ہے۔ کچھ دیر بعد دوبارہ کوشش کریں۔',CREDENTIALS:'معلومات یا تصدیقی کوڈ درست نہیں۔',UNAUTHORIZED:'سیشن ختم ہوگیا ہے۔ دوبارہ لاگ اِن کریں۔',CSRF:'صفحہ تازہ کرکے دوبارہ کوشش کریں۔',ORIGIN:'یہ درخواست قبول نہیں ہوسکی۔',STEP_UP:'پہلے پاس ورڈ اور تصدیقی کوڈ سے شناخت کی تصدیق کریں۔',STATUS:'ریکارڈ تبدیل ہوگیا ہے۔ تازہ کرکے دوبارہ کوشش کریں۔',IDEMPOTENCY:'درخواست کی معلومات بدل گئی ہیں۔ دوبارہ کوشش کریں۔',NOT_FOUND:'مطلوبہ ریکارڈ نہیں ملا۔',SAVED:'تبدیلیاں محفوظ ہوگئیں۔'}
 };
 translations.en.portal.other='Other / enter manually';
 translations.ur.portal.other='فہرست میں نہیں / خود درج کریں';
@@ -407,8 +405,69 @@ Object.assign(translations.en.portal, { gender: 'Gender', male: 'Male', female: 
 Object.assign(translations.ur.portal, { gender: 'جنس', male: 'مرد', female: 'خاتون', age: 'عمر', cnicNumber: 'شناختی کارڈ نمبر', nicopNumber: 'نائیکوپ نمبر', national: 'قومی حلقہ نمبر', assembly: 'صوبائی حلقہ نمبر', intro: 'ٹی جے پی کی رکنیت کے لیے درخواست دیں۔', homeHelp: 'پاکستان میں اپنا آبائی علاقہ درج کریں۔', localHelp: 'یونین کونسل یا وارڈ اور متعلقہ حلقے درج کریں۔' });
 translations.en.membership.description = translations.en.portal.intro;
 translations.ur.membership.description = translations.ur.portal.intro;
-translations.en.home.manifesto = { title: 'Manifesto', empty: 'Manifesto entries will appear here.' };
-translations.ur.home.manifesto = { title: 'منشور', empty: 'منشور کی تفصیلات یہاں شامل کی جائیں گی۔' };
+translations.en.portal.formPlaceholders = {
+  name: 'Enter full name', email: 'Enter email address', phone: 'Enter phone number',
+  cnic: 'Enter CNIC number', nicop: 'Enter NICOP number', age: 'Enter age', gender: 'Select gender',
+  religiousCommunity: 'Select community', ageGroup: 'Select age group',
+  country: 'Select country', overseasRegion: 'Enter state or region', overseasCity: 'Enter city',
+  region: 'Select province or region', district: 'Select district', locality: 'Select city or locality',
+  national: 'Select constituency', assembly: 'Select constituency',
+  union: 'Enter Union Council', ward: 'Enter ward number',
+};
+translations.ur.portal.formPlaceholders = {
+  name: 'پورا نام درج کریں', email: 'ای میل درج کریں', phone: 'فون نمبر درج کریں',
+  cnic: 'شناختی کارڈ نمبر درج کریں', nicop: 'نائیکوپ نمبر درج کریں', age: 'عمر درج کریں', gender: 'جنس منتخب کریں',
+  religiousCommunity: 'مذہبی برادری منتخب کریں', ageGroup: 'عمر کا زمرہ منتخب کریں',
+  country: 'ملک منتخب کریں', overseasRegion: 'ریاست یا علاقہ درج کریں', overseasCity: 'شہر درج کریں',
+  region: 'صوبہ یا خطہ منتخب کریں', district: 'ضلع منتخب کریں', locality: 'شہر یا آبادی منتخب کریں',
+  national: 'حلقہ منتخب کریں', assembly: 'حلقہ منتخب کریں',
+  union: 'یونین کونسل درج کریں', ward: 'وارڈ نمبر درج کریں',
+};
+translations.en.portal.formManualPlaceholders = {
+  district: 'Enter district', locality: 'Enter city or locality',
+  national: 'Enter constituency', assembly: 'Enter constituency',
+};
+translations.ur.portal.formManualPlaceholders = {
+  district: 'ضلع درج کریں', locality: 'شہر یا آبادی درج کریں',
+  national: 'حلقہ درج کریں', assembly: 'حلقہ درج کریں',
+};
+translations.en.home.manifesto = {
+  eyebrow: 'OUR MANIFESTO',
+  title: 'The manifesto of Tehreek-e-Jawanan Pakistan',
+  items: [
+    "To implement the Constitution of Tehreek-e-Jawanan Pakistan in its true spirit and establish justice in the country.",
+    "To promote the ideology of Pakistan, based on the Two-Nation Theory, and encourage young people to build an Islamic welfare state.",
+    "To establish a non-electoral political system based on merit and improve the country's overall conditions.",
+    "To take measures to promote national unity, harmony, and brotherhood among all provinces and communities of Pakistan.",
+    "To unite the people of Pakistan, especially the youth, beyond provincial, regional, linguistic, and political differences, under the flag of Pakistan.",
+    "To establish peace and security throughout Pakistan and protect the country from hostile forces, conspiracies, and political instability.",
+    "To raise awareness about India's illegal occupation of Kashmir and the struggle for freedom from unlawful military control.",
+    "To educate the younger generation about the threats posed by internal and external enemies to the Islamic Republic of Pakistan.",
+    "To protect Pakistan's ideological and geographical boundaries and safeguard the country's national interests and sovereignty.",
+    "To unite all democratic and patriotic forces against conspiracies aimed at weakening the Islamic Republic of Pakistan and to establish a strong national alliance.",
+    "To raise our voices in support of oppressed Muslims and people around the world.",
+    "To maintain strong relations with all provinces, regions, and communities of Pakistan, ensuring national unity and territorial integrity.",
+    "To protect Pakistan from hostile conspiracies and promote national solidarity.",
+  ],
+};
+translations.ur.home.manifesto = {
+  eyebrow: 'ہمارا منشور',
+  title: 'تحریکِ جوانان پاکستان کا منشور',
+  items: [
+    'آئینِ پاکستان پر اس کی اصل روح کے مطابق عمل درآمد اور ملک میں انصاف کے قیام کے لیے جدوجہد کرنا۔',
+    'دو قومی نظریے کو فروغ دینا، جس کی بنیاد پر اسلامی جمہوریہ پاکستان معرضِ وجود میں آیا، اور نوجوانوں کو پاکستان کو حقیقی اسلامی فلاحی ریاست بنانے کے لیے متحرک کرنا۔',
+    'غیر انتخابی مگر سیاسی عمل پر مبنی نظام کے ذریعے ملکی حالات میں بہتری کے لیے جدوجہد کرنا۔',
+    'مملکتِ پاکستان میں امن و استحکام، صوبائی بھائی چارے اور قومی یکجہتی کے فروغ کے لیے اقدامات کرنا۔',
+    'تمام صوبائی، علاقائی، لسانی، گروہی اور سیاسی اختلافات سے بالاتر ہو کر پاکستانی عوام، بالخصوص نوجوانوں کو پرچمِ پاکستان تلے متحد کرنا۔',
+    'پاکستان مخالف سرگرمیوں اور دشمن قوتوں کی سازشوں کی روک تھام کے لیے امن و استحکام کے قیام کی جدوجہد کرنا۔',
+    'پاکستان کی شہ رگ کشمیر کو بھارتی جارحیت اور غیر قانونی فوجی قبضے سے آزاد کرانے کی جدوجہد کرنا۔',
+    'اسلامی جمہوریہ پاکستان کو درپیش اندرونی و بیرونی خطرات سے نوجوان نسل کو آگاہ کرنا۔',
+    'قومی مفاد کے اداروں کے شانہ بشانہ وطنِ عزیز کی نظریاتی اور جغرافیائی سرحدوں کا تحفظ کرنا۔',
+    'اسلامی جمہوریہ پاکستان کے خلاف بیرونی سازشوں اور بے جا ہائبرڈ وار کے خلاف عوامی بیداری مہم چلانا اور سیمینار منعقد کرنا، اور عوامی تعاون سے ملک دشمن سازشوں کا منہ توڑ جواب دینا۔',
+    'پوری دنیا میں مظلوم مسلمانوں اور انسانوں کی حمایت میں آواز بلند کرنا۔',
+    'ہر پاکستانی، خواہ اس کا تعلق کسی بھی صوبے، علاقے یا گروہ سے ہو، تحریکِ جوانان پاکستان کا رکن بن سکتا ہے، بشرطیکہ وہ پاکستان کی سالمیت پر یقین رکھتا ہو اور ملک مخالف سرگرمیوں میں ملوث نہ ہو۔',
+  ],
+};
 Object.assign(translations.en.portal, { ageGroup: 'Age', age18to29: '18–29', age30to49: '30–49', age50plus: '50 or older', adult: '18 or older (legacy)' });
 Object.assign(translations.ur.portal, { ageGroup: 'عمر', age18to29: '۱۸ سے ۲۹ سال', age30to49: '۳۰ سے ۴۹ سال', age50plus: '۵۰ سال یا اس سے زیادہ', adult: '۱۸ سال یا اس سے زیادہ (پرانا ریکارڈ)' });
 translations.en.portal.errors.AGE_GROUP_MISMATCH = 'Choose a group that matches the recorded age, or clear the recorded age.';
@@ -423,3 +482,110 @@ translations.en.portal.membershipBannerAlt = 'Illustrated view of the Pakistani 
 translations.ur.portal.membershipBannerAlt = 'پاکستانی پرچم، فیصل مسجد اور مارگلہ کی پہاڑیوں کا تخیلاتی منظر';
 Object.assign(translations.en.portal, { religiousCommunity: 'Religious community', muslim: 'Muslim', minority: 'Religious minority' });
 Object.assign(translations.ur.portal, { religiousCommunity: 'مذہبی برادری', muslim: 'مسلمان', minority: 'مذہبی اقلیت' });
+translations.en.navigation.leadership = 'Leadership';
+translations.ur.navigation.leadership = 'قیادت';
+translations.en.leadership = {
+  intro: { eyebrow: 'OUR LEADERSHIP', title: 'The people behind our vision.', description: 'Meet the founder and chairman of Tehreek Jawanan Pakistan.' },
+  section: { eyebrow: 'OUR LEADERSHIP', title: 'A vision for Pakistan.', description: 'Discover the people and ideas behind TJP.', action: 'Explore leadership' },
+  source: 'Read the original profile',
+  profiles: {
+    founder: { role: 'FOUNDER', name: 'Lt. Gen. Hamid Gul', description: 'TJP’s founder connected the movement’s vision with national unity, development, and self-reliance.' },
+    chairman: { role: 'CHAIRMAN', name: 'Mohammad Abdullah Gul', description: 'The chairman’s published message highlights youth participation, education, and national development.' },
+  },
+};
+translations.ur.leadership = {
+  intro: { eyebrow: 'ہماری قیادت', title: 'ہمارے وژن کے پیچھے شخصیات', description: 'تحریکِ جوانان پاکستان کے بانی اور چیئرمین کا تعارف۔' },
+  section: { eyebrow: 'ہماری قیادت', title: 'پاکستان کے لیے ایک وژن', description: 'ٹی جے پی کی شخصیات اور ان کے خیالات سے واقف ہوں۔', action: 'قیادت کا تعارف' },
+  source: 'اصل تعارف پڑھیں',
+  profiles: {
+    founder: { role: 'بانی', name: 'لیفٹیننٹ جنرل حمید گل', description: 'ٹی جے پی کے بانی نے تحریک کے وژن کو قومی اتحاد، ترقی اور خود انحصاری سے جوڑا۔' },
+    chairman: { role: 'چیئرمین', name: 'محمد عبداللہ گل', description: 'چیئرمین کے شائع شدہ پیغام میں نوجوانوں کی شرکت، تعلیم اور قومی ترقی پر زور دیا گیا ہے۔' },
+  },
+};
+translations.en.home.about.leadership = 'Chairman Mohammad Abdullah Gul’s published message highlights education, entrepreneurship, and civic responsibility.';
+translations.ur.home.about.leadership = 'چیئرمین محمد عبداللہ گل کے شائع شدہ پیغام میں تعلیم، کاروباری صلاحیت اور شہری ذمہ داری نمایاں ہیں۔';
+translations.en.social.description = 'Follow TJP and join the conversation on our social channels.';
+translations.ur.social.description = 'ہمارے سماجی رابطوں کے ذرائع پر ٹی جے پی سے جڑیں اور گفتگو میں شریک ہوں۔';
+translations.en.sections.participate.items[2] = { title: 'Explore our gallery', description: 'Discover people, places, and moments from the TJP archive.', action: 'View the gallery' };
+translations.ur.sections.participate.items[2] = { title: 'تصویری گیلری دیکھیں', description: 'ٹی جے پی کے ذخیرے سے شخصیات، مقامات اور یادگار لمحات دیکھیے۔', action: 'گیلری دیکھیں' };
+translations.en.auth.benefitText = 'Meet our leadership, discover the gallery, or apply for membership.';
+translations.ur.auth.benefitText = 'ہماری قیادت کا تعارف دیکھیے، گیلری دریافت کیجیے یا رکنیت کے لیے درخواست دیں۔';
+
+translations.en.home.about.link = 'Discover our story';
+translations.ur.home.about.link = 'ہماری کہانی جانیے';
+translations.en.aboutPage = { intro: { eyebrow: 'ABOUT TJP', title: 'A shared purpose for Pakistan.', description: 'Discover the movement, its leadership and the principles in its manifesto.' }, storyTitle: 'Our story and purpose', story: [translations.en.home.about.description, translations.en.home.about.leadership], focusTitle: 'A vision for the future' };
+translations.ur.aboutPage = { intro: { eyebrow: 'ٹی جے پی کا تعارف', title: 'پاکستان کے لیے مشترکہ مقصد', description: 'تحریک، اس کی قیادت اور منشور کے اصولوں سے واقف ہوں۔' }, storyTitle: 'ہماری کہانی اور مقصد', story: [translations.ur.home.about.description, translations.ur.home.about.leadership], focusTitle: 'مستقبل کا وژن' };
+Object.assign(translations.en.portal, { education: 'Education', profession: 'Profession', noFormalEducation: 'No formal education', primary: 'Primary', middle: 'Middle', matric: 'Matriculation', intermediate: 'Intermediate', diploma: 'Diploma', bachelors: 'Bachelor’s degree', masters: 'Master’s degree', doctorate: 'Doctorate', otherEducation: 'Other', student: 'Student', employed: 'Employed', business: 'Business owner', selfEmployed: 'Self-employed', agriculture: 'Agriculture', homemaker: 'Homemaker', retired: 'Retired', unemployed: 'Not currently employed', otherProfession: 'Other' });
+Object.assign(translations.ur.portal, { education: 'تعلیم', profession: 'پیشہ', noFormalEducation: 'رسمی تعلیم نہیں', primary: 'پرائمری', middle: 'مڈل', matric: 'میٹرک', intermediate: 'انٹرمیڈیٹ', diploma: 'ڈپلومہ', bachelors: 'بیچلر ڈگری', masters: 'ماسٹر ڈگری', doctorate: 'ڈاکٹریٹ', otherEducation: 'دیگر', student: 'طالب علم', employed: 'ملازمت پیشہ', business: 'کاروباری', selfEmployed: 'خود روزگار', agriculture: 'زراعت', homemaker: 'گھریلو امور', retired: 'ریٹائرڈ', unemployed: 'فی الحال بے روزگار', otherProfession: 'دیگر' });
+translations.en.portal.formPlaceholders.education = 'Select education';
+translations.ur.portal.formPlaceholders.education = 'تعلیم منتخب کریں';
+translations.en.portal.formPlaceholders.profession = 'Select profession';
+translations.ur.portal.formPlaceholders.profession = 'پیشہ منتخب کریں';
+translations.en.sections.gallery.hint = 'Scroll sideways to explore the archive';
+translations.ur.sections.gallery.hint = 'تصاویر دیکھنے کے لیے دائیں یا بائیں اسکرول کریں';
+
+translations.ur.home.manifesto.items.push('پاکستان کو دشمن سازشوں سے محفوظ رکھنا اور قومی یکجہتی کو فروغ دینا۔');
+
+translations.en.sections.gallery.pause = 'Pause scrolling';
+translations.en.sections.gallery.play = 'Resume scrolling';
+translations.ur.sections.gallery.pause = 'اسکرول روکیں';
+translations.ur.sections.gallery.play = 'اسکرول جاری کریں';
+translations.en.portal.dashboardUi.sessionStarted = 'Started';
+translations.ur.portal.dashboardUi.sessionStarted = 'شروع ہونے کا وقت';
+translations.en.portal.dashboardUi.sessionExpires = 'Session expires';
+translations.ur.portal.dashboardUi.sessionExpires = 'سیشن کی میعاد';
+translations.en.portal.dashboardUi.totalMembers = 'Members';
+translations.ur.portal.dashboardUi.totalMembers = 'اراکین';
+translations.en.portal.dashboardUi.viewsShort = 'Page views';
+translations.ur.portal.dashboardUi.viewsShort = 'صفحے کے مشاہدات';
+translations.en.portal.dashboardUi.visitsShort = 'Visits';
+translations.ur.portal.dashboardUi.visitsShort = 'دورے';
+
+translations.en.websiteAdmin = {
+  settings: "Settings", pages: "Page content", branding: "Branding", menu: "Site menu",
+  contact: "Contact details", leaders: "Leadership", gallery: "Gallery", inbox: "Inbox",
+  en: "English", ur: "Urdu", siteName: "Site name", name: "Name", role: "Role", title: "Title",
+  description: "Description", alt: "Image description", source: "Source link", order: "Order",
+  category: "Category", credit: "Photo credit", address: "Address", phone: "Phone", email: "Email",
+  logo: "Logo", image: "Image", imageHint: "JPG, PNG or WebP · up to 12 MB", resetLogo: "Use default logo",
+  add: "Add", edit: "Edit", published: "Published", hidden: "Hidden", saved: "Saved",
+  read: "Read", unread: "Unread", markRead: "Mark as read",
+  favicon: "Favicon", resetFavicon: "Use default favicon", label: "Menu label", href: "Link URL",
+  status: "Status", actions: "Actions", received: "Received", openMessage: "Open", refresh: "Refresh",
+  emptyInbox: "No messages yet.",
+  selectPage: "Choose a page", pageNames: {
+    site: "Shared site content", home: "Home", about: "About us", leaders: "Leadership",
+    gallery: "Gallery", contact: "Contact us", membership: "Membership",
+  },
+  importHint: "Save the current website content to the database. Existing edits are kept.",
+  importContent: "Import current content", importing: "Importing…",
+  imported: "{count} content records imported.", alreadyImported: "Current content is already imported.",
+  addMember: "Add member", applicantConsent: "I confirm the applicant agreed to share these details with TJP for their membership application.",
+  INVALID_IMAGE: "Choose a supported image or select the default.", IMAGE_REQUIRED: "Add an image.",
+  CLOUDINARY_NOT_CONFIGURED: "Cloudinary needs to be configured on the server.",
+  MEDIA_UNAVAILABLE: "Image storage is unavailable. Try again.",
+};
+translations.ur.websiteAdmin = {
+  settings: "ترتیبات", pages: "صفحات کا مواد", branding: "ویب سائٹ کی شناخت", menu: "ویب سائٹ کا مینو",
+  contact: "رابطے کی تفصیلات", leaders: "قیادت", gallery: "گیلری", inbox: "ان باکس",
+  en: "انگریزی", ur: "اردو", siteName: "ویب سائٹ کا نام", name: "نام", role: "عہدہ", title: "عنوان",
+  description: "تفصیل", alt: "تصویر کی وضاحت", source: "ماخذ کا لنک", order: "ترتیب",
+  category: "زمرہ", credit: "تصویر کا کریڈٹ", address: "پتہ", phone: "فون", email: "ای میل",
+  logo: "لوگو", image: "تصویر", imageHint: "JPG، PNG یا WebP · زیادہ سے زیادہ ۱۲ ایم بی", resetLogo: "اصل لوگو استعمال کریں",
+  add: "شامل کریں", edit: "ترمیم", published: "شائع شدہ", hidden: "پوشیدہ", saved: "محفوظ ہو گیا",
+  read: "پڑھا گیا", unread: "نیا", markRead: "پڑھا ہوا نشان زد کریں",
+  favicon: "ویب سائٹ کا آئیکن", resetFavicon: "اصل آئیکن استعمال کریں", label: "مینو کا نام", href: "لنک کا پتہ",
+  status: "حالت", actions: "اقدامات", received: "موصول ہوا", openMessage: "کھولیں", refresh: "تازہ کریں",
+  emptyInbox: "ابھی کوئی پیغام نہیں۔",
+  selectPage: "صفحہ منتخب کریں", pageNames: {
+    site: "ویب سائٹ کا مشترکہ مواد", home: "ابتدائی صفحہ", about: "ہمارے بارے میں", leaders: "قیادت",
+    gallery: "گیلری", contact: "ہم سے رابطہ", membership: "رکنیت",
+  },
+  importHint: "ویب سائٹ کا موجودہ مواد ڈیٹا بیس میں محفوظ کریں۔ پچھلی تبدیلیاں برقرار رہیں گی۔",
+  importContent: "موجودہ مواد درآمد کریں", importing: "مواد درآمد ہو رہا ہے…",
+  imported: "مواد کے {count} ریکارڈ درآمد ہوئے۔", alreadyImported: "موجودہ مواد پہلے ہی درآمد ہو چکا ہے۔",
+  addMember: "رکن شامل کریں", applicantConsent: "میں تصدیق کرتا ہوں کہ درخواست گزار نے رکنیت کے لیے یہ تفصیلات ٹی جے پی کے ساتھ شیئر کرنے کی اجازت دی ہے۔",
+  INVALID_IMAGE: "درست تصویر یا اصل تصویر منتخب کریں۔", IMAGE_REQUIRED: "تصویر شامل کریں۔",
+  CLOUDINARY_NOT_CONFIGURED: "سرور پر کلاؤڈینری کی ترتیبات درکار ہیں۔",
+  MEDIA_UNAVAILABLE: "تصاویر کی سروس دستیاب نہیں۔ دوبارہ کوشش کریں۔",
+};

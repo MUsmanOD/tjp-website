@@ -9,7 +9,7 @@ Node.js 24 LTS, strict TypeScript, Express, MongoDB replica set. The public brow
 3. In `server`, run `npm ci`, then `npm run setup:local` **once**. This creates an ignored `.env` with independent cryptographically random secrets; it refuses to overwrite an existing configuration.
 4. Run `npm run admin:create`. Enter the administrator email and a password of at least 14 characters. Password input is hidden. No administrator or known password is shipped.
 5. Run `npm run dev`. In another terminal start the client with `npm run dev` from `client`.
-6. Visit `/admin/login` and sign in with your email and password. Two-factor authentication is optional under **Security** in the admin panel. To enable it, confirm your password, add the setup key to an authenticator, then verify its six-digit code. Save the ten recovery codes displayed once. Login requires a second factor only after enablement.
+6. Visit `/tjp-portal-pubjab-0001-login` and sign in with your email and password. Two-factor authentication is optional under **Security** in the admin panel. To enable it, confirm your password, add the setup key to an authenticator, then verify its six-digit code. Save the ten recovery codes displayed once. Login requires a second factor only after enablement.
 
 Run the development server with `npm run dev`, not `node --watch src/server.ts`. The development script uses `tsx` to resolve the `.js` import paths to the TypeScript source files; those same paths resolve to JavaScript after the production build. If an existing `.env` is missing `DATA_KEYS`, `HASH_KEY`, or `TOKEN_KEY`, restore the original values for an existing database. For a new installation, `npm run setup:local` generates them, but only when `.env` does not already exist.
 
@@ -30,6 +30,12 @@ New membership applications require a name, gender, religious community (Muslim 
 Reference data: 657 urban localities and their districts in the PBS 2023 tables; general National/Provincial Assembly seat codes from the ECP 2024 report. These data are historical reference catalogues, not live boundary verification. Rural locations, subsequent boundary changes, AJK/GB places, and their local-assembly seats can be entered manually and are flagged. Constituencies are selected independently of residential localities. Source spellings remain available; place names without reviewed Urdu overrides retain the original name. No official address-to-constituency inference is made.
 
 ## Security behavior
+
+`GET /api/v1/website` exposes published content and public contact details. In the dashboard, **Settings → Import current content** copies the default page text, menu, contact information, branding, leadership and gallery records into MongoDB. The import inserts missing records and preserves edits. Default images keep their bundled URLs.
+
+Set `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, and `CLOUDINARY_API_SECRET` in the server environment to enable image uploads. The editor converts JPEG, PNG, and WebP uploads to bounded, single-frame WebP. The backend signs uploads with Cloudinary's authenticated delivery type and serves published images through the same-origin API. Admins can preview draft uploads after signing in. The browser receives neither the Cloudinary credentials nor signed delivery URLs.
+
+Changes and inbox reads under `/api/v1/admin/website` require an admin session. Content writes use the shared origin and CSRF checks and bounded request bodies. The public contact endpoint is limited to six attempts per hour per IP, accepts an idempotent submission ID, and encrypts sender and message details at rest.
 
 Passwords use Argon2id. TOTP codes and recovery codes cannot be replayed. Five-minute access JWTs are paired with rotating opaque refresh tokens and a server-side session. A session expires after 30 minutes without an authenticated request or 12 hours absolutely. Logout, recovery and refresh reuse revoke sessions. A fresh password (plus an unused MFA/recovery code when 2FA is enabled) grants a five-minute step-up window for identity reveal, identity changes, permanent removal, and session revocation.
 

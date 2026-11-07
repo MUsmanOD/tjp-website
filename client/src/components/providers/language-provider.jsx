@@ -1,8 +1,9 @@
 "use client";
 
-import { createContext, useContext, useEffect, useSyncExternalStore } from "react";
+import { createContext, useContext, useEffect, useMemo, useSyncExternalStore } from "react";
 import { Direction } from "radix-ui";
 import { defaultLocale, normalizeLocale, translations } from "@/i18n/messages";
+import { applyPageContent, useWebsite } from "@/lib/website-content";
 
 const LanguageContext = createContext(null);
 const storageKey = "tjp-language";
@@ -40,6 +41,8 @@ function setLocale(value) {
 export function LanguageProvider({ children }) {
   const locale = useSyncExternalStore(subscribe, getSnapshot, () => defaultLocale);
   const direction = "ltr";
+  const pages = useWebsite()?.pages;
+  const messages = useMemo(() => applyPageContent(translations[locale], pages, locale), [locale, pages]);
 
   useEffect(() => {
     document.documentElement.lang = locale;
@@ -47,7 +50,7 @@ export function LanguageProvider({ children }) {
   }, [locale, direction]);
 
   return (
-    <LanguageContext.Provider value={{ locale, direction, messages: translations[locale], setLocale }}>
+    <LanguageContext.Provider value={{ locale, direction, messages, setLocale }}>
       <Direction.Provider dir={direction}>{children}</Direction.Provider>
     </LanguageContext.Provider>
   );

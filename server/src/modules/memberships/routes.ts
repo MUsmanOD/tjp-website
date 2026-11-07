@@ -4,32 +4,28 @@ import { z } from "zod";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
 import { Membership, Audit, audit } from "../../infrastructure/models.js";
 import { unseal, digest } from "../../infrastructure/crypto.js";
-import { ApiError } from "../../middleware/security.js";
+import { ApiError, rateLimit } from "../../middleware/security.js";
 import { requireAdmin, requireStepUp } from "../auth.js";
 import { query } from "./query.js";
 import { stored, view } from "./service.js";
 import { membershipSchema, digits } from "./schema.js";
-export const publicMemberships = Router();
-publicMemberships.post("/", async (req, res) => {
-  const data = membershipSchema.parse(req.body),
-    idempotency = z.uuid().parse(req.get("idempotency-key")),
-    payloadHash = digest(JSON.stringify(data));
+async function createMembership(input: unknown, idempotency: string) {
+  const data = membershipSchema.parse(input);
+  const key = digest(idempotency);
+  const payloadHash = digest(JSON.stringify(data));
   const missing: Record<string, string> = {};
   if (!data.gender) missing.gender = "REQUIRED";
   if (!data.religiousCommunity) missing.religiousCommunity = "REQUIRED";
   if (Object.keys(missing).length) throw new ApiError(422, "VALIDATION", missing);
-  const previous = await Membership.findOne({
-    idempotency: digest(idempotency),
-  });
+  const previous = await Membership.findOne({ idempotency: key });
   if (previous) {
     if (previous.payloadHash !== payloadHash)
       throw new ApiError(409, "IDEMPOTENCY");
-    res.status(202).json({ reference: previous.reference });
-    return;
+    return { row: previous, created: false };
   }
   const row = new Membership({
     reference: "TJP-" + randomUUID(),
-    idempotency: digest(idempotency),
+    idempotency: key,
     payloadHash,
     consentVersion: "2026-10-28",
     consentedAt: new Date(),
@@ -39,18 +35,29 @@ publicMemberships.post("/", async (req, res) => {
     await row.save();
   } catch (error: any) {
     if (error.code !== 11000) throw error;
-    const existing = await Membership.findOne({
-      idempotency: digest(idempotency),
-    });
+    const existing = await Membership.findOne({ idempotency: key });
     if (!existing || existing.payloadHash !== payloadHash)
       throw new ApiError(409, "IDEMPOTENCY");
-    res.status(202).json({ reference: existing.reference });
-    return;
+    return { row: existing, created: false };
   }
+  return { row, created: true };
+}
+
+export const publicMemberships = Router();
+publicMemberships.post("/", async (req, res) => {
+  const idempotency = z.uuid().parse(req.get("idempotency-key"));
+  const { row } = await createMembership(req.body, idempotency);
   res.status(202).json({ reference: row.reference });
 });
 export const adminMemberships = Router();
 adminMemberships.use(requireAdmin);
+adminMemberships.post("/", rateLimit("admin-member-create", 30, 3600000), async (req, res) => {
+  const idempotency = z.uuid().parse(req.get("idempotency-key"));
+  const actor = String(res.locals.session.adminId);
+  const { row, created } = await createMembership(req.body, "admin:" + actor + ":" + idempotency);
+  if (created) await audit(actor, "membership-create", String(row._id));
+  res.status(created ? 201 : 200).json({ id: String(row._id), reference: row.reference });
+});
 adminMemberships.get("/", async (req, res) => {
   const { where, page } = query(req.query);
   const [rows, total] = await Promise.all([
@@ -155,6 +162,8 @@ adminMemberships.patch("/:id", async (req, res) => {
       req.body.identity === undefined ? old.identity : req.body.identity,
     religiousCommunity:
       req.body.religiousCommunity ?? old.religiousCommunity ?? "",
+    education: req.body.education ?? old.education ?? "",
+    profession: req.body.profession ?? old.profession ?? "",
   });
   if (
     data.identity !== old.identity ||

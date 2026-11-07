@@ -86,7 +86,7 @@ export function ThemeSelect() {
           )}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" side="top" aria-label={t.theme}>
+      <DropdownMenuContent align="end" side="bottom" aria-label={t.theme}>
         <DropdownMenuRadioGroup value={theme} onValueChange={change}>
           {[
             ["light", Sun],

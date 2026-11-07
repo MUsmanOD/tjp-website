@@ -3,10 +3,10 @@ export const siteConfig = {
   name: "TJP",
   navigation: [
     { key: "home", href: "/#home" },
-    { key: "about", href: "/#about" },
+    { key: "about", href: "/about-us" },
     { key: "focus", href: "/#focus" },
     { key: "gallery", href: "/gallery" },
-    { key: "blogs", href: "/blogs" },
+    { key: "leadership", href: "/leadership" },
     { key: "contact", href: "/contact" },
   ],
   social: [

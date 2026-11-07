@@ -10,22 +10,8 @@ const nextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: "/tjp-punjab-pk-portal",
-        destination: "/admin/login",
-        permanent: true,
-      },
-      {
-        source: "/tjp-admin-dashboard",
-        destination: "/admin",
-        permanent: true,
-      },
-    ];
-  },
   /* config options here */
-  // Nonce-based CSP on membership/admin requires complete request-time rendering.
+  // Nonce-based CSP on membership and the portal requires complete request-time rendering.
   cacheComponents: false,
   partialPrefetching: false,
   async headers() {
@@ -44,12 +30,6 @@ const nextConfig = {
   },
   turbopack: {
     root: fileURLToPath(new URL(".", import.meta.url)),
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
   },
 };
 

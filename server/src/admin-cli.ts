@@ -64,7 +64,7 @@ try {
     String(admin!._id),
   );
   console.info(
-    "Administrator saved. Sign in at /admin/login. Optional 2FA is available under Security in the admin panel.",
+    "Administrator saved. Sign in at /tjp-portal-pubjab-0001-login. Optional 2FA is available under Security in the admin panel.",
   );
 } finally {
   terminal.close();

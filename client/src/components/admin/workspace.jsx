@@ -2,7 +2,13 @@
 import { useState, useEffect, useCallback } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { Overview } from "./overview";
+import { Overview, StatusCards } from "./overview";
+import { HeadingFilters } from "./heading-filters";
+import { MemberRecords } from "./member-records";
+import { SessionRecords } from "./session-records";
+import { SecurityRecords } from "./security-records";
+import { ImportWebsite, WebsiteEditor, websiteViews } from "./website-editor";
+import { ContactInbox } from "./contact-inbox";
 import {
   LayoutDashboard,
   Users,
@@ -10,17 +16,22 @@ import {
   ShieldCheck,
   LogOut,
   Menu,
-  SlidersHorizontal,
   MapPinned,
   ChevronRight,
+  Settings,
+  MapPin,
+  Images,
+  ContactRound,
   Inbox,
+  Plus,
+  PanelsTopLeft,
+  Palette,
+  List,
 } from "lucide-react";
 import {
   Table,
-  TableHeader,
   TableBody,
   TableRow,
-  TableHead,
   TableCell,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
@@ -36,10 +47,10 @@ import { AdminLanguageMenu } from "./language-menu";
 import { SecuritySettings } from "./security-settings";
 import { useQueryClient, useQuery } from "@tanstack/react-query";
 import { useLanguage } from "@/components/providers/language-provider";
+import { DashboardLoading, LogoLoading } from "@/components/providers/website-loading";
 import { Brand } from "@/components/layout/brand";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
 import {
   Dialog,
   DialogContent,
@@ -54,6 +65,14 @@ import {
 } from "@/components/ui/sheet";
 import { ApplicationForm } from "@/components/membership/application-form";
 import { api, clearAuth } from "@/lib/portal-api";
+import { portalPath, portalDashboardPath } from "@/config/portal";
+const navIcons = {
+  overview: LayoutDashboard, members: Users,
+  pages: PanelsTopLeft, branding: Palette, menu: List,
+  contact: MapPin, leaders: ContactRound, gallery: Images, inbox: Inbox,
+  sessions: MonitorSmartphone, security: ShieldCheck, settings: Settings,
+};
+
 export function AdminWorkspace() {
   const { messages, locale } = useLanguage(),
     t = messages.portal,
@@ -64,11 +83,15 @@ export function AdminWorkspace() {
     [error, setError] = useState(""),
     [member, setMember] = useState(null),
     [edit, setEdit] = useState(false),
+    [addingMember, setAddingMember] = useState(false),
     [action, setAction] = useState(null),
     [names, setNames] = useState({}),
     [mobileOpen, setMobileOpen] = useState(false),
     [searchResult, setSearchResult] = useState(null);
-  const mode = params.get("view") || "overview";
+  const requestedView = params.get("view");
+  const mode = Object.hasOwn(navIcons, requestedView) ? requestedView : "overview";
+  const websiteView = websiteViews.includes(mode);
+  const viewLabel = (view) => messages.websiteAdmin[view] || t[view];
   const placeName = (value) =>
     value === "__none__"
       ? t.unspecified
@@ -122,9 +145,10 @@ export function AdminWorkspace() {
     const expired = () => {
       cache.clear();
       setMember(null);
+      setAddingMember(false);
       setSearchResult(null);
       clearAuth();
-      router.replace("/admin/login");
+      router.replace(portalPath);
     };
     window.addEventListener("tjp-session-expired", expired);
     api("/auth/me").then(setIdentity).catch(expired);
@@ -142,7 +166,7 @@ export function AdminWorkspace() {
     isFetching,
   } = useQuery({
     queryKey: ["admin", identity?.sessionId, mode, query],
-    enabled: !!identity,
+    enabled: !!identity && !websiteView,
     queryFn: () => workspaceData(mode, query),
     retry: false,
     gcTime: 0,
@@ -164,7 +188,7 @@ export function AdminWorkspace() {
       else q.delete(k);
     }
     setMobileOpen(false);
-    router.push("/admin?" + q);
+    router.push(portalDashboardPath + "?" + q);
   }
   async function open(id) {
     try {
@@ -209,24 +233,17 @@ export function AdminWorkspace() {
       setError(e.message);
     }
   }
-  const navIcons = {
-    overview: LayoutDashboard,
-    members: Users,
-    sessions: MonitorSmartphone,
-    security: ShieldCheck,
-  };
   const navigation = (
     <>
-      {" "}
       <div className="admin-brand">
         <Brand compact showWordmark />
       </div>
-      <nav aria-label={t.workspace} className="admin-navigation">
-        <span className="admin-sidebar-label">{t.workspace}</span>
-        {["overview", "members", "sessions", "security"].map((view) => (
+      <p className="admin-sidebar-label" aria-hidden="true">{t.workspace}</p>
+      <nav aria-label={t.workspace} className="admin-navigation" data-lenis-prevent>
+        {Object.keys(navIcons).map((view) => (
           <Link
             key={view}
-            href={"/admin?view=" + view}
+            href={portalDashboardPath + "?view=" + view}
             onClick={() => setMobileOpen(false)}
             aria-current={mode === view ? "page" : undefined}
             className={"admin-nav-link " + (mode === view ? "is-active" : "")}
@@ -235,20 +252,15 @@ export function AdminWorkspace() {
               const Icon = navIcons[view];
               return <Icon aria-hidden="true" />;
             })()}
-            <span>{t[view]}</span>
+            <span>{viewLabel(view)}</span>
           </Link>
         ))}
       </nav>
       <div className="admin-sidebar-footer">
-        <div className="admin-sidebar-settings">
-          <div className="admin-preference-controls">
-            <span className="admin-theme-label">{t.theme}</span>
-            <ThemeSelect />
-          </div>
-        </div>
         <Button
+          type="button"
           variant="plain"
-          className="admin-signout"
+          className="admin-signout w-full justify-start"
           onClick={async () => {
             try {
               await api("/auth/logout", { method: "POST" });
@@ -260,12 +272,13 @@ export function AdminWorkspace() {
               cache.clear();
               setIdentity(null);
               setMember(null);
+              setAddingMember(false);
               setSearchResult(null);
               clearAuth();
               const channel = new BroadcastChannel("tjp-auth");
               channel.postMessage("logout");
               channel.close();
-              router.replace("/admin/login");
+              router.replace(portalPath);
             }
           }}
         >
@@ -277,8 +290,8 @@ export function AdminWorkspace() {
   );
   if (!identity)
     return (
-      <main id="main-content" className="p-10" role="status">
-        {t.loading}
+      <main id="main-content">
+        <LogoLoading />
       </main>
     );
   const group = params.get("group") || "country";
@@ -292,251 +305,58 @@ export function AdminWorkspace() {
         </aside>
         <section className="admin-main">
           <header className="admin-topbar">
+            <Button type="button" variant="outline" size="sm" className="lg:hidden" onClick={() => setMobileOpen(true)}>
+              <Menu aria-hidden="true" />{t.menu}
+            </Button>
             <div className="admin-topbar-actions">
+              <ThemeSelect />
               <AdminLanguageMenu />
             </div>
           </header>
           <div className="admin-dashboard-content w-full">
-            <Button
-              variant="outline"
-              className="mb-5 lg:hidden"
-              onClick={() => setMobileOpen(true)}
-            >
-              <Menu aria-hidden="true" />
-              {t.menu}
-            </Button>
             <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
               <SheetContent
                 side={locale === "ur" ? "right" : "left"}
                 closeLabel={messages.common.close}
-                className="admin-mobile-sidebar overflow-y-auto p-5"
+                className="admin-mobile-sidebar w-[min(20rem,calc(100vw_-_1.5rem))] overflow-hidden p-4"
               >
-                <SheetTitle>{t.workspace}</SheetTitle>
-                <SheetDescription>{t.menu}</SheetDescription>
+                <SheetTitle className="sr-only">{t.workspace}</SheetTitle>
+                <SheetDescription className="sr-only">{t.menu}</SheetDescription>
                 <div className="flex min-h-0 flex-1 flex-col">{navigation}</div>
               </SheetContent>
             </Sheet>
             <div className="admin-page-heading">
               <div>
-                <h1>{t[mode] || t.members}</h1>
+                <h1>{viewLabel(mode)}</h1>
               </div>
+              {!websiteView && <HeadingFilters key={mode + ":" + query} mode={mode} params={params} navigate={navigate} t={t} />}
             </div>
-            <p role="alert" className="my-4">
-              {(error ? t.errors[error] || t.errors.INTERNAL : "") ||
-                (loadError
-                  ? t.errors[loadError.message] || t.errors.INTERNAL
-                  : "")}
-            </p>
-            {isFetching && <p role="status">{t.loading}</p>}
-            {mode === "security" && (
-              <SecuritySettings
-                identity={identity}
-                onChanged={async () => {
-                  cache.clear();
-                  setIdentity(await api("/auth/me"));
-                }}
-              />
-            )}
+            {mode === "inbox" && <ContactInbox sessionId={identity.sessionId} />}
+            {mode === "settings" && <ImportWebsite sessionId={identity.sessionId} />}
+            {websiteView && mode !== "inbox" && mode !== "settings" &&
+              <WebsiteEditor key={mode} mode={mode} sessionId={identity.sessionId} />}
+            {(error || loadError) && <p role="alert" className="my-4">
+              {error ? t.errors[error] || t.errors.INTERNAL : t.errors[loadError.message] || t.errors.INTERNAL}
+            </p>}
+            {!websiteView && <DashboardLoading key={mode} busy={isFetching && !result} />}
+            {(mode === "overview" || mode === "members") && stats && <StatusCards stats={stats} variant={mode} />}
+            {mode === "overview" && listing && <MemberRecords listing={listing} t={t} locale={locale} placeName={placeName} open={open} navigate={navigate} />}
             {mode === "overview" && stats && <Overview stats={stats} />}
-            {mode === "sessions" && (
-              <div className="space-y-4">
-                {sessions.map((s) => (
-                  <Card key={s._id} className="p-5">
-                    <p>{new Date(s.createdAt).toLocaleString(locale)}</p>
-                    <p>
-                      {s._id === identity.sessionId
-                        ? t.currentSession
-                        : t.session}
-                    </p>
-                    <Button variant="outline" onClick={() => setAction(s._id)}>
-                      {t.revoke}
-                    </Button>
-                  </Card>
-                ))}
-              </div>
-            )}
+            {mode === "sessions" && result && <SessionRecords sessions={sessions} identity={identity} locale={locale} t={t} params={params} navigate={navigate} setAction={setAction} />}
+            {mode === "security" && <>
+              <SecurityRecords identity={identity} locale={locale} t={t} params={params} />
+              <SecuritySettings identity={identity} onChanged={async () => {
+                cache.clear();
+                setIdentity(await api("/auth/me"));
+              }} />
+            </>}
             {mode === "members" && (
               <>
-                <div className="admin-section-heading">
-                  <div>
-                    <h2>{t.dashboardUi.browseByLocation}</h2>
-                  </div>
-                  <MapPinned aria-hidden="true" />
-                </div>
-                <div className="flex flex-wrap gap-3">
-                  <Button
-                    variant="outline"
-                    onClick={() => router.push("/admin?view=members")}
-                  >
-                    {t.all}
+                <div className="flex justify-end">
+                  <Button type="button" size="sm" onClick={() => setAddingMember(true)}>
+                    <Plus aria-hidden="true" />{messages.websiteAdmin.addMember}
                   </Button>
-                  <Button
-                    variant="outline"
-                    onClick={() =>
-                      router.push("/admin?view=members&group=region")
-                    }
-                  >
-                    {t.homeArea}
-                  </Button>
-                  {[
-                    "country",
-                    "region",
-                    "district",
-                    "locality",
-                    "overseasRegion",
-                    "overseasCity",
-                  ]
-                    .filter((k) => params.get(k))
-                    .map((k) => (
-                      <button
-                        className="rounded border px-3 py-2"
-                        key={k}
-                        onClick={() => {
-                          const q = new URLSearchParams(params);
-                          const levels = [
-                            "country",
-                            "region",
-                            "district",
-                            "locality",
-                            "overseasRegion",
-                            "overseasCity",
-                          ];
-                          const index = levels.indexOf(k);
-                          for (const level of levels.slice(index))
-                            q.delete(level);
-                          q.set("group", k);
-                          q.delete("page");
-                          router.push("/admin?" + q);
-                        }}
-                      >
-                        {t[k]}: {placeName(params.get(k))}
-                      </button>
-                    ))}
                 </div>
-                <div className="my-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                  {tree.map((item) => (
-                    <button
-                      key={item._id || "empty"}
-                      className="admin-location-card"
-                      onClick={() => {
-                        const g =
-                          group === "country"
-                            ? item._id === "PK"
-                              ? "region"
-                              : "overseasRegion"
-                            : {
-                                region: "district",
-                                district: "locality",
-                                overseasRegion: "overseasCity",
-                              }[group];
-                        navigate({
-                          [group]: item._id,
-                          group: g || group,
-                          page: "",
-                        });
-                      }}
-                    >
-                      <span className="admin-location-icon">
-                        <MapPinned aria-hidden="true" />
-                      </span>
-                      <span className="admin-location-name">
-                        {placeName(item._id) || t.unspecified}
-                        <small>
-                          {new Intl.NumberFormat(locale).format(item.count)} ·{" "}
-                          {t.members}
-                        </small>
-                      </span>
-                      <ChevronRight
-                        className="admin-location-arrow rtl:rotate-180"
-                        aria-hidden="true"
-                      />
-                    </button>
-                  ))}
-                </div>
-                <details className="admin-filters">
-                  <summary>
-                    <SlidersHorizontal aria-hidden="true" />
-                    <span>{t.dashboardUi.refineResults}</span>
-                    <ChevronRight
-                      className="admin-filter-chevron"
-                      aria-hidden="true"
-                    />
-                  </summary>
-                  <form
-                    className="grid gap-4 border-t p-5 sm:grid-cols-3"
-                    onSubmit={(e) => {
-                      e.preventDefault();
-                      navigate({
-                        ...Object.fromEntries(
-                          [...new FormData(e.currentTarget)].map(
-                            ([key, value]) => [
-                              key,
-                              value === "all" ? "" : value,
-                            ],
-                          ),
-                        ),
-                        page: "",
-                      });
-                    }}
-                  >
-                    {[
-                      [
-                        "status",
-                        ["pending", "approved", "rejected", "archived"],
-                      ],
-                      ["ageGroup", ["under18", "age18to29", "age30to49", "age50plus", "adult"]],
-                      ["manual", ["true", "false"]],
-                    ].map(([field, options]) => (
-                      <div key={field}>
-                        <label
-                          className="form-label"
-                          htmlFor={"admin-filter-" + field}
-                        >
-                          {t[field]}
-                        </label>
-                        <Select
-                          name={field}
-                          defaultValue={params.get(field) || "all"}
-                          dir={locale === "ur" ? "rtl" : "ltr"}
-                        >
-                          <SelectTrigger id={"admin-filter-" + field}>
-                            <SelectValue />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="all">{t.all}</SelectItem>
-                            {options.map((value) => (
-                              <SelectItem key={value} value={value}>
-                                {field === "manual"
-                                  ? value === "true"
-                                    ? t.yes
-                                    : t.no
-                                  : t[value]}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    ))}
-                    {[
-                      "from",
-                      "to",
-                      "national",
-                      "assembly",
-                      "union",
-                      "ward",
-                    ].map((k) => (
-                      <label key={k}>
-                        {t[k]}
-                        <Input
-                          name={k}
-                          type={["from", "to"].includes(k) ? "date" : "text"}
-                          defaultValue={params.get(k) || ""}
-                        />
-                      </label>
-                    ))}
-                    <Button>{t.filter}</Button>
-                  </form>
-                </details>
                 <form
                   className="admin-search"
                   onSubmit={async (e) => {
@@ -586,86 +406,122 @@ export function AdminWorkspace() {
                   />
                   <Button>{t.search}</Button>
                 </form>
-                <Card className="admin-table-card">
-                  <div className="admin-table-heading">
-                    <div>
-                      <h2>{t.dashboardUi.memberRecords}</h2>
-                    </div>
-                    <span className="admin-period">
-                      {listing?.total ?? listing?.rows?.length ?? 0}
-                    </span>
+                {listing && <MemberRecords listing={listing} t={t} locale={locale} placeName={placeName} open={open} navigate={navigate} />}
+                <div className="admin-section-heading">
+                  <div>
+                    <h2>{t.dashboardUi.browseByLocation}</h2>
                   </div>
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        {["name", "ageGroup", "region", "status", "createdAt"].map((k) => (
-                          <TableHead key={k}>{t[k]}</TableHead>
-                        ))}
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {listing?.rows.map((row) => (
-                        <TableRow key={row.id}>
-                          <TableCell>
-                            <button
-                              className="text-link"
-                              onClick={() => open(row.id)}
-                            >
-                              {row.name}
-                            </button>
-                          </TableCell>
-                          <TableCell>{t[row.ageGroup] || t.unspecified}</TableCell>
-                          <TableCell>{placeName(row.region)}</TableCell>
-                          <TableCell>
-                            <Badge
-                              className={
-                                "admin-status admin-status-" + row.status
-                              }
-                            >
-                              {t[row.status]}
-                            </Badge>
-                          </TableCell>
-                          <TableCell>
-                            {new Date(row.createdAt).toLocaleDateString(locale)}
-                          </TableCell>
-                        </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                  {listing?.rows.length === 0 && (
-                    <div className="admin-table-empty">
-                      <span>
-                        <Inbox aria-hidden="true" />
+                  <MapPinned aria-hidden="true" />
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  <Button
+                    variant="outline"
+                    onClick={() => router.push(portalDashboardPath + "?view=members")}
+                  >
+                    {t.all}
+                  </Button>
+                  <Button
+                    variant="outline"
+                    onClick={() =>
+                      router.push(portalDashboardPath + "?view=members&group=region")
+                    }
+                  >
+                    {t.homeArea}
+                  </Button>
+                  {[
+                    "country",
+                    "region",
+                    "district",
+                    "locality",
+                    "overseasRegion",
+                    "overseasCity",
+                  ]
+                    .filter((k) => params.get(k))
+                    .map((k) => (
+                      <button
+                        className="rounded border px-3 py-2"
+                        key={k}
+                        onClick={() => {
+                          const q = new URLSearchParams(params);
+                          const levels = [
+                            "country",
+                            "region",
+                            "district",
+                            "locality",
+                            "overseasRegion",
+                            "overseasCity",
+                          ];
+                          const index = levels.indexOf(k);
+                          for (const level of levels.slice(index))
+                            q.delete(level);
+                          q.set("group", k);
+                          q.delete("page");
+                          router.push(portalDashboardPath + "?" + q);
+                        }}
+                      >
+                        {t[k]}: {placeName(params.get(k))}
+                      </button>
+                    ))}
+                </div>
+                <div className="my-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {tree.map((item) => (
+                    <button
+                      key={item._id || "empty"}
+                      className="admin-location-card"
+                      onClick={() => {
+                        const g =
+                          group === "country"
+                            ? item._id === "PK"
+                              ? "region"
+                              : "overseasRegion"
+                            : {
+                                region: "district",
+                                district: "locality",
+                                overseasRegion: "overseasCity",
+                              }[group];
+                        navigate({
+                          [group]: item._id,
+                          group: g || group,
+                          page: "",
+                        });
+                      }}
+                    >
+                      <span className="admin-location-icon">
+                        <MapPinned aria-hidden="true" />
                       </span>
-                      <strong>{t.dashboardUi.noMembers}</strong>
-                      <p>{t.dashboardUi.noMembersDescription}</p>
-                    </div>
-                  )}
-                </Card>
-                <div className="mt-4 flex justify-between">
-                  <Button
-                    variant="outline"
-                    disabled={!listing?.page || listing.page <= 1}
-                    onClick={() => navigate({ page: String(listing.page - 1) })}
-                  >
-                    {t.previous}
-                  </Button>
-                  <span>
-                    {listing?.page} / {listing?.pages || 1}
-                  </span>
-                  <Button
-                    variant="outline"
-                    disabled={!listing?.page || listing.page >= listing.pages}
-                    onClick={() => navigate({ page: String(listing.page + 1) })}
-                  >
-                    {t.next}
-                  </Button>
+                      <span className="admin-location-name">
+                        {placeName(item._id) || t.unspecified}
+                        <small>
+                          {new Intl.NumberFormat(locale).format(item.count)} ·{" "}
+                          {t.members}
+                        </small>
+                      </span>
+                      <ChevronRight
+                        className="admin-location-arrow rtl:rotate-180"
+                        aria-hidden="true"
+                      />
+                    </button>
+                  ))}
                 </div>
               </>
             )}
           </div>
         </section>
       </div>
+      <Dialog open={addingMember && mode === "members"} onOpenChange={setAddingMember}>
+        {addingMember && mode === "members" && <DialogContent
+          closeLabel={messages.common.close}
+          className="admin-editor-dialog"
+          aria-describedby={undefined}
+        >
+          <DialogTitle className="heading-card">{messages.websiteAdmin.addMember}</DialogTitle>
+          <ApplicationForm onAdminCreate={async ({ id }) => {
+            setAddingMember(false);
+            await open(id);
+            await load();
+          }} />
+        </DialogContent>}
+      </Dialog>
       <Dialog
         open={!!member}
         onOpenChange={(open) => {
@@ -734,11 +590,13 @@ export function AdminWorkspace() {
                     "assembly",
                     "union",
                     "ward",
+                    "education",
+                    "profession",
                     "occupation",
                     "interests",
                   ].map((k) => {
                     const value = member[k];
-                    const label = ["status", "gender", "religiousCommunity", "ageGroup"].includes(k)
+                    const label = ["status", "gender", "religiousCommunity", "ageGroup", "education", "profession"].includes(k)
                       ? t[value] || value
                       : ["country", "region", "district", "locality"].includes(k)
                         ? placeName(value)
@@ -836,15 +694,22 @@ export function AdminWorkspace() {
 
 async function workspaceData(mode, query) {
   if (mode === "security") return {};
-  if (mode === "overview") return { stats: await api("/admin/analytics") };
   if (mode === "sessions") return { sessions: await api("/auth/sessions") };
+  const stats = api("/admin/analytics");
+  if (mode === "overview") {
+    const q = new URLSearchParams(query);
+    q.delete("view");
+    const [summary, listing] = await Promise.all([stats, api("/admin/memberships?" + q)]);
+    return { stats: summary, listing };
+  }
   const q = new URLSearchParams(query);
   q.delete("view");
   const group = q.get("group") || "country";
   q.delete("group");
-  const [listing, tree] = await Promise.all([
+  const [summary, listing, tree] = await Promise.all([
+    stats,
     api("/admin/memberships?" + q),
     api("/admin/memberships/tree?" + q + "&group=" + group),
   ]);
-  return { listing, tree };
+  return { stats: summary, listing, tree };
 }

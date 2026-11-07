@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -30,7 +31,7 @@ export function LocationPicker({
   return (
     <div>
       <label className="form-label" id={name + "-label"}>
-        {t[name]} *
+        {t[name]} <span className="form-required">*</span>
       </label>
       <Button
         id={"application-" + name}
@@ -40,19 +41,20 @@ export function LocationPicker({
         aria-labelledby={name + "-label"}
         aria-invalid={!!error}
         aria-describedby={error ? name + "-error" : undefined}
-        className="w-full justify-between whitespace-normal text-start"
+        className="location-picker-trigger w-full justify-between whitespace-normal text-start"
         onClick={() => {
           setSearch("");
           setOpen(true);
         }}
       >
-        {manual ? t.other : selected?.[locale] || selected?.en || t.choose}
-        <span aria-hidden="true">⌄</span>
+        {manual ? t.other : selected?.[locale] || selected?.en || t.formPlaceholders[name] || t.choose}
+        <ChevronDown className="ms-auto size-4 shrink-0 text-muted-foreground" aria-hidden="true" />
       </Button>
       {manual && (
         <Input
           className="mt-2"
           aria-label={t[name] + " " + t.other}
+          placeholder={t.formManualPlaceholders[name]}
           aria-invalid={!!error}
           aria-describedby={error ? name + "-error" : undefined}
           value={value}

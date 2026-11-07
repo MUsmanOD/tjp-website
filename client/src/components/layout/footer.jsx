@@ -13,11 +13,14 @@ import { Separator } from "@/components/ui/separator";
 import { mediaCredits } from "@/config/media";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { portalPath } from "@/config/portal";
+import { useWebsite } from "@/lib/website-content";
 
-export function Footer({ name, navigation = siteConfig.navigation, className }) {
+export function Footer({ name, navigation, className }) {
   const { messages } = useLanguage();
   const pathname = usePathname();
-  if (pathname.startsWith("/admin") || pathname === "/login" || pathname === "/signup" || pathname === "/tjp-punjab-pk-portal" || pathname === "/tjp-admin-dashboard") return null;
+  const menu = useWebsite()?.menu;
+  if (pathname.startsWith(portalPath) || pathname === "/signup") return null;
   return (
     <footer className={cn("footer-inverse shrink-0", className)}>
       <Container>
@@ -33,8 +36,7 @@ export function Footer({ name, navigation = siteConfig.navigation, className }) 
               <SiteLink href="/#home" className="footer-top-link" aria-label={messages.common.backToTop}><ArrowUp className="size-4" aria-hidden="true" /></SiteLink>
             </div>
             <nav aria-label={messages.common.footerNavigation} className="footer-navigation">
-              <NavigationLinks items={navigation} />
-              <SiteLink href="/login" className="nav-link">{messages.common.login}</SiteLink>
+              <NavigationLinks items={navigation ?? menu ?? siteConfig.navigation} />
               <SiteLink href="/signup" className="nav-link">{messages.common.signup}</SiteLink>
               <SiteLink href="/membership" className="nav-link">{messages.common.membership}</SiteLink>
             </nav>

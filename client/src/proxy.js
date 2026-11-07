@@ -15,6 +15,8 @@ export function proxy(request) {
     "camera=(), microphone=(), geolocation=()",
   );
   response.headers.set("Cache-Control", "private, no-store");
+  if (request.nextUrl.pathname.startsWith("/tjp-portal-pubjab-0001-login"))
+    response.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
   return response;
 }
-export const config = { matcher: ["/admin/:path*", "/membership"] };
+export const config = { matcher: ["/tjp-portal-pubjab-0001-login", "/tjp-portal-pubjab-0001-login/:path*", "/membership"] };

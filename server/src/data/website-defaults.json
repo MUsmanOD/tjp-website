@@ -1,0 +1,1662 @@
+{
+  "settings": {
+    "name": {
+      "en": "Tehreek Jawanan Pakistan",
+      "ur": "تحریکِ جوانان پاکستان"
+    },
+    "logo": "/images/brand/tjp-logo.png",
+    "social": {
+      "facebook": "https://www.facebook.com/tjpofficial.org/",
+      "x": "https://x.com/TjpOfficial01",
+      "instagram": "",
+      "youtube": ""
+    }
+  },
+  "contact": {
+    "address": {
+      "en": "House No. 4, Lane 1, Park Road, Chak Shehzad, Islamabad, Pakistan",
+      "ur": "مکان نمبر ۴، لین ۱، پارک روڈ، چک شہزاد، اسلام آباد، پاکستان"
+    },
+    "phone": "+923005221884",
+    "email": "",
+    "name": {
+      "en": "",
+      "ur": ""
+    }
+  },
+  "leaders": [
+    {
+      "id": "founder",
+      "order": 0,
+      "published": true,
+      "name": {
+        "en": "Lt. Gen. Hamid Gul",
+        "ur": "لیفٹیننٹ جنرل حمید گل"
+      },
+      "role": {
+        "en": "FOUNDER",
+        "ur": "بانی"
+      },
+      "description": {
+        "en": "TJP’s founder connected the movement’s vision with national unity, development, and self-reliance.",
+        "ur": "ٹی جے پی کے بانی نے تحریک کے وژن کو قومی اتحاد، ترقی اور خود انحصاری سے جوڑا۔"
+      },
+      "alt": {
+        "en": "TJP profile portrait of Lieutenant General Hamid Gul",
+        "ur": "ٹی جے پی کے تعارفی صفحے سے لیفٹیننٹ جنرل حمید گل کی تصویر"
+      },
+      "imageUrl": "/images/leadership/hamid-gul-cutout.png",
+      "source": "https://tjp.org.pk/founder-lt-gen-hamid-gul/"
+    },
+    {
+      "id": "chairman",
+      "order": 1,
+      "published": true,
+      "name": {
+        "en": "Mohammad Abdullah Gul",
+        "ur": "محمد عبداللہ گل"
+      },
+      "role": {
+        "en": "CHAIRMAN",
+        "ur": "چیئرمین"
+      },
+      "description": {
+        "en": "The chairman’s published message highlights youth participation, education, and national development.",
+        "ur": "چیئرمین کے شائع شدہ پیغام میں نوجوانوں کی شرکت، تعلیم اور قومی ترقی پر زور دیا گیا ہے۔"
+      },
+      "alt": {
+        "en": "TJP profile portrait of Chairman Mohammad Abdullah Gul",
+        "ur": "ٹی جے پی کے تعارفی صفحے سے چیئرمین محمد عبداللہ گل کی تصویر"
+      },
+      "imageUrl": "/images/leadership/abdullah-gul-cutout.png",
+      "source": "https://tjp.org.pk/chairman-abdullah-gul/"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "founderArchive",
+      "order": 0,
+      "category": "leadership",
+      "published": true,
+      "title": {
+        "en": "Gen. Hamid Gul · Archive portrait",
+        "ur": "جنرل حمید گل · محفوظ تصویر"
+      },
+      "alt": {
+        "en": "Hamid Gul seated in a grey suit with a framed military portrait behind him",
+        "ur": "سرمئی سوٹ میں بیٹھے حمید گل، پس منظر میں ان کی فوجی تصویر"
+      },
+      "description": {
+        "en": "A portrait preserved in TJP’s media archive. The photograph’s date is not specified.",
+        "ur": "ٹی جے پی کے تصویری ذخیرے سے ایک تصویر۔ اصل ذخیرے میں تصویر کی تاریخ درج نہیں۔"
+      },
+      "imageUrl": "/images/leadership/hamid-gul-archive.webp",
+      "position": "50% 28%",
+      "source": "https://tjp.org.pk/founder-lt-gen-hamid-gul/",
+      "credit": ""
+    },
+    {
+      "id": "chinaMeeting",
+      "order": 1,
+      "category": "meetings",
+      "published": true,
+      "title": {
+        "en": "Meeting with China’s defence attaché",
+        "ur": "چین کے دفاعی اتاشی سے ملاقات"
+      },
+      "alt": {
+        "en": "Abdullah Hamid Gul shaking hands with General Wang between the Pakistan and China flags",
+        "ur": "پاکستان اور چین کے پرچموں کے درمیان جنرل وانگ سے مصافحہ کرتے عبداللہ حمید گل"
+      },
+      "description": {
+        "en": "Abdullah Hamid Gul with General Wang, identified by TJP as China’s defence attaché. Report published 29 July 2024.",
+        "ur": "عبداللہ حمید گل کی جنرل وانگ سے ملاقات، جنہیں ٹی جے پی نے چین کا دفاعی اتاشی بتایا۔ رپورٹ ۲۹ جولائی ۲۰۲۴ کو شائع ہوئی۔"
+      },
+      "imageUrl": "/images/archive/china-defence-attache-meeting.webp",
+      "position": "50% 35%",
+      "source": "https://tjp.org.pk/china-and-pakistan-as-iron-brothers-share-common-vision-to-bring-peace-prosperity-and-happiness-in-this-region-detailed-meeting-with-gen-wang-defence-attache-of-china/",
+      "credit": ""
+    },
+    {
+      "id": "school",
+      "order": 2,
+      "category": "events",
+      "published": true,
+      "title": {
+        "en": "Girls’ education · Sargodha",
+        "ur": "بچیوں کی تعلیم · سرگودھا"
+      },
+      "alt": {
+        "en": "Abdullah Hamid Gul at the General Hamid Gul School prize ceremony for orphan girls",
+        "ur": "یتیم بچیوں کے جنرل حمید گل اسکول کی تقسیمِ انعامات کی تقریب میں عبداللہ حمید گل"
+      },
+      "description": {
+        "en": "A school prize ceremony in Sargodha, reported by TJP on 6 July 2024.",
+        "ur": "سرگودھا میں اسکول کی تقسیمِ انعامات کی تقریب، جس کی رپورٹ ۶ جولائی ۲۰۲۴ کو شائع ہوئی۔"
+      },
+      "imageUrl": "/images/archive/girls-school-prize-ceremony.webp",
+      "position": "50% 35%",
+      "source": "https://tjp.org.pk/annual-prize-distribution-ceremony-at-mujahid-islam-general-hamid-gul-ra-school-for-orphan-girls-sargodha/",
+      "credit": ""
+    },
+    {
+      "id": "founder",
+      "order": 3,
+      "category": "leadership",
+      "published": true,
+      "title": {
+        "en": "Gen. Hamid Gul · Founder",
+        "ur": "جنرل حمید گل · بانی"
+      },
+      "alt": {
+        "en": "TJP profile portrait of Lieutenant General Hamid Gul",
+        "ur": "ٹی جے پی کے تعارفی صفحے سے لیفٹیننٹ جنرل حمید گل کی تصویر"
+      },
+      "description": {
+        "en": "Founder portrait from TJP’s published leadership profile.",
+        "ur": "ٹی جے پی کے شائع شدہ تعارفی صفحے سے بانی کی تصویر۔"
+      },
+      "imageUrl": "/images/leadership/hamid-gul.webp",
+      "position": "50% 20%",
+      "source": "https://tjp.org.pk/founder-lt-gen-hamid-gul/",
+      "credit": ""
+    },
+    {
+      "id": "chairman",
+      "order": 4,
+      "category": "leadership",
+      "published": true,
+      "title": {
+        "en": "Mohammad Abdullah Gul · Chairman",
+        "ur": "محمد عبداللہ گل · چیئرمین"
+      },
+      "alt": {
+        "en": "TJP profile portrait of Chairman Mohammad Abdullah Gul",
+        "ur": "ٹی جے پی کے تعارفی صفحے سے چیئرمین محمد عبداللہ گل کی تصویر"
+      },
+      "description": {
+        "en": "Chairman portrait from TJP’s published leadership profile.",
+        "ur": "ٹی جے پی کے شائع شدہ تعارفی صفحے سے چیئرمین کی تصویر۔"
+      },
+      "imageUrl": "/images/leadership/abdullah-gul.webp",
+      "position": "50% 20%",
+      "source": "https://tjp.org.pk/chairman-abdullah-gul/",
+      "credit": ""
+    },
+    {
+      "id": "barVisit",
+      "order": 5,
+      "category": "meetings",
+      "published": true,
+      "title": {
+        "en": "Central Bar Association · AJK",
+        "ur": "سنٹرل بار ایسوسی ایشن · آزاد کشمیر"
+      },
+      "alt": {
+        "en": "TJP’s photograph accompanying its Central Bar Association visit in Muzaffarabad",
+        "ur": "مظفرآباد میں سنٹرل بار ایسوسی ایشن کے دورے کے ساتھ ٹی جے پی کی شائع شدہ تصویر"
+      },
+      "description": {
+        "en": "TJP’s report of 26 June 2024 records a welcome for the chairman and Tehrik Jawanan Kashmir members in Muzaffarabad.",
+        "ur": "۲۶ جون ۲۰۲۴ کی رپورٹ میں مظفرآباد میں چیئرمین اور تحریکِ جوانان کشمیر کے ارکان کے استقبال کا ذکر ہے۔"
+      },
+      "imageUrl": "/images/archive/central-bar-association-visit.webp",
+      "position": "50% 35%",
+      "source": "https://tjp.org.pk/visit-to-central-bar-association-ajk/",
+      "credit": ""
+    },
+    {
+      "id": "skills",
+      "order": 6,
+      "category": "events",
+      "published": true,
+      "title": {
+        "en": "Skills & technology address",
+        "ur": "ہنر اور ٹیکنالوجی پر خطاب"
+      },
+      "alt": {
+        "en": "Abdullah Hamid Gul speaking at the Lions Club and National Technical Institute event",
+        "ur": "لائنز کلب اور نیشنل ٹیکنیکل انسٹی ٹیوٹ کی تقریب سے خطاب کرتے عبداللہ حمید گل"
+      },
+      "description": {
+        "en": "An address on youth skills and technology, reported by TJP on 30 January 2025.",
+        "ur": "نوجوانوں کے ہنر اور ٹیکنالوجی پر خطاب، جس کی رپورٹ ۳۰ جنوری ۲۰۲۵ کو شائع ہوئی۔"
+      },
+      "imageUrl": "/images/archive/skills-address.webp",
+      "position": "50% 35%",
+      "source": "https://tjp.org.pk/artificial-intelligence-cant-compete-human-intelligence/",
+      "credit": ""
+    },
+    {
+      "id": "sports",
+      "order": 7,
+      "category": "events",
+      "published": true,
+      "title": {
+        "en": "Islamabad schools sports festival",
+        "ur": "اسلام آباد کا اسکول اسپورٹس فیسٹیول"
+      },
+      "alt": {
+        "en": "Abdullah Hamid Gul at Islamabad’s 500 Schools Sports Festival",
+        "ur": "اسلام آباد کے ۵۰۰ اسکولز اسپورٹس فیسٹیول میں عبداللہ حمید گل"
+      },
+      "description": {
+        "en": "TJP’s report of 22 January 2025 identifies Abdullah Hamid Gul as chief guest at the festival.",
+        "ur": "۲۲ جنوری ۲۰۲۵ کی ٹی جے پی رپورٹ کے مطابق عبداللہ حمید گل تقریب کے مہمانِ خصوصی تھے۔"
+      },
+      "imageUrl": "/images/archive/schools-sports-festival.webp",
+      "position": "50% 35%",
+      "source": "https://tjp.org.pk/sports-instills-an-energetic-and-positive-mindset-along-with-health-in-children/",
+      "credit": ""
+    },
+    {
+      "id": "book",
+      "order": 8,
+      "category": "events",
+      "published": true,
+      "title": {
+        "en": "The Lost War · Book launch invitation",
+        "ur": "دی لاسٹ وار · تقریبِ رونمائی کا دعوت نامہ"
+      },
+      "alt": {
+        "en": "Archived invitation poster for the book launch of The Lost War",
+        "ur": "کتاب دی لاسٹ وار کی رونمائی کا محفوظ دعوتی پوسٹر"
+      },
+      "description": {
+        "en": "An invitation published on 25 July 2024, preserved as an archive item.",
+        "ur": "۲۵ جولائی ۲۰۲۴ کو شائع شدہ دعوت نامہ، ماضی کے ریکارڈ کے طور پر محفوظ۔"
+      },
+      "imageUrl": "/images/archive/the-lost-war-invitation.webp",
+      "position": "50% 50%",
+      "source": "https://tjp.org.pk/book-launch-ceremony-the-lost-war/",
+      "credit": ""
+    },
+    {
+      "id": "islamabad",
+      "order": 9,
+      "category": "heritage",
+      "published": true,
+      "title": {
+        "en": "Islamabad · Faisal Mosque",
+        "ur": "اسلام آباد · فیصل مسجد"
+      },
+      "alt": {
+        "en": "Faisal Mosque framed by the Margalla Hills in Islamabad",
+        "ur": "اسلام آباد میں مارگلہ کی پہاڑیوں کے دامن میں فیصل مسجد"
+      },
+      "description": {
+        "en": "Shoaib Zafar · Heritage photography · CC BY-SA 4.0.",
+        "ur": "شعیب ظفر کی ثقافتی تصویر · سی سی بی وائی ایس اے ۴.۰۔"
+      },
+      "imageUrl": "/images/home/islamabad.webp",
+      "position": "50% 50%",
+      "source": "https://commons.wikimedia.org/wiki/File:Faisal_Mosque_nestled_in_Margalla_Hills.jpg",
+      "credit": "Shoaib Zafar"
+    },
+    {
+      "id": "hunza",
+      "order": 10,
+      "category": "landscapes",
+      "published": true,
+      "title": {
+        "en": "Hunza Valley",
+        "ur": "وادیٔ ہنزہ"
+      },
+      "alt": {
+        "en": "Hunza Valley surrounded by the mountains of northern Pakistan",
+        "ur": "شمالی پاکستان کے پہاڑوں میں گھری وادیٔ ہنزہ"
+      },
+      "description": {
+        "en": "Rizwan Bhiriya (RB) · Landscape photography · CC BY-SA 4.0.",
+        "ur": "رضوان بھیریا کی قدرتی منظر کی تصویر · سی سی بی وائی ایس اے ۴.۰۔"
+      },
+      "imageUrl": "/images/home/hunza.webp",
+      "position": "50% 50%",
+      "source": "https://commons.wikimedia.org/wiki/File:Hunza_Valley_,_The_land_of_the_Angels.jpg",
+      "credit": "Rizwan Bhiriya (RB)"
+    },
+    {
+      "id": "lahore",
+      "order": 11,
+      "category": "heritage",
+      "published": true,
+      "title": {
+        "en": "Lahore · Badshahi Mosque",
+        "ur": "لاہور · بادشاہی مسجد"
+      },
+      "alt": {
+        "en": "The courtyard and domes of Badshahi Mosque in Lahore",
+        "ur": "لاہور میں بادشاہی مسجد کا صحن اور گنبد"
+      },
+      "description": {
+        "en": "Ch Humayun Hanif · Heritage photography · CC BY-SA 4.0.",
+        "ur": "چوہدری ہمایوں حنیف کی ثقافتی تصویر · سی سی بی وائی ایس اے ۴.۰۔"
+      },
+      "imageUrl": "/images/home/lahore.webp",
+      "position": "50% 50%",
+      "source": "https://commons.wikimedia.org/wiki/File:Badshahi_Mosque_(Front_View).jpg",
+      "credit": "Ch Humayun Hanif"
+    },
+    {
+      "id": "karachi",
+      "order": 12,
+      "category": "heritage",
+      "published": true,
+      "title": {
+        "en": "Karachi · Mazar-e-Quaid",
+        "ur": "کراچی · مزارِ قائد"
+      },
+      "alt": {
+        "en": "The white marble Mazar-e-Quaid in Karachi",
+        "ur": "کراچی میں سفید سنگِ مرمر سے بنا مزارِ قائد"
+      },
+      "description": {
+        "en": "Abbas jaffri.9 · Heritage photography · CC BY-SA 4.0.",
+        "ur": "عباس جعفری کی ثقافتی تصویر · سی سی بی وائی ایس اے ۴.۰۔"
+      },
+      "imageUrl": "/images/home/karachi.webp",
+      "position": "50% 50%",
+      "source": "https://commons.wikimedia.org/wiki/File:MAZAR_E_QUAID.jpg",
+      "credit": "Abbas jaffri.9"
+    }
+  ],
+  "pages": {
+    "site": [
+      {
+        "path": "announcement.text",
+        "label": {
+          "en": "Announcement · Text",
+          "ur": "اعلان · متن"
+        },
+        "value": {
+          "en": "A shared future starts with you.",
+          "ur": "مشترکہ مستقبل کا آغاز آپ سے۔"
+        }
+      },
+      {
+        "path": "announcement.action",
+        "label": {
+          "en": "Announcement · Button label",
+          "ur": "اعلان · بٹن کا متن"
+        },
+        "value": {
+          "en": "Explore membership",
+          "ur": "رکنیت کے بارے میں جانیں"
+        }
+      },
+      {
+        "path": "footer.description",
+        "label": {
+          "en": "Footer · Description",
+          "ur": "فوٹر · تفصیل"
+        },
+        "value": {
+          "en": "Tehreek Jawanan Pakistan · Unity, Prosperity, Progress.",
+          "ur": "تحریکِ جوانان پاکستان · اتحاد، خوشحالی، ترقی۔"
+        }
+      },
+      {
+        "path": "footer.rights",
+        "label": {
+          "en": "Footer · Copyright",
+          "ur": "فوٹر · حقوق"
+        },
+        "value": {
+          "en": "TJP. All rights reserved.",
+          "ur": "ٹی جے پی۔ جملہ حقوق محفوظ ہیں۔"
+        }
+      },
+      {
+        "path": "footer.madeFor",
+        "label": {
+          "en": "Footer · Closing line",
+          "ur": "فوٹر · اختتامی عبارت"
+        },
+        "value": {
+          "en": "For Pakistan. For tomorrow.",
+          "ur": "پاکستان کے لیے۔ آنے والے کل کے لیے۔"
+        }
+      },
+      {
+        "path": "sections.join.eyebrow",
+        "label": {
+          "en": "Join banner · Eyebrow",
+          "ur": "شمولیت کا بینر · ذیلی عنوان"
+        },
+        "value": {
+          "en": "YOUR VOICE MATTERS",
+          "ur": "آپ کی آواز اہم ہے"
+        }
+      },
+      {
+        "path": "sections.join.title",
+        "label": {
+          "en": "Join banner · Title",
+          "ur": "شمولیت کا بینر · عنوان"
+        },
+        "value": {
+          "en": "A shared tomorrow\nstarts with us.",
+          "ur": "مشترکہ کل کا آغاز\nہم سے ہوتا ہے۔"
+        }
+      },
+      {
+        "path": "sections.join.description",
+        "label": {
+          "en": "Join banner · Description",
+          "ur": "شمولیت کا بینر · تفصیل"
+        },
+        "value": {
+          "en": "Apply to join Tehreek Jawanan Pakistan.",
+          "ur": "تحریکِ جوانان پاکستان کی رکنیت کے لیے درخواست دیں۔"
+        }
+      },
+      {
+        "path": "sections.join.action",
+        "label": {
+          "en": "Join banner · Button label",
+          "ur": "شمولیت کا بینر · بٹن کا متن"
+        },
+        "value": {
+          "en": "Explore membership",
+          "ur": "رکنیت کے بارے میں جانیں"
+        }
+      },
+      {
+        "path": "sections.join.secondary",
+        "label": {
+          "en": "Join banner · Secondary link",
+          "ur": "شمولیت کا بینر · دوسرا لنک"
+        },
+        "value": {
+          "en": "Let’s talk",
+          "ur": "بات کریں"
+        }
+      }
+    ],
+    "home": [
+      {
+        "path": "home.slides.0.title",
+        "label": {
+          "en": "Hero 1 · Title",
+          "ur": "ہیرو 1 · عنوان"
+        },
+        "value": {
+          "en": "A shared vision.",
+          "ur": "مشترکہ تصور۔"
+        }
+      },
+      {
+        "path": "home.slides.0.accent",
+        "label": {
+          "en": "Hero 1 · Accent",
+          "ur": "ہیرو 1 · نمایاں عبارت"
+        },
+        "value": {
+          "en": "A stronger Pakistan.",
+          "ur": "مضبوط پاکستان۔"
+        }
+      },
+      {
+        "path": "home.slides.0.description",
+        "label": {
+          "en": "Hero 1 · Description",
+          "ur": "ہیرو 1 · تفصیل"
+        },
+        "value": {
+          "en": "Discover Gen. Hamid Gul’s founding vision of unity and self-reliance.",
+          "ur": "قومی یکجہتی اور خود انحصاری پر جنرل حمید گل کے بنیادی تصور کو جانیں۔"
+        }
+      },
+      {
+        "path": "home.slides.0.alt",
+        "label": {
+          "en": "Hero 1 · Image description",
+          "ur": "ہیرو 1 · تصویر کی وضاحت"
+        },
+        "value": {
+          "en": "TJP’s published founder banner featuring Gen. Hamid Gul",
+          "ur": "جنرل حمید گل کی تصویر پر مشتمل ٹی جے پی کا شائع شدہ بینر"
+        }
+      },
+      {
+        "path": "home.slides.1.title",
+        "label": {
+          "en": "Hero 2 · Title",
+          "ur": "ہیرو 2 · عنوان"
+        },
+        "value": {
+          "en": "Building connections.",
+          "ur": "تعلقات کی تعمیر۔"
+        }
+      },
+      {
+        "path": "home.slides.1.accent",
+        "label": {
+          "en": "Hero 2 · Accent",
+          "ur": "ہیرو 2 · نمایاں عبارت"
+        },
+        "value": {
+          "en": "Opening dialogue.",
+          "ur": "مکالمے کا آغاز۔"
+        }
+      },
+      {
+        "path": "home.slides.1.description",
+        "label": {
+          "en": "Hero 2 · Description",
+          "ur": "ہیرو 2 · تفصیل"
+        },
+        "value": {
+          "en": "Explore the chairman’s meetings and public engagements in our archive.",
+          "ur": "چیئرمین کی ملاقاتیں اور عوامی سرگرمیاں ہمارے محفوظ ریکارڈ میں دیکھیں۔"
+        }
+      },
+      {
+        "path": "home.slides.1.alt",
+        "label": {
+          "en": "Hero 2 · Image description",
+          "ur": "ہیرو 2 · تصویر کی وضاحت"
+        },
+        "value": {
+          "en": "Abdullah Hamid Gul meeting General Wang, China’s defence attaché",
+          "ur": "چین کے دفاعی اتاشی جنرل وانگ سے ملاقات کرتے عبداللہ حمید گل"
+        }
+      },
+      {
+        "path": "home.slides.2.title",
+        "label": {
+          "en": "Hero 3 · Title",
+          "ur": "ہیرو 3 · عنوان"
+        },
+        "value": {
+          "en": "Learning today.",
+          "ur": "آج کی تعلیم۔"
+        }
+      },
+      {
+        "path": "home.slides.2.accent",
+        "label": {
+          "en": "Hero 3 · Accent",
+          "ur": "ہیرو 3 · نمایاں عبارت"
+        },
+        "value": {
+          "en": "Possibilities tomorrow.",
+          "ur": "کل کے امکانات۔"
+        }
+      },
+      {
+        "path": "home.slides.2.description",
+        "label": {
+          "en": "Hero 3 · Description",
+          "ur": "ہیرو 3 · تفصیل"
+        },
+        "value": {
+          "en": "A look at educational activities and community engagement.",
+          "ur": "تعلیمی سرگرمیوں اور سماجی شرکت کی ایک جھلک۔"
+        }
+      },
+      {
+        "path": "home.slides.2.alt",
+        "label": {
+          "en": "Hero 3 · Image description",
+          "ur": "ہیرو 3 · تصویر کی وضاحت"
+        },
+        "value": {
+          "en": "A school prize ceremony in Sargodha attended by Abdullah Hamid Gul",
+          "ur": "سرگودھا میں تقسیمِ انعامات کی تقریب میں عبداللہ حمید گل کی شرکت"
+        }
+      },
+      {
+        "path": "home.slides.3.title",
+        "label": {
+          "en": "Hero 4 · Title",
+          "ur": "ہیرو 4 · عنوان"
+        },
+        "value": {
+          "en": "Many voices.",
+          "ur": "مختلف آوازیں۔"
+        }
+      },
+      {
+        "path": "home.slides.3.accent",
+        "label": {
+          "en": "Hero 4 · Accent",
+          "ur": "ہیرو 4 · نمایاں عبارت"
+        },
+        "value": {
+          "en": "One Pakistan.",
+          "ur": "ایک پاکستان۔"
+        }
+      },
+      {
+        "path": "home.slides.3.description",
+        "label": {
+          "en": "Hero 4 · Description",
+          "ur": "ہیرو 4 · تفصیل"
+        },
+        "value": {
+          "en": "Youth participation, civic responsibility, and a shared future.",
+          "ur": "نوجوانوں کی شرکت، شہری ذمہ داری اور ایک مشترکہ مستقبل۔"
+        }
+      },
+      {
+        "path": "home.slides.3.alt",
+        "label": {
+          "en": "Hero 4 · Image description",
+          "ur": "ہیرو 4 · تصویر کی وضاحت"
+        },
+        "value": {
+          "en": "Faisal Mosque framed by the Margalla Hills in Islamabad",
+          "ur": "اسلام آباد میں مارگلہ کی پہاڑیوں کے دامن میں فیصل مسجد"
+        }
+      },
+      {
+        "path": "home.about.eyebrow",
+        "label": {
+          "en": "About preview · Eyebrow",
+          "ur": "تعارف · ذیلی عنوان"
+        },
+        "value": {
+          "en": "ABOUT US",
+          "ur": "ہمارا تعارف"
+        }
+      },
+      {
+        "path": "home.about.title",
+        "label": {
+          "en": "About preview · Title",
+          "ur": "تعارف · عنوان"
+        },
+        "value": {
+          "en": "A shared purpose.\nA stronger Pakistan.",
+          "ur": "مشترکہ مقصد۔\nمضبوط پاکستان۔"
+        }
+      },
+      {
+        "path": "home.about.description",
+        "label": {
+          "en": "About preview · Description",
+          "ur": "تعارف · تفصیل"
+        },
+        "value": {
+          "en": "Founded by Gen. Hamid Gul, Tehreek Jawanan Pakistan is a youth-focused political movement. Its published vision centres on national unity, self-reliance, and development through peaceful, lawful participation.",
+          "ur": "جنرل حمید گل کی قائم کردہ تحریکِ جوانان پاکستان نوجوانوں پر توجہ دینے والی سیاسی تحریک ہے۔ اس کے شائع شدہ تصور میں قومی یکجہتی، خود انحصاری اور پُرامن قانونی شرکت کے ذریعے ترقی کو اہمیت دی گئی ہے۔"
+        }
+      },
+      {
+        "path": "home.about.leadership",
+        "label": {
+          "en": "About preview · Leadership summary",
+          "ur": "تعارف · قیادت کا خلاصہ"
+        },
+        "value": {
+          "en": "Chairman Mohammad Abdullah Gul’s published message highlights education, entrepreneurship, and civic responsibility.",
+          "ur": "چیئرمین محمد عبداللہ گل کے شائع شدہ پیغام میں تعلیم، کاروباری صلاحیت اور شہری ذمہ داری نمایاں ہیں۔"
+        }
+      },
+      {
+        "path": "home.about.note",
+        "label": {
+          "en": "About preview · Note",
+          "ur": "تعارف · نوٹ"
+        },
+        "value": {
+          "en": "Unity. Prosperity. Progress.",
+          "ur": "اتحاد۔ خوشحالی۔ ترقی۔"
+        }
+      },
+      {
+        "path": "home.about.link",
+        "label": {
+          "en": "About preview · Link label",
+          "ur": "تعارف · لنک کا متن"
+        },
+        "value": {
+          "en": "Discover our story",
+          "ur": "ہماری کہانی جانیے"
+        }
+      },
+      {
+        "path": "home.focus.eyebrow",
+        "label": {
+          "en": "Our focus · Eyebrow",
+          "ur": "ہمارے مقاصد · ذیلی عنوان"
+        },
+        "value": {
+          "en": "LOOKING AHEAD",
+          "ur": "مستقبل کی جانب"
+        }
+      },
+      {
+        "path": "home.focus.title",
+        "label": {
+          "en": "Our focus · Title",
+          "ur": "ہمارے مقاصد · عنوان"
+        },
+        "value": {
+          "en": "Ideas that bring us together.",
+          "ur": "وہ خیالات جو ہمیں یکجا کریں۔"
+        }
+      },
+      {
+        "path": "home.focus.description",
+        "label": {
+          "en": "Our focus · Description",
+          "ur": "ہمارے مقاصد · تفصیل"
+        },
+        "value": {
+          "en": "Priorities drawn from TJP’s published vision for a self-reliant Pakistan.",
+          "ur": "خود انحصار پاکستان کے لیے ٹی جے پی کے شائع شدہ تصور سے اخذ کردہ ترجیحات۔"
+        }
+      },
+      {
+        "path": "home.focus.items.0.title",
+        "label": {
+          "en": "Focus 1 · Title",
+          "ur": "مقصد 1 · عنوان"
+        },
+        "value": {
+          "en": "Education & skills",
+          "ur": "تعلیم اور ہنر"
+        }
+      },
+      {
+        "path": "home.focus.items.0.description",
+        "label": {
+          "en": "Focus 1 · Description",
+          "ur": "مقصد 1 · تفصیل"
+        },
+        "value": {
+          "en": "A stated focus on learning, practical skills, and opportunities for young people.",
+          "ur": "تعلیم، عملی مہارتوں اور نوجوانوں کے لیے مواقع پر توجہ۔"
+        }
+      },
+      {
+        "path": "home.focus.items.1.title",
+        "label": {
+          "en": "Focus 2 · Title",
+          "ur": "مقصد 2 · عنوان"
+        },
+        "value": {
+          "en": "National unity",
+          "ur": "قومی یکجہتی"
+        }
+      },
+      {
+        "path": "home.focus.items.1.description",
+        "label": {
+          "en": "Focus 2 · Description",
+          "ur": "مقصد 2 · تفصیل"
+        },
+        "value": {
+          "en": "Respect for cultural diversity, civic responsibility, and peaceful participation.",
+          "ur": "ثقافتی تنوع کا احترام، شہری ذمہ داری اور پُرامن شرکت۔"
+        }
+      },
+      {
+        "path": "home.focus.items.2.title",
+        "label": {
+          "en": "Focus 3 · Title",
+          "ur": "مقصد 3 · عنوان"
+        },
+        "value": {
+          "en": "Self-reliance & progress",
+          "ur": "خود انحصاری اور ترقی"
+        }
+      },
+      {
+        "path": "home.focus.items.2.description",
+        "label": {
+          "en": "Focus 3 · Description",
+          "ur": "مقصد 3 · تفصیل"
+        },
+        "value": {
+          "en": "A vision for local enterprise, innovation, and sustainable national development.",
+          "ur": "مقامی کاروبار، جدت اور پائیدار قومی ترقی کا تصور۔"
+        }
+      },
+      {
+        "path": "sections.gallery.eyebrow",
+        "label": {
+          "en": "Gallery preview · Eyebrow",
+          "ur": "گیلری · ذیلی عنوان"
+        },
+        "value": {
+          "en": "THE TJP PHOTO ARCHIVE",
+          "ur": "ٹی جے پی کا تصویری ذخیرہ"
+        }
+      },
+      {
+        "path": "sections.gallery.title",
+        "label": {
+          "en": "Gallery preview · Title",
+          "ur": "گیلری · عنوان"
+        },
+        "value": {
+          "en": "People. Purpose. Participation.",
+          "ur": "لوگ۔ مقصد۔ شرکت۔"
+        }
+      },
+      {
+        "path": "sections.gallery.description",
+        "label": {
+          "en": "Gallery preview · Description",
+          "ur": "گیلری · تفصیل"
+        },
+        "value": {
+          "en": "Discover our leadership, public engagements, and the places that connect us.",
+          "ur": "ہماری قیادت، عوامی سرگرمیوں اور مشترکہ ورثے کی تصویری جھلکیاں۔"
+        }
+      },
+      {
+        "path": "sections.gallery.action",
+        "label": {
+          "en": "Gallery preview · Button label",
+          "ur": "گیلری · بٹن کا متن"
+        },
+        "value": {
+          "en": "View the gallery",
+          "ur": "گیلری دیکھیں"
+        }
+      },
+      {
+        "path": "sections.participate.eyebrow",
+        "label": {
+          "en": "Participation · Eyebrow",
+          "ur": "شرکت · ذیلی عنوان"
+        },
+        "value": {
+          "en": "MAKE A CONNECTION",
+          "ur": "رابطہ بڑھائیں"
+        }
+      },
+      {
+        "path": "sections.participate.title",
+        "label": {
+          "en": "Participation · Title",
+          "ur": "شرکت · عنوان"
+        },
+        "value": {
+          "en": "There’s a place for your voice.",
+          "ur": "آپ کی آواز کے لیے جگہ ہے۔"
+        }
+      },
+      {
+        "path": "sections.participate.description",
+        "label": {
+          "en": "Participation · Description",
+          "ur": "شرکت · تفصیل"
+        },
+        "value": {
+          "en": "Start with what matters to you. Discover a way to take part.",
+          "ur": "اپنی دلچسپی سے آغاز کریں اور شرکت کا راستہ تلاش کریں۔"
+        }
+      },
+      {
+        "path": "sections.participate.items.0.title",
+        "label": {
+          "en": "Participation 1 · Title",
+          "ur": "شرکت 1 · عنوان"
+        },
+        "value": {
+          "en": "Explore membership",
+          "ur": "رکنیت کے بارے میں جانیں"
+        }
+      },
+      {
+        "path": "sections.participate.items.0.description",
+        "label": {
+          "en": "Participation 1 · Description",
+          "ur": "شرکت 1 · تفصیل"
+        },
+        "value": {
+          "en": "Apply online to join TJP.",
+          "ur": "ٹی جے پی کی رکنیت کے لیے آن لائن درخواست دیں۔"
+        }
+      },
+      {
+        "path": "sections.participate.items.0.action",
+        "label": {
+          "en": "Participation 1 · Button label",
+          "ur": "شرکت 1 · بٹن کا متن"
+        },
+        "value": {
+          "en": "Membership form",
+          "ur": "رکنیت کا فارم"
+        }
+      },
+      {
+        "path": "sections.participate.items.1.title",
+        "label": {
+          "en": "Participation 2 · Title",
+          "ur": "شرکت 2 · عنوان"
+        },
+        "value": {
+          "en": "Share a perspective",
+          "ur": "اپنا نقطۂ نظر پیش کریں"
+        }
+      },
+      {
+        "path": "sections.participate.items.1.description",
+        "label": {
+          "en": "Participation 2 · Description",
+          "ur": "شرکت 2 · تفصیل"
+        },
+        "value": {
+          "en": "Questions, ideas, or a conversation worth starting? Get in touch.",
+          "ur": "کوئی سوال، خیال یا اہم گفتگو؟ ہم سے رابطہ کریں۔"
+        }
+      },
+      {
+        "path": "sections.participate.items.1.action",
+        "label": {
+          "en": "Participation 2 · Button label",
+          "ur": "شرکت 2 · بٹن کا متن"
+        },
+        "value": {
+          "en": "Contact us",
+          "ur": "رابطہ کریں"
+        }
+      },
+      {
+        "path": "sections.participate.items.2.title",
+        "label": {
+          "en": "Participation 3 · Title",
+          "ur": "شرکت 3 · عنوان"
+        },
+        "value": {
+          "en": "Explore our gallery",
+          "ur": "تصویری گیلری دیکھیں"
+        }
+      },
+      {
+        "path": "sections.participate.items.2.description",
+        "label": {
+          "en": "Participation 3 · Description",
+          "ur": "شرکت 3 · تفصیل"
+        },
+        "value": {
+          "en": "Discover people, places, and moments from the TJP archive.",
+          "ur": "ٹی جے پی کے ذخیرے سے شخصیات، مقامات اور یادگار لمحات دیکھیے۔"
+        }
+      },
+      {
+        "path": "sections.participate.items.2.action",
+        "label": {
+          "en": "Participation 3 · Button label",
+          "ur": "شرکت 3 · بٹن کا متن"
+        },
+        "value": {
+          "en": "View the gallery",
+          "ur": "گیلری دیکھیں"
+        }
+      },
+      {
+        "path": "social.eyebrow",
+        "label": {
+          "en": "Social section · Eyebrow",
+          "ur": "سوشل سیکشن · ذیلی عنوان"
+        },
+        "value": {
+          "en": "THE CONVERSATION CONTINUES",
+          "ur": "گفتگو جاری ہے"
+        }
+      },
+      {
+        "path": "social.title",
+        "label": {
+          "en": "Social section · Title",
+          "ur": "سوشل سیکشن · عنوان"
+        },
+        "value": {
+          "en": "Ideas worth sharing.",
+          "ur": "وہ خیالات جو بانٹنے کے قابل ہیں۔"
+        }
+      },
+      {
+        "path": "social.description",
+        "label": {
+          "en": "Social section · Description",
+          "ur": "سوشل سیکشن · تفصیل"
+        },
+        "value": {
+          "en": "Follow TJP and join the conversation on our social channels.",
+          "ur": "ہمارے سماجی رابطوں کے ذرائع پر ٹی جے پی سے جڑیں اور گفتگو میں شریک ہوں۔"
+        }
+      }
+    ],
+    "about": [
+      {
+        "path": "aboutPage.intro.eyebrow",
+        "label": {
+          "en": "Intro · Eyebrow",
+          "ur": "تعارف · ذیلی عنوان"
+        },
+        "value": {
+          "en": "ABOUT TJP",
+          "ur": "ٹی جے پی کا تعارف"
+        }
+      },
+      {
+        "path": "aboutPage.intro.title",
+        "label": {
+          "en": "Intro · Title",
+          "ur": "تعارف · عنوان"
+        },
+        "value": {
+          "en": "A shared purpose for Pakistan.",
+          "ur": "پاکستان کے لیے مشترکہ مقصد"
+        }
+      },
+      {
+        "path": "aboutPage.intro.description",
+        "label": {
+          "en": "Intro · Description",
+          "ur": "تعارف · تفصیل"
+        },
+        "value": {
+          "en": "Discover the movement, its leadership and the principles in its manifesto.",
+          "ur": "تحریک، اس کی قیادت اور منشور کے اصولوں سے واقف ہوں۔"
+        }
+      },
+      {
+        "path": "aboutPage.storyTitle",
+        "label": {
+          "en": "About · Story heading",
+          "ur": "ہمارے بارے میں · تعارف کی سرخی"
+        },
+        "value": {
+          "en": "Our story and purpose",
+          "ur": "ہماری کہانی اور مقصد"
+        }
+      },
+      {
+        "path": "aboutPage.focusTitle",
+        "label": {
+          "en": "About · Focus heading",
+          "ur": "ہمارے بارے میں · مقاصد کی سرخی"
+        },
+        "value": {
+          "en": "A vision for the future",
+          "ur": "مستقبل کا وژن"
+        }
+      },
+      {
+        "path": "aboutPage.story.0",
+        "label": {
+          "en": "Story · Item 1",
+          "ur": "کہانی · نکتہ 1"
+        },
+        "value": {
+          "en": "Founded by Gen. Hamid Gul, Tehreek Jawanan Pakistan is a youth-focused political movement. Its published vision centres on national unity, self-reliance, and development through peaceful, lawful participation.",
+          "ur": "جنرل حمید گل کی قائم کردہ تحریکِ جوانان پاکستان نوجوانوں پر توجہ دینے والی سیاسی تحریک ہے۔ اس کے شائع شدہ تصور میں قومی یکجہتی، خود انحصاری اور پُرامن قانونی شرکت کے ذریعے ترقی کو اہمیت دی گئی ہے۔"
+        }
+      },
+      {
+        "path": "aboutPage.story.1",
+        "label": {
+          "en": "Story · Item 2",
+          "ur": "کہانی · نکتہ 2"
+        },
+        "value": {
+          "en": "Chairman Mohammad Abdullah Gul’s published message highlights education, entrepreneurship, and civic responsibility.",
+          "ur": "چیئرمین محمد عبداللہ گل کے شائع شدہ پیغام میں تعلیم، کاروباری صلاحیت اور شہری ذمہ داری نمایاں ہیں۔"
+        }
+      },
+      {
+        "path": "home.manifesto.eyebrow",
+        "label": {
+          "en": "Manifesto · Eyebrow",
+          "ur": "منشور · ذیلی عنوان"
+        },
+        "value": {
+          "en": "OUR MANIFESTO",
+          "ur": "ہمارا منشور"
+        }
+      },
+      {
+        "path": "home.manifesto.title",
+        "label": {
+          "en": "Manifesto · Title",
+          "ur": "منشور · عنوان"
+        },
+        "value": {
+          "en": "The manifesto of Tehreek-e-Jawanan Pakistan",
+          "ur": "تحریکِ جوانان پاکستان کا منشور"
+        }
+      },
+      {
+        "path": "home.manifesto.items.0",
+        "label": {
+          "en": "Manifesto · Item 1",
+          "ur": "منشور · نکتہ 1"
+        },
+        "value": {
+          "en": "To implement the Constitution of Tehreek-e-Jawanan Pakistan in its true spirit and establish justice in the country.",
+          "ur": "آئینِ پاکستان پر اس کی اصل روح کے مطابق عمل درآمد اور ملک میں انصاف کے قیام کے لیے جدوجہد کرنا۔"
+        }
+      },
+      {
+        "path": "home.manifesto.items.1",
+        "label": {
+          "en": "Manifesto · Item 2",
+          "ur": "منشور · نکتہ 2"
+        },
+        "value": {
+          "en": "To promote the ideology of Pakistan, based on the Two-Nation Theory, and encourage young people to build an Islamic welfare state.",
+          "ur": "دو قومی نظریے کو فروغ دینا، جس کی بنیاد پر اسلامی جمہوریہ پاکستان معرضِ وجود میں آیا، اور نوجوانوں کو پاکستان کو حقیقی اسلامی فلاحی ریاست بنانے کے لیے متحرک کرنا۔"
+        }
+      },
+      {
+        "path": "home.manifesto.items.2",
+        "label": {
+          "en": "Manifesto · Item 3",
+          "ur": "منشور · نکتہ 3"
+        },
+        "value": {
+          "en": "To establish a non-electoral political system based on merit and improve the country's overall conditions.",
+          "ur": "غیر انتخابی مگر سیاسی عمل پر مبنی نظام کے ذریعے ملکی حالات میں بہتری کے لیے جدوجہد کرنا۔"
+        }
+      },
+      {
+        "path": "home.manifesto.items.3",
+        "label": {
+          "en": "Manifesto · Item 4",
+          "ur": "منشور · نکتہ 4"
+        },
+        "value": {
+          "en": "To take measures to promote national unity, harmony, and brotherhood among all provinces and communities of Pakistan.",
+          "ur": "مملکتِ پاکستان میں امن و استحکام، صوبائی بھائی چارے اور قومی یکجہتی کے فروغ کے لیے اقدامات کرنا۔"
+        }
+      },
+      {
+        "path": "home.manifesto.items.4",
+        "label": {
+          "en": "Manifesto · Item 5",
+          "ur": "منشور · نکتہ 5"
+        },
+        "value": {
+          "en": "To unite the people of Pakistan, especially the youth, beyond provincial, regional, linguistic, and political differences, under the flag of Pakistan.",
+          "ur": "تمام صوبائی، علاقائی، لسانی، گروہی اور سیاسی اختلافات سے بالاتر ہو کر پاکستانی عوام، بالخصوص نوجوانوں کو پرچمِ پاکستان تلے متحد کرنا۔"
+        }
+      },
+      {
+        "path": "home.manifesto.items.5",
+        "label": {
+          "en": "Manifesto · Item 6",
+          "ur": "منشور · نکتہ 6"
+        },
+        "value": {
+          "en": "To establish peace and security throughout Pakistan and protect the country from hostile forces, conspiracies, and political instability.",
+          "ur": "پاکستان مخالف سرگرمیوں اور دشمن قوتوں کی سازشوں کی روک تھام کے لیے امن و استحکام کے قیام کی جدوجہد کرنا۔"
+        }
+      },
+      {
+        "path": "home.manifesto.items.6",
+        "label": {
+          "en": "Manifesto · Item 7",
+          "ur": "منشور · نکتہ 7"
+        },
+        "value": {
+          "en": "To raise awareness about India's illegal occupation of Kashmir and the struggle for freedom from unlawful military control.",
+          "ur": "پاکستان کی شہ رگ کشمیر کو بھارتی جارحیت اور غیر قانونی فوجی قبضے سے آزاد کرانے کی جدوجہد کرنا۔"
+        }
+      },
+      {
+        "path": "home.manifesto.items.7",
+        "label": {
+          "en": "Manifesto · Item 8",
+          "ur": "منشور · نکتہ 8"
+        },
+        "value": {
+          "en": "To educate the younger generation about the threats posed by internal and external enemies to the Islamic Republic of Pakistan.",
+          "ur": "اسلامی جمہوریہ پاکستان کو درپیش اندرونی و بیرونی خطرات سے نوجوان نسل کو آگاہ کرنا۔"
+        }
+      },
+      {
+        "path": "home.manifesto.items.8",
+        "label": {
+          "en": "Manifesto · Item 9",
+          "ur": "منشور · نکتہ 9"
+        },
+        "value": {
+          "en": "To protect Pakistan's ideological and geographical boundaries and safeguard the country's national interests and sovereignty.",
+          "ur": "قومی مفاد کے اداروں کے شانہ بشانہ وطنِ عزیز کی نظریاتی اور جغرافیائی سرحدوں کا تحفظ کرنا۔"
+        }
+      },
+      {
+        "path": "home.manifesto.items.9",
+        "label": {
+          "en": "Manifesto · Item 10",
+          "ur": "منشور · نکتہ 10"
+        },
+        "value": {
+          "en": "To unite all democratic and patriotic forces against conspiracies aimed at weakening the Islamic Republic of Pakistan and to establish a strong national alliance.",
+          "ur": "اسلامی جمہوریہ پاکستان کے خلاف بیرونی سازشوں اور بے جا ہائبرڈ وار کے خلاف عوامی بیداری مہم چلانا اور سیمینار منعقد کرنا، اور عوامی تعاون سے ملک دشمن سازشوں کا منہ توڑ جواب دینا۔"
+        }
+      },
+      {
+        "path": "home.manifesto.items.10",
+        "label": {
+          "en": "Manifesto · Item 11",
+          "ur": "منشور · نکتہ 11"
+        },
+        "value": {
+          "en": "To raise our voices in support of oppressed Muslims and people around the world.",
+          "ur": "پوری دنیا میں مظلوم مسلمانوں اور انسانوں کی حمایت میں آواز بلند کرنا۔"
+        }
+      },
+      {
+        "path": "home.manifesto.items.11",
+        "label": {
+          "en": "Manifesto · Item 12",
+          "ur": "منشور · نکتہ 12"
+        },
+        "value": {
+          "en": "To maintain strong relations with all provinces, regions, and communities of Pakistan, ensuring national unity and territorial integrity.",
+          "ur": "ہر پاکستانی، خواہ اس کا تعلق کسی بھی صوبے، علاقے یا گروہ سے ہو، تحریکِ جوانان پاکستان کا رکن بن سکتا ہے، بشرطیکہ وہ پاکستان کی سالمیت پر یقین رکھتا ہو اور ملک مخالف سرگرمیوں میں ملوث نہ ہو۔"
+        }
+      },
+      {
+        "path": "home.manifesto.items.12",
+        "label": {
+          "en": "Manifesto · Item 13",
+          "ur": "منشور · نکتہ 13"
+        },
+        "value": {
+          "en": "To protect Pakistan from hostile conspiracies and promote national solidarity.",
+          "ur": "پاکستان کو دشمن سازشوں سے محفوظ رکھنا اور قومی یکجہتی کو فروغ دینا۔"
+        }
+      }
+    ],
+    "leaders": [
+      {
+        "path": "leadership.intro.eyebrow",
+        "label": {
+          "en": "Intro · Eyebrow",
+          "ur": "تعارف · ذیلی عنوان"
+        },
+        "value": {
+          "en": "OUR LEADERSHIP",
+          "ur": "ہماری قیادت"
+        }
+      },
+      {
+        "path": "leadership.intro.title",
+        "label": {
+          "en": "Intro · Title",
+          "ur": "تعارف · عنوان"
+        },
+        "value": {
+          "en": "The people behind our vision.",
+          "ur": "ہمارے وژن کے پیچھے شخصیات"
+        }
+      },
+      {
+        "path": "leadership.intro.description",
+        "label": {
+          "en": "Intro · Description",
+          "ur": "تعارف · تفصیل"
+        },
+        "value": {
+          "en": "Meet the founder and chairman of Tehreek Jawanan Pakistan.",
+          "ur": "تحریکِ جوانان پاکستان کے بانی اور چیئرمین کا تعارف۔"
+        }
+      },
+      {
+        "path": "leadership.section.eyebrow",
+        "label": {
+          "en": "Leadership section · Eyebrow",
+          "ur": "قیادت · ذیلی عنوان"
+        },
+        "value": {
+          "en": "OUR LEADERSHIP",
+          "ur": "ہماری قیادت"
+        }
+      },
+      {
+        "path": "leadership.section.title",
+        "label": {
+          "en": "Leadership section · Title",
+          "ur": "قیادت · عنوان"
+        },
+        "value": {
+          "en": "A vision for Pakistan.",
+          "ur": "پاکستان کے لیے ایک وژن"
+        }
+      },
+      {
+        "path": "leadership.section.description",
+        "label": {
+          "en": "Leadership section · Description",
+          "ur": "قیادت · تفصیل"
+        },
+        "value": {
+          "en": "Discover the people and ideas behind TJP.",
+          "ur": "ٹی جے پی کی شخصیات اور ان کے خیالات سے واقف ہوں۔"
+        }
+      },
+      {
+        "path": "leadership.section.action",
+        "label": {
+          "en": "Leadership section · Button label",
+          "ur": "قیادت · بٹن کا متن"
+        },
+        "value": {
+          "en": "Explore leadership",
+          "ur": "قیادت کا تعارف"
+        }
+      }
+    ],
+    "gallery": [
+      {
+        "path": "gallery.eyebrow",
+        "label": {
+          "en": "Gallery · Eyebrow",
+          "ur": "گیلری · ذیلی عنوان"
+        },
+        "value": {
+          "en": "LEADERSHIP, ENGAGEMENTS & HERITAGE",
+          "ur": "قیادت، سرگرمیاں اور ورثہ"
+        }
+      },
+      {
+        "path": "gallery.title",
+        "label": {
+          "en": "Gallery · Title",
+          "ur": "گیلری · عنوان"
+        },
+        "value": {
+          "en": "The TJP photo gallery.",
+          "ur": "ٹی جے پی کی تصویری گیلری۔"
+        }
+      },
+      {
+        "path": "gallery.description",
+        "label": {
+          "en": "Gallery · Description",
+          "ur": "گیلری · تفصیل"
+        },
+        "value": {
+          "en": "Explore founder portraits, the chairman’s documented engagements, and Pakistan’s shared heritage.",
+          "ur": "بانی کی تصاویر، چیئرمین کی شائع شدہ سرگرمیاں اور پاکستان کا مشترکہ ورثہ دیکھیں۔"
+        }
+      },
+      {
+        "path": "gallery.note",
+        "label": {
+          "en": "Gallery · Note",
+          "ur": "گیلری · نوٹ"
+        },
+        "value": {
+          "en": "Open a photograph for its context and source. Archive dates refer to publication; undated portraits are labelled accordingly.",
+          "ur": "سیاق اور ماخذ دیکھنے کے لیے تصویر کھولیں۔ محفوظ تاریخیں اشاعت کی ہیں؛ بغیر تاریخ کی تصاویر کی نشاندہی کی گئی ہے۔"
+        }
+      }
+    ],
+    "contact": [
+      {
+        "path": "contact.eyebrow",
+        "label": {
+          "en": "Contact · Eyebrow",
+          "ur": "رابطہ · ذیلی عنوان"
+        },
+        "value": {
+          "en": "LET’S CONNECT",
+          "ur": "آئیے رابطہ کریں"
+        }
+      },
+      {
+        "path": "contact.title",
+        "label": {
+          "en": "Contact · Title",
+          "ur": "رابطہ · عنوان"
+        },
+        "value": {
+          "en": "Let’s start a conversation.",
+          "ur": "آئیے گفتگو کا آغاز کریں۔"
+        }
+      },
+      {
+        "path": "contact.description",
+        "label": {
+          "en": "Contact · Description",
+          "ur": "رابطہ · تفصیل"
+        },
+        "value": {
+          "en": "Ask a question, share an idea, or find your next step with TJP.",
+          "ur": "کوئی سوال پوچھیں، خیال پیش کریں یا ٹی جے پی کے ساتھ اگلا قدم جانیں۔"
+        }
+      },
+      {
+        "path": "contact.heading",
+        "label": {
+          "en": "Contact · Heading",
+          "ur": "رابطہ · سرخی"
+        },
+        "value": {
+          "en": "Send a message",
+          "ur": "پیغام بھیجیں"
+        }
+      },
+      {
+        "path": "contact.formDescription",
+        "label": {
+          "en": "Contact · Form description",
+          "ur": "رابطہ · فارم کی تفصیل"
+        },
+        "value": {
+          "en": "Your message goes to the TJP team.",
+          "ur": "آپ کا پیغام ٹی جے پی کی ٹیم کو بھیجا جائے گا۔"
+        }
+      },
+      {
+        "path": "contact.addressTitle",
+        "label": {
+          "en": "Contact · Address heading",
+          "ur": "رابطہ · پتے کی سرخی"
+        },
+        "value": {
+          "en": "Visit the head office",
+          "ur": "مرکزی دفتر"
+        }
+      },
+      {
+        "path": "contact.phoneTitle",
+        "label": {
+          "en": "Contact · Phone heading",
+          "ur": "رابطہ · فون کی سرخی"
+        },
+        "value": {
+          "en": "General enquiries",
+          "ur": "عام معلومات"
+        }
+      },
+      {
+        "path": "contact.channels",
+        "label": {
+          "en": "Contact · Social links heading",
+          "ur": "رابطہ · سوشل لنکس کی سرخی"
+        },
+        "value": {
+          "en": "Find us online",
+          "ur": "آن لائن رابطے"
+        }
+      },
+      {
+        "path": "contact.faqTitle",
+        "label": {
+          "en": "Contact · FAQ heading",
+          "ur": "رابطہ · عام سوالات کی سرخی"
+        },
+        "value": {
+          "en": "A little more information",
+          "ur": "کچھ مزید معلومات"
+        }
+      },
+      {
+        "path": "contact.faqs.0.question",
+        "label": {
+          "en": "FAQ 1 · Question",
+          "ur": "سوال 1 · سوال"
+        },
+        "value": {
+          "en": "How do I enquire about membership?",
+          "ur": "رکنیت کے بارے میں کیسے پوچھوں؟"
+        }
+      },
+      {
+        "path": "contact.faqs.0.answer",
+        "label": {
+          "en": "FAQ 1 · Answer",
+          "ur": "سوال 1 · جواب"
+        },
+        "value": {
+          "en": "Complete the online membership form. Your application will be reviewed by the team.",
+          "ur": "رکنیت کے صفحے پر آن لائن درخواست دیں۔ ٹیم آپ کی درخواست کا جائزہ لے گی۔"
+        }
+      },
+      {
+        "path": "contact.faqs.1.question",
+        "label": {
+          "en": "FAQ 2 · Question",
+          "ur": "سوال 2 · سوال"
+        },
+        "value": {
+          "en": "Can I browse in Urdu?",
+          "ur": "کیا ویب سائٹ اردو میں دیکھ سکتا ہوں؟"
+        }
+      },
+      {
+        "path": "contact.faqs.1.answer",
+        "label": {
+          "en": "FAQ 2 · Answer",
+          "ur": "سوال 2 · جواب"
+        },
+        "value": {
+          "en": "Yes. Select اردو in the header to switch the whole website, including forms and navigation, to Urdu.",
+          "ur": "جی ہاں۔ ہیڈر میں اردو منتخب کریں۔ فارم اور نیویگیشن سمیت پوری ویب سائٹ اردو میں بدل جائے گی۔"
+        }
+      },
+      {
+        "path": "contact.faqs.2.question",
+        "label": {
+          "en": "FAQ 3 · Question",
+          "ur": "سوال 3 · سوال"
+        },
+        "value": {
+          "en": "Where does my message go?",
+          "ur": "میرا پیغام کہاں جاتا ہے؟"
+        }
+      },
+      {
+        "path": "contact.faqs.2.answer",
+        "label": {
+          "en": "FAQ 3 · Answer",
+          "ur": "سوال 3 · جواب"
+        },
+        "value": {
+          "en": "It goes to the TJP team’s inbox.",
+          "ur": "یہ ٹی جے پی ٹیم کے ان باکس میں جاتا ہے۔"
+        }
+      }
+    ],
+    "membership": [
+      {
+        "path": "membership.eyebrow",
+        "label": {
+          "en": "Membership · Eyebrow",
+          "ur": "رکنیت · ذیلی عنوان"
+        },
+        "value": {
+          "en": "MEMBERSHIP",
+          "ur": "رکنیت"
+        }
+      },
+      {
+        "path": "membership.title",
+        "label": {
+          "en": "Membership · Title",
+          "ur": "رکنیت · عنوان"
+        },
+        "value": {
+          "en": "Join TJP",
+          "ur": "ٹی جے پی میں شامل ہوں"
+        }
+      },
+      {
+        "path": "portal.intro",
+        "label": {
+          "en": "Membership · Introduction",
+          "ur": "رکنیت · تعارف"
+        },
+        "value": {
+          "en": "Apply to join TJP.",
+          "ur": "ٹی جے پی کی رکنیت کے لیے درخواست دیں۔"
+        }
+      }
+    ]
+  },
+  "menu": [
+    {
+      "id": "home",
+      "href": "/#home",
+      "order": 0,
+      "published": true,
+      "label": {
+        "en": "Home",
+        "ur": "مرکزی صفحہ"
+      }
+    },
+    {
+      "id": "about",
+      "href": "/about-us",
+      "order": 1,
+      "published": true,
+      "label": {
+        "en": "About us",
+        "ur": "ہمارا تعارف"
+      }
+    },
+    {
+      "id": "focus",
+      "href": "/#focus",
+      "order": 2,
+      "published": true,
+      "label": {
+        "en": "Our focus",
+        "ur": "ہماری توجہ"
+      }
+    },
+    {
+      "id": "gallery",
+      "href": "/gallery",
+      "order": 3,
+      "published": true,
+      "label": {
+        "en": "Gallery",
+        "ur": "گیلری"
+      }
+    },
+    {
+      "id": "leadership",
+      "href": "/leadership",
+      "order": 4,
+      "published": true,
+      "label": {
+        "en": "Leadership",
+        "ur": "قیادت"
+      }
+    },
+    {
+      "id": "contact",
+      "href": "/contact",
+      "order": 5,
+      "published": true,
+      "label": {
+        "en": "Contact us",
+        "ur": "رابطہ کریں"
+      }
+    }
+  ]
+}

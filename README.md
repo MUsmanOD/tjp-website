@@ -41,7 +41,7 @@ npm run dev
 ```
 
 The client runs at `http://localhost:3000`; the API runs at
-`http://127.0.0.1:5027`. The browser uses same-origin `/api` requests through Next.js. API health endpoints are `/api/health` and `/api/ready`. The public form is `/membership`; administration is `/admin`.
+`http://127.0.0.1:5027`. The browser uses same-origin `/api` requests through Next.js. API health endpoints are `/api/health` and `/api/ready`. The public form is `/membership`; administrator sign-in is `/tjp-portal-pubjab-0001-login`, with dashboard views under `/tjp-portal-pubjab-0001-login/dashboard`.
 
 Run the API tests with `cd server; npm test`.
 

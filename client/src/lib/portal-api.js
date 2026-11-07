@@ -22,13 +22,14 @@ async function csrf() {
 }
 export async function api(
   path,
-  { method = "GET", body, headers = {}, retry = true } = {},
+  { method = "GET", body, headers = {}, retry = true, signal = AbortSignal.timeout(30_000) } = {},
 ) {
   const requestGeneration = generation;
   const response = await fetch("/api/v1" + path, {
     method,
     credentials: "same-origin",
     cache: "no-store",
+    signal,
     headers: {
       Accept: "application/json",
       ...(method !== "GET"
@@ -47,7 +48,7 @@ export async function api(
       ["/auth/me", "/auth/sessions", "/auth/logout"].includes(path))
   ) {
     const refresh = async () => {
-      const check = await fetch("/api/v1/auth/me", { cache: "no-store" });
+      const check = await fetch("/api/v1/auth/me", { cache: "no-store", signal });
       if (check.ok) return;
       return api("/auth/refresh", { method: "POST", retry: false });
     };
@@ -61,7 +62,7 @@ export async function api(
       });
     try {
       await refreshPromise;
-      return api(path, { method, body, headers, retry: false });
+      return api(path, { method, body, headers, retry: false, signal });
     } catch {
       window.dispatchEvent(new Event("tjp-session-expired"));
     }

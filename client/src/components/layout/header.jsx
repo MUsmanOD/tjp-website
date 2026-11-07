@@ -12,18 +12,22 @@ import { useLanguage } from "@/components/providers/language-provider";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { portalPath } from "@/config/portal";
+import { useWebsite } from "@/lib/website-content";
 
-export function Header({ name, navigation = siteConfig.navigation, className }) {
+export function Header({ name, navigation, className }) {
   const { messages } = useLanguage();
   const pathname = usePathname();
-  if (pathname.startsWith("/admin") || pathname === "/tjp-punjab-pk-portal" || pathname === "/tjp-admin-dashboard") return null;
+  const menu = useWebsite()?.menu;
+  const items = navigation ?? menu ?? siteConfig.navigation;
+  if (pathname.startsWith(portalPath)) return null;
   return (
     <header className={cn("site-header sticky top-0 z-40 shrink-0 border-b bg-background/95 backdrop-blur-md", className)}>
       <AnnouncementBar />
       <Container className="header-main flex items-center justify-between gap-3">
-        <Brand name={name} compact showWordmark />
+        <Brand name={name} compact showWordmark loadingTarget />
         <nav aria-label={messages.common.mainNavigation} className="hidden items-center gap-5 xl:gap-7 lg:flex">
-          <NavigationLinks items={navigation} />
+          <NavigationLinks items={items} />
         </nav>
         <div className="flex items-center gap-1 sm:gap-3">
           <LanguageSwitcher className="header-language" />
@@ -31,7 +35,7 @@ export function Header({ name, navigation = siteConfig.navigation, className }) 
           <Button asChild className="header-membership px-3 sm:px-4">
             <SiteLink href="/membership">{messages.common.join}</SiteLink>
           </Button>
-          <MobileNavigation name={name} items={navigation} />
+          <MobileNavigation name={name} items={items} />
         </div>
       </Container>
     </header>

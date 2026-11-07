@@ -26,7 +26,7 @@ try {
       lastStep: -1,
     });
     await audit("host", "admin-created", String(admin._id));
-    console.info("Administrator created. Sign in at /admin/login.");
+    console.info("Administrator created. Sign in at /tjp-portal-pubjab-0001-login.");
   }
 } finally {
   await mongoose.disconnect();

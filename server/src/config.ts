@@ -13,6 +13,9 @@ const schema = z.object({
   TOKEN_KEY: z.string().regex(/^[a-f0-9]{64}$/i),
   TRUST_PROXY: z.string().default(""),
   MEMBERSHIP_LIMIT: z.coerce.number().int().positive().default(10),
+  CLOUDINARY_CLOUD_NAME: z.string().regex(/^[a-zA-Z0-9_-]*$/).default(""),
+  CLOUDINARY_API_KEY: z.string().default(""),
+  CLOUDINARY_API_SECRET: z.string().default(""),
 });
 export const config = schema.parse(process.env);
 export const dataKeys = JSON.parse(config.DATA_KEYS) as Record<string, string>;

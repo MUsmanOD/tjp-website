@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useLanguage } from "@/components/providers/language-provider";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { api } from "@/lib/portal-api";
+import { portalDashboardPath } from "@/config/portal";
 export function AdminSignIn() {
   const { messages } = useLanguage(),
     t = messages.portal,
@@ -15,6 +16,13 @@ export function AdminSignIn() {
   const [challenge, setChallenge] = useState(null),
     [error, setError] = useState(""),
     [busy, setBusy] = useState(false);
+  useEffect(() => {
+    let active = true;
+    api("/auth/me").then(() => {
+      if (active) router.replace(portalDashboardPath);
+    }).catch(() => {});
+    return () => { active = false; };
+  }, [router]);
   async function submit(event) {
     event.preventDefault();
     if (busy) return;
@@ -27,14 +35,14 @@ export function AdminSignIn() {
           method: "POST",
           body: { challenge: challenge.challenge, code: values.code },
         });
-        router.replace("/admin");
+        router.replace(portalDashboardPath);
       } else {
         const result = await api("/auth/login", {
           method: "POST",
           body: values,
         });
         if (result.mfaRequired) setChallenge(result);
-        else if (result.authenticated) router.replace("/admin");
+        else if (result.authenticated) router.replace(portalDashboardPath);
         else throw new Error("INTERNAL");
       }
     } catch (error) {
